@@ -12,7 +12,9 @@ Approved and implemented 7 Jul 2026 (Parliament-tracker pattern: flat JSON + sta
 - [x] Verification pass: 10 key documents fetched; SaveLIFE split into WP(C) 235/2012 (disposed) + WP(C) 726/2024 (pending); Gyan Prakash = WP(C) 1272/2019; Gohar = C.A. 9322/2022 + MA 825/2023 (monitoring)
 - [x] Dashboard: dashboard/index.html (self-contained, CFI design tokens), verified in browser
 - [x] Weekly refresh: pipeline/refresh.py dry-run clean (30 pages, ₹15, 3 new docs → all correctly unassigned)
-- [x] Scheduled task "sc-litigation-tracker-refresh": Tuesdays 08:10 IST
+- [x] CLOUD MIGRATION (7 Jul 2026): public repo DeepanshuCFI/sc-litigation-tracker; GitHub Actions weekly refresh (Tue 02:40 UTC) with Claude curation (auto_curate.py, claude-opus-4-8); dashboard on GitHub Pages at https://deepanshucfi.github.io/sc-litigation-tracker/ (main:/docs); secrets IK_API_TOKEN + ANTHROPIC_API_KEY encrypted in repo. First cloud run green (0 new docs, ₹15).
+- [x] Dashboard grouped: PIL/suo motu (original jurisdiction) vs Appeals & References
+- [x] Local scheduled task repurposed: Tuesdays 08:30 IST reviewer (pull, QC the LLM curation, report to Deepanshu) — runs only when the app is open, which is fine; the cloud does the real work
 
 ## Key facts
 - Indian Kanoon API: POST + `Authorization: Token`; SC daily orders live under doctypes:scorders (97 Rajaseekaran orders there vs 7 in judgments doctype)
