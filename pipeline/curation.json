@@ -16,7 +16,8 @@
         "post-crash care",
         "enforcement",
         "institutions",
-        "victim compensation"
+        "victim compensation",
+        "pedestrian safety"
       ],
       "why_it_matters": "The master road-safety PIL, filed by orthopaedic surgeon Dr. S. Rajaseekaran. Created the SC Committee on Road Safety (22 Apr 2014), forced state road-safety policies and lead agencies (30 Nov 2017), produced the Jan 2024 hit-and-run compensation directions, and is now driving vehicle-tracking and speed-governor enforcement.",
       "latest_development": "13 May 2026: Bench of Pardiwala & Viswanathan JJ (amicus Gaurav Agrawal) took up IAs on Vehicle Location Tracking Devices and emergency buttons in public service vehicles (Rule 125H CMVR), speed governors, the National Road Safety Board, and a challenge to UP legislation abating MV Act prosecutions.",
@@ -35,6 +36,10 @@
         },
         "2026-05-13": {
           "gist": "Examined VLTD/emergency-button enforcement in public service vehicles, speed-limiting devices, National Road Safety Board functioning, and UP's abatement of MV Act prosecutions.",
+          "significance": "major"
+        },
+        "2025-05-14": {
+          "gist": "Pedestrian-safety order (Oka & Bhuyan JJ) on IA 50798/2025: footpaths in proper condition — accessible to persons with disabilities and free of encroachments — held part of Article 21, following Olga Tellis; nationwide pedestrian-infrastructure norms taken up. Same order: a final six months to constitute the National Road Safety Board under S.215B.",
           "significance": "major"
         }
       }
@@ -435,6 +440,32 @@
           "significance": "major"
         }
       }
+    },
+    {
+      "id": "right-to-walk-2026",
+      "match": [
+        "maniyar iliyaz",
+        "right to walk and footpath"
+      ],
+      "title": "Re: Fundamental Right to Walk and Footpath (Maniyar Iliyaz v. P. Ayyappan)",
+      "case_number": "C.A. 4665-4666/2025, re-numbered as Art. 32 petition · 2026 INSC 647",
+      "court": "Supreme Court of India",
+      "case_type": "Suo motu writ (converted appeal)",
+      "status": "pending",
+      "filed_year": 2025,
+      "themes": [
+        "pedestrian safety",
+        "footpaths",
+        "institutions"
+      ],
+      "why_it_matters": "Born from a five-year-old killed walking to school on a road with no footpath or crossing: the Court declared the right to walk a fundamental right under Article 19(1)(d), placed a correlative duty on urban development authorities, municipalities and panchayats to demarcate, build and maintain footpaths, and made breach actionable for restitution and compensation independent of the MV Act. The Court then converted the disposed appeal into a continuing Article 32 matter, impleading MoHUA, MoRD and MoRTH.",
+      "latest_development": "19 Jun 2026 (Narasimha & Chandurkar JJ): judgment delivered; Registry directed to re-register the case as 'Re: Fundamental Right to Walk and Footpath' with the Union impleaded in person — the pedestrian-infrastructure counterpart to Phalodi.",
+      "order_notes": {
+        "2026-06-19": {
+          "gist": "Reportable judgment: the right to walk on demarcated footpaths recognised as a facet of Art. 19(1)(d); duty bearers named (urban development authorities, municipal bodies, panchayats); violations remediable through constitutional and legal claims independent of the MV Act; case converted into a continuing Article 32 petition with amicus and ASG assistance.",
+          "significance": "major"
+        }
+      }
     }
   ],
   "notable_judgments": [
@@ -593,6 +624,12 @@
       "date": "2026-06-11",
       "title": "Shishupal @ Shish Ram v. Surjeet",
       "gist": "Created the 'loss of domestic care' head: ₹30,000/month — rising 10% every three years — as the minimum value of a homemaker's work in MACT cases; a stand-in income for non-earning homemakers, additional to proved income for working women."
+    },
+    {
+      "tid": 49053501,
+      "date": "2024-12-11",
+      "title": "Baby Sakshi Greola v. Manzoor Ahmad Simon",
+      "gist": "A seven-year-old struck by a speeding car on a zebra crossing: the Court set aside the High Court's order and enhanced the MACT compensation, insurer to pay within eight weeks — pedestrian priority at crossings, vindicated in compensation law."
     }
   ],
   "borderline_excluded": [
@@ -625,6 +662,18 @@
       "why": "MACT pendency grievance (Orissa) — individual relief but symptomatic; watch",
       "cases": [
         "Minati Dash v. Registrar, Orissa HC (2026)"
+      ]
+    },
+    {
+      "why": "Accessibility-rights matter (persons with disabilities) whose directions cover footpaths and pedestrian infrastructure — overlaps the Rajaseekaran pedestrian IA; promote if road-specific directions issue",
+      "cases": [
+        "Rajive Raturi v. Union of India (2017 order; 2024 judgment)"
+      ]
+    },
+    {
+      "why": "Footpath-encroachment and street-vending jurisprudence (livelihood/municipal law, not crash safety) — the backdrop to pedestrian-infrastructure orders",
+      "cases": [
+        "Olga Tellis (1985) · Sodan Singh (1989) · Gainda Ram · Maharashtra Ekta Hawkers Union · Footpath Vikreta Kalyan Samiti (ongoing)"
       ]
     }
   ]

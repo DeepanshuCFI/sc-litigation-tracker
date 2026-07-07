@@ -9,15 +9,6 @@
   ]
  },
  {
-  "tid": 115323844,
-  "date": "2026-06-19",
-  "title": "Maniyar Iliyaz @ Shaik Riyaz vs P. Ayyappan on 19 June, 2026",
-  "queries": [
-   "\"Rajaseekaran\" doctypes:supremecourt",
-   "\"road safety\" doctypes:supremecourt"
-  ]
- },
- {
   "tid": 1794819,
   "date": "2007-01-11",
   "title": "Rathnashalvan vs State Of Karnataka on 11 January, 2007",
@@ -3066,6 +3057,14 @@
   "title": "Atul Chauhan vs State Of Haryana on 11 June, 2026",
   "queries": [
    "\"road accident\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 49053501,
+  "date": "2024-12-11",
+  "title": "Baby Sakshi Greola vs Manzoor Ahmad Simon on 11 December, 2024",
+  "queries": [
+   "pedestrian-sweep-jul2026"
   ]
  }
 ]
