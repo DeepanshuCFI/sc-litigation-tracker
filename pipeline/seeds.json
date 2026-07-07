@@ -1,0 +1,41 @@
+{
+  "inclusion_rule": "Track a case if it seeks or produces systemic relief (directions, guidelines, monitoring, policy change) on road safety. Exclude individual compensation appeals unless precedent-setting — those go to notable_judgments.",
+  "seed_cases": [
+    {
+      "id": "rajaseekaran-295-2012",
+      "title": "S. Rajaseekaran v. Union of India",
+      "case_number": "W.P.(C) 295/2012",
+      "why_seeded": "Master road-safety PIL: SC Committee on Road Safety (Sapre Committee), Jan 2024 hit-and-run compensation directions, MACT reforms, ongoing monitoring.",
+      "search_queries": ["\"Rajaseekaran\" doctypes:supremecourt"]
+    },
+    {
+      "id": "savelife-235-2012",
+      "title": "SaveLIFE Foundation v. Union of India",
+      "case_number": "W.P.(C) 235/2012",
+      "why_seeded": "Good Samaritan PIL — 2016 guidelines given force of law.",
+      "search_queries": ["\"SaveLIFE Foundation\" doctypes:supremecourt"]
+    },
+    {
+      "id": "gohar-mohammed-2022",
+      "title": "Gohar Mohammed v. Uttar Pradesh SRTC",
+      "case_number": "C.A. 9322/2022",
+      "why_seeded": "Systemic MACT directions: DAR workflow, police/insurer timelines.",
+      "search_queries": ["\"Gohar Mohammed\" doctypes:supremecourt"]
+    }
+  ],
+  "discovery_queries": [
+    "\"road safety\" doctypes:supremecourt",
+    "\"black spot\" road doctypes:supremecourt",
+    "\"pedestrian safety\" doctypes:supremecourt",
+    "\"road accident\" directions doctypes:supremecourt",
+    "helmet \"Motor Vehicles Act\" doctypes:supremecourt",
+    "\"speed breaker\" OR \"road hump\" doctypes:supremecourt",
+    "\"Good Samaritan\" doctypes:supremecourt",
+    "\"Motor Vehicles Amendment Act\" doctypes:supremecourt",
+    "\"National Road Safety\" doctypes:supremecourt",
+    "\"hit and run\" compensation doctypes:supremecourt",
+    "\"driving licence\" directions doctypes:supremecourt",
+    "\"road engineering\" OR \"crash barrier\" doctypes:supremecourt"
+  ],
+  "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses."
+}

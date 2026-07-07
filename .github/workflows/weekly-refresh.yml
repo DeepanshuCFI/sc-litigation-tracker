@@ -1,0 +1,64 @@
+name: Weekly refresh
+
+on:
+  schedule:
+    - cron: "40 2 * * 2"   # Tuesdays 02:40 UTC = 08:10 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      IK_API_TOKEN: ${{ secrets.IK_API_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install anthropic certifi
+
+      - name: Fetch new orders from Indian Kanoon
+        run: python3 pipeline/refresh.py
+
+      - name: LLM curation (classify candidates, write gists)
+        run: python3 pipeline/auto_curate.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/ pipeline/curation.json
+          if git diff --cached --quiet; then
+            echo "No changes this week."
+          else
+            git commit -m "Weekly refresh $(date -u +%F)"
+            git push
+          fi
+
+      - name: Job summary
+        if: always()
+        run: |
+          echo "## Weekly refresh" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/refresh_report.json ]; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat data/refresh_report.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f data/curation_log.json ]; then
+            echo '### Curation' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat data/curation_log.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi

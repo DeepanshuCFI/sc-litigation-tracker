@@ -1,0 +1,29 @@
+{
+ "query": "\"pedestrian safety\" doctypes:supremecourt",
+ "docs": [
+  {
+   "tid": 1352960,
+   "catids": [
+    46,
+    667,
+    583
+   ],
+   "doctype": 1000,
+   "publishdate": "1996-10-11",
+   "authorid": 1941,
+   "bench": [
+    1941
+   ],
+   "title": "Ahmedabad Municipal Corporation vs Nawab Khan Gulab Khan & Ors on 11 October, 1996",
+   "numcites": 19,
+   "numcitedby": 172,
+   "headline": "with a\nreasonable measure  of <b>safety</b>  and security.  That facility,\nwhich has matured into a right of the <b>pedestrians</b>, cannot be\nset at\tnaught ... road is a permanent obstruction to\nfree  passage\tof  traffic   and  <b>pedestrians</b>&#x27;\t <b>safety</b>\t and\nsecurity. Therefore,  it would be impermissible to permit",
+   "docsize": 59189,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "K Ramaswamy",
+   "authorEncoded": "k-ramaswamy",
+   "citation": "AIR 1997 SUPREME COURT 152"
+  }
+ ]
+}

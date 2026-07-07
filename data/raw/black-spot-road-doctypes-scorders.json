@@ -1,0 +1,44 @@
+{
+ "query": "\"black spot\" road doctypes:scorders",
+ "docs": [
+  {
+   "tid": 169219343,
+   "catids": [
+    33
+   ],
+   "doctype": 1001,
+   "publishdate": "2014-04-22",
+   "authorid": 1606,
+   "bench": [
+    1606
+   ],
+   "title": "S.Rajaseekaran vs Union Of India And Ors. on 22 April, 2014",
+   "numcites": 40,
+   "numcitedby": 0,
+   "headline": "State\n\nGovernments must make <b>road</b> safety an integral part of <b>road</b> design at\n\nthe planning stage and conduct regular <b>road</b> safety audit of selected\n\nstretches ... termed                    as\n\n‘<b>black</b> <b>spots</b>’ i.e. problem <b>spots</b> where a large number of accidents\n\noccur.          Regular maintenance of all highways and <b>roads</b> both",
+   "docsize": 99103,
+   "fragment": true,
+   "docsource": "Supreme Court - Daily Orders",
+   "author": "R Gogoi",
+   "authorEncoded": "r-gogoi"
+  },
+  {
+   "tid": 47252166,
+   "catids": null,
+   "doctype": 1001,
+   "publishdate": "2016-09-19",
+   "authorid": null,
+   "bench": [
+    369,
+    187
+   ],
+   "title": "S.Rajaseekaran vs Union Of India And Ors. on 19 September, 2016",
+   "numcites": 0,
+   "numcitedby": 0,
+   "headline": "safety\n\nmeasures including identification and rectification of <b>black</b> <b>spots</b>.\n\nIt has been mentioned that 789 <b>black</b> <b>spots</b> have been identified\n\nbased on fatality data available ... identification of\n\n<b>black</b> <b>spots</b> on National Highways.             In other words, an amount of\n\nRs.1100 crore has been made available for the <b>road</b> safety purposes",
+   "docsize": 7651,
+   "fragment": true,
+   "docsource": "Supreme Court - Daily Orders"
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+  "_comment": "Curation config: title patterns (lowercase substring on normalized title) + optional date_min/date_max assign raw hits to tracked cases. order_notes maps order dates to gists/significance. All facts below verified against fetched order text unless marked (verify).",
+  "tracked_cases": [
+    {
+      "id": "rajaseekaran-295-2012",
+      "match": ["rajaseekaran"],
+      "title": "S. Rajaseekaran v. Union of India",
+      "case_number": "W.P.(C) 295/2012",
+      "court": "Supreme Court of India",
+      "case_type": "PIL (continuing mandamus)",
+      "status": "pending",
+      "filed_year": 2012,
+      "themes": ["post-crash care", "enforcement", "institutions", "victim compensation"],
+      "why_it_matters": "The master road-safety PIL, filed by orthopaedic surgeon Dr. S. Rajaseekaran. Created the SC Committee on Road Safety (22 Apr 2014), forced state road-safety policies and lead agencies (30 Nov 2017), produced the Jan 2024 hit-and-run compensation directions, and is now driving vehicle-tracking and speed-governor enforcement.",
+      "latest_development": "13 May 2026: Bench of Pardiwala & Viswanathan JJ (amicus Gaurav Agrawal) took up IAs on Vehicle Location Tracking Devices and emergency buttons in public service vehicles (Rule 125H CMVR), speed governors, the National Road Safety Board, and a challenge to UP legislation abating MV Act prosecutions.",
+      "order_notes": {
+        "2014-04-22": {"gist": "Constituted the Supreme Court Committee on Road Safety (Justice K.S. Radhakrishnan) with directions to states on implementation reporting.", "significance": "major"},
+        "2017-11-30": {"gist": "Wide-ranging directions: every state to have a road safety policy, council, lead agency, road safety fund, action plan, engineering review of designs, trauma-care measures and protocols.", "significance": "major"},
+        "2024-01-12": {"gist": "Directions on the hit-and-run compensation scheme under S.161 MV Act — awareness drives, police obligation to inform victims, GIC reporting and monitoring of claims.", "significance": "major"},
+        "2026-05-13": {"gist": "Examined VLTD/emergency-button enforcement in public service vehicles, speed-limiting devices, National Road Safety Board functioning, and UP's abatement of MV Act prosecutions.", "significance": "major"}
+      }
+    },
+    {
+      "id": "phalodi-smwpc-9-2025",
+      "match": ["in re: phalodi accident"],
+      "title": "In Re: Phalodi Accident (Suo Motu)",
+      "case_number": "SMW(C) 9/2025",
+      "court": "Supreme Court of India",
+      "case_type": "Suo motu writ",
+      "status": "pending",
+      "filed_year": 2025,
+      "themes": ["road engineering", "highways", "institutions"],
+      "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
+      "latest_development": "13 Apr 2026 (2026 INSC 388, Maheshwari & Chandurkar JJ): interim directions (a)–(m) under Article 142 — national policy framework with deadlines, removal of illegal parking/dhabas, blackspot rectification, agencies jointly liable; MoRTH to file district-wise compliance in 75 days and route the Justice Sapre Road Safety Committee's recommendations to the Court. Listed for compliance after two months.",
+      "order_notes": {
+        "2025-11-10": {"gist": "Suo motu cognizance of the Phalodi (Rajasthan) and Chevella (Telangana) crashes of 2–3 Nov 2025; notice to Rajasthan and central highway authorities.", "significance": "major"},
+        "2026-04-13": {"gist": "Reportable Article 142 interim directions (a)–(m): national expressway-safety policy framework, blackspot and illegal-obstruction removal, joint agency liability, MoRTH compliance report in 75 days, Sapre Committee recommendations to be placed before the Court.", "significance": "major"}
+      }
+    },
+    {
+      "id": "savelife-good-samaritan-235-2012",
+      "match": ["savelife foundation"],
+      "date_max": "2023-12-31",
+      "title": "SaveLIFE Foundation v. Union of India (Good Samaritan)",
+      "case_number": "W.P.(C) 235/2012",
+      "court": "Supreme Court of India",
+      "case_type": "PIL",
+      "status": "disposed",
+      "filed_year": 2012,
+      "themes": ["post-crash care", "good samaritan"],
+      "why_it_matters": "The Good Samaritan case: 30 Mar 2016 judgment gave MoRTH's 2015 Good Samaritan guidelines the force of law, protecting bystanders who help crash victims — later codified as S.134A MV Act.",
+      "latest_development": "Disposed 30 Mar 2016; guidelines later codified as S.134A MV Act (2019 amendment).",
+      "order_notes": {
+        "2016-03-30": {"gist": "Judgment: MoRTH's Good Samaritan guidelines and SOPs given the force of law under Article 141/142, binding on all states until legislation.", "significance": "major"}
+      }
+    },
+    {
+      "id": "savelife-emergency-care-726-2024",
+      "match": ["savelife foundation"],
+      "date_min": "2024-01-01",
+      "title": "SaveLIFE Foundation v. Union of India (Emergency Care)",
+      "case_number": "W.P.(C) 726/2024",
+      "court": "Supreme Court of India",
+      "case_type": "PIL",
+      "status": "pending",
+      "filed_year": 2024,
+      "themes": ["post-crash care", "good samaritan", "PM RAHAT"],
+      "why_it_matters": "SaveLIFE's second-generation petition: integrate all emergency helplines into 112, Good Samaritan grievance redressal in every state, and full operationalization of cashless treatment. The May 2026 order turned PM RAHAT rollout into a court-monitored obligation.",
+      "latest_development": "26 May 2026 (reportable, Maheshwari J): all states/UTs directed to fully operationalize PM RAHAT within 8 weeks–3 months (hospital designation, SHA on TMS, police on eDAR, DC sub-agency accounts), integrate helplines with 112, run multilingual mass-media campaigns on 112/S.134A/cashless treatment, and file action-taken reports. Non-implementation declared a violation of the MV Act. Listed after four months.",
+      "order_notes": {
+        "2026-05-26": {"gist": "Reportable order: PM RAHAT operationalization within 8 weeks–3 months made a court-monitored obligation on all states/UTs; 112 helpline integration; Good Samaritan grievance systems; mass-media campaigns; ATRs to the Registry; listed after 4 months.", "significance": "major"}
+      }
+    },
+    {
+      "id": "gohar-mohammed-2022",
+      "match": ["gohar mohammad", "gohar mohammed"],
+      "title": "Gohar Mohammed v. Uttar Pradesh SRTC",
+      "case_number": "C.A. 9322/2022 (from SLP(C) 32448/2018); MA 825/2023",
+      "court": "Supreme Court of India",
+      "case_type": "Civil appeal with systemic directions",
+      "status": "monitoring",
+      "filed_year": 2018,
+      "themes": ["victim compensation", "MACT reform"],
+      "why_it_matters": "15 Dec 2022 judgment (Nazeer & Maheshwari JJ) issued nationwide directions on the Detailed Accident Report workflow — police/insurer timelines, MACT registration, coordination portal — reshaping how compensation claims begin. Compliance is monitored through MA 825/2023.",
+      "latest_development": "5 May 2026: brief order in MA 825/2023 — matter listed for August 2026; court-held fixed deposit renewed.",
+      "order_notes": {
+        "2022-12-15": {"gist": "Judgment with nationwide DAR directions: police to register and forward Detailed Accident Reports to MACTs within fixed timelines, insurers to respond on liability, states to coordinate through a web portal.", "significance": "major"}
+      }
+    },
+    {
+      "id": "k-balu-liquor-2016",
+      "match": ["k balu"],
+      "title": "State of Tamil Nadu v. K. Balu",
+      "case_number": "C.A. 12164/2016",
+      "court": "Supreme Court of India",
+      "case_type": "Appeal with systemic directions",
+      "status": "disposed",
+      "filed_year": 2016,
+      "themes": ["drunk driving", "highways"],
+      "why_it_matters": "Banned liquor vends within 500m of national and state highways (Dec 2016), relying on National Road Safety Council advice; scope clarified for municipal areas in 2017. The landmark drunk-driving-prevention order.",
+      "latest_development": "Disposed; 31 Mar 2017 clarification modified the ban's application.",
+      "order_notes": {
+        "2016-12-15": {"gist": "Liquor vends prohibited within 500m of national/state highways; licences not to be renewed after 31 Mar 2017; signage advertising liquor on highways banned.", "significance": "major"},
+        "2017-03-31": {"gist": "Clarification: distance reduced for smaller municipal areas; implementation modalities settled.", "significance": "major"}
+      }
+    },
+    {
+      "id": "rambha-devi-lmv-2024",
+      "match": ["rambha devi"],
+      "title": "Bajaj Allianz Gen. Insurance v. Rambha Devi (Constitution Bench)",
+      "case_number": "C.A. 841/2018",
+      "court": "Supreme Court of India",
+      "case_type": "Constitution Bench reference",
+      "status": "disposed",
+      "filed_year": 2018,
+      "themes": ["licensing", "insurance"],
+      "why_it_matters": "Five-judge bench (6 Nov 2024) settled whether an LMV licence covers transport vehicles under 7,500 kg — upholding Mukund Dewangan — while recording road-safety concerns about licensing for MoRTH to address through amendments.",
+      "latest_development": "Disposed 6 Nov 2024 by Constitution Bench.",
+      "order_notes": {
+        "2024-11-06": {"gist": "Constitution Bench: LMV licence holders may drive transport vehicles below 7,500 kg GVW; licensing-regime concerns flagged for MoRTH's pending MV Act amendments.", "significance": "major"}
+      }
+    },
+    {
+      "id": "gyan-prakash-1272-2019",
+      "match": ["gyan prakash"],
+      "date_min": "2019-01-01",
+      "title": "Gyan Prakash v. Union of India",
+      "case_number": "W.P.(C) 1272/2019",
+      "court": "Supreme Court of India",
+      "case_type": "PIL",
+      "status": "pending",
+      "filed_year": 2019,
+      "themes": ["highways", "road engineering", "institutions"],
+      "why_it_matters": "National Highway safety PIL built on the Control of National Highways (Land and Traffic) Act 2002 and Highway Administration Rules 2004 — pressing for functioning highway administrations. The Justice Sapre Road Safety Committee reports to the Court through this matter.",
+      "latest_development": "21 May 2025 (2025 INSC 753, Oka J): reportable order on highway safety under the 2002 Act; MoRTH directed to file details through the amicus curiae.",
+      "order_notes": {
+        "2025-05-21": {"gist": "Reportable order (Oka J) on NH safety under the 2002 Act/2004 Rules — highway administrations, enforcement machinery; MoRTH filings directed via amicus.", "significance": "major"}
+      }
+    },
+    {
+      "id": "gic-ap-2014",
+      "match": ["general insurance council"],
+      "title": "General Insurance Council v. State of A.P.",
+      "case_number": "(verify)",
+      "court": "Supreme Court of India",
+      "case_type": "Implementation petition",
+      "status": "disposed",
+      "filed_year": 2014,
+      "themes": ["victim compensation", "insurance"],
+      "why_it_matters": "Petition to enforce the Rajaseekaran order of 22 Apr 2014 across states — an example of how the master PIL's directions were operationalised through satellite litigation.",
+      "latest_development": "Disposed (last order Aug 2016).",
+      "order_notes": {}
+    },
+    {
+      "id": "common-cause-580-2003",
+      "match": ["common cause (a regd society)"],
+      "title": "Common Cause v. Union of India",
+      "case_number": "W.P.(C) 580/2003",
+      "court": "Supreme Court of India",
+      "case_type": "PIL",
+      "status": "disposed",
+      "filed_year": 2003,
+      "themes": ["road engineering", "legislation"],
+      "why_it_matters": "Early PIL on deficient road infrastructure and traffic-control devices. Dismissed (11 Apr 2008, Katju J) holding courts cannot direct legislation — the doctrinal gap that Rajaseekaran later filled through continuing mandamus.",
+      "latest_development": "Dismissed 11 Apr 2008.",
+      "order_notes": {
+        "2008-04-11": {"gist": "PIL seeking a Road Traffic Safety Act dismissed: courts cannot direct Parliament to legislate; judgment doubles as a critique of PIL overreach.", "significance": "major"}
+      }
+    },
+    {
+      "id": "avishek-goenka-2012",
+      "match": ["avishek goenka"],
+      "title": "Avishek Goenka v. Union of India",
+      "case_number": "W.P.(C) 265/2011",
+      "court": "Supreme Court of India",
+      "case_type": "PIL",
+      "status": "disposed",
+      "filed_year": 2011,
+      "themes": ["enforcement", "vehicle standards"],
+      "why_it_matters": "Banned black films / dark tinted glass on vehicles beyond prescribed visual light transmission (Apr 2012) on road-safety and crime-prevention grounds.",
+      "latest_development": "Disposed 27 Apr 2012.",
+      "order_notes": {
+        "2012-04-27": {"gist": "Black films and tints beyond prescribed VLT banned on all vehicles; police empowered to remove them on the spot.", "significance": "major"}
+      }
+    },
+    {
+      "id": "ajay-canu-1988",
+      "match": ["ajay canu"],
+      "title": "Ajay Canu v. Union of India",
+      "case_number": "(verify)",
+      "court": "Supreme Court of India",
+      "case_type": "Writ",
+      "status": "disposed",
+      "filed_year": 1987,
+      "themes": ["helmets", "enforcement"],
+      "why_it_matters": "Upheld compulsory helmet rules (1988) against constitutional challenge — the foundation for helmet mandates nationwide.",
+      "latest_development": "Disposed 29 Aug 1988.",
+      "order_notes": {
+        "1988-08-29": {"gist": "Compulsory helmet requirement upheld as a valid road-safety measure, not an unconstitutional restriction on personal liberty.", "significance": "major"}
+      }
+    },
+    {
+      "id": "arrive-safe-2014",
+      "match": ["arrive safe society"],
+      "title": "State of Haryana v. Arrive Safe Society of Chandigarh",
+      "case_number": "SLP(C) 2658/2014",
+      "court": "Supreme Court of India",
+      "case_type": "SLP (dismissed)",
+      "status": "disposed",
+      "filed_year": 2014,
+      "themes": ["drunk driving", "highways"],
+      "why_it_matters": "Precursor to K. Balu: SC refused to disturb the P&H High Court's interim orders against Haryana's policy of licensing liquor shops along National Highways, noting the MoRTH Road Safety Cell circular.",
+      "latest_development": "SLP dismissed 10 Mar 2014.",
+      "order_notes": {
+        "2014-03-10": {"gist": "SLP dismissed: Haryana's highway liquor-licence policy left to High Court scrutiny; MoRTH circular noted approvingly.", "significance": "major"}
+      }
+    }
+  ],
+  "notable_judgments": [
+    {"tid": 837924, "date": "2009-04-15", "title": "Sarla Verma v. Delhi Transport Corporation", "gist": "Standardised the multiplier method for motor accident compensation — the arithmetic every MACT in India now uses."},
+    {"tid": 139996215, "date": "2017-10-31", "title": "National Insurance Co. v. Pranay Sethi (Constitution Bench)", "gist": "Settled 'future prospects' additions and conventional heads for just compensation, resolving conflicting benches."},
+    {"tid": 41625467, "date": "2016-12-15", "title": "State of Tamil Nadu v. K. Balu", "gist": "Liquor vends banned within 500m of highways — drunk-driving prevention as a constitutional road-safety obligation."},
+    {"tid": 138121606, "date": "2024-11-06", "title": "Bajaj Allianz v. Rambha Devi (Constitution Bench)", "gist": "LMV licence holders may drive transport vehicles under 7,500 kg; licensing-reform concerns flagged to MoRTH."},
+    {"tid": 191389481, "date": "2022-02-17", "title": "Regional Transport Authority v. Shaju", "gist": "Upheld Kerala rule letting RTAs refuse replacement of a permit vehicle with an older one (S.83 MV Act) — vehicle age and road-worthiness as valid safety criteria."},
+    {"tid": 79026890, "date": "2012-01-12", "title": "Alister Anthony Pareira v. State of Maharashtra", "gist": "Upheld conviction and custodial sentence in the Mumbai drunk-driving pavement deaths case — deterrence in drunk-driving sentencing."},
+    {"tid": 86908489, "date": "2013-04-02", "title": "Reshma Kumari v. Madan Mohan", "gist": "Three-judge bench affirming Sarla Verma's multiplier approach — bound the compensation method ahead of Pranay Sethi."},
+    {"tid": 85494539, "date": "2022-12-15", "title": "Gohar Mohammed v. UP SRTC", "gist": "Nationwide Detailed Accident Report directions — police and insurer timelines that begin every compensation claim (also a tracked case)."}
+  ],
+  "borderline_excluded": [
+    {"why": "Transport aggregator regulation (bike taxis) — road safety cited but the core issue is platform licensing", "cases": ["Roppen Transportation v. UoI (2023)", "GNCTD v. Roppen (2023)"]},
+    {"why": "Vehicular pollution matter (Delhi), not crash safety — occasional adjacent orders (colour-coded stickers)", "cases": ["M.C. Mehta v. UoI"]},
+    {"why": "Disposed citing Rajaseekaran as already covering the field", "cases": ["Anti Corruption Council of India v. MoRTH (2021)"]},
+    {"why": "Driving-licence qualification notifications (Karnataka) — watch; may merit tracking if systemic directions issue", "cases": ["S.G. Jamaludheen v. State of Karnataka (2025)"]},
+    {"why": "MACT pendency grievance (Orissa) — individual relief but symptomatic; watch", "cases": ["Minati Dash v. Registrar, Orissa HC (2026)"]}
+  ]
+}

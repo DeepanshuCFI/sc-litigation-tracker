@@ -1,0 +1,400 @@
+{
+ "query": "\"Good Samaritan\" doctypes:supremecourt",
+ "docs": [
+  {
+   "tid": 79865001,
+   "catids": [
+    154,
+    249,
+    46,
+    44
+   ],
+   "doctype": 1000,
+   "publishdate": "2016-03-30",
+   "authorid": 1205,
+   "bench": [
+    1205,
+    1474
+   ],
+   "title": "Savelife Foundation & Anr vs Union Of India & Anr on 30 March, 2016",
+   "numcites": 30,
+   "numcitedby": 6,
+   "headline": "Ontario, Alberta and British Columbia offer protection  to  <b>good</b>\n<b>Samaritans</b>. In Ontario, the <b>Good</b> <b>Samaritan</b>  Act  2001,  by   Section  2  (1) ,\nprovides that except ... question  shall  be\nasked to such bystander or <b>good</b> <b>Samaritan</b>. \n  (2)  The  bystander  or  <b>good</b>  <b>Samaritan</b>  shall  be  suitably  rewarded   or\ncompensated to encourage other",
+   "docsize": 47135,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "A Mishra",
+   "authorEncoded": "a-mishra",
+   "citation": "AIR 2016 SUPREME COURT 1617"
+  },
+  {
+   "tid": 190237958,
+   "catids": [
+    53,
+    0,
+    118,
+    274
+   ],
+   "doctype": 1000,
+   "publishdate": "2012-08-03",
+   "authorid": 1214,
+   "bench": [
+    904,
+    1214
+   ],
+   "title": "State Tr.P.S.Lodhi Colony,New Delhi vs Sanjeev Nanda on 3 August, 2012",
+   "numcites": 42,
+   "numcitedby": 334,
+   "headline": " State Tr.P.S.Lodhi Colony,New Delhi vs Sanjeev Nanda on 3 August, 2012",
+   "docsize": 133453,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "D Verma",
+   "authorEncoded": "d-verma",
+   "citation": "AIR 2012 SUPREME COURT 3104"
+  },
+  {
+   "tid": 1873226,
+   "catids": [
+    430
+   ],
+   "doctype": 1000,
+   "publishdate": "2001-03-13",
+   "authorid": null,
+   "bench": [
+    2204,
+    2213
+   ],
+   "title": "Rathi Menon vs Union Of India on 13 March, 2001",
+   "numcites": 15,
+   "numcitedby": 425,
+   "headline": "happened to remain on the rail-track, and unless a <b>Good</b>\n<b>Samaritan</b>  had passed by that track during the night she had\nto  remain  there",
+   "docsize": 31575,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "citation": "AIR 2001 SUPREME COURT 1333"
+  },
+  {
+   "tid": 209154,
+   "catids": [
+    1,
+    154
+   ],
+   "doctype": 1000,
+   "publishdate": "1979-11-09",
+   "authorid": 2149,
+   "bench": [
+    2149,
+    2099,
+    2160
+   ],
+   "title": "Shiv Shanker Dal Mills Etc. Etc vs State Of Haryana & Ors. Etc on 9 November, 1979",
+   "numcites": 2,
+   "numcitedby": 196,
+   "headline": "When  we  reminded\t counsel  on  both  sides  of  these\nguidelines  of\t<b>Good</b>  <b>Samaritan</b>\t jurisprudence\tand  desired\nconsensual disposal  of these  cases, we  gratifyingly found\nwelcome",
+   "docsize": 18215,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "V R Iyer",
+   "authorEncoded": "v-r-iyer",
+   "citation": "1980 AIR 1037"
+  },
+  {
+   "tid": 1463544,
+   "catids": [
+    133,
+    46,
+    4
+   ],
+   "doctype": 1000,
+   "publishdate": "1980-02-01",
+   "authorid": 2099,
+   "bench": [
+    2099,
+    2149,
+    2154,
+    2159,
+    2160
+   ],
+   "title": "P. S. R. Sadhanantham vs Arunachalam & Anr on 1 February, 1980",
+   "numcites": 14,
+   "numcitedby": 183,
+   "headline": "locus  standi of  a <b>Good</b>  <b>Samaritan</b>, if  we may use that\nexpression to  refer to a public-spirited citizen seeking to\ntrigger the legal process",
+   "docsize": 50258,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "R S Pathak",
+   "authorEncoded": "r-s-pathak",
+   "citation": "1980 AIR 856"
+  },
+  {
+   "tid": 1309066,
+   "catids": [
+    9,
+    0,
+    2,
+    2048,
+    52
+   ],
+   "doctype": 1000,
+   "publishdate": "2003-11-04",
+   "authorid": 1880,
+   "bench": [
+    2215,
+    1880
+   ],
+   "title": "Banti @ Guddu vs State Of Madhya Pradesh on 4 November, 2003",
+   "numcites": 12,
+   "numcitedby": 187,
+   "headline": "public life. Innocent women are the victims, and the fate of\n<b>good</b> <b>Samaritans</b> like Pravin Pathak (hereinafter referred to as &#x27;deceased&#x27;)\nis untimely ... days when people used\nto wish that the tribe of <b>good</b> <b>Samaritans</b> like Abu Ben Adhem would\nincrease. On 30.9.1991, deceased was allegedly stabbed",
+   "docsize": 17874,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "A Pasayat",
+   "authorEncoded": "a-pasayat",
+   "citation": "AIR 2004 SUPREME COURT 261"
+  },
+  {
+   "tid": 1144681,
+   "catids": [
+    697,
+    232
+   ],
+   "doctype": 1000,
+   "publishdate": "1978-10-04",
+   "authorid": 2149,
+   "bench": [
+    2149,
+    2159,
+    2161
+   ],
+   "title": "V. C. Rangadurai vs D. Gopalan And Ors on 4 October, 1978",
+   "numcites": 13,
+   "numcitedby": 99,
+   "headline": "ethics in what\n     he might  have thought was a gainful yet <b>good</b> <b>samaritan</b>\n     move. When\t the move failed and there was no likelihood",
+   "docsize": 50056,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "V R Iyer",
+   "authorEncoded": "v-r-iyer",
+   "citation": "1979 AIR 281"
+  },
+  {
+   "tid": 160876193,
+   "catids": [
+    2154,
+    2162,
+    2156,
+    73
+   ],
+   "doctype": 1000,
+   "publishdate": "2020-12-08",
+   "authorid": 1612,
+   "bench": [
+    675,
+    1612,
+    931
+   ],
+   "title": "Anita Sharma vs The New India Assurance Co. Ltd. on 8 December, 2020",
+   "numcites": 7,
+   "numcitedby": 126,
+   "headline": "Page | 8\n\fthe hospital. Ritesh Pandey (AW­3) acted as a <b>good</b> <b>samaritan</b> and a\n\nresponsible citizen, and the High Court ought not to have",
+   "docsize": 30247,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "S Kant",
+   "authorEncoded": "s-kant",
+   "citation": "AIR 2021 SUPREME COURT 302"
+  },
+  {
+   "tid": 165352093,
+   "catids": [
+    33
+   ],
+   "doctype": 1000,
+   "publishdate": "2014-04-22",
+   "authorid": 1606,
+   "bench": [
+    675,
+    1606,
+    1600
+   ],
+   "title": "S.Rajaseekaran vs Union Of India & Ors on 22 April, 2014",
+   "numcites": 39,
+   "numcitedby": 64,
+   "headline": "emergency care for RTA\n           victims and the legal protection available  to  <b>good</b>  <b>Samaritans</b>\n           who offer help to a victim of a road accident.\n \n\n       (vi)  There ... saved by timely medical attention.  Lack of  adequate  number\nof <b>good</b> <b>samaritans</b>; squabbles between  police  stations  and  administrative\nauthorities over jurisdiction;  lack  of  quick  response",
+   "docsize": 81309,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "R Gogoi",
+   "authorEncoded": "r-gogoi",
+   "citation": "2014 AIR SCW 3308"
+  },
+  {
+   "tid": 874714,
+   "catids": [
+    4,
+    406,
+    535,
+    133,
+    107
+   ],
+   "doctype": 1000,
+   "publishdate": "1956-10-03",
+   "authorid": 2126,
+   "bench": [
+    2126,
+    1758,
+    2124,
+    2125
+   ],
+   "title": "Niranjan Singh vs The State Of Uttar Pradesh(And ... on 3 October, 1956",
+   "numcites": 10,
+   "numcitedby": 64,
+   "headline": "information.,  In\nshort,\tthe  defence  is that these two\t accused  were\t<b>good</b>\n<b>Samaritans</b>  who\t tried to help the family of Atal  Singh  in\ntheir  hour",
+   "docsize": 28550,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "P G Menon",
+   "authorEncoded": "p-g-menon",
+   "citation": "1957 AIR 142"
+  },
+  {
+   "tid": 57541479,
+   "catids": [
+    274,
+    9,
+    11
+   ],
+   "doctype": 1000,
+   "publishdate": "2010-04-28",
+   "authorid": null,
+   "bench": [
+    1910,
+    1503
+   ],
+   "title": "Vijender Kumar @ Vijay vs State Of Delhi on 28 April, 2010",
+   "numcites": 3,
+   "numcitedby": 3,
+   "headline": "found the injured lying unconscious on\nthe roadside and as a <b>good</b> <b>Samaritan</b> had brought him to the hospital after having\n\fpicked him from there",
+   "docsize": 7428,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "citation": "2010 AIR SCW 4414"
+  },
+  {
+   "tid": 180054699,
+   "catids": [
+    46
+   ],
+   "doctype": 1000,
+   "publishdate": "2013-04-10",
+   "authorid": 904,
+   "bench": [
+    904,
+    1509
+   ],
+   "title": "Aarushi Dhasmana vs Union Of India & Ors on 10 April, 2013",
+   "numcites": 1,
+   "numcitedby": 4,
+   "headline": "them.\nThe doors of this Court have been knocked by  a  <b>good</b>  <b>Samaritan</b>  and  since\nthis Court has a fundamental duty  to  look  after",
+   "docsize": 23135,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "K Radhakrishnan",
+   "authorEncoded": "k-radhakrishnan",
+   "citation": "2013 AIR SCW 3653"
+  },
+  {
+   "tid": 138121606,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2024-11-06",
+   "authorid": 1126,
+   "bench": [
+    159,
+    2049,
+    1126,
+    429
+   ],
+   "title": "M/S. Bajaj Alliance General Insurance ... vs Rambha Devi on 6 November, 2024",
+   "numcites": 124,
+   "numcitedby": 0,
+   "headline": "Risks\n      Chapter VIII- Offences, Penalties and Procedure\n      Chapter IX- Examination of <b>Good</b> <b>Samaritan</b> and Enquiry\n\n                                Page 34 of 126 \n  \f21. This court, to effectively address",
+   "docsize": 267862,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "H Roy",
+   "authorEncoded": "h-roy"
+  },
+  {
+   "tid": 153176766,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2025-12-18",
+   "authorid": null,
+   "bench": null,
+   "title": "Telangana State Level Police ... vs Penjarla Vijay Kumar on 18 December, 2025",
+   "numcites": 21,
+   "numcitedby": 0,
+   "headline": "make a provision for protection of <b>Good</b> <b>Samaritans</b>.\n  6. The Notes on clauses explain in detail the various provisions contained in the Bill",
+   "docsize": 79380,
+   "fragment": true,
+   "docsource": "Supreme Court of India"
+  },
+  {
+   "tid": 92556884,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2026-04-06",
+   "authorid": 302,
+   "bench": [
+    302
+   ],
+   "title": "Sajal Bose vs The State Of West Bengal on 6 April, 2026",
+   "numcites": 25,
+   "numcitedby": 0,
+   "headline": "between the\n  parties. It was submitted that the appellants\n  acting as <b>good</b> <b>Samaritans</b> had, in fact, intervened\n  only to resolve the dispute which had flared",
+   "docsize": 51659,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "V Nath",
+   "authorEncoded": "v-nath"
+  },
+  {
+   "tid": 139113182,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2024-03-18",
+   "authorid": 1671,
+   "bench": [
+    1671,
+    1126
+   ],
+   "title": "Periyasamy vs State Rep. By The Inspector Of Police on 18 March, 2024",
+   "numcites": 17,
+   "numcitedby": 0,
+   "headline": "embroiled in the controversy; (c) A-2 was in fact a “<b>good</b>\n\n<b>Samaritan</b>” ; (d) that the witnesses were deposing the accused persons at the\n\nbehest",
+   "docsize": 48302,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "S Karol",
+   "authorEncoded": "s-karol"
+  },
+  {
+   "tid": 87207704,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2025-09-11",
+   "authorid": null,
+   "bench": null,
+   "title": "Mohammad Afzal Mohammad Sharif vs The State Of Maharashtra on 11 September, 2025",
+   "numcites": 14,
+   "numcitedby": 0,
+   "headline": "fell unconscious on the road and was\n\ntaken by two <b>good</b> <b>samaritans</b> to Akola Main Hospital. His father,\n\nthereafter, took him to Icon Multispecialty Hospital",
+   "docsize": 36579,
+   "fragment": true,
+   "docsource": "Supreme Court of India"
+  }
+ ]
+}

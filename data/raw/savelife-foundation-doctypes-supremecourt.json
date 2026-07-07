@@ -1,0 +1,31 @@
+{
+ "query": "\"SaveLIFE Foundation\" doctypes:supremecourt",
+ "docs": [
+  {
+   "tid": 79865001,
+   "catids": [
+    154,
+    249,
+    46,
+    44
+   ],
+   "doctype": 1000,
+   "publishdate": "2016-03-30",
+   "authorid": 1205,
+   "bench": [
+    1205,
+    1474
+   ],
+   "title": "<b>Savelife</b> <b>Foundation</b> & Anr vs Union Of India & Anr on 30 March, 2016",
+   "numcites": 30,
+   "numcitedby": 6,
+   "headline": "<b>Savelife</b> <b>Foundation</b> &amp; Anr vs Union Of India &amp; Anr on 30 March, 2016 \n\n Equivalent citations: AIR 2016 SUPREME COURT ... INDIA\nCIVIL ORIGINAL JURISDICTION\nWRIT PETITION (C) NO.235 OF 2012\n<b>Savelife</b> <b>Foundation</b> &amp; Anr.                        … Petitioners\nVs.\nUnion of India &amp; Anr.                             … Respondents\n                                  JUDGM",
+   "docsize": 47135,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "A Mishra",
+   "authorEncoded": "a-mishra",
+   "citation": "AIR 2016 SUPREME COURT 1617"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "query": "\"Gohar Mohammed\" doctypes:supremecourt",
+ "docs": [
+  {
+   "tid": 109592543,
+   "catids": null,
+   "doctype": 1000,
+   "publishdate": "2022-12-15",
+   "authorid": 1640,
+   "bench": [
+    1640,
+    971
+   ],
+   "title": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 15 December, 2022",
+   "numcites": 14,
+   "numcitedby": 13,
+   "headline": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 15 December, 2022 \n\n Author:  J.K. Maheshwari  \n\n Bench:  J.K. Maheshwari ,  S. Abdul Nazeer  \n\n                                                                         REPORTABLE ... ARISING OUT OF SPECIAL LEAVE PETITION (C) NO. 32448 OF 2018]\n\n\n          <b>Gohar</b> <b>Mohammed</b>                                                 ...Appellant\n\n                                                  Versus\n\n\n          Uttar Pradesh State Road Transport Corporation\n          &amp; others                                                      ...Respondent",
+   "docsize": 107072,
+   "fragment": true,
+   "docsource": "Supreme Court of India",
+   "author": "J K Maheshwari",
+   "authorEncoded": "j-k-maheshwari"
+  }
+ ]
+}
