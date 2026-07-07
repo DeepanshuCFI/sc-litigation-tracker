@@ -410,6 +410,31 @@
           "significance": "major"
         }
       }
+    },
+    {
+      "id": "shishupal-homemaker-2026",
+      "match": [
+        "shishupal"
+      ],
+      "title": "Shishupal @ Shish Ram v. Surjeet",
+      "case_number": "C.A. of 2026 (SLP(C) 33915/2025) · 2026 INSC 634",
+      "court": "Supreme Court of India",
+      "case_type": "Appeal with systemic directions",
+      "status": "disposed",
+      "filed_year": 2025,
+      "themes": [
+        "victim compensation",
+        "MACT reform",
+        "homemakers"
+      ],
+      "why_it_matters": "The homemaker-valuation judgment: fixed ₹30,000/month as the floor value of a homemaker's work — a new 'loss of domestic care' head rising 10% cumulatively every three years — recast homemakers as 'Nation Builders', and issued nationwide directions to High Courts and tribunals on clearing decades-old MACT appeals. The family here had waited 25 years.",
+      "latest_development": "Decided 11 Jun 2026 (Karol & Kotiswar Singh JJ); judgment circulated to the Registrars General of all High Courts for compliance.",
+      "order_notes": {
+        "2026-06-11": {
+          "gist": "Reportable judgment: composite ₹30,000/month 'loss of domestic care' head created (stand-in minimum income for non-earning homemakers; additional to proved income otherwise); chronological oldest-first listing of MACT appeals in all High Courts; tribunals nudged to S.169 summary procedure; Pranay Sethi heads with 10%/3-year enhancement strictly enforced.",
+          "significance": "major"
+        }
+      }
     }
   ],
   "notable_judgments": [
@@ -562,6 +587,12 @@
       "date": "2017-07-03",
       "title": "Mukund Dewangan v. Oriental Insurance (3-judge)",
       "gist": "LMV licence holders may drive transport vehicles under 7,500 kg — later affirmed by the Rambha Devi Constitution Bench."
+    },
+    {
+      "tid": 158690569,
+      "date": "2026-06-11",
+      "title": "Shishupal @ Shish Ram v. Surjeet",
+      "gist": "Created the 'loss of domestic care' head: ₹30,000/month — rising 10% every three years — as the minimum value of a homemaker's work in MACT cases; a stand-in income for non-earning homemakers, additional to proved income for working women."
     }
   ],
   "borderline_excluded": [

@@ -46,7 +46,9 @@
     "\"road safety audit\" doctypes:supremecourt",
     "\"cashless treatment\" doctypes:supremecourt",
     "\"golden hour\" doctypes:supremecourt",
-    "\"overloading\" \"motor vehicles\" doctypes:supremecourt"
+    "\"overloading\" \"motor vehicles\" doctypes:supremecourt",
+    "\"homemaker\" compensation doctypes:supremecourt",
+    "\"loss of domestic care\" doctypes:supremecourt"
   ],
   "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses."
 }
