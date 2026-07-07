@@ -6,21 +6,27 @@
       "title": "S. Rajaseekaran v. Union of India",
       "case_number": "W.P.(C) 295/2012",
       "why_seeded": "Master road-safety PIL: SC Committee on Road Safety (Sapre Committee), Jan 2024 hit-and-run compensation directions, MACT reforms, ongoing monitoring.",
-      "search_queries": ["\"Rajaseekaran\" doctypes:supremecourt"]
+      "search_queries": [
+        "\"Rajaseekaran\" doctypes:supremecourt"
+      ]
     },
     {
       "id": "savelife-235-2012",
       "title": "SaveLIFE Foundation v. Union of India",
       "case_number": "W.P.(C) 235/2012",
       "why_seeded": "Good Samaritan PIL — 2016 guidelines given force of law.",
-      "search_queries": ["\"SaveLIFE Foundation\" doctypes:supremecourt"]
+      "search_queries": [
+        "\"SaveLIFE Foundation\" doctypes:supremecourt"
+      ]
     },
     {
       "id": "gohar-mohammed-2022",
       "title": "Gohar Mohammed v. Uttar Pradesh SRTC",
       "case_number": "C.A. 9322/2022",
       "why_seeded": "Systemic MACT directions: DAR workflow, police/insurer timelines.",
-      "search_queries": ["\"Gohar Mohammed\" doctypes:supremecourt"]
+      "search_queries": [
+        "\"Gohar Mohammed\" doctypes:supremecourt"
+      ]
     }
   ],
   "discovery_queries": [
@@ -35,7 +41,12 @@
     "\"National Road Safety\" doctypes:supremecourt",
     "\"hit and run\" compensation doctypes:supremecourt",
     "\"driving licence\" directions doctypes:supremecourt",
-    "\"road engineering\" OR \"crash barrier\" doctypes:supremecourt"
+    "\"road engineering\" OR \"crash barrier\" doctypes:supremecourt",
+    "\"suo motu\" \"road accident\" doctypes:supremecourt",
+    "\"road safety audit\" doctypes:supremecourt",
+    "\"cashless treatment\" doctypes:supremecourt",
+    "\"golden hour\" doctypes:supremecourt",
+    "\"overloading\" \"motor vehicles\" doctypes:supremecourt"
   ],
   "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses."
 }

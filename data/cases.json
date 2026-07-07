@@ -2,8 +2,8 @@
  "meta": {
   "built": "2026-07-07",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 570,
-  "assigned_docs": 187
+  "raw_docs": 572,
+  "assigned_docs": 193
  },
  "cases": [
   {
@@ -1516,6 +1516,110 @@
    "order_count": 1,
    "first_order": "2014-03-10",
    "latest_order": "2014-03-10"
+  },
+  {
+   "id": "parmanand-katara-1989",
+   "title": "Pt. Parmanand Katara v. Union of India",
+   "case_number": "W.P.(Crl) 270/1988",
+   "court": "Supreme Court of India",
+   "case_type": "PIL",
+   "status": "disposed",
+   "filed_year": 1988,
+   "themes": [
+    "post-crash care",
+    "good samaritan"
+   ],
+   "why_it_matters": "The foundation of post-crash care law in India: every doctor, government or private, must provide immediate emergency treatment to accident victims without waiting for police formalities. Every later Good Samaritan and cashless-treatment direction builds on this.",
+   "latest_development": "Disposed 28 Aug 1989; the duty-to-treat principle now underpins S.134A MV Act and PM RAHAT.",
+   "orders": [
+    {
+     "date": "1989-08-28",
+     "tid": 498126,
+     "link": "https://indiankanoon.org/doc/498126/",
+     "gist": "Judgment: the right to life obliges doctors to treat road-accident victims immediately; procedural formalities (police clearance, medico-legal registration) cannot delay emergency care.",
+     "significance": "major"
+    }
+   ],
+   "order_count": 1,
+   "first_order": "1989-08-28",
+   "latest_order": "1989-08-28"
+  },
+  {
+   "id": "paramjit-bhasin-2005",
+   "title": "Paramjit Bhasin v. Union of India",
+   "case_number": "W.P.(C) 136/2003",
+   "court": "Supreme Court of India",
+   "case_type": "PIL",
+   "status": "disposed",
+   "filed_year": 2003,
+   "themes": [
+    "overloading",
+    "enforcement",
+    "highways"
+   ],
+   "why_it_matters": "The overloading case: struck at state notifications that let overloaded commercial vehicles ply on payment, holding axle-load limits under the MV Act must be enforced, not monetised — overloading being a major crash and road-damage cause.",
+   "latest_development": "Disposed 9 Nov 2005 (Pasayat & Thakker JJ).",
+   "orders": [
+    {
+     "date": "2005-11-09",
+     "tid": 1375445,
+     "link": "https://indiankanoon.org/doc/1375445/",
+     "gist": "Judgment on Art. 32: state notifications permitting overloaded vehicles to operate on compounding payments held impermissible; load limits under the MV Act to be strictly enforced.",
+     "significance": "major"
+    }
+   ],
+   "order_count": 1,
+   "first_order": "2005-11-09",
+   "latest_order": "2005-11-09"
+  },
+  {
+   "id": "jai-prakash-mact",
+   "title": "Jai Prakash v. National Insurance Co.",
+   "case_number": "SLP(C) 11801-11804/2005",
+   "court": "Supreme Court of India",
+   "case_type": "Appeal with systemic directions",
+   "status": "disposed",
+   "filed_year": 2005,
+   "themes": [
+    "victim compensation",
+    "MACT reform",
+    "hit-and-run"
+   ],
+   "why_it_matters": "The pre-Gohar Mohammed reform vehicle: a reportable three-judge order (17 Dec 2009) confronting four systemic MACT failures — uncompensated victims of hit-and-run and uninsured vehicles, delayed claim registration, and police-tribunal coordination — with follow-up orders into 2018.",
+   "latest_development": "Disposed; monitoring orders ran through Feb 2018. Its reporting mechanism was later expanded by Gohar Mohammed (2022).",
+   "orders": [
+    {
+     "date": "2009-12-17",
+     "tid": 49727603,
+     "link": "https://indiankanoon.org/doc/49727603/",
+     "gist": "Reportable order (Raveendran, Radhakrishnan, Sharma JJ) addressing four recurring MACT problems, including the ~20% of victims left uncompensated by hit-and-run and uninsured vehicles, and directing procedural fixes.",
+     "significance": "major"
+    },
+    {
+     "date": "2017-07-14",
+     "tid": 191988517,
+     "link": "https://indiankanoon.org/doc/191988517/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2017-11-06",
+     "tid": 73448494,
+     "link": "https://indiankanoon.org/doc/73448494/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2018-02-07",
+     "tid": 152893409,
+     "link": "https://indiankanoon.org/doc/152893409/",
+     "gist": "",
+     "significance": "routine"
+    }
+   ],
+   "order_count": 4,
+   "first_order": "2009-12-17",
+   "latest_order": "2018-02-07"
   }
  ],
  "notable_judgments": [
@@ -1541,11 +1645,60 @@
    "link": "https://indiankanoon.org/doc/191389481/"
   },
   {
+   "tid": 117494438,
+   "date": "2021-11-16",
+   "title": "Kurvan Ansari v. Shyam Kishore Murmu",
+   "gist": "Raised the notional-income basis for deceased children, criticising states' failure to update compensation schedules.",
+   "link": "https://indiankanoon.org/doc/117494438/"
+  },
+  {
+   "tid": 106405133,
+   "date": "2021-01-05",
+   "title": "Kirti v. Oriental Insurance",
+   "gist": "Fixed notional income for homemakers and extended future prospects to notional-income cases — recognising unpaid domestic work.",
+   "link": "https://indiankanoon.org/doc/106405133/"
+  },
+  {
+   "tid": 142302016,
+   "date": "2020-06-30",
+   "title": "United India Insurance v. Satinder Kaur",
+   "gist": "Consolidated the post-Pranay Sethi law on just compensation — income assessment, future prospects and conventional heads.",
+   "link": "https://indiankanoon.org/doc/142302016/"
+  },
+  {
+   "tid": 180443810,
+   "date": "2020-02-05",
+   "title": "Kajal v. Jagdish Chand",
+   "gist": "A comprehensive framework for compensating a child left with 100% disability — attendant care, future treatment, interest.",
+   "link": "https://indiankanoon.org/doc/180443810/"
+  },
+  {
+   "tid": 175246407,
+   "date": "2018-09-18",
+   "title": "Magma General Insurance v. Nanu Ram",
+   "gist": "Recognised loss of consortium in its spousal, parental and filial forms as distinct heads of compensation.",
+   "link": "https://indiankanoon.org/doc/175246407/"
+  },
+  {
+   "tid": 153452910,
+   "date": "2018-04-06",
+   "title": "Mangla Ram v. Oriental Insurance",
+   "gist": "MACT claims are decided on preponderance of probability — strict criminal-trial proof standards do not apply.",
+   "link": "https://indiankanoon.org/doc/153452910/"
+  },
+  {
    "tid": 139996215,
    "date": "2017-10-31",
    "title": "National Insurance Co. v. Pranay Sethi (Constitution Bench)",
    "gist": "Settled 'future prospects' additions and conventional heads for just compensation, resolving conflicting benches.",
    "link": "https://indiankanoon.org/doc/139996215/"
+  },
+  {
+   "tid": 120470411,
+   "date": "2017-07-03",
+   "title": "Mukund Dewangan v. Oriental Insurance (3-judge)",
+   "gist": "LMV licence holders may drive transport vehicles under 7,500 kg — later affirmed by the Rambha Devi Constitution Bench.",
+   "link": "https://indiankanoon.org/doc/120470411/"
   },
   {
    "tid": 41625467,
@@ -1555,11 +1708,25 @@
    "link": "https://indiankanoon.org/doc/41625467/"
   },
   {
+   "tid": 155597603,
+   "date": "2015-03-30",
+   "title": "State of Punjab v. Saurabh Bakshi",
+   "gist": "Deterrent sentencing in rash-driving deaths reiterated, with a call to the legislature to revisit inadequate penalties.",
+   "link": "https://indiankanoon.org/doc/155597603/"
+  },
+  {
    "tid": 86908489,
    "date": "2013-04-02",
    "title": "Reshma Kumari v. Madan Mohan",
    "gist": "Three-judge bench affirming Sarla Verma's multiplier approach — bound the compensation method ahead of Pranay Sethi.",
    "link": "https://indiankanoon.org/doc/86908489/"
+  },
+  {
+   "tid": 190237958,
+   "date": "2012-08-03",
+   "title": "State v. Sanjeev Nanda (BMW hit-and-run)",
+   "gist": "Drunk-driving death treated as culpable homicide (S.304 Part II) — a marker for the accountability of intoxicated drivers.",
+   "link": "https://indiankanoon.org/doc/190237958/"
   },
   {
    "tid": 79026890,
@@ -1574,6 +1741,62 @@
    "title": "Sarla Verma v. Delhi Transport Corporation",
    "gist": "Standardised the multiplier method for motor accident compensation — the arithmetic every MACT in India now uses.",
    "link": "https://indiankanoon.org/doc/837924/"
+  },
+  {
+   "tid": 1827019,
+   "date": "2004-01-05",
+   "title": "National Insurance Co. v. Swaran Singh (3-judge)",
+   "gist": "Licence-defect defences narrowed: the insurer must prove a wilful, fundamental breach to escape third-party liability; pay-and-recover preserved.",
+   "link": "https://indiankanoon.org/doc/1827019/"
+  },
+  {
+   "tid": 47966,
+   "date": "2002-12-03",
+   "title": "Nagappa v. Gurudayal Singh",
+   "gist": "Tribunals may award compensation beyond the amount claimed — just compensation is not capped by the pleading.",
+   "link": "https://indiankanoon.org/doc/47966/"
+  },
+  {
+   "tid": 611175,
+   "date": "2000-05-04",
+   "title": "Dalbir Singh v. State of Haryana",
+   "gist": "Sentencing in S.304A road-death cases: leniency towards rash drivers undermines deterrence — the custodial norm affirmed.",
+   "link": "https://indiankanoon.org/doc/611175/"
+  },
+  {
+   "tid": 772259,
+   "date": "1996-07-17",
+   "title": "Sohan Lal Passi v. P. Sesh Reddy",
+   "gist": "An insurer escapes liability only for the insured's wilful breach of licence conditions — protecting third-party claimants.",
+   "link": "https://indiankanoon.org/doc/772259/"
+  },
+  {
+   "tid": 1554972,
+   "date": "1996-05-07",
+   "title": "U.P. SRTC v. Trilok Chandra",
+   "gist": "Recalibrated the multiplier method and capped multipliers — the bridge between Susamma Thomas and Sarla Verma.",
+   "link": "https://indiankanoon.org/doc/1554972/"
+  },
+  {
+   "tid": 1683465,
+   "date": "1993-01-06",
+   "title": "G.M., Kerala SRTC v. Susamma Thomas",
+   "gist": "Established the multiplier method as the governing approach to computing fatal-accident compensation.",
+   "link": "https://indiankanoon.org/doc/1683465/"
+  },
+  {
+   "tid": 712469,
+   "date": "1991-07-17",
+   "title": "Shivaji Dayanu Patil v. Vatschala Uttam More",
+   "gist": "'Arising out of the use of a motor vehicle' read expansively — a tanker explosion hours after the collision remained compensable.",
+   "link": "https://indiankanoon.org/doc/712469/"
+  },
+  {
+   "tid": 987419,
+   "date": "1977-02-09",
+   "title": "Manjusri Raha v. B.L. Gupta",
+   "gist": "Early three-judge call for realistic, non-conservative compensation in fatal road accidents.",
+   "link": "https://indiankanoon.org/doc/987419/"
   }
  ],
  "borderline_excluded": [

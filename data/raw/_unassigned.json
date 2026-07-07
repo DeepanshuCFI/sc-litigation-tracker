@@ -51,16 +51,6 @@
   ]
  },
  {
-  "tid": 49727603,
-  "date": "2009-12-17",
-  "title": "Jai Prakash vs M/S. National Insurance Co. & Ors on 17 December, 2009",
-  "queries": [
-   "\"driving licence\" directions doctypes:supremecourt",
-   "\"hit and run\" compensation doctypes:supremecourt",
-   "\"road safety\" doctypes:supremecourt"
-  ]
- },
- {
   "tid": 144382043,
   "date": "2026-05-26",
   "title": "In Re: Illegal Sand Mining In The ... vs The State Of Rajasthan on 26 May, 2026",
@@ -1548,15 +1538,6 @@
   ]
  },
  {
-  "tid": 152893409,
-  "date": "2018-02-07",
-  "title": "Jai Prakash vs M/S. National Insurance Co. . on 7 February, 2018",
-  "queries": [
-   "\"Rajaseekaran\" doctypes:scorders",
-   "\"road safety\" doctypes:scorders"
-  ]
- },
- {
   "tid": 110430543,
   "date": "2021-11-12",
   "title": "Anti Corruption Council Of India vs Ministry Of Road Transport And Highways on 12 November, 2021",
@@ -1570,15 +1551,6 @@
   "title": "Mr. Gyan Prakash vs Union Of India Rep.By Road Tpt.& H. on 21 April, 2014",
   "queries": [
    "\"Rajaseekaran\" doctypes:scorders"
-  ]
- },
- {
-  "tid": 191988517,
-  "date": "2017-07-14",
-  "title": "Jai Prakash vs M/S. National Insurance Co. . on 14 July, 2017",
-  "queries": [
-   "\"Rajaseekaran\" doctypes:scorders",
-   "\"road safety\" doctypes:scorders"
   ]
  },
  {
@@ -1659,14 +1631,6 @@
   "tid": 152331237,
   "date": "2021-06-29",
   "title": "Rakesh Kumar vs The State Of Haryana on 29 June, 2021",
-  "queries": [
-   "\"road safety\" doctypes:scorders"
-  ]
- },
- {
-  "tid": 73448494,
-  "date": "2017-11-06",
-  "title": "Jai Prakash vs M/S. National Insurance Co. . on 6 November, 2017",
   "queries": [
    "\"road safety\" doctypes:scorders"
   ]

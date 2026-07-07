@@ -6407,5 +6407,27 @@
   "queries": [
    "\"road accident\" directions doctypes:supremecourt"
   ]
+ },
+ "498126": {
+  "tid": 498126,
+  "title": "Pt. Parmanand Katara vs Union Of India & Ors on 28 August, 1989",
+  "publishdate": "1989-08-28",
+  "docsource": "Supreme Court of India",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "manual-research-jul2026"
+  ]
+ },
+ "1375445": {
+  "tid": 1375445,
+  "title": "Paramjit Bhasin And Ors vs Union Of India And Ors on 9 November, 2005",
+  "publishdate": "2005-11-09",
+  "docsource": "Supreme Court of India",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "manual-research-jul2026"
+  ]
  }
 }
