@@ -3,26 +3,7 @@
  "fromdate_window": "28-05-2026",
  "search_pages": 30,
  "approx_cost_inr": 15.0,
- "new_docs_total": 3,
+ "new_docs_total": 0,
  "cases_with_new_orders": [],
- "new_unassigned_candidates": [
-  {
-   "tid": 187324815,
-   "date": "2026-06-11",
-   "title": "Atul Chauhan vs State Of Haryana on 11 June, 2026",
-   "headline": " Atul Chauhan vs State Of Haryana on 11 June, 2026 \n\n Author:  Sanjay Karol  \n\n Bench:  Sanjay"
-  },
-  {
-   "tid": 177198562,
-   "date": "2026-06-24",
-   "title": "Shankar Dutt vs United India Insurance Co. Ltd on 24 June, 2026",
-   "headline": " Shankar Dutt vs United India Insurance Co. Ltd on 24 June, 2026 \n\n 2026 INSC 656"
-  },
-  {
-   "tid": 164414205,
-   "date": "2026-07-01",
-   "title": "Rashmirekha Tripathy vs The Branch Manager (Legal Claims) ... on 1 July, 2026",
-   "headline": " Rashmirekha Tripathy vs The Branch Manager (Legal Claims) ... on 1 July, 2026 \n\n Author:  Sanjay Karol"
-  }
- ]
+ "new_unassigned_candidates": []
 }
