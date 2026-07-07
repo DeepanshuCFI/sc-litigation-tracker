@@ -22,6 +22,9 @@ Approved and implemented 7 Jul 2026 (Parliament-tracker pattern: flat JSON + sta
 - Rebuild chain: curation.json → build_registry.py → cases.json → build_dashboard.py → dashboard/index.html
 - refresh.py orchestrates the whole chain + writes data/refresh_report.json for the curation session
 
+- [x] Same-day expansions (7 Jul, on Deepanshu's asks): Shishupal v. Surjeet (₹30k/month homemaker head) in docket + precedent feed; pedestrian sweep → Re: Fundamental Right to Walk and Footpath tracked (2026 INSC 647), Rajaseekaran 14-05-2025 Art-21 footpath order annotated, Baby Sakshi Greola precedent, Raturi + encroachment line on watchlist; battery now 23 queries. Registry: 18 cases / 186 orders / 27 precedents.
+- [x] Design-system compliance pass vs CFI_Skill v2.2: all colors token-derived (color-mix), CTA trailing arrows, 22% hero glow, 44px touch targets, exact max-widths, verified at 375/768/1280. Card radius settled at 16px (real rounded-2xl rendering; spec's "12px" prose is a slip) — Deepanshu delegated the call 7 Jul 2026.
+
 ## Deviations
 - Dashboard eyebrow changed to avoid all-caps brand name (design-system rule)
 - Added `monitoring` as a third case status (Gohar Mohammed: disposed but compliance-monitored via MA)

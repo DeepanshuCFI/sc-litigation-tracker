@@ -4,9 +4,15 @@
 Layout follows the Crashfree India design system (CFI_Skill v2.2) to the letter:
 section wrapper (max-w-7xl, px-6/10, py-24/32), background rotation
 (background -> brand-lite -> brand), section anatomy (eyebrow -> two-line H2 ->
-lead -> grid), Montserrat + Geist only, semantic color tokens only.
+lead -> grid), Montserrat + Geist only, semantic color tokens only (all tints
+via color-mix from :root tokens — never hardcode a color below :root).
 The docket is split into three sections: PIL & Writs / Suo Motu / Appeals &
 References — cases self-sort by case_type.
+
+Settled design decision (Deepanshu, 7 Jul 2026): card radius is 16px — the
+real rendering of the spec's `rounded-2xl` class on the Tailwind stack that
+crashfreeindia.org uses; the spec prose's "(12px)" is a transcription slip.
+Featured panels (brand-section cards) are 24px (`rounded-3xl`).
 """
 
 import json
