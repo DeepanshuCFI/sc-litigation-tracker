@@ -55,6 +55,27 @@
      "authority": "Highway Administrations", "granted": "2 months", "due": "2025-07-21", "theme": "highways"},
     {"id": "gyanprakash-20250521-morth", "case_id": "gyan-prakash-1272-2019", "order_date": "2025-05-21", "order_tid": 85517552,
      "directive": "File an affidavit on the grievance-redressal machinery under the Control of National Highways (Land and Traffic) Act 2002, with wide publicity of the mechanism.",
-     "authority": "MoRTH", "granted": "3 months", "due": "2025-08-21", "theme": "institutions"}
+     "authority": "MoRTH", "granted": "3 months", "due": "2025-08-21", "theme": "institutions"},
+
+    {"id": "rajaseekaran-2017-policy", "case_id": "rajaseekaran-295-2012", "order_date": "2017-11-30", "order_tid": 145033342,
+     "directive": "Every State/UT to formulate and notify a State Road Safety Policy (deadline set at 31 Dec 2017); a foundational obligation the Court continues to monitor.",
+     "authority": "States / UTs", "granted": "by 31 Dec 2017", "due": "2017-12-31", "theme": "institutions", "status": "ongoing", "historical": true},
+    {"id": "rajaseekaran-2017-leadagency", "case_id": "rajaseekaran-295-2012", "order_date": "2017-11-30", "order_tid": 145033342,
+     "directive": "Every State/UT to establish a dedicated Lead Agency for road safety, licensing and vehicle standards (deadline set at 31 Dec 2017).",
+     "authority": "States / UTs", "granted": "by 31 Dec 2017", "due": "2017-12-31", "theme": "institutions", "status": "ongoing", "historical": true},
+    {"id": "rajaseekaran-2017-fund", "case_id": "rajaseekaran-295-2012", "order_date": "2017-11-30", "order_tid": 145033342,
+     "directive": "Every State/UT to constitute a dedicated Road Safety Fund; a standing obligation monitored order to order.",
+     "authority": "States / UTs", "granted": "standing (2017 order)", "due": null, "theme": "institutions", "status": "ongoing", "historical": true},
+    {"id": "rajaseekaran-2017-curriculum", "case_id": "rajaseekaran-295-2012", "order_date": "2017-11-30", "order_tid": 145033342,
+     "directive": "Incorporate road-safety education into the school curriculum of State Boards (deadline set at 1 Apr 2018).",
+     "authority": "States / UTs", "granted": "by 1 Apr 2018", "due": "2018-04-01", "theme": "enforcement", "status": "ongoing", "historical": true},
+    {"id": "rajaseekaran-2017-cell", "case_id": "rajaseekaran-295-2012", "order_date": "2017-11-30", "order_tid": 145033342,
+     "directive": "Set up a permanent Road Safety Cell in the Ministry and in every State — the Court recorded these had been established and passed no further orders.",
+     "authority": "MoRTH", "granted": "by 2017 order", "due": null, "theme": "institutions", "status": "complied",
+     "status_note": "30 Nov 2017 order records the cells had been set up; no further orders sought on this direction."},
+
+    {"id": "rajaseekaran-2024-hitrun", "case_id": "rajaseekaran-295-2012", "order_date": "2024-01-12", "order_tid": 134366340,
+     "directive": "Operationalise the hit-and-run compensation scheme under S.161 MV Act — Claims Enquiry Officer to forward a report within one month, compensation within 15 days of sanction, GIC to report annually; a standing scheme obligation the Court monitors.",
+     "authority": "States / UTs", "granted": "standing scheme", "due": null, "theme": "victim compensation", "status": "ongoing", "historical": true}
   ]
 }
