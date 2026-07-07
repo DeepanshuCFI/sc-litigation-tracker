@@ -59,6 +59,54 @@ GIST_SCHEMA = {
     "additionalProperties": False,
 }
 
+DIRECTIONS_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "directions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "directive": {"type": "string"},
+                    "authority": {"type": "string"},
+                    "granted": {"type": "string"},
+                    "theme": {"type": "string"},
+                },
+                "required": ["directive", "authority", "granted", "theme"],
+                "additionalProperties": False,
+            },
+        }
+    },
+    "required": ["directions"],
+    "additionalProperties": False,
+}
+
+
+def compute_due(order_date: str, granted: str):
+    """order_date (ISO) + a granted period like '60 days'/'3 months'/'6 weeks' -> ISO due date.
+    Returns None for recurring/unclear periods (those become 'ongoing')."""
+    from datetime import date as _date, timedelta
+    g = granted.lower().strip()
+    m = re.search(r"(\d+)\s*(day|week|month|year)", g)
+    if not m:
+        words = {"one": 1, "two": 2, "three": 3, "four": 4, "six": 6, "eight": 8, "nine": 9, "twelve": 12}
+        m2 = re.search(r"(one|two|three|four|six|eight|nine|twelve)\s*(day|week|month|year)", g)
+        if not m2:
+            return None
+        n, unit = words[m2.group(1)], m2.group(2)
+    else:
+        n, unit = int(m.group(1)), m.group(2)
+    d = _date.fromisoformat(order_date)
+    if unit == "day":
+        d += timedelta(days=n)
+    elif unit == "week":
+        d += timedelta(weeks=n)
+    elif unit == "month":
+        d += timedelta(days=round(n * 30.44))
+    elif unit == "year":
+        d += timedelta(days=round(n * 365.25))
+    return d.isoformat()
+
 
 def doc_text(tid: int, limit: int = 9000) -> str:
     d = ik_client.doc(tid)
@@ -182,6 +230,23 @@ def main() -> None:
         "adjournments, extensions, and exemptions are 'routine' (gist may be empty for those). "
         "latest_development: one sentence, starting with the date, capturing where the case stands now."
     )
+    # Accountability Ledger extraction (grounded, deadline-bearing directions only)
+    dir_system = (
+        "You extract COMPLIANCE DIRECTIONS from a Supreme Court of India road-safety order for an "
+        "accountability ledger. Return only concrete directions that (a) command a government body to DO "
+        "something and (b) carry a time period (e.g. 'within 60 days', 'three months', 'six weeks'). "
+        "Skip directions with no deadline, adjournments, and anything not addressed to a government "
+        "duty-bearer. For each: 'directive' = one grounded sentence (condensed from the text, never "
+        "invented); 'authority' = the single primary duty-bearer, normalised to one of MoRTH, NHAI, "
+        "States / UTs, District Magistrates, Highway Administrations, State Police, Union (Health), or a "
+        "short proper name if none fit; 'granted' = the period exactly as stated (e.g. '60 days'); "
+        "'theme' = one short tag. Return an empty list if the order carries no deadline-bearing directions."
+    )
+    DIR_PATH = ROOT / "pipeline" / "directions.json"
+    dirdata = json.loads(DIR_PATH.read_text())
+    existing_dir_ids = {d["id"] for d in dirdata["directions"]}
+    dir_changed = False
+
     registry = json.loads((ROOT / "data" / "cases.json").read_text())
     by_id = {cs["id"]: cs for cs in registry["cases"]}
     for cid in grew:
@@ -202,8 +267,35 @@ def main() -> None:
             if result["latest_development"]:
                 spec["latest_development"] = result["latest_development"]
             changed = True
+
+            # extract deadline-bearing directions from this order into the ledger
+            if result["significance"] == "major":
+                dres = ask(client, dir_system,
+                           f"Case: {case['title']}\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
+                           DIRECTIONS_SCHEMA)
+                for i, d in enumerate(dres.get("directions", [])):
+                    did = f"{cid}-{newest['date'].replace('-','')}-{i}"
+                    if did in existing_dir_ids:
+                        continue
+                    due = compute_due(newest["date"], d["granted"])
+                    entry = {
+                        "id": did, "case_id": cid, "order_date": newest["date"],
+                        "order_tid": newest["tid"], "directive": d["directive"],
+                        "authority": d["authority"], "granted": d["granted"],
+                        "due": due, "theme": d["theme"],
+                    }
+                    if due is None:
+                        entry["status"] = "ongoing"
+                    dirdata["directions"].append(entry)
+                    existing_dir_ids.add(did)
+                    dir_changed = True
+                    log.setdefault("new_directions", []).append({"case": cid, "directive": d["directive"][:80], "due": due})
         except Exception as e:
-            log["errors"].append(f"gist case={cid}: {e}")
+            log["errors"].append(f"gist/directions case={cid}: {e}")
+
+    if dir_changed:
+        DIR_PATH.write_text(json.dumps(dirdata, indent=2, ensure_ascii=False))
+        changed = True
 
     if changed:
         CURATION_PATH.write_text(json.dumps(curation, indent=2, ensure_ascii=False))

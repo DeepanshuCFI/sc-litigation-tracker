@@ -125,6 +125,39 @@ section{border-top:1px solid var(--border)}
 .bg-lite{background:var(--brand-lite)}
 .bg-lite .case,.bg-lite .stat{background:var(--white)}
 
+/* accountability ledger */
+.ledger-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:48px}
+.lstat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
+.lstat .num{font-family:Montserrat;font-size:44px;font-weight:700;line-height:1;color:var(--brand)}
+.lstat.red .num{color:var(--danger)}
+.lstat.orange .num{color:var(--warning)}
+.lstat.green .num{color:var(--success)}
+.lstat .lbl{margin-top:8px;font-size:14px;color:var(--muted)}
+.authchart{margin-top:24px;border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px 28px}
+.authchart h4{font-family:Montserrat;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--dark)}
+.authchart .csub{font-size:12.5px;color:var(--muted);margin-top:4px;margin-bottom:20px}
+.abar{display:grid;grid-template-columns:minmax(88px,168px) 1fr 28px;align-items:center;gap:14px;margin:11px 0}
+.abar .an{font-size:13px;color:var(--dark);text-align:right;line-height:1.3}
+.abar .track{height:14px;background:var(--brand-lite);border-radius:9999px;overflow:hidden}
+.abar .fill{height:100%;background:var(--brand);border-radius:9999px;min-width:14px}
+.abar .av{font-family:Montserrat;font-size:13px;font-weight:600;color:var(--brand);text-align:right}
+.ledger-list{margin-top:24px}
+.dcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:22px 24px;margin-bottom:16px;transition:.15s}
+.dcard:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 5%,transparent)}
+.dcard-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap-reverse}
+.dtext{font-size:15px;color:var(--dark);line-height:1.5;max-width:760px;flex:1 1 320px}
+.dpill{font-family:Montserrat;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:9999px;padding:6px 13px;white-space:nowrap}
+.dpill.overdue,.dpill.missed{background:color-mix(in srgb,var(--danger) 9%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 28%,transparent)}
+.dpill.due-soon{background:color-mix(in srgb,var(--warning) 10%,transparent);color:var(--warning);border:1px solid color-mix(in srgb,var(--warning) 30%,transparent)}
+.dpill.upcoming{background:color-mix(in srgb,var(--brand) 10%,transparent);color:var(--brand);border:1px solid color-mix(in srgb,var(--brand) 25%,transparent)}
+.dpill.complied{background:color-mix(in srgb,var(--success) 10%,transparent);color:var(--success);border:1px solid color-mix(in srgb,var(--success) 30%,transparent)}
+.dpill.ongoing{background:var(--brand-lite);color:var(--muted);border:1px solid var(--border)}
+.dmeta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.dmeta b{color:var(--dark);font-weight:500}
+.authchip{font-family:Montserrat;font-size:11px;font-weight:600;letter-spacing:.06em;border-radius:9999px;padding:4px 12px;background:color-mix(in srgb,var(--brand) 8%,transparent);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent);color:var(--brand);white-space:nowrap}
+.dmeta .dcase{font-style:italic}
+.ledger-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:820px;border-left:3px solid var(--border);padding-left:16px;font-style:italic}
+
 /* precedent feed — brand section */
 .notable{background:var(--brand)}
 .notable .eyebrow{color:var(--lav-text)}
@@ -158,16 +191,40 @@ footer p{max-width:820px;margin-top:8px}
     <p class="lead">Every systemic road-safety case before the Supreme Court — public interest litigation, suo motu matters and appeals that produced nationwide directions — tracked order by order, alongside the judgments that set precedent for crash victims.</p>
     <p class="meta">Last refreshed <b id="last-refresh"></b> · Source: Indian Kanoon (Supreme Court judgments + daily orders) · Refreshes automatically every Tuesday</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#docket">Browse the docket
+      <a class="btn btn-primary" href="#ledger">See what's come due
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
-      <a class="btn btn-secondary" href="#precedents">Precedent judgments
+      <a class="btn btn-secondary" href="#docket">Browse the docket
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="stats" id="stats"></div>
   </div>
 </section>
 
-<section class="sect bg-lite" id="docket">
+<section class="sect bg-lite" id="ledger">
+  <div class="wrap">
+    <span class="eyebrow">Accountability Ledger</span>
+    <h2 class="h2">What the Court ordered.<br><span class="accent">What's come due.</span></h2>
+    <p class="lead">The Supreme Court doesn't just decide road-safety cases — it hands the government dated deadlines. This ledger extracts each direction, names the duty-bearer, and converts the granted time into a calendar date, so the question becomes simple: has the deadline passed?</p>
+    <div class="ledger-stats" id="ledger-stats"></div>
+    <div class="authchart">
+      <h4>Court-ordered obligations, by duty-bearer</h4>
+      <div class="csub">Who the Supreme Court is currently holding to a deadline on road safety.</div>
+      <div id="auth-bars"></div>
+    </div>
+    <div class="filters" id="ledger-filters">
+      <button class="fbtn active" data-lstatus="all">All directions</button>
+      <button class="fbtn" data-lstatus="overdue">Overdue</button>
+      <button class="fbtn" data-lstatus="due-soon">Due soon</button>
+      <button class="fbtn" data-lstatus="upcoming">Upcoming</button>
+      <button class="fbtn" data-lstatus="ongoing">Ongoing</button>
+    </div>
+    <div class="tchips" id="ledger-auth"></div>
+    <div class="ledger-list" id="ledger-list"></div>
+    <p class="ledger-note">"Deadline passed" means the date the Court set has gone by with compliance not confirmed on the orders we track — not a finding of government failure. "Non-compliance recorded" is used only where a later order of the Court itself notes the direction was not met (as with the National Road Safety Board). Every direction links to its source order.</p>
+  </div>
+</section>
+
+<section class="sect" id="docket">
   <div class="wrap">
     <span class="eyebrow">The Docket · 01</span>
     <h2 class="h2">Public interest litigation<br><span class="accent">that built road-safety law.</span></h2>
@@ -186,7 +243,7 @@ footer p{max-width:820px;margin-top:8px}
   </div>
 </section>
 
-<section class="sect" id="suo-motu">
+<section class="sect bg-lite" id="suo-motu">
   <div class="wrap">
     <div class="group-top">
       <div style="max-width:760px">
@@ -200,7 +257,7 @@ footer p{max-width:820px;margin-top:8px}
   </div>
 </section>
 
-<section class="sect bg-lite" id="appeals">
+<section class="sect" id="appeals">
   <div class="wrap">
     <div class="group-top">
       <div style="max-width:760px">
@@ -272,6 +329,94 @@ $('#stats').innerHTML = [
   [orders,'orders indexed',''],
   [DB.notable_judgments.length,'precedent judgments','']
 ].map(([n,l,c])=>`<div class="stat"><div class="num ${c}">${n}</div><div class="lbl">${l}</div></div>`).join('');
+
+// ===== Accountability Ledger =====
+const DIRS = DB.directions || [];
+const SMETA = {
+  overdue:   {label:'Deadline passed',          cls:'overdue',  rank:0},
+  missed:    {label:'Non-compliance recorded',  cls:'missed',   rank:0},
+  'due-soon':{label:'Due within 90 days',       cls:'due-soon', rank:1},
+  upcoming:  {label:'Upcoming',                 cls:'upcoming', rank:2},
+  complied:  {label:'Complied',                 cls:'complied', rank:3},
+  ongoing:   {label:'Ongoing / recurring',      cls:'ongoing',  rank:4},
+};
+function dstatus(d){
+  if(d.status) return d.status;              // missed / complied / ongoing set explicitly
+  if(!d.due) return 'ongoing';
+  const midnight = new Date(new Date().toDateString());
+  const days = Math.floor((new Date(d.due+'T00:00:00') - midnight)/86400000);
+  if(days < 0) return 'overdue';
+  if(days <= 90) return 'due-soon';
+  return 'upcoming';
+}
+DIRS.forEach(d => d._st = dstatus(d));
+
+// stat strip
+const nOver = DIRS.filter(d=>d._st==='overdue'||d._st==='missed').length;
+const nSoon = DIRS.filter(d=>d._st==='due-soon').length;
+const nDone = DIRS.filter(d=>d._st==='complied').length;
+$('#ledger-stats').innerHTML = [
+  [DIRS.length,'directions tracked',''],
+  [nOver,'overdue — deadline passed','red'],
+  [nSoon,'due within 90 days','orange'],
+  [nDone,'confirmed complied','green'],
+].map(([n,l,c])=>`<div class="lstat ${c}"><div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
+
+// by-authority bar chart (single-hue magnitude)
+const authCounts = {};
+DIRS.forEach(d=>{authCounts[d.authority]=(authCounts[d.authority]||0)+1;});
+const authRows = Object.entries(authCounts).sort((a,b)=>b[1]-a[1]);
+const authMax = Math.max(...authRows.map(r=>r[1]),1);
+$('#auth-bars').innerHTML = authRows.map(([a,n])=>`
+  <div class="abar">
+    <div class="an">${a}</div>
+    <div class="track"><div class="fill" style="width:${Math.round(n/authMax*100)}%"></div></div>
+    <div class="av">${n}</div>
+  </div>`).join('');
+
+// authority filter chips
+const authList = authRows.map(r=>r[0]);
+$('#ledger-auth').innerHTML = authList.map(a=>`<button class="tchip" data-lauth="${a}">${a}</button>`).join('');
+
+let lStatus='all', lAuth=null;
+function renderLedger(){
+  const inStatusBucket = (st) => lStatus==='all' ? true
+    : lStatus==='overdue' ? (st==='overdue'||st==='missed')
+    : st===lStatus;
+  const rows = DIRS.filter(d=>{
+    if(!inStatusBucket(d._st)) return false;
+    if(lAuth && d.authority!==lAuth) return false;
+    return true;
+  }).sort((a,b)=> (SMETA[a._st].rank - SMETA[b._st].rank) || ((a.due||'9999').localeCompare(b.due||'9999')));
+
+  $('#ledger-list').innerHTML = rows.length ? rows.map(d=>{
+    const m = SMETA[d._st];
+    const due = d.due ? `due <b>${fmt(d.due)}</b>` : '<b>no fixed date</b>';
+    const link = d.link ? `<a href="${d.link}" target="_blank" rel="noopener">Read order ↗</a>` : '';
+    return `<div class="dcard">
+      <div class="dcard-head">
+        <div class="dtext">${d.directive}</div>
+        <span class="dpill ${m.cls}">${m.label}</span>
+      </div>
+      <div class="dmeta">
+        <span class="authchip">${d.authority}</span>
+        <span>Granted <b>${d.granted}</b> · ${due}</span>
+        <span class="dcase">${d.case_title}</span>
+        ${link}
+      </div>
+    </div>`;
+  }).join('') : '<div class="gempty">No directions match the current filters.</div>';
+}
+document.querySelectorAll('#ledger-filters .fbtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); lStatus=b.dataset.lstatus; renderLedger();
+}));
+document.querySelectorAll('#ledger-auth .tchip').forEach(b=>b.addEventListener('click',()=>{
+  const on=b.classList.contains('active');
+  document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
+  lAuth = on ? null : b.dataset.lauth; if(!on) b.classList.add('active'); renderLedger();
+}));
+renderLedger();
 
 // theme chips
 const themes = [...new Set(DB.cases.flatMap(c=>c.themes||[]))].sort();

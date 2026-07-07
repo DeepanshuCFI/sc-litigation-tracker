@@ -91,6 +91,19 @@ def main() -> None:
     for nj in CURATION["notable_judgments"]:
         notable.append({**nj, "link": f"https://indiankanoon.org/doc/{nj['tid']}/"})
 
+    # Accountability Ledger: join each direction to its case title + order link
+    case_titles = {c["id"]: c["title"] for c in cases}
+    directions = []
+    dir_path = ROOT / "pipeline" / "directions.json"
+    if dir_path.exists():
+        for d in json.loads(dir_path.read_text()).get("directions", []):
+            directions.append({
+                **d,
+                "case_title": case_titles.get(d.get("case_id"), d.get("case_id", "")),
+                "link": f"https://indiankanoon.org/doc/{d['order_tid']}/" if d.get("order_tid") else None,
+            })
+        directions.sort(key=lambda x: (x.get("due") or "9999-99-99"))
+
     registry = {
         "meta": {
             "built": date.today().isoformat(),
@@ -100,13 +113,14 @@ def main() -> None:
         },
         "cases": cases,
         "notable_judgments": sorted(notable, key=lambda x: x["date"], reverse=True),
+        "directions": directions,
         "borderline_excluded": CURATION["borderline_excluded"],
         "new_this_refresh": [],
     }
     out_path.write_text(json.dumps(registry, indent=1, ensure_ascii=False))
     (RAW / "_unassigned.json").write_text(json.dumps(unassigned, indent=1, ensure_ascii=False))
 
-    print(f"cases.json: {len(cases)} cases, {len(notable)} notable judgments")
+    print(f"cases.json: {len(cases)} cases, {len(notable)} notable judgments, {len(directions)} directions")
     for c in cases:
         print(f"  {c['order_count']:4d} orders  {c['first_order']} → {c['latest_order']}  [{c['status']:8s}]  {c['title'][:60]}")
     print(f"unassigned: {len(unassigned)} docs (audit file written)")

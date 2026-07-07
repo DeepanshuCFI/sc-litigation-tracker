@@ -21,9 +21,19 @@ Secrets required: `IK_API_TOKEN` (Indian Kanoon), `ANTHROPIC_API_KEY` (curation)
 - `pipeline/ik_client.py` — Indian Kanoon API client (search / doc / docmeta), stdlib + certifi
 - `pipeline/seeds.json` — seed cases + discovery query battery
 - `pipeline/curation.json` — the human/LLM-curated case metadata (single source of truth)
-- `pipeline/build_registry.py` — curation + raw hits → `data/cases.json`
+- `pipeline/directions.json` — the Accountability Ledger: government directions with deadlines
+- `pipeline/build_registry.py` — curation + directions + raw hits → `data/cases.json`
 - `pipeline/build_dashboard.py` — `data/cases.json` → `docs/index.html` (self-contained, CFI design system)
 - `data/raw/_index.json` — all hits ever seen (dedupe state); `_unassigned.json` — audit trail
+
+## The Accountability Ledger
+`directions.json` records concrete directions the Court gave a government duty-bearer, each with
+the granted period converted to an absolute `due` date. The dashboard computes status LIVE
+(overdue / due-soon / upcoming) from `due` vs today, so a deadline flips to overdue on its own
+even between refreshes. Explicit `status` (missed/complied/ongoing) overrides the date, and is
+set only when a later tracked order confirms it. `auto_curate.py` extracts new deadline-bearing
+directions from each major new order weekly. Honesty rule: "deadline passed" ≠ "government failed";
+"non-compliance recorded" is used only where the Court's own later order says so.
 
 Rebuild chain after editing curation.json:
 `python3 pipeline/build_registry.py && python3 pipeline/build_dashboard.py`
