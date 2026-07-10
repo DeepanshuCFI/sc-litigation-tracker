@@ -42,7 +42,15 @@ a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
 @media(min-width:768px){.wrap{padding:0 40px}}
-section{border-top:1px solid var(--border)}
+section{border-top:1px solid var(--border);scroll-margin-top:76px}
+
+/* sticky section nav */
+.jumpnav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border)}
+.jumpnav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px;align-items:center;scrollbar-width:none}
+.jumpnav .wrap::-webkit-scrollbar{display:none}
+.jn{font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);padding:0 16px;min-height:44px;border-radius:9999px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.jn:hover{color:var(--brand);background:var(--brand-lite);text-decoration:none}
+.jn .n{font-size:11px;color:var(--brand);font-weight:700}
 .sect{padding:96px 0}
 @media(min-width:1024px){.sect{padding:128px 0}}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:Montserrat;font-size:11px;font-weight:500;letter-spacing:.25em;color:var(--brand);text-transform:uppercase}
@@ -171,6 +179,17 @@ section{border-top:1px solid var(--border)}
 .nj p{color:color-mix(in srgb,var(--white) 80%,transparent);font-size:14px;margin-top:8px}
 .nj a{color:var(--lav-text);font-size:13px;display:inline-block;margin-top:12px}
 
+/* final CTA — brand section */
+.cta-final{background:var(--brand)}
+.cta-final .eyebrow{color:var(--lav-text)}
+.cta-final .h2{color:var(--white)}
+.cta-final .h2 .accent{color:var(--lav-text)}
+.cta-final .lead{color:color-mix(in srgb,var(--white) 80%,transparent)}
+.btn-inv{background:var(--white);color:var(--brand);border:none}
+.btn-inv:hover{background:color-mix(in srgb,var(--white) 90%,transparent)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid color-mix(in srgb,var(--white) 30%,transparent)}
+.btn-ghost:hover{border-color:color-mix(in srgb,var(--white) 60%,transparent)}
+
 /* watchlist */
 .wgrid{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
 .wcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
@@ -199,6 +218,17 @@ footer p{max-width:820px;margin-top:8px}
     <div class="stats" id="stats"></div>
   </div>
 </section>
+
+<nav class="jumpnav" aria-label="Sections">
+  <div class="wrap">
+    <a class="jn" href="#ledger">Ledger <span class="n" id="jn-ledger"></span></a>
+    <a class="jn" href="#docket">PIL &amp; Writs <span class="n" id="jn-pil"></span></a>
+    <a class="jn" href="#suo-motu">Suo Motu <span class="n" id="jn-suo"></span></a>
+    <a class="jn" href="#appeals">Appeals <span class="n" id="jn-app"></span></a>
+    <a class="jn" href="#precedents">Precedents <span class="n" id="jn-nj"></span></a>
+    <a class="jn" href="#watchlist">Watchlist</a>
+  </div>
+</nav>
 
 <section class="sect bg-lite" id="ledger">
   <div class="wrap">
@@ -286,6 +316,20 @@ footer p{max-width:820px;margin-top:8px}
     <h2 class="h2">Reviewed and set aside<br><span class="accent">— for now.</span></h2>
     <p class="lead">Matters that surfaced in the weekly sweep but sit outside the inclusion rule. They stay on watch; a systemic turn moves them onto the docket.</p>
     <div class="wgrid" id="watch-grid"></div>
+  </div>
+</section>
+
+<section class="sect cta-final">
+  <div class="wrap">
+    <span class="eyebrow">Use this tracker</span>
+    <h2 class="h2">Data is leverage.<br><span class="accent">Put it in your next representation.</span></h2>
+    <p class="lead">Every case, order and deadline here links to its source text on Indian Kanoon. The full dataset is open — cite it in filings and letters, embed it, build on it.</p>
+    <div class="cta-row">
+      <a class="btn btn-inv" href="data.json" download="sc-road-safety-tracker.json">Download the data (JSON)
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+      <a class="btn btn-ghost" href="https://github.com/DeepanshuCFI/sc-litigation-tracker" target="_blank" rel="noopener">Source &amp; methodology
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -418,6 +462,13 @@ document.querySelectorAll('#ledger-auth .tchip').forEach(b=>b.addEventListener('
 }));
 renderLedger();
 
+// sticky nav counts (static totals, independent of filters)
+$('#jn-ledger').textContent = DIRS.length;
+$('#jn-nj').textContent = DB.notable_judgments.length;
+$('#jn-pil').textContent = DB.cases.filter(isPil).length;
+$('#jn-suo').textContent = DB.cases.filter(isSuo).length;
+$('#jn-app').textContent = DB.cases.filter(c=>!isPil(c)&&!isSuo(c)).length;
+
 // theme chips
 const themes = [...new Set(DB.cases.flatMap(c=>c.themes||[]))].sort();
 $('#theme-chips').innerHTML = themes.map(t=>`<button class="tchip" data-theme="${t}">${t}</button>`).join('');
@@ -451,7 +502,7 @@ function renderCase(c, newSet){
       <span class="chip-type">${typeChip(c)}</span>
       ${newSet.has(c.id)?'<span class="badge new">New</span>':''}
       <span class="badge ${c.status}">${statusLabel(c.status)}</span>
-      <div class="meta"><b>${c.case_number}</b> · ${c.case_type} · filed ${c.filed_year} · ${c.order_count} orders on record (${fmt(c.first_order)} → ${fmt(c.latest_order)})</div>
+      <div class="meta"><b>${c.case_number}</b> · ${c.case_type} · filed ${c.filed_year} · ${c.order_count} orders on record (${fmt(c.first_order)} → ${fmt(c.latest_order)})${c.next_listing?` · Next listing: <b>${c.next_listing}</b>`:''}</div>
     </div>
     <p class="why">${c.why_it_matters||''}</p>
     ${c.latest_development?`<div class="latest"><b>Latest development</b>${c.latest_development}</div>`:''}
@@ -515,7 +566,9 @@ def main() -> None:
     out = ROOT / "docs" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(html)
-    print(f"wrote {out} ({len(html)//1024} KB)")
+    # open-data companion: the full dataset, downloadable from the dashboard
+    (ROOT / "docs" / "data.json").write_text(json.dumps(DATA, indent=1, ensure_ascii=False))
+    print(f"wrote {out} ({len(html)//1024} KB) + docs/data.json")
 
 
 if __name__ == "__main__":
