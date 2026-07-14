@@ -88,7 +88,10 @@
   "citation": null,
   "queries": [
    "\"Rajaseekaran\" doctypes:supremecourt",
-   "\"road safety\" doctypes:supremecourt"
+   "\"road safety\" doctypes:supremecourt",
+   "\"pedestrian\" guidelines doctypes:supremecourt",
+   "\"footpath\" road doctypes:supremecourt",
+   "\"right to walk\" doctypes:supremecourt"
   ]
  },
  "79865001": {
@@ -6438,7 +6441,9 @@
   "headline": "",
   "citation": "2026 INSC 634",
   "queries": [
-   "manual-research-jul2026"
+   "manual-research-jul2026",
+   "\"homemaker\" compensation doctypes:supremecourt",
+   "\"loss of domestic care\" doctypes:supremecourt"
   ]
  },
  "49053501": {
@@ -6450,6 +6455,40 @@
   "citation": "2024 INSC 963",
   "queries": [
    "pedestrian-sweep-jul2026"
+  ]
+ },
+ "58545786": {
+  "tid": 58545786,
+  "title": "Manju Singh vs Avinash Singh on 13 July, 2026",
+  "publishdate": "2026-07-13",
+  "docsource": "Supreme Court of India",
+  "headline": " Manju Singh vs Avinash Singh on 13 July, 2026 \n\n Author:  Sanjay Karol  \n\n Bench:  Sanjay Karol",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ "145672176": {
+  "tid": 145672176,
+  "title": "The Commissioner, Bruhat Bangalore ... vs K.K. Umesh Kumar on 11 June, 2026",
+  "publishdate": "2026-06-11",
+  "docsource": "Supreme Court of India",
+  "headline": "Page 6 of 14 \n\fthe deceased Jayantilal, was walking on the <b>footpath</b> when a tree\nfell upon him, leading to grievous injuries and eventual death ... applying the law. A tree has been on the side of the <b>road</b> for many\nyears. Because it is part of the city, the Municipal",
+  "citation": null,
+  "queries": [
+   "\"footpath\" road doctypes:supremecourt"
+  ]
+ },
+ "111576681": {
+  "tid": 111576681,
+  "title": "Maniyar Iliyaz @ Shaik Riyaz vs P. Ayyappan on 19 June, 2026",
+  "publishdate": "2026-06-19",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "fundamental right    to walk    on\n              demarcated <b>footpaths</b> has a correlative duty.\n              If the <b>road</b> exists, there is a duty to\n              ensure that there are demarcated ... Right to Walk\n         and <b>Footpath</b>. The Government of India, through\n         the Ministries of Housing and Urban Affairs,\n         Rural   Development   and  <b>Road</b>   Transpo",
+  "citation": null,
+  "queries": [
+   "\"footpath\" road doctypes:scorders",
+   "\"right to walk\" doctypes:scorders"
   ]
  }
 }

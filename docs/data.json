@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-07-10",
+  "built": "2026-07-14",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 574,
-  "assigned_docs": 195
+  "raw_docs": 577,
+  "assigned_docs": 196
  },
  "cases": [
   {
@@ -1672,8 +1672,8 @@
    "orders": [
     {
      "date": "2026-06-19",
-     "tid": 115323844,
-     "link": "https://indiankanoon.org/doc/115323844/",
+     "tid": 111576681,
+     "link": "https://indiankanoon.org/doc/111576681/",
      "gist": "Reportable judgment: the right to walk on demarcated footpaths recognised as a facet of Art. 19(1)(d); duty bearers named (urban development authorities, municipal bodies, panchayats); violations remediable through constitutional and legal claims independent of the MV Act; case converted into a continuing Article 32 petition with amicus and ASG assistance.",
      "significance": "major"
     }
@@ -1690,6 +1690,13 @@
    "title": "Shishupal @ Shish Ram v. Surjeet",
    "gist": "Created the 'loss of domestic care' head: ₹30,000/month — rising 10% every three years — as the minimum value of a homemaker's work in MACT cases; a stand-in income for non-earning homemakers, additional to proved income for working women.",
    "link": "https://indiankanoon.org/doc/158690569/"
+  },
+  {
+   "tid": 145672176,
+   "date": "2026-06-11",
+   "title": "The Commissioner, Bruhat Bangalore Mahanagara Palike vs K.K. Umesh Kumar",
+   "gist": "A stationary autorickshaw passenger was injured when a tree branch fell during rain. The Supreme Court held the vehicle played no active role in the accident so a Section 166 MV Act claim may not be appropriate, but under Article 142 enhanced compensation to Rs.25 lakh to avoid further litigation, keeping apportionment undisturbed.",
+   "link": "https://indiankanoon.org/doc/145672176/"
   },
   {
    "tid": 49053501,

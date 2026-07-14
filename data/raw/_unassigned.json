@@ -3066,5 +3066,21 @@
   "queries": [
    "pedestrian-sweep-jul2026"
   ]
+ },
+ {
+  "tid": 58545786,
+  "date": "2026-07-13",
+  "title": "Manju Singh vs Avinash Singh on 13 July, 2026",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 145672176,
+  "date": "2026-06-11",
+  "title": "The Commissioner, Bruhat Bangalore ... vs K.K. Umesh Kumar on 11 June, 2026",
+  "queries": [
+   "\"footpath\" road doctypes:supremecourt"
+  ]
  }
 ]
