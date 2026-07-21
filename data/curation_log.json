@@ -1,21 +1,69 @@
 {
- "date": "2026-07-14",
+ "date": "2026-07-21",
  "classified": [
   {
-   "tid": 145672176,
-   "date": "2026-06-11",
-   "title": "The Commissioner, Bruhat Bangalore ... vs K.K. Umesh Kumar on 11 June, 2026",
-   "action": "notable",
-   "reason": "This is an individual motor accident compensation appeal, but it settles a question of law on whether a claim under Section 166 MV Act lies where the vehicle plays no active/proximate role in the accident (tree branch falling on a stationary vehicle), which sets precedent MACTs must follow on 'caused by' vs 'arising out of' use of vehicle."
-  },
-  {
-   "tid": 58545786,
+   "tid": 6593927,
    "date": "2026-07-13",
-   "title": "Manju Singh vs Avinash Singh on 13 July, 2026",
+   "title": "Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026",
    "action": "ignore",
-   "reason": "Individual motor accident compensation appeal applying settled Sarla Verma/Pranay Sethi principles to a specific case; no systemic or precedent-setting directions for road safety."
+   "reason": "Individual motor accident compensation appeal enhancing lump-sum award to a claimant; applies existing precedent without laying down any principle of law binding on all MACTs/insurers."
   }
  ],
- "gists": [],
- "errors": []
+ "gists": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "date": "2026-07-13",
+   "gist": "In this suo motu matter arising from the Phalodi accident, the Court noted that only three States/UTs (Bihar, Karnataka, Puducherry) had filed compliance affidavits to its detailed 13 April 2026 road-safety directions, and directed that its orders be re-circulated to all concerned authorities, warning that defaulting States' Chief Secretaries and DGPs would be summoned to appear personally if affidavits are not filed within two weeks.",
+   "significance": "major",
+   "latest_development": "As of 13 July 2026, the Court warned that Chief Secretaries and DGPs of defaulting States/UTs will be summoned to appear personally if compliance affidavits are not filed within two weeks, and listed the matter for 17 August 2026."
+  }
+ ],
+ "errors": [],
+ "new_directions": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "No heavy or commercial vehicle shall park/stop on any National Highway carriagew",
+   "due": "2026-09-11"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "The Highway Administration, NHAI, NHIDCL, and State PWDs shall file a consolidat",
+   "due": "2026-08-12"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "NHAI shall operationalise its ATMS comprising TMCC cameras, VSDS speed detectors",
+   "due": "2026-09-11"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "NHAI shall deploy BLS ambulances and recovery cranes at intervals not exceeding ",
+   "due": "2026-09-11"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "MoRTH/NHAI shall identify accident blackspots and critical areas and publish a c",
+   "due": "2026-08-27"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "Full installation of high-intensity LED/high-mast lighting, speed enforcement ca",
+   "due": "2026-11-12"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-Stat",
+   "due": "2026-09-11"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "MoRTH, upon securing the consolidated district-wise and agency-wise compliance r",
+   "due": "2026-09-26"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "Defaulting States and Union Territories shall file the requisite compliance affi",
+   "due": "2026-07-27"
+  }
+ ]
 }

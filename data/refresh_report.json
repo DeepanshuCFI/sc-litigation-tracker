@@ -1,22 +1,18 @@
 {
- "refresh_date": "2026-07-14",
- "fromdate_window": "04-06-2026",
+ "refresh_date": "2026-07-21",
+ "fromdate_window": "11-06-2026",
  "search_pages": 52,
  "approx_cost_inr": 26.0,
- "new_docs_total": 3,
- "cases_with_new_orders": [],
+ "new_docs_total": 2,
+ "cases_with_new_orders": [
+  "phalodi-smwpc-9-2025"
+ ],
  "new_unassigned_candidates": [
   {
-   "tid": 145672176,
-   "date": "2026-06-11",
-   "title": "The Commissioner, Bruhat Bangalore ... vs K.K. Umesh Kumar on 11 June, 2026",
-   "headline": "Page 6 of 14 \n\fthe deceased Jayantilal, was walking on the footpath when a tree\nfell upon him, leading to grievous injuries and eventual death ... applying the law. A tree has been on the side of the "
-  },
-  {
-   "tid": 58545786,
+   "tid": 6593927,
    "date": "2026-07-13",
-   "title": "Manju Singh vs Avinash Singh on 13 July, 2026",
-   "headline": " Manju Singh vs Avinash Singh on 13 July, 2026 \n\n Author:  Sanjay Karol  \n\n Bench:  Sanjay Karol"
+   "title": "Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026",
+   "headline": " Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026 \n\n Author:  Prashant Kumar Mishra"
   }
  ]
 }
