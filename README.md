@@ -37,6 +37,13 @@ directions from each new order weekly. Honesty rule: "deadline passed" ≠ "gove
 `compliance_events` on a direction record dated facts of partial compliance (e.g. which States
 filed affidavits) without changing its status.
 
+## Citation-follow sweep (quarterly)
+Phrase discovery misses cases that never use a seed phrase. `python3 pipeline/citation_sweep.py`
+(~₹2–5) walks the citation graph instead: for each principal order in seeds.json →
+`citation_follow`, it fetches the SC cases that cite it and reports anything not already in the
+raw index to `data/citation_sweep_report.json` for operator classification. Run quarterly —
+IK's citation graph fills in slowly, so weekly would be waste.
+
 Rebuild chain after editing curation.json:
 `python3 pipeline/build_registry.py && python3 pipeline/build_dashboard.py`
 

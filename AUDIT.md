@@ -183,12 +183,26 @@ rendered; "Complied" ledger filter; "Standing since" pill for historical
 directions; IST-anchored ledger status; doc-fetch cost in curation_log;
 research2 scratch files removed.
 
+Closed 21 Jul (evening session — SC-only product round):
+- Citation-follow discovery: `pipeline/citation_sweep.py` + `citation_follow`
+  in seeds.json. Quarterly run; resolves IK duplicate-tid problem (court copy
+  vs canonical) by sweeping all same-date same-case tids; ₹0.02 docmeta probes
+  before paying for full docs. Operator classifies findings — never writes
+  curation.json itself.
+- "Coming up" strip on the dashboard: hearings (parsed from next_listing) +
+  ledger deadlines within 90 days, IST-anchored, deep-links to direction cards.
+- Stale-listing watch: refresh_report.stale_listings flags hearing dates that
+  passed with no order fetched (IK indexing lag detector).
+- Per-direction permalinks: #dir-<id> anchors with scroll+highlight.
+
 Still open (deliberate deferrals):
-- High Courts phase 2 — scope decision, not a fix.
-- Citation-follow discovery (doc maxcitedby on seed docids) — noted in seeds.json,
-  needs a backfill-style run, ~₹10 one-off; worth doing quarterly.
+- High Courts phase 2 — DECIDED 21 Jul: staying SC-only for now. A 5-court
+  pilot design (Delhi/Bombay/Madras/Rajasthan/P&H, Haiku pre-screen, ~₹100/wk)
+  is costed in the session notes if ever revisited.
+- Website embed of the tracker into crashfreeindia.org — visibility step,
+  needs a website-workflow decision.
 - Case-number/title: operator polling per tracked case — partially covered by the
-  new per-case seed queries; full docket-number polling would need SC registry
+  per-case seed queries; full docket-number polling would need SC registry
   scraping, out of scope for IK.
 - First-run verification of the failure-notification path (can only be tested by
   a real failure or a forced one; the gh CLI calls are standard).
