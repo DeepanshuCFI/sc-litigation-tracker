@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write   # failure notifications are filed as issues
 
 concurrency:
   group: weekly-refresh
@@ -27,7 +28,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install anthropic certifi
+        # pinned below the next major so an SDK breaking change can't take out
+        # a Tuesday run unreviewed; bump the floor deliberately when needed
+        run: pip install "anthropic>=0.60,<2" certifi
 
       - name: Fetch new orders from Indian Kanoon
         run: python3 pipeline/refresh.py
@@ -45,6 +48,23 @@ jobs:
           else
             git commit -m "Weekly refresh $(date -u +%F)"
             git push
+          fi
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Weekly refresh FAILED — $(date -u +%F)"
+          BODY="Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          The Tuesday refresh did not complete; the dashboard is serving last week's data. Check the run log, then re-run via workflow_dispatch once fixed."
+          # reuse a single open failure issue rather than piling up one per week
+          EXISTING=$(gh issue list --state open --search "Weekly refresh FAILED in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$TITLE — $BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY"
           fi
 
       - name: Job summary

@@ -168,14 +168,28 @@ Ratings: 🔴 fix soon · 🟡 worth improving · 🟢 fine / by design · 💡 
 |---|------|------|--------|
 | 1 | Dashboard filter cross-wiring emptied docket | 🔴 bug | **fixed 21 Jul** |
 | 2 | Stale `next_listing` (wrong hearing date shown) | 🔴 bug | **fixed + schema'd 21 Jul** |
-| 3 | Workflow failure notification | 🔴 ops | open — needs repo settings or a notify step |
-| 4 | Multi-new-order gap (only newest order curated) | 🔴 pipeline | open |
-| 5 | Unpinned `anthropic` dependency | 🟡 ops | open — one-line fix |
-| 6 | doc_text 9k truncation on long orders | 🟡 pipeline | open |
-| 7 | Seed query per tracked pending case | 💡 coverage | open |
-| 8 | Compliance-events per direction (affidavit trickle) | 💡 model | open |
-| 9 | "Newly overdue this week" in weekly summary | 💡 product | open |
-| 10 | Calendar-month due-date arithmetic | 🟡 pipeline | open |
+| 3 | Workflow failure notification | 🔴 ops | **fixed 21 Jul** — failure files/updates a GitHub issue |
+| 4 | Multi-new-order gap (only newest order curated) | 🔴 pipeline | **fixed 21 Jul** — loops all new orders per case |
+| 5 | Unpinned `anthropic` dependency | 🟡 ops | **fixed 21 Jul** — `>=0.60,<2` |
+| 6 | doc_text 9k truncation on long orders | 🟡 pipeline | **fixed 21 Jul** — 24k + fetch-count in log |
+| 7 | Seed query per tracked pending case | 💡 coverage | **fixed 21 Jul** — Phalodi + Gyan Prakash; +5 discovery queries |
+| 8 | Compliance-events per direction (affidavit trickle) | 💡 model | **fixed 21 Jul** — `compliance_events` rendered on cards |
+| 9 | "Newly overdue this week" in weekly summary | 💡 product | **fixed 21 Jul** — `newly_overdue` in refresh_report |
+| 10 | Calendar-month due-date arithmetic | 🟡 pipeline | **fixed 21 Jul** — verified zero drift on stored dates |
 
-Items 3–6 are each ≤30 min. Items 7–9 are the next real product increments.
+Also closed 21 Jul: adaptive refresh window after gaps; search_all truncation
+warning; match_pattern sanity check + case-id collision guard; status_note now
+rendered; "Complied" ledger filter; "Standing since" pill for historical
+directions; IST-anchored ledger status; doc-fetch cost in curation_log;
+research2 scratch files removed.
+
+Still open (deliberate deferrals):
+- High Courts phase 2 — scope decision, not a fix.
+- Citation-follow discovery (doc maxcitedby on seed docids) — noted in seeds.json,
+  needs a backfill-style run, ~₹10 one-off; worth doing quarterly.
+- Case-number/title: operator polling per tracked case — partially covered by the
+  new per-case seed queries; full docket-number polling would need SC registry
+  scraping, out of scope for IK.
+- First-run verification of the failure-notification path (can only be tested by
+  a real failure or a forced one; the gh CLI calls are standard).
 

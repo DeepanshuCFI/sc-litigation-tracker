@@ -32,8 +32,10 @@ the granted period converted to an absolute `due` date. The dashboard computes s
 (overdue / due-soon / upcoming) from `due` vs today, so a deadline flips to overdue on its own
 even between refreshes. Explicit `status` (missed/complied/ongoing) overrides the date, and is
 set only when a later tracked order confirms it. `auto_curate.py` extracts new deadline-bearing
-directions from each major new order weekly. Honesty rule: "deadline passed" ≠ "government failed";
-"non-compliance recorded" is used only where the Court's own later order says so.
+directions from each new order weekly. Honesty rule: "deadline passed" ≠ "government failed";
+"non-compliance recorded" is used only where the Court's own later order says so. Optional
+`compliance_events` on a direction record dated facts of partial compliance (e.g. which States
+filed affidavits) without changing its status.
 
 Rebuild chain after editing curation.json:
 `python3 pipeline/build_registry.py && python3 pipeline/build_dashboard.py`
