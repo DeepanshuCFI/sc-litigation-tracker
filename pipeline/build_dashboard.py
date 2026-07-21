@@ -133,6 +133,22 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .bg-lite{background:var(--brand-lite)}
 .bg-lite .case,.bg-lite .stat{background:var(--white)}
 
+/* coming up strip */
+.upcoming{padding:48px 0}
+.upcoming .uhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.upcoming .usub{font-size:14px;color:var(--muted)}
+.utrack{margin-top:24px;display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.ucard{flex:0 0 260px;border:1px solid var(--border);border-radius:16px;background:var(--white);padding:18px 20px;transition:.15s;text-decoration:none;color:inherit;display:block}
+.ucard:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);text-decoration:none}
+.ucard .udate{font-family:Montserrat;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--brand)}
+.ucard .udate .udays{font-weight:500;color:var(--muted);letter-spacing:0;text-transform:none;margin-left:6px}
+.ucard.past .udate{color:var(--warning)}
+.ucard .ukind{display:inline-block;margin-top:10px;font-family:Montserrat;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:9999px;padding:4px 11px}
+.ucard .ukind.hearing{background:color-mix(in srgb,var(--brand) 10%,transparent);color:var(--brand);border:1px solid color-mix(in srgb,var(--brand) 25%,transparent)}
+.ucard .ukind.deadline{background:color-mix(in srgb,var(--warning) 10%,transparent);color:var(--warning);border:1px solid color-mix(in srgb,var(--warning) 30%,transparent)}
+.ucard .ulabel{margin-top:10px;font-size:13.5px;line-height:1.45;color:var(--dark);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ucard .usub2{margin-top:8px;font-size:12px;color:var(--muted)}
+
 /* accountability ledger */
 .ledger-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:48px}
 .lstat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
@@ -165,6 +181,10 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .authchip{font-family:Montserrat;font-size:11px;font-weight:600;letter-spacing:.06em;border-radius:9999px;padding:4px 12px;background:color-mix(in srgb,var(--brand) 8%,transparent);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent);color:var(--brand);white-space:nowrap}
 .dmeta .dcase{font-style:italic}
 .ledger-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:820px;border-left:3px solid var(--border);padding-left:16px;font-style:italic}
+.dcard{scroll-margin-top:76px}
+.dlink{font-size:12px;color:var(--muted);white-space:nowrap}
+.dlink:hover{color:var(--brand)}
+.dcard.flash{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 15%,transparent)}
 .dnote{margin-top:12px;font-size:13.5px;color:var(--muted);max-width:760px;border-left:3px solid var(--border);padding-left:14px}
 .devents{margin-top:12px}
 .devent{font-size:13.5px;color:var(--dark);border-left:3px solid color-mix(in srgb,var(--brand) 40%,transparent);background:var(--brand-lite);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:8px;max-width:760px}
@@ -233,6 +253,16 @@ footer p{max-width:820px;margin-top:8px}
     <a class="jn" href="#watchlist">Watchlist</a>
   </div>
 </nav>
+
+<section class="upcoming" id="upcoming" hidden>
+  <div class="wrap">
+    <div class="uhead">
+      <span class="eyebrow">Coming up</span>
+      <span class="usub">Hearings and court-set deadlines in the next 90 days</span>
+    </div>
+    <div class="utrack" id="utrack"></div>
+  </div>
+</section>
 
 <section class="sect bg-lite" id="ledger">
   <div class="wrap">
@@ -448,7 +478,7 @@ function renderLedger(){
     const events = (d.compliance_events||[]).map(e=>
       `<div class="devent"><b>${fmt(e.date)}</b> — ${e.note}${e.tid?` <a href="https://indiankanoon.org/doc/${e.tid}/" target="_blank" rel="noopener">order ↗</a>`:''}</div>`).join('');
     const note = d.status_note ? `<div class="dnote">${d.status_note}</div>` : '';
-    return `<div class="dcard">
+    return `<div class="dcard" id="dir-${d.id}">
       <div class="dcard-head">
         <div class="dtext">${d.directive}</div>
         <span class="dpill ${m.cls}">${m.label}</span>
@@ -460,6 +490,7 @@ function renderLedger(){
         <span>Granted <b>${d.granted}</b> · ${due}</span>
         <span class="dcase">${d.case_title}</span>
         ${link}
+        <a class="dlink" href="#dir-${d.id}" title="Permalink to this direction">§ link</a>
       </div>
     </div>`;
   }).join('') : '<div class="gempty">No directions match the current filters.</div>';
@@ -474,6 +505,54 @@ document.querySelectorAll('#ledger-auth .tchip').forEach(b=>b.addEventListener('
   lAuth = on ? null : b.dataset.lauth; if(!on) b.classList.add('active'); renderLedger();
 }));
 renderLedger();
+
+// ===== Coming up (next 90 days) =====
+// Hearings come from cases' next_listing (free text, e.g. "17 August 2026 (per
+// order of ...)"); deadlines from computed-status ledger directions. Both are
+// IST-anchored like the ledger. Unparseable next_listing values simply don't
+// appear — the strip hides itself when empty.
+const MONTHS_ = {january:1,february:2,march:3,april:4,may:5,june:6,july:7,august:8,september:9,october:10,november:11,december:12};
+function parseListing(s){
+  const m = (s||'').match(/(\d{1,2})\s+([A-Za-z]+),?\s+(\d{4})/);
+  if(!m) return null;
+  const mo = MONTHS_[m[2].toLowerCase()];
+  return mo ? `${m[3]}-${String(mo).padStart(2,'0')}-${String(m[1]).padStart(2,'0')}` : null;
+}
+(function(){
+  const today = new Date(Date.now() + 330*60000).toISOString().slice(0,10);
+  const horizon = new Date(Date.parse(today) + 90*86400000).toISOString().slice(0,10);
+  const events = [];
+  DB.cases.forEach(c => {
+    const d = parseListing(c.next_listing);
+    if(d && d >= today && d <= horizon)
+      events.push({date:d, kind:'hearing', klabel:'Hearing', label:c.title, sub:c.case_number, href:'#docket'});
+  });
+  DIRS.forEach(x => {
+    if(x.due && x.due >= today && x.due <= horizon && !x.status)
+      events.push({date:x.due, kind:'deadline', klabel:'Deadline', label:x.directive, sub:x.authority, href:'#dir-'+x.id});
+  });
+  if(!events.length) return;
+  events.sort((a,b) => a.date.localeCompare(b.date));
+  const days = d => Math.round((Date.parse(d) - Date.parse(today))/86400000);
+  document.getElementById('utrack').innerHTML = events.map(e => {
+    const n = days(e.date);
+    const rel = n === 0 ? 'today' : n === 1 ? 'tomorrow' : `in ${n} days`;
+    return `<a class="ucard" href="${e.href}">
+      <div class="udate">${fmt(e.date)}<span class="udays">· ${rel}</span></div>
+      <span class="ukind ${e.kind}">${e.klabel}</span>
+      <div class="ulabel">${e.label}</div>
+      <div class="usub2">${e.sub}</div>
+    </a>`;
+  }).join('');
+  document.getElementById('upcoming').hidden = false;
+})();
+
+// deep link to a direction card (#dir-<id>) — content renders dynamically, so
+// resolve the hash ourselves after first render
+if(location.hash.startsWith('#dir-')){
+  const el = document.querySelector(CSS.escape ? '#'+CSS.escape(location.hash.slice(1)) : location.hash);
+  if(el){ el.scrollIntoView(); el.classList.add('flash'); }
+}
 
 // sticky nav counts (static totals, independent of filters)
 $('#jn-ledger').textContent = DIRS.length;

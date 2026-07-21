@@ -77,5 +77,58 @@
     "\"trauma centre\" OR \"trauma care\" doctypes:supremecourt",
     "\"National Highway\" fatality directions doctypes:supremecourt"
   ],
-  "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses."
+  "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses.",
+  "citation_follow": {
+    "_comment": "Principal systemic orders whose citing cases are swept quarterly by citation_sweep.py — catches oddly-worded matters the phrase battery misses. Compensation precedents (Sarla Verma, Pranay Sethi) deliberately excluded: citedby is thousands of individual MACT appeals.",
+    "docids": [
+      {
+        "case_id": "rajaseekaran-295-2012",
+        "date": "2017-11-30",
+        "tid": 180830072,
+        "why": "2017 governance-backbone order"
+      },
+      {
+        "case_id": "rajaseekaran-295-2012",
+        "date": "2024-01-12",
+        "tid": 4654780,
+        "why": "2024 hit-and-run compensation directions"
+      },
+      {
+        "case_id": "rajaseekaran-295-2012",
+        "date": "2025-05-14",
+        "tid": 166094161,
+        "why": "NRSB constitution order"
+      },
+      {
+        "case_id": "savelife-good-samaritan-235-2012",
+        "date": "2016-03-30",
+        "tid": 132863475,
+        "why": "Good Samaritan guidelines judgment"
+      },
+      {
+        "case_id": "savelife-emergency-care-726-2024",
+        "date": "2026-05-26",
+        "tid": 79241526,
+        "why": "Emergency care / PM RAHAT directions"
+      },
+      {
+        "case_id": "gohar-mohammed-2022",
+        "date": "2022-12-15",
+        "tid": 85494539,
+        "why": "DAR workflow judgment"
+      },
+      {
+        "case_id": "phalodi-smwpc-9-2025",
+        "date": "2026-04-13",
+        "tid": 78882038,
+        "why": "Highway safety direction set"
+      },
+      {
+        "case_id": "gyan-prakash-1272-2019",
+        "date": "2025-05-21",
+        "tid": 85517552,
+        "why": "NH encroachment order"
+      }
+    ]
+  }
 }

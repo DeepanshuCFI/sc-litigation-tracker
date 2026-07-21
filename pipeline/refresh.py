@@ -117,6 +117,31 @@ def main() -> None:
         if d.get("due") and week_ago < d["due"] <= today_iso and not d.get("status")
     ]
 
+    # hearings that have happened with no order fetched yet — IK indexing lags
+    # a few days after big hearings; this tells the operator when to check the
+    # SC website manually instead of waiting for next Tuesday
+    def parse_listing(s):
+        m = re.search(r"(\d{1,2})\s+([A-Za-z]+),?\s+(\d{4})", s or "")
+        if not m:
+            return None
+        try:
+            from datetime import datetime
+            return datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}", "%d %B %Y").date().isoformat()
+        except ValueError:
+            return None
+
+    curation = json.loads((ROOT / "pipeline" / "curation.json").read_text())
+    latest_by_id = {c["id"]: c.get("latest_order") for c in reg["cases"]}
+    stale_listings = []
+    for spec in curation["tracked_cases"]:
+        listed = parse_listing(spec.get("next_listing"))
+        if listed and listed <= today_iso and (latest_by_id.get(spec["id"]) or "") < listed:
+            stale_listings.append({
+                "case": spec["id"], "listed_for": listed,
+                "latest_order_on_record": latest_by_id.get(spec["id"]),
+                "note": "hearing date passed with no order fetched yet — check the SC website / IK directly",
+            })
+
     report = {
         "refresh_date": today_iso,
         "fromdate_window": fromdate,
@@ -126,6 +151,7 @@ def main() -> None:
         "cases_with_new_orders": grew,
         "new_order_counts": new_order_counts,
         "newly_overdue": newly_overdue,
+        "stale_listings": stale_listings,
         "new_unassigned_candidates": [
             {"tid": d["tid"], "date": d["publishdate"], "title": ctitle(d["title"]),
              "headline": ctitle(d.get("headline") or "")[:200]}
