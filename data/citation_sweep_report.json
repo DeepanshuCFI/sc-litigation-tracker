@@ -1,0 +1,16 @@
+{
+ "sweep_date": "2026-07-21",
+ "docids_followed": 8,
+ "maxcitedby": 50,
+ "new_sc_candidates": [],
+ "errors": [
+  "docmeta ctid=184482790: <urlopen error [Errno 60] Operation timed out>",
+  "docmeta ctid=28472106: Remote end closed connection without response",
+  "tid=180830072: Remote end closed connection without response",
+  "docmeta ctid=89422094: <urlopen error [Errno 60] Operation timed out>",
+  "docmeta ctid=114195230: Remote end closed connection without response",
+  "docmeta ctid=132257860: The read operation timed out",
+  "docmeta ctid=148477357: The read operation timed out"
+ ],
+ "approx_cost_inr": 3.0
+}
