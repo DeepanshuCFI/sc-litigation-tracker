@@ -533,13 +533,16 @@ function render(){
   }));
 }
 
-document.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));
+// Scoped to the docket's own controls — the ledger has separate .fbtn/.tchip
+// sets with their own handlers; unscoped selectors double-bind and clicking a
+// ledger filter would set fStatus=undefined, emptying every docket section.
+document.querySelectorAll('#docket .fbtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#docket .fbtn').forEach(x=>x.classList.remove('active'));
   b.classList.add('active'); fStatus=b.dataset.status; render();
 }));
-document.querySelectorAll('.tchip').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('#theme-chips .tchip').forEach(b=>b.addEventListener('click',()=>{
   const on=b.classList.contains('active');
-  document.querySelectorAll('.tchip').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('#theme-chips .tchip').forEach(x=>x.classList.remove('active'));
   fTheme=on?null:b.dataset.theme; if(!on)b.classList.add('active'); render();
 }));
 document.getElementById('search').addEventListener('input',e=>{fText=e.target.value.trim().toLowerCase();render();});

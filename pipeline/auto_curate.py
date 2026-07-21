@@ -54,8 +54,9 @@ GIST_SCHEMA = {
         "gist": {"type": "string"},
         "significance": {"type": "string", "enum": ["major", "routine"]},
         "latest_development": {"type": "string"},
+        "next_listing": {"type": "string"},
     },
-    "required": ["gist", "significance", "latest_development"],
+    "required": ["gist", "significance", "latest_development", "next_listing"],
     "additionalProperties": False,
 }
 
@@ -281,7 +282,9 @@ def main() -> None:
         "whose operative content is merely re-circulating or reproducing directions already issued on an "
         "earlier date is 'routine'. An order that records non-compliance, sets a fresh deadline, or "
         "threatens coercive consequences (personal appearance, contempt) is 'major' even if short. "
-        "latest_development: one sentence, starting with the date, capturing where the case stands now."
+        "latest_development: one sentence, starting with the date, capturing where the case stands now. "
+        "next_listing: the next hearing date exactly as the order states it (e.g. 'List on 17th August, "
+        "2026' -> '17 August 2026'); empty string if the order fixes no date."
     )
     # Accountability Ledger extraction (grounded, deadline-bearing directions only)
     dir_system = (
@@ -331,6 +334,12 @@ def main() -> None:
                     "gist": result["gist"], "significance": "major"}
             if result["latest_development"]:
                 spec["latest_development"] = result["latest_development"]
+            # keep next_listing current — a stale hearing date is worse than none
+            if result.get("next_listing"):
+                spec["next_listing"] = f"{result['next_listing']} (per order of {newest['date']})"
+            elif "next_listing" in spec:
+                # order fixed no date; drop the old one rather than display it stale
+                del spec["next_listing"]
             changed = True
 
             # Extract deadline-bearing directions from this order into the ledger.
