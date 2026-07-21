@@ -27,6 +27,24 @@
       "search_queries": [
         "\"Gohar Mohammed\" doctypes:supremecourt"
       ]
+    },
+    {
+      "id": "phalodi-smwpc-9-2025",
+      "title": "In Re: Phalodi Accident (Suo Motu)",
+      "case_number": "SMW(C) 9/2025",
+      "why_seeded": "Live suo motu with the largest active direction set (highway safety, ATMS, blackspots); title-based query so its orders are caught even when no discovery phrase appears in the text.",
+      "search_queries": [
+        "\"Phalodi\" doctypes:supremecourt"
+      ]
+    },
+    {
+      "id": "gyan-prakash-1272-2019",
+      "title": "Gyan Prakash v. Union of India",
+      "case_number": "W.P.(C) 1272/2019",
+      "why_seeded": "Pending NH encroachment-removal matter with open ledger directions; needs a title query for the same reason.",
+      "search_queries": [
+        "\"Gyan Prakash\" highways doctypes:supremecourt"
+      ]
     }
   ],
   "discovery_queries": [
@@ -52,7 +70,12 @@
     "\"pedestrian\" guidelines doctypes:supremecourt",
     "\"footpath\" road doctypes:supremecourt",
     "\"zebra crossing\" doctypes:supremecourt",
-    "\"right to walk\" doctypes:supremecourt"
+    "\"right to walk\" doctypes:supremecourt",
+    "\"school bus\" OR \"school children\" transport doctypes:supremecourt",
+    "\"drunk driving\" OR \"drunken driving\" doctypes:supremecourt",
+    "\"e-rickshaw\" OR \"electric vehicle\" safety doctypes:supremecourt",
+    "\"trauma centre\" OR \"trauma care\" doctypes:supremecourt",
+    "\"National Highway\" fatality directions doctypes:supremecourt"
   ],
   "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses."
 }

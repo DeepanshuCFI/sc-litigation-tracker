@@ -39,7 +39,21 @@ def main() -> None:
     ap.add_argument("--days-back", type=int, default=40)
     args = ap.parse_args()
 
-    fromdate = (date.today() - timedelta(days=args.days_back)).strftime("%d-%m-%Y")
+    # if refreshes have been failing/skipped, widen the window to cover the gap
+    # (plus IK indexing lag) instead of silently missing the missed weeks
+    days_back = args.days_back
+    report_path = ROOT / "data" / "refresh_report.json"
+    if report_path.exists():
+        try:
+            last = date.fromisoformat(json.loads(report_path.read_text())["refresh_date"])
+            gap = (date.today() - last).days
+            if gap + 21 > days_back:
+                days_back = gap + 21
+                print(f"  last refresh {last} — widening window to {days_back} days", file=sys.stderr)
+        except (KeyError, ValueError):
+            pass
+
+    fromdate = (date.today() - timedelta(days=days_back)).strftime("%d-%m-%Y")
     index = json.loads((RAW / "_index.json").read_text())
     before_tids = set(index.keys())
     old_reg = json.loads((ROOT / "data" / "cases.json").read_text())
@@ -74,9 +88,12 @@ def main() -> None:
     # rebuild registry (preserves existing gists via its merge logic)
     subprocess.run([sys.executable, str(ROOT / "pipeline" / "build_registry.py")], check=True)
 
-    # flag cases whose timelines grew
+    # flag cases whose timelines grew (and by how many orders, so curation
+    # can gist every new order, not just the newest)
     reg = json.loads((ROOT / "data" / "cases.json").read_text())
     grew = [c["id"] for c in reg["cases"] if c["order_count"] > old_counts.get(c["id"], 0)]
+    new_order_counts = {c["id"]: c["order_count"] - old_counts.get(c["id"], 0)
+                        for c in reg["cases"] if c["id"] in grew}
     reg["new_this_refresh"] = grew
     reg["meta"]["built"] = date.today().isoformat()
     (ROOT / "data" / "cases.json").write_text(json.dumps(reg, indent=1, ensure_ascii=False))
@@ -89,13 +106,26 @@ def main() -> None:
         return re.sub(r"<[^>]+>", "", t or "")
     assigned = {str(o["tid"]) for c in reg["cases"] for o in c["orders"]}
     unassigned_new = [d for d in new_docs if str(d["tid"]) not in assigned]
+    # ledger deadlines that crossed 'due' since the last refresh — the flip to
+    # overdue happens client-side and would otherwise go unannounced
+    week_ago = (date.today() - timedelta(days=7)).isoformat()
+    today_iso = date.today().isoformat()
+    newly_overdue = [
+        {"id": d["id"], "authority": d["authority"], "due": d["due"],
+         "directive": d["directive"][:100]}
+        for d in json.loads((ROOT / "pipeline" / "directions.json").read_text())["directions"]
+        if d.get("due") and week_ago < d["due"] <= today_iso and not d.get("status")
+    ]
+
     report = {
-        "refresh_date": date.today().isoformat(),
+        "refresh_date": today_iso,
         "fromdate_window": fromdate,
         "search_pages": pages,
         "approx_cost_inr": round(pages * 0.5, 1),
         "new_docs_total": len(new_docs),
         "cases_with_new_orders": grew,
+        "new_order_counts": new_order_counts,
+        "newly_overdue": newly_overdue,
         "new_unassigned_candidates": [
             {"tid": d["tid"], "date": d["publishdate"], "title": ctitle(d["title"]),
              "headline": ctitle(d.get("headline") or "")[:200]}

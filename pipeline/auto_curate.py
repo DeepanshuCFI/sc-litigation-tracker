@@ -132,6 +132,15 @@ def near_duplicate(directive: str, case_id: str, existing: list,
     return None
 
 
+def _add_months(d, n: int):
+    """Calendar-month addition, day clamped to month end (courts count calendar
+    months: 13 Apr + 3 months = 13 Jul, not 13 Apr + 91.32 days)."""
+    import calendar
+    y, m = divmod(d.month - 1 + n, 12)
+    y, m = d.year + y, m + 1
+    return d.replace(year=y, month=m, day=min(d.day, calendar.monthrange(y, m)[1]))
+
+
 def compute_due(order_date: str, granted: str):
     """order_date (ISO) + a granted period like '60 days'/'3 months'/'6 weeks' -> ISO due date.
     Returns None for recurring/unclear periods (those become 'ongoing')."""
@@ -152,13 +161,20 @@ def compute_due(order_date: str, granted: str):
     elif unit == "week":
         d += timedelta(weeks=n)
     elif unit == "month":
-        d += timedelta(days=round(n * 30.44))
+        d = _add_months(d, n)
     elif unit == "year":
-        d += timedelta(days=round(n * 365.25))
+        d = _add_months(d, 12 * n)
     return d.isoformat()
 
 
-def doc_text(tid: int, limit: int = 9000) -> str:
+DOC_FETCHES = {"n": 0}  # for honest cost reporting in the curation log
+
+
+def doc_text(tid: int, limit: int = 24000) -> str:
+    """Fetch and flatten an order. The limit is generous — SC orders put their
+    operative directions after pages of appearances, and a tight middle-elision
+    (the old 9k) risked cutting exactly the part the ledger needs."""
+    DOC_FETCHES["n"] += 1
     d = ik_client.doc(tid)
     text = re.sub(r"<[^>]+>", " ", d.get("doc") or "")
     text = re.sub(r"\s+", " ", text).strip()
@@ -177,6 +193,15 @@ def ask(client, system: str, user: str, schema: dict) -> dict:
     )
     text = next(b.text for b in resp.content if b.type == "text")
     return json.loads(text)
+
+
+def norm_title(t: str) -> str:
+    """Mirror of build_registry.norm_title — the string match patterns run against."""
+    t = re.sub(r"<[^>]+>", "", t or "")
+    t = re.sub(r"\s+on\s+\d{1,2}\s+\w+,\s+\d{4}\s*$", "", t)
+    t = re.sub(r"[&.,]", "", t).lower()
+    t = re.sub(r"\s+(and|ors|anr|etc|others)\b", "", t)
+    return re.sub(r"\s+", " ", t).strip()
 
 
 def norm_pattern(title: str) -> str:
@@ -243,10 +268,19 @@ def main() -> None:
                      "action": result["action"], "reason": result["reason"]}
             log["classified"].append(entry)
             if result["action"] == "track":
-                cid = re.sub(r"[^a-z0-9]+", "-", result["match_pattern"])[:40].strip("-") + f"-{c['date'][:4]}"
+                # match_pattern drives title-matching forever — sanity-check it
+                # against the source title so a hallucinated or over-broad
+                # pattern can't vacuum unrelated documents into the case
+                pattern = result["match_pattern"] or ""
+                if pattern not in norm_title(c["title"]) or len(pattern) < 8:
+                    pattern = norm_pattern(c["title"])
+                cid = re.sub(r"[^a-z0-9]+", "-", pattern)[:40].strip("-") + f"-{c['date'][:4]}"
+                taken = {s["id"] for s in curation["tracked_cases"]}
+                while cid in taken:  # same-year name collision — never merge timelines silently
+                    cid += "-x"
                 curation["tracked_cases"].append({
                     "id": cid,
-                    "match": [result["match_pattern"] or norm_pattern(c["title"])],
+                    "match": [pattern],
                     "title": result["title"],
                     "case_number": result["case_number"] or "(verify)",
                     "court": "Supreme Court of India",
@@ -322,8 +356,13 @@ def main() -> None:
         spec = next((s for s in curation["tracked_cases"] if s["id"] == cid), None)
         if not case or not spec or not case["orders"]:
             continue
-        newest = case["orders"][-1]
-        try:
+        # gist/extract EVERY order added this refresh, not just the newest —
+        # after court vacations a case routinely gains 2+ orders in one window,
+        # and skipping the earlier ones left their directions out of the ledger.
+        # Chronological order, so the newest order wins latest_development.
+        n_new = max(1, report.get("new_order_counts", {}).get(cid, 1))
+        for newest in case["orders"][-n_new:]:
+          try:
             text = doc_text(newest["tid"])
             result = ask(client, gist_system,
                          f"Case: {case['title']} ({case['case_number']})\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
@@ -374,8 +413,8 @@ def main() -> None:
                 existing_dir_ids.add(did)
                 dir_changed = True
                 log.setdefault("new_directions", []).append({"case": cid, "directive": d["directive"][:80], "due": due})
-        except Exception as e:
-            log["errors"].append(f"gist/directions case={cid}: {e}")
+          except Exception as e:
+            log["errors"].append(f"gist/directions case={cid} order={newest['date']}: {e}")
 
     if dir_changed:
         DIR_PATH.write_text(json.dumps(dirdata, indent=2, ensure_ascii=False))
@@ -391,6 +430,8 @@ def main() -> None:
         (ROOT / "data" / "cases.json").write_text(json.dumps(registry, indent=1, ensure_ascii=False))
         subprocess.run([sys.executable, str(ROOT / "pipeline" / "build_dashboard.py")], check=True)
 
+    log["doc_fetches"] = DOC_FETCHES["n"]
+    log["approx_doc_cost_inr"] = round(DOC_FETCHES["n"] * 0.2, 1)
     (ROOT / "data" / "curation_log.json").write_text(json.dumps(log, indent=1, ensure_ascii=False))
     print(json.dumps(log, indent=1, ensure_ascii=False))
 

@@ -80,9 +80,14 @@ def search_all(query: str, max_pages: int = 5, delay: float = 1.0) -> list:
         if not batch:
             break
         docs.extend(batch)
-        found = result.get("found", "")
         if len(batch) < 10:  # last page
             break
+        if page == max_pages - 1:
+            # a full final page means results were likely truncated — say so
+            # loudly rather than silently under-fetching (matters after gaps)
+            print(f"  WARNING: '{query}' hit max_pages={max_pages} with a full "
+                  f"page — results may be truncated; found={result.get('found','?')}",
+                  file=sys.stderr)
         time.sleep(delay)
     return docs
 
