@@ -2080,28 +2080,16 @@
    "link": "https://indiankanoon.org/doc/78882038/"
   },
   {
-   "id": "phalodi-smwpc-9-2025-20260713-8",
+   "id": "phalodi-20260713-affidavits",
    "case_id": "phalodi-smwpc-9-2025",
    "order_date": "2026-07-13",
    "order_tid": 121987210,
-   "directive": "Defaulting States and Union Territories shall file the requisite compliance affidavits, failing which the Court shall direct personal appearance of Chief Secretaries and DGPs.",
+   "directive": "Defaulting States and Union Territories shall file the compliance affidavits required by the 13 April 2026 directions within two weeks, failing which the Court will direct personal appearance (physical or virtual) of their Chief Secretaries/Administrators and Directors General of Police.",
    "authority": "States / UTs",
    "granted": "two weeks",
    "due": "2026-07-27",
-   "theme": "Compliance affidavits",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-1",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "The Highway Administration, NHAI, NHIDCL, and State PWDs shall file a consolidated report on inspection team composition and schedules, encroachments identified, and notices issued under Section 26 of the CNH Act.",
-   "authority": "Highway Administrations",
-   "granted": "30 days",
-   "due": "2026-08-12",
-   "theme": "Inspection & grievance report",
+   "theme": "institutions",
+   "status_note": "As of 13 July 2026 the Court recorded, on the Amicus Curiae's submission, that compliance affidavits had been received from only three States/UTs — Bihar, Karnataka and Puducherry. Matter listed for 17 August 2026.",
    "case_title": "In Re: Phalodi Accident (Suo Motu)",
    "link": "https://indiankanoon.org/doc/121987210/"
   },
@@ -2158,71 +2146,6 @@
    "link": "https://indiankanoon.org/doc/79241526/"
   },
   {
-   "id": "phalodi-smwpc-9-2025-20260713-4",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "MoRTH/NHAI shall identify accident blackspots and critical areas and publish a comprehensive list of Accident blackspots on National Highways.",
-   "authority": "MoRTH",
-   "granted": "45 days",
-   "due": "2026-08-27",
-   "theme": "Accident blackspots",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-0",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "No heavy or commercial vehicle shall park/stop on any National Highway carriageway or paved shoulder except at designated bays, enforced through ATMS real-time alerts, GPS-timestamped evidence, and eChallan generation, with District Magistrates setting up an SOP for inspections and patrolling.",
-   "authority": "NHAI",
-   "granted": "60 days",
-   "due": "2026-09-11",
-   "theme": "Parking enforcement",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-2",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "NHAI shall operationalise its ATMS comprising TMCC cameras, VSDS speed detectors, VIDS cameras, Variable Message Signboards, and Emergency Call Boxes across all 4/6-lane highways and expressways and file an affidavit certifying operational status; non-operational units to be made functional.",
-   "authority": "NHAI",
-   "granted": "60 days",
-   "due": "2026-09-11",
-   "theme": "ATMS operationalisation",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-3",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "NHAI shall deploy BLS ambulances and recovery cranes at intervals not exceeding 75 km on every National Highway stretch, at toll plazas, Wayside Amenities, or dedicated posts.",
-   "authority": "NHAI",
-   "granted": "60 days",
-   "due": "2026-09-11",
-   "theme": "Emergency response",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-6",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-State Highway Safety Coordination Committee for standardising enforcement protocols across State boundaries.",
-   "authority": "MoRTH",
-   "granted": "60 days",
-   "due": "2026-09-11",
-   "theme": "Coordination committee",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
    "id": "savelife-20260526-f",
    "case_id": "savelife-emergency-care-726-2024",
    "order_date": "2026-05-26",
@@ -2234,32 +2157,6 @@
    "theme": "post-crash care",
    "case_title": "SaveLIFE Foundation v. Union of India (Emergency Care)",
    "link": "https://indiankanoon.org/doc/79241526/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-7",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "MoRTH, upon securing the consolidated district-wise and agency-wise compliance report from all implementing agencies, shall file the same in tabular form before the Court.",
-   "authority": "MoRTH",
-   "granted": "75 days",
-   "due": "2026-09-26",
-   "theme": "Compliance report",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
-  },
-  {
-   "id": "phalodi-smwpc-9-2025-20260713-5",
-   "case_id": "phalodi-smwpc-9-2025",
-   "order_date": "2026-07-13",
-   "order_tid": 121987210,
-   "directive": "Full installation of high-intensity LED/high-mast lighting, speed enforcement cameras, retro-reflective warning signs, and transverse bar markings at every blackspot shall be completed after issuance of the Policy Framework.",
-   "authority": "NHAI",
-   "granted": "4 months",
-   "due": "2026-11-12",
-   "theme": "Blackspot lighting",
-   "case_title": "In Re: Phalodi Accident (Suo Motu)",
-   "link": "https://indiankanoon.org/doc/121987210/"
   },
   {
    "id": "phalodi-20260413-drone",
@@ -2366,7 +2263,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "phalodi-smwpc-9-2025"
- ]
+ "new_this_refresh": []
 }
