@@ -165,6 +165,10 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .authchip{font-family:Montserrat;font-size:11px;font-weight:600;letter-spacing:.06em;border-radius:9999px;padding:4px 12px;background:color-mix(in srgb,var(--brand) 8%,transparent);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent);color:var(--brand);white-space:nowrap}
 .dmeta .dcase{font-style:italic}
 .ledger-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:820px;border-left:3px solid var(--border);padding-left:16px;font-style:italic}
+.dnote{margin-top:12px;font-size:13.5px;color:var(--muted);max-width:760px;border-left:3px solid var(--border);padding-left:14px}
+.devents{margin-top:12px}
+.devent{font-size:13.5px;color:var(--dark);border-left:3px solid color-mix(in srgb,var(--brand) 40%,transparent);background:var(--brand-lite);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:8px;max-width:760px}
+.devent b{font-family:Montserrat;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--brand)}
 
 /* precedent feed — brand section */
 .notable{background:var(--brand)}
@@ -246,6 +250,7 @@ footer p{max-width:820px;margin-top:8px}
       <button class="fbtn" data-lstatus="overdue">Overdue</button>
       <button class="fbtn" data-lstatus="due-soon">Due soon</button>
       <button class="fbtn" data-lstatus="upcoming">Upcoming</button>
+      <button class="fbtn" data-lstatus="complied">Complied</button>
       <button class="fbtn" data-lstatus="ongoing">Ongoing</button>
     </div>
     <div class="tchips" id="ledger-auth"></div>
@@ -387,8 +392,10 @@ const SMETA = {
 function dstatus(d){
   if(d.status) return d.status;              // missed / complied / ongoing set explicitly
   if(!d.due) return 'ongoing';
-  const midnight = new Date(new Date().toDateString());
-  const days = Math.floor((new Date(d.due+'T00:00:00') - midnight)/86400000);
+  // anchor "today" to IST — the deadlines are Indian court deadlines, and a
+  // viewer's local timezone shouldn't change which side of due a direction sits
+  const todayIST = new Date(Date.now() + 330*60000).toISOString().slice(0,10);
+  const days = Math.round((Date.parse(d.due) - Date.parse(todayIST))/86400000);
   if(days < 0) return 'overdue';
   if(days <= 90) return 'due-soon';
   return 'upcoming';
@@ -437,13 +444,19 @@ function renderLedger(){
     const m = SMETA[d._st];
     const due = d.due ? `due <b>${fmt(d.due)}</b>` : '<b>no fixed date</b>';
     const link = d.link ? `<a href="${d.link}" target="_blank" rel="noopener">Read order ↗</a>` : '';
+    const standing = d.historical ? `<span class="dpill ongoing">Standing since ${(d.order_date||'').slice(0,4)}</span>` : '';
+    const events = (d.compliance_events||[]).map(e=>
+      `<div class="devent"><b>${fmt(e.date)}</b> — ${e.note}${e.tid?` <a href="https://indiankanoon.org/doc/${e.tid}/" target="_blank" rel="noopener">order ↗</a>`:''}</div>`).join('');
+    const note = d.status_note ? `<div class="dnote">${d.status_note}</div>` : '';
     return `<div class="dcard">
       <div class="dcard-head">
         <div class="dtext">${d.directive}</div>
         <span class="dpill ${m.cls}">${m.label}</span>
       </div>
+      ${note}${events?`<div class="devents">${events}</div>`:''}
       <div class="dmeta">
         <span class="authchip">${d.authority}</span>
+        ${standing}
         <span>Granted <b>${d.granted}</b> · ${due}</span>
         <span class="dcase">${d.case_title}</span>
         ${link}

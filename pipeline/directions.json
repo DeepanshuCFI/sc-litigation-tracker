@@ -1,5 +1,5 @@
 {
-  "_comment": "The Accountability Ledger. Each entry is a concrete direction the Supreme Court issued to a government duty-bearer, with the granted period converted to an absolute 'due' date. Status is computed LIVE in the dashboard from 'due' vs today, EXCEPT where an explicit 'status' is set (missed/complied/ongoing) because a later tracked order confirms it. Every 'directive' is condensed from fetched order text — never invented. 'overdue'/'due-soon'/'upcoming' are never asserted as government failure; they mean the deadline has passed with compliance unconfirmed on the tracked record.",
+  "_comment": "The Accountability Ledger. Each entry is a concrete direction the Supreme Court issued to a government duty-bearer, with the granted period converted to an absolute 'due' date. Status is computed LIVE in the dashboard from 'due' vs today, EXCEPT where an explicit 'status' is set (missed/complied/ongoing) because a later tracked order confirms it. Every 'directive' is condensed from fetched order text — never invented. 'overdue'/'due-soon'/'upcoming' are never asserted as government failure; they mean the deadline has passed with compliance unconfirmed on the tracked record. Optional 'compliance_events': [{date, tid, note}] — dated facts from later orders about partial/progressive compliance (e.g. which States filed affidavits), rendered on the direction card without changing its status.",
   "directions": [
     {
       "id": "phalodi-20260413-a",
@@ -323,7 +323,14 @@
       "granted": "two weeks",
       "due": "2026-07-27",
       "theme": "institutions",
-      "status_note": "As of 13 July 2026 the Court recorded, on the Amicus Curiae's submission, that compliance affidavits had been received from only three States/UTs — Bihar, Karnataka and Puducherry. Matter listed for 17 August 2026."
+      "status_note": "Matter listed for 17 August 2026; the Court warned that Chief Secretaries and DGPs of still-defaulting States/UTs will be summoned to appear personally.",
+      "compliance_events": [
+        {
+          "date": "2026-07-13",
+          "tid": 121987210,
+          "note": "Court records compliance affidavits received from only 3 of 36 States/UTs — Bihar, Karnataka and Puducherry."
+        }
+      ]
     }
   ]
 }

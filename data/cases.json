@@ -2141,7 +2141,14 @@
    "granted": "two weeks",
    "due": "2026-07-27",
    "theme": "institutions",
-   "status_note": "As of 13 July 2026 the Court recorded, on the Amicus Curiae's submission, that compliance affidavits had been received from only three States/UTs — Bihar, Karnataka and Puducherry. Matter listed for 17 August 2026.",
+   "status_note": "Matter listed for 17 August 2026; the Court warned that Chief Secretaries and DGPs of still-defaulting States/UTs will be summoned to appear personally.",
+   "compliance_events": [
+    {
+     "date": "2026-07-13",
+     "tid": 121987210,
+     "note": "Court records compliance affidavits received from only 3 of 36 States/UTs — Bihar, Karnataka and Puducherry."
+    }
+   ],
    "case_title": "In Re: Phalodi Accident (Suo Motu)",
    "link": "https://indiankanoon.org/doc/121987210/"
   },
