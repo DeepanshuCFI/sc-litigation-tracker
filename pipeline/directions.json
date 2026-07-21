@@ -35,6 +35,17 @@
       "theme": "highways"
     },
     {
+      "id": "phalodi-20260413-d",
+      "case_id": "phalodi-smwpc-9-2025",
+      "order_date": "2026-04-13",
+      "order_tid": 78882038,
+      "directive": "No department, authority or local body shall grant or renew any licence, NOC or trade approval for a site within a Highway safety zone without prior NHAI/PWD clearance; all such existing licences shall be reviewed.",
+      "authority": "States / UTs",
+      "granted": "30 days",
+      "due": "2026-05-13",
+      "theme": "highways"
+    },
+    {
       "id": "phalodi-20260413-e",
       "case_id": "phalodi-smwpc-9-2025",
       "order_date": "2026-04-13",
@@ -44,6 +55,28 @@
       "granted": "15 days",
       "due": "2026-04-28",
       "theme": "institutions"
+    },
+    {
+      "id": "phalodi-20260413-e2",
+      "case_id": "phalodi-smwpc-9-2025",
+      "order_date": "2026-04-13",
+      "order_tid": 78882038,
+      "directive": "State Governments shall issue notifications prohibiting change of land use within 40 metres (residential) and 75 metres (commercial) of the mid-point of any National Highway, consistent with IRC norms; MoRTH to facilitate uniform notifications across all States in the same period.",
+      "authority": "States / UTs",
+      "granted": "60 days",
+      "due": "2026-06-12",
+      "theme": "road engineering"
+    },
+    {
+      "id": "phalodi-20260413-f",
+      "case_id": "phalodi-smwpc-9-2025",
+      "order_date": "2026-04-13",
+      "order_tid": 78882038,
+      "directive": "Constitute dedicated Highway Surveillance Teams of State Police and Transport Department personnel for regular National Highway patrolling, supplementing NHAI's 24x7 route patrolling vehicles at intervals not exceeding 50 km, all fitted with Vehicle Tracking Devices.",
+      "authority": "State Police",
+      "granted": "30 days",
+      "due": "2026-05-13",
+      "theme": "enforcement"
     },
     {
       "id": "phalodi-20260413-g",
@@ -77,6 +110,17 @@
       "granted": "45 days",
       "due": "2026-05-28",
       "theme": "road engineering"
+    },
+    {
+      "id": "phalodi-20260413-l",
+      "case_id": "phalodi-smwpc-9-2025",
+      "order_date": "2026-04-13",
+      "order_tid": 78882038,
+      "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-State Highway Safety Coordination Committee to standardise enforcement protocols — uniform driving-hour limits, surveillance standards, parking enforcement and penalty regimes — across State boundaries.",
+      "authority": "MoRTH",
+      "granted": "60 days",
+      "due": "2026-06-12",
+      "theme": "institutions"
     },
     {
       "id": "phalodi-20260413-m",

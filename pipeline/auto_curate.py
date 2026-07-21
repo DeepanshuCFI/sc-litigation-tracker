@@ -59,6 +59,12 @@ GIST_SCHEMA = {
     "additionalProperties": False,
 }
 
+# Closed taxonomy for ledger directions — keeps the Accountability Ledger's theme
+# tags consistent instead of minting a new one-off tag per order.
+LEDGER_THEMES = ["institutions", "highways", "enforcement", "post-crash care",
+                 "road engineering", "good samaritan", "PM RAHAT",
+                 "victim compensation", "driver licensing", "vehicle safety"]
+
 DIRECTIONS_SCHEMA = {
     "type": "object",
     "properties": {
@@ -70,7 +76,7 @@ DIRECTIONS_SCHEMA = {
                     "directive": {"type": "string"},
                     "authority": {"type": "string"},
                     "granted": {"type": "string"},
-                    "theme": {"type": "string"},
+                    "theme": {"type": "string", "enum": LEDGER_THEMES},
                 },
                 "required": ["directive", "authority", "granted", "theme"],
                 "additionalProperties": False,
@@ -80,6 +86,49 @@ DIRECTIONS_SCHEMA = {
     "required": ["directions"],
     "additionalProperties": False,
 }
+
+
+_STOP = {"the", "a", "an", "of", "to", "and", "or", "in", "on", "for", "at", "by", "with",
+         "shall", "any", "all", "every", "be", "is", "are", "within", "from", "this", "that",
+         "such", "which", "as", "its", "their", "no", "not", "may", "must", "each"}
+
+# Terms that recur across nearly every direction in this corpus. They carry no
+# signal for telling two road-safety directions apart and, on short directives,
+# inflate the overlap ratio enough to collide unrelated obligations.
+_BOILERPLATE = {"road", "safety", "state", "states", "national", "highway", "highways",
+                "court", "india", "union", "territories", "territory", "order", "orders",
+                "direction", "directions", "every", "concerned", "authority", "authorities"}
+
+
+def _content_words(s: str) -> set:
+    return {w for w in re.findall(r"[a-z0-9]+", s.lower())
+            if w not in _STOP and w not in _BOILERPLATE and len(w) > 2}
+
+
+def near_duplicate(directive: str, case_id: str, existing: list,
+                   threshold: float = 0.4, floor: int = 4):
+    """Return the id of an existing direction in the same case that this directive
+    restates, else None. Guards against prior directions recited in a later order
+    being re-extracted with a fresh (and therefore wrong) deadline clock.
+
+    Tuned on the 13 Jul 2026 Phalodi order, which recited eight already-ledgered
+    directions: catches 7 of 8 with no false positive anywhere in the ledger. The
+    floor stops two short directives from matching on a handful of shared words."""
+    words = _content_words(directive)
+    if not words:
+        return None
+    for d in existing:
+        if d.get("case_id") != case_id:
+            continue
+        other = _content_words(d.get("directive", ""))
+        if not other:
+            continue
+        # containment, not symmetric overlap: a condensed restatement of a longer
+        # direction (or vice versa) should still register as the same obligation.
+        shared = len(words & other)
+        if shared >= floor and shared / min(len(words), len(other)) >= threshold:
+            return d["id"]
+    return None
 
 
 def compute_due(order_date: str, granted: str):
@@ -228,6 +277,10 @@ def main() -> None:
         "Write a 1-2 sentence gist of what THIS order does, grounded only in the text. Mark significance "
         "'major' only for substantive directions, judgments, or notable developments — listings, "
         "adjournments, extensions, and exemptions are 'routine' (gist may be empty for those). "
+        "Judge the order by what IT adds, not by the length of any earlier order it reproduces: an order "
+        "whose operative content is merely re-circulating or reproducing directions already issued on an "
+        "earlier date is 'routine'. An order that records non-compliance, sets a fresh deadline, or "
+        "threatens coercive consequences (personal appearance, contempt) is 'major' even if short. "
         "latest_development: one sentence, starting with the date, capturing where the case stands now."
     )
     # Accountability Ledger extraction (grounded, deadline-bearing directions only)
@@ -236,11 +289,23 @@ def main() -> None:
         "accountability ledger. Return only concrete directions that (a) command a government body to DO "
         "something and (b) carry a time period (e.g. 'within 60 days', 'three months', 'six weeks'). "
         "Skip directions with no deadline, adjournments, and anything not addressed to a government "
-        "duty-bearer. For each: 'directive' = one grounded sentence (condensed from the text, never "
+        "duty-bearer.\n\n"
+        "CRITICAL — extract only directions THIS order itself issues. Supreme Court orders routinely "
+        "reproduce the directions of an EARLIER order before adding their own. Any block that is quoted "
+        "(inside quotation marks), or introduced by wording such as 'vide order dated X this Court issued "
+        "the following directions', 'in terms of the order dated X', 'the directions issued earlier were', "
+        "or is otherwise recited in the past tense as something already directed on a previous date, is "
+        "HISTORY, not a new direction — ignore it entirely, however long and detailed it is. Such recitals "
+        "are already in the ledger under their original order date, and re-extracting them here would "
+        "wrongly restart their deadline clocks. Read past the recital to the paragraphs where the Court "
+        "speaks in the present ('we direct', 'it is directed', 'shall file within') and extract only "
+        "those. A long order can legitimately yield zero new directions.\n\n"
+        "For each: 'directive' = one grounded sentence (condensed from the text, never "
         "invented); 'authority' = the single primary duty-bearer, normalised to one of MoRTH, NHAI, "
         "States / UTs, District Magistrates, Highway Administrations, State Police, Union (Health), or a "
         "short proper name if none fit; 'granted' = the period exactly as stated (e.g. '60 days'); "
-        "'theme' = one short tag. Return an empty list if the order carries no deadline-bearing directions."
+        "'theme' = the closest tag from the fixed list in the schema. "
+        "Return an empty list if the order carries no deadline-bearing directions of its own."
     )
     DIR_PATH = ROOT / "pipeline" / "directions.json"
     dirdata = json.loads(DIR_PATH.read_text())
@@ -268,28 +333,38 @@ def main() -> None:
                 spec["latest_development"] = result["latest_development"]
             changed = True
 
-            # extract deadline-bearing directions from this order into the ledger
-            if result["significance"] == "major":
-                dres = ask(client, dir_system,
-                           f"Case: {case['title']}\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
-                           DIRECTIONS_SCHEMA)
-                for i, d in enumerate(dres.get("directions", [])):
-                    did = f"{cid}-{newest['date'].replace('-','')}-{i}"
-                    if did in existing_dir_ids:
-                        continue
-                    due = compute_due(newest["date"], d["granted"])
-                    entry = {
-                        "id": did, "case_id": cid, "order_date": newest["date"],
-                        "order_tid": newest["tid"], "directive": d["directive"],
-                        "authority": d["authority"], "granted": d["granted"],
-                        "due": due, "theme": d["theme"],
-                    }
-                    if due is None:
-                        entry["status"] = "ongoing"
-                    dirdata["directions"].append(entry)
-                    existing_dir_ids.add(did)
-                    dir_changed = True
-                    log.setdefault("new_directions", []).append({"case": cid, "directive": d["directive"][:80], "due": due})
+            # Extract deadline-bearing directions from this order into the ledger.
+            # Deliberately NOT gated on significance: a procedurally 'routine' listing
+            # order can still set a real deadline, and dropping it would leave a hole
+            # in the ledger. The extractor returns [] when there is nothing to capture.
+            dres = ask(client, dir_system,
+                       f"Case: {case['title']}\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
+                       DIRECTIONS_SCHEMA)
+            for i, d in enumerate(dres.get("directions", [])):
+                did = f"{cid}-{newest['date'].replace('-','')}-{i}"
+                if did in existing_dir_ids:
+                    continue
+                # Backstop against recited prior directions the prompt failed to skip:
+                # if this restates a direction already on the ledger for this case,
+                # the original entry (with its original clock) stands.
+                dup = near_duplicate(d["directive"], cid, dirdata["directions"])
+                if dup:
+                    log.setdefault("skipped_recitals", []).append(
+                        {"case": cid, "directive": d["directive"][:80], "duplicate_of": dup})
+                    continue
+                due = compute_due(newest["date"], d["granted"])
+                entry = {
+                    "id": did, "case_id": cid, "order_date": newest["date"],
+                    "order_tid": newest["tid"], "directive": d["directive"],
+                    "authority": d["authority"], "granted": d["granted"],
+                    "due": due, "theme": d["theme"],
+                }
+                if due is None:
+                    entry["status"] = "ongoing"
+                dirdata["directions"].append(entry)
+                existing_dir_ids.add(did)
+                dir_changed = True
+                log.setdefault("new_directions", []).append({"case": cid, "directive": d["directive"][:80], "due": due})
         except Exception as e:
             log["errors"].append(f"gist/directions case={cid}: {e}")
 
