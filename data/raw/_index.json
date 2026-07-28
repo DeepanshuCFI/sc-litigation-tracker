@@ -91,7 +91,8 @@
    "\"road safety\" doctypes:supremecourt",
    "\"pedestrian\" guidelines doctypes:supremecourt",
    "\"footpath\" road doctypes:supremecourt",
-   "\"right to walk\" doctypes:supremecourt"
+   "\"right to walk\" doctypes:supremecourt",
+   "\"Phalodi\" doctypes:supremecourt"
   ]
  },
  "79865001": {
@@ -6397,7 +6398,8 @@
   "headline": " Rashmirekha Tripathy vs The Branch Manager (Legal Claims) ... on 1 July, 2026 \n\n Author:  Sanjay Karol",
   "citation": null,
   "queries": [
-   "\"road accident\" directions doctypes:supremecourt"
+   "\"road accident\" directions doctypes:supremecourt",
+   "\"National Highway\" fatality directions doctypes:supremecourt"
   ]
  },
  "187324815": {
@@ -6499,7 +6501,9 @@
   "headline": "months of the Policy Framework.\n        l)   Institutional   Co-ordination,    Reporting     and    <b>Road</b>    <b>Safety</b>\n\nSMWP(C)No.9/2025 ETC.\n                                                                                  5 \n \f         Committee- MoRTH shall, within",
   "citation": null,
   "queries": [
-   "\"road safety\" doctypes:scorders"
+   "\"road safety\" doctypes:scorders",
+   "\"Phalodi\" doctypes:scorders",
+   "\"Gyan Prakash\" highways doctypes:scorders"
   ]
  },
  "6593927": {
@@ -6511,6 +6515,83 @@
   "citation": null,
   "queries": [
    "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ "190503435": {
+  "tid": 190503435,
+  "title": "Monika Ranjan Malpani vs Ranjan Mahesh Malpani on 13 July, 2026",
+  "publishdate": "2026-07-13",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "Jodhpur, Rajasthan whereas the\n Signature Not Verified \n     applicant is permanent resident of <b>Phalodi</b>, Rajasthan and other two\n Digitally signed by \n KAPIL TANDON \n Date ... applicant are also pending consideration\n Reason: \n\n\n\n\n                                                          1 \n\fbefore the Court at <b>Phalodi</b>, Rajasthan. Learned counsel for the\n\napplicant prays that aforesa",
+  "citation": null,
+  "queries": [
+   "\"Phalodi\" doctypes:scorders"
+  ]
+ },
+ "69879794": {
+  "tid": 69879794,
+  "title": "Dilip Agarwal vs Rajshri Agarwal on 22 July, 2026",
+  "publishdate": "2026-07-22",
+  "docsource": "Supreme Court of India",
+  "headline": "vehicle and the injury. ‘Caused by’\n                   connotes a ‘<b>direct</b>’ or ‘proximate’\n                   relationship of cause and effect. ‘Arising\n                   out of’ extends this to a result that ... following terms: \n                “31. The right of the victim of a <b>road</b> <b>accident</b> to\n              claim compensation is a statutory one. He is a victim",
+  "citation": null,
+  "queries": [
+   "\"road accident\" directions doctypes:supremecourt"
+  ]
+ },
+ "3307141": {
+  "tid": 3307141,
+  "title": "Karam Singh vs Pal Singh on 20 July, 2026",
+  "publishdate": "2026-07-20",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "have\n\n                         not entered appearance despite service of notice.\n\n                           3.      In      a        <b>road</b>    <b>accident</b>        which       occurred       on\n\n                         09.03.2013, the appellant has suffered amputation\n\n                         of   his     right ... resulting       in    80    per   cent    of\n\n                         pe",
+  "citation": null,
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ "49160611": {
+  "tid": 49160611,
+  "title": "Nalini vs The Branch Manager United India ... on 17 July, 2026",
+  "publishdate": "2026-07-17",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": " Nalini vs The Branch Manager United India ... on 17 July, 2026 \n\n                                                             1\n\n                                            IN THE SUPREME",
+  "citation": null,
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ "67856717": {
+  "tid": 67856717,
+  "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026",
+  "publishdate": "2026-07-20",
+  "docsource": "Supreme Court of India",
+  "headline": " The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026 \n\n Author",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ "83378303": {
+  "tid": 83378303,
+  "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
+  "publishdate": "2026-07-13",
+  "docsource": "Supreme Court of India",
+  "headline": " Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026 \n\n Author:  Dipankar Datta",
+  "citation": null,
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
+ },
+ "184970920": {
+  "tid": 184970920,
+  "title": "Gurmail Kaur vs <b>National</b> Insurance Company Limited on 16 July, 2026",
+  "publishdate": "2026-07-16",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "cross the divider on the\n\n<b>National</b> <b>Highway</b> when a truck driven rashly and negligently hit\n\nhim, injuring him <b>fatally</b>. There is a world of difference ... <b>National</b> <b>Highways</b>\n\nare put up for keeping the traffic in check, while crossing a divider\n\nwhen walking across the <b>National</b> <b>Highway</b> cannot be said",
+  "citation": null,
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:scorders"
   ]
  }
 }

@@ -3048,6 +3048,7 @@
   "date": "2026-07-01",
   "title": "Rashmirekha Tripathy vs The Branch Manager (Legal Claims) ... on 1 July, 2026",
   "queries": [
+   "\"National Highway\" fatality directions doctypes:supremecourt",
    "\"road accident\" directions doctypes:supremecourt"
   ]
  },
@@ -3089,6 +3090,62 @@
   "title": "Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026",
   "queries": [
    "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 190503435,
+  "date": "2026-07-13",
+  "title": "Monika Ranjan Malpani vs Ranjan Mahesh Malpani on 13 July, 2026",
+  "queries": [
+   "\"Phalodi\" doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 69879794,
+  "date": "2026-07-22",
+  "title": "Dilip Agarwal vs Rajshri Agarwal on 22 July, 2026",
+  "queries": [
+   "\"road accident\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 3307141,
+  "date": "2026-07-20",
+  "title": "Karam Singh vs Pal Singh on 20 July, 2026",
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 49160611,
+  "date": "2026-07-17",
+  "title": "Nalini vs The Branch Manager United India ... on 17 July, 2026",
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 67856717,
+  "date": "2026-07-20",
+  "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 83378303,
+  "date": "2026-07-13",
+  "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 184970920,
+  "date": "2026-07-16",
+  "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:scorders"
   ]
  }
 ]

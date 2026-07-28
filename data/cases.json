@@ -1,8 +1,8 @@
 {
  "meta": {
-  "built": "2026-07-21",
+  "built": "2026-07-28",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 579,
+  "raw_docs": 586,
   "assigned_docs": 197
  },
  "cases": [
@@ -1691,6 +1691,13 @@
   }
  ],
  "notable_judgments": [
+  {
+   "tid": 67856717,
+   "date": "2026-07-20",
+   "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited",
+   "gist": "Insurer's appeal against being held liable for a Durg-to-Nepal bus accident was dismissed; the Court ruled the 'Limitations as to Use' permit clause provided coverage regardless of location, applied contra proferentem, held non-payment of IMT additional premium immaterial given Section 147(5) MVA's overriding effect, and advised IRDAI to standardise cross-border coverage clauses.",
+   "link": "https://indiankanoon.org/doc/67856717/"
+  },
   {
    "tid": 158690569,
    "date": "2026-06-11",

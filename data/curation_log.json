@@ -1,69 +1,58 @@
 {
- "date": "2026-07-21",
+ "date": "2026-07-28",
  "classified": [
   {
-   "tid": 6593927,
+   "tid": 190503435,
    "date": "2026-07-13",
-   "title": "Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026",
+   "title": "Monika Ranjan Malpani vs Ranjan Mahesh Malpani on 13 July, 2026",
    "action": "ignore",
-   "reason": "Individual motor accident compensation appeal enhancing lump-sum award to a claimant; applies existing precedent without laying down any principle of law binding on all MACTs/insurers."
-  }
- ],
- "gists": [
+   "reason": "Matrimonial case transfer petition with no connection to road safety."
+  },
   {
-   "case": "phalodi-smwpc-9-2025",
+   "tid": 83378303,
    "date": "2026-07-13",
-   "gist": "In this suo motu matter arising from the Phalodi accident, the Court noted that only three States/UTs (Bihar, Karnataka, Puducherry) had filed compliance affidavits to its detailed 13 April 2026 road-safety directions, and directed that its orders be re-circulated to all concerned authorities, warning that defaulting States' Chief Secretaries and DGPs would be summoned to appear personally if affidavits are not filed within two weeks.",
-   "significance": "major",
-   "latest_development": "As of 13 July 2026, the Court warned that Chief Secretaries and DGPs of defaulting States/UTs will be summoned to appear personally if compliance affidavits are not filed within two weeks, and listed the matter for 17 August 2026."
+   "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
+   "action": "ignore",
+   "reason": "This is a land acquisition dispute under the Land Acquisition Act, 1894, concerning acquisition of land for a metro car depot. It involves no road safety issues and produces no systemic road-safety relief; it is a routine civil appeal on acquisition procedure."
+  },
+  {
+   "tid": 184970920,
+   "date": "2026-07-16",
+   "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal restoring the Tribunal's award; fact-specific negligence finding with no systemic or precedent-setting direction."
+  },
+  {
+   "tid": 49160611,
+   "date": "2026-07-17",
+   "title": "Nalini vs The Branch Manager United India ... on 17 July, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal restoring the MACT award; no systemic road-safety relief or precedent binding on all tribunals/insurers."
+  },
+  {
+   "tid": 3307141,
+   "date": "2026-07-20",
+   "title": "Karam Singh vs Pal Singh on 20 July, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal; the Court merely restored the appellant's enhancement appeal to the High Court file. No systemic relief or precedent for all MACTs/insurers."
+  },
+  {
+   "tid": 67856717,
+   "date": "2026-07-20",
+   "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026",
+   "action": "notable",
+   "reason": "Though framed as an individual insurance appeal on liability for a cross-border accident, the judgment lays down interpretive principles binding on MACTs/insurers regarding cross-border insurance coverage, applies contra proferentem, holds Section 147(5) MVA overrides IMT regulations, and issues suggestions plus directs IRDAI to consider a master circular standardising cross-border coverage clauses. This has precedential and systemic significance."
+  },
+  {
+   "tid": 69879794,
+   "date": "2026-07-22",
+   "title": "Dilip Agarwal vs Rajshri Agarwal on 22 July, 2026",
+   "action": "ignore",
+   "reason": "Individual MACT compensation appeal turning on whether death 'arose out of' use of a motor vehicle on its own facts. No systemic/nationwide directions; it applies established precedent to a specific fact situation rather than laying down a new binding rule for all tribunals."
   }
  ],
+ "gists": [],
  "errors": [],
- "new_directions": [
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "No heavy or commercial vehicle shall park/stop on any National Highway carriagew",
-   "due": "2026-09-11"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "The Highway Administration, NHAI, NHIDCL, and State PWDs shall file a consolidat",
-   "due": "2026-08-12"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "NHAI shall operationalise its ATMS comprising TMCC cameras, VSDS speed detectors",
-   "due": "2026-09-11"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "NHAI shall deploy BLS ambulances and recovery cranes at intervals not exceeding ",
-   "due": "2026-09-11"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "MoRTH/NHAI shall identify accident blackspots and critical areas and publish a c",
-   "due": "2026-08-27"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "Full installation of high-intensity LED/high-mast lighting, speed enforcement ca",
-   "due": "2026-11-12"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-Stat",
-   "due": "2026-09-11"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "MoRTH, upon securing the consolidated district-wise and agency-wise compliance r",
-   "due": "2026-09-26"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "Defaulting States and Union Territories shall file the requisite compliance affi",
-   "due": "2026-07-27"
-  }
- ]
+ "doc_fetches": 7,
+ "approx_doc_cost_inr": 1.4
 }

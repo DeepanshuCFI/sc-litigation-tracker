@@ -1,18 +1,62 @@
 {
- "refresh_date": "2026-07-21",
- "fromdate_window": "11-06-2026",
- "search_pages": 52,
- "approx_cost_inr": 26.0,
- "new_docs_total": 2,
- "cases_with_new_orders": [
-  "phalodi-smwpc-9-2025"
+ "refresh_date": "2026-07-28",
+ "fromdate_window": "18-06-2026",
+ "search_pages": 66,
+ "approx_cost_inr": 33.0,
+ "new_docs_total": 7,
+ "cases_with_new_orders": [],
+ "new_order_counts": {},
+ "newly_overdue": [
+  {
+   "id": "phalodi-20260713-affidavits",
+   "authority": "States / UTs",
+   "due": "2026-07-27",
+   "directive": "Defaulting States and Union Territories shall file the compliance affidavits required by the 13 Apri"
+  }
  ],
+ "stale_listings": [],
  "new_unassigned_candidates": [
   {
-   "tid": 6593927,
+   "tid": 190503435,
    "date": "2026-07-13",
-   "title": "Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026",
-   "headline": " Madhabi Das vs Oriental Insurance Company Limited on 13 July, 2026 \n\n Author:  Prashant Kumar Mishra"
+   "title": "Monika Ranjan Malpani vs Ranjan Mahesh Malpani on 13 July, 2026",
+   "headline": "Jodhpur, Rajasthan whereas the\n Signature Not Verified \n     applicant is permanent resident of Phalodi, Rajasthan and other two\n Digitally signed by \n KAPIL TANDON \n Date ... applicant are also pendi"
+  },
+  {
+   "tid": 83378303,
+   "date": "2026-07-13",
+   "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
+   "headline": " Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026 \n\n Author:  Dipankar Datta"
+  },
+  {
+   "tid": 184970920,
+   "date": "2026-07-16",
+   "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
+   "headline": "cross the divider on the\n\nNational Highway when a truck driven rashly and negligently hit\n\nhim, injuring him fatally. There is a world of difference ... National Highways\n\nare put up for keeping the t"
+  },
+  {
+   "tid": 49160611,
+   "date": "2026-07-17",
+   "title": "Nalini vs The Branch Manager United India ... on 17 July, 2026",
+   "headline": " Nalini vs The Branch Manager United India ... on 17 July, 2026 \n\n                                                             1\n\n                                            IN THE SUPREME"
+  },
+  {
+   "tid": 3307141,
+   "date": "2026-07-20",
+   "title": "Karam Singh vs Pal Singh on 20 July, 2026",
+   "headline": "have\n\n                         not entered appearance despite service of notice.\n\n                           3.      In      a        road    accident        which       occurred       on\n\n           "
+  },
+  {
+   "tid": 67856717,
+   "date": "2026-07-20",
+   "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026",
+   "headline": " The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026 \n\n Author"
+  },
+  {
+   "tid": 69879794,
+   "date": "2026-07-22",
+   "title": "Dilip Agarwal vs Rajshri Agarwal on 22 July, 2026",
+   "headline": "vehicle and the injury. ‘Caused by’\n                   connotes a ‘direct’ or ‘proximate’\n                   relationship of cause and effect. ‘Arising\n                   out of’ extends this to a res"
   }
  ]
 }
