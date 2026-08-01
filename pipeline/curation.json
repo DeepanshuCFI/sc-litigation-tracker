@@ -474,6 +474,59 @@
         }
       },
       "next_listing": "Awaiting first listing as the re-registered Article 32 matter"
+    },
+    {
+      "id": "fundamental-right-to-walk-2026",
+      "match": [
+        "fundamental right to walk"
+      ],
+      "title": "In Re: Fundamental Right To Walk And Footpath vs Ministry Of Housing And Urban Affairs",
+      "case_number": "Writ Petition (Civil) No. 844/2026",
+      "court": "Supreme Court of India",
+      "case_type": "Suo motu writ petition (PIL)",
+      "status": "pending",
+      "filed_year": 2026,
+      "themes": [
+        "pedestrian safety",
+        "footpaths",
+        "urban road infrastructure",
+        "suo motu PIL"
+      ],
+      "why_it_matters": "A suo motu Supreme Court PIL recognising a right to walk could compel nationwide standards for footpaths and pedestrian infrastructure, directly affecting pedestrian road deaths.",
+      "latest_development": "2026-07-27: Court directed the Registry to publish the Amicus Curiae's name and to send the petition and its 19.06.2026 judgment (in Civil Appeal Nos. 4665-4666 of 2025) to ASG K.M. Nataraj, who was requested to assist; matter re-listed for 03.08.2026.",
+      "order_notes": {
+        "2026-07-27": {
+          "gist": "Court directed the Registry to publish the Amicus Curiae's name and to send the petition and its 19.06.2026 judgment (in Civil Appeal Nos. 4665-4666 of 2025) to ASG K.M. Nataraj, who was requested to assist; matter re-listed for 03.08.2026.",
+          "significance": "major"
+        }
+      }
+    },
+    {
+      "id": "nisha-2026",
+      "match": [
+        "nisha"
+      ],
+      "title": "Nisha vs Municipal Council Sangrur",
+      "case_number": "Civil Appeal (arising out of SLP(C) No. 4663 of 2026); 2026 INSC 774",
+      "court": "Supreme Court of India",
+      "case_type": "Civil Appeal (from writ petition under Article 226)",
+      "status": "disposed",
+      "filed_year": 2026,
+      "themes": [
+        "stray cattle on roads",
+        "road safety",
+        "compensation mechanism",
+        "state liability",
+        "municipal duty"
+      ],
+      "why_it_matters": "The Court directed States/Centre to implement cattle laws, create compensation mechanisms for bovine-caused road accidents (pedestrian and vehicular), mandate animal tagging, shelter transfer receipts and nodal officers, circulating the judgment to all Chief Secretaries.",
+      "latest_development": "2026-07-31: Widow of a man fatally injured by a stray bull on a road in Sangrur challenged the High Court Division Bench's refusal of writ relief; the Supreme Court awarded Rs.15 lakh lump sum (expressly not a precedent) and issued systemic suggestions to the Centre and States on stray cattle management and compensation.",
+      "order_notes": {
+        "2026-07-31": {
+          "gist": "Widow of a man fatally injured by a stray bull on a road in Sangrur challenged the High Court Division Bench's refusal of writ relief; the Supreme Court awarded Rs.15 lakh lump sum (expressly not a precedent) and issued systemic suggestions to the Centre and States on stray cattle management and compensation.",
+          "significance": "major"
+        }
+      }
     }
   ],
   "notable_judgments": [
@@ -650,6 +703,12 @@
       "date": "2026-07-20",
       "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited",
       "gist": "Insurer's appeal against being held liable for a Durg-to-Nepal bus accident was dismissed; the Court ruled the 'Limitations as to Use' permit clause provided coverage regardless of location, applied contra proferentem, held non-payment of IMT additional premium immaterial given Section 147(5) MVA's overriding effect, and advised IRDAI to standardise cross-border coverage clauses."
+    },
+    {
+      "tid": 151189997,
+      "date": "2026-07-30",
+      "title": "Reliance General Insurance Company Ltd vs Om Parkash",
+      "gist": "The Supreme Court set aside the High Court's finding that the driver held a valid licence on the accident date, holding the insurer not ultimately liable but applying pay-and-recover; it also suggested MoRTH and States run awareness campaigns, ensure strict compliance and streamline licence issuance/renewal and driving school regulation."
     }
   ],
   "borderline_excluded": [

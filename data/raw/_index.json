@@ -6593,5 +6593,38 @@
   "queries": [
    "\"National Highway\" fatality directions doctypes:scorders"
   ]
+ },
+ "151189997": {
+  "tid": 151189997,
+  "title": "Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026",
+  "publishdate": "2026-07-30",
+  "docsource": "Supreme Court of India",
+  "headline": " Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026 \n\n Author:  Sanjay Karol",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ "84110900": {
+  "tid": 84110900,
+  "title": "Nisha vs Municipal Council Sangrur on 31 July, 2026",
+  "publishdate": "2026-07-31",
+  "docsource": "Supreme Court of India",
+  "headline": " Nisha vs Municipal Council Sangrur on 31 July, 2026 \n\n Author:  Sanjay Karol  \n\n Bench:  Sanjay Karol",
+  "citation": null,
+  "queries": [
+   "\"pedestrian\" guidelines doctypes:supremecourt"
+  ]
+ },
+ "111300879": {
+  "tid": 111300879,
+  "title": "In Re: Fundamental <b>Right</b> To <b>Walk</b> And ... vs Ministry Of Housing And Urban Affairs on 27 July, 2026",
+  "publishdate": "2026-07-27",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "Fundamental <b>Right</b> To <b>Walk</b> And ... vs Ministry Of Housing And Urban Affairs on 27 July, 2026 \n\n Author:  Pamidighantam Sri Narasimha  \n\n Bench:  Pamidighantam Sri Narasimha  \n\n      ITEM ... Writ Petition(s)(Civil)       No(s).    844/2026\n\n     IN RE: FUNDAMENTAL <b>RIGHT</b> TO <b>WALK</b> AND FOOTPATH                                Petitioner(s)\n\n                                   ",
+  "citation": null,
+  "queries": [
+   "\"right to walk\" doctypes:scorders"
+  ]
  }
 }

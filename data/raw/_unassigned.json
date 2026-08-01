@@ -357,15 +357,6 @@
   ]
  },
  {
-  "tid": 822220,
-  "date": "2008-04-29",
-  "title": "Oriental Insurance Co. Ltd vs Zaharulnisha & Ors on 29 April, 2008",
-  "queries": [
-   "\"driving licence\" directions doctypes:supremecourt",
-   "\"road accident\" directions doctypes:supremecourt"
-  ]
- },
- {
   "tid": 153658097,
   "date": "2021-12-08",
   "title": "Rasmita Biswal vs Divisional Manager, National ... on 8 December, 2021",
@@ -1436,14 +1427,6 @@
   "tid": 603309,
   "date": "2011-07-25",
   "title": "Uttar Pradesh State Road Transport Corp vs Kulsum & Ors on 25 July, 2011",
-  "queries": [
-   "\"driving licence\" directions doctypes:supremecourt"
-  ]
- },
- {
-  "tid": 79552396,
-  "date": "2018-04-27",
-  "title": "Nishan Singh vs Oriental Insurance Company Ltd. ... on 27 April, 2018",
   "queries": [
    "\"driving licence\" directions doctypes:supremecourt"
   ]
@@ -2572,14 +2555,6 @@
   ]
  },
  {
-  "tid": 63325187,
-  "date": "2018-04-27",
-  "title": "Nishan Singh vs Oriental Insurance Company Ltd. ... on 27 April, 2018",
-  "queries": [
-   "\"driving licence\" directions doctypes:scorders"
-  ]
- },
- {
   "tid": 41915259,
   "date": "2018-04-20",
   "title": "Nandakumar vs The State Of Kerala on 20 April, 2018",
@@ -3146,6 +3121,14 @@
   "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
   "queries": [
    "\"National Highway\" fatality directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 151189997,
+  "date": "2026-07-30",
+  "title": "Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
   ]
  }
 ]

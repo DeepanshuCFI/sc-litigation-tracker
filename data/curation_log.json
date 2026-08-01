@@ -1,58 +1,30 @@
 {
- "date": "2026-07-28",
+ "date": "2026-08-01",
  "classified": [
   {
-   "tid": 190503435,
-   "date": "2026-07-13",
-   "title": "Monika Ranjan Malpani vs Ranjan Mahesh Malpani on 13 July, 2026",
-   "action": "ignore",
-   "reason": "Matrimonial case transfer petition with no connection to road safety."
+   "tid": 111300879,
+   "date": "2026-07-27",
+   "title": "In Re: Fundamental Right To Walk And ... vs Ministry Of Housing And Urban Affairs on 27 July, 2026",
+   "action": "track",
+   "reason": "Suo motu PIL on fundamental right to walk and footpaths, seeking systemic pedestrian infrastructure relief nationwide."
   },
   {
-   "tid": 83378303,
-   "date": "2026-07-13",
-   "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
-   "action": "ignore",
-   "reason": "This is a land acquisition dispute under the Land Acquisition Act, 1894, concerning acquisition of land for a metro car depot. It involves no road safety issues and produces no systemic road-safety relief; it is a routine civil appeal on acquisition procedure."
-  },
-  {
-   "tid": 184970920,
-   "date": "2026-07-16",
-   "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
-   "action": "ignore",
-   "reason": "Individual motor accident compensation appeal restoring the Tribunal's award; fact-specific negligence finding with no systemic or precedent-setting direction."
-  },
-  {
-   "tid": 49160611,
-   "date": "2026-07-17",
-   "title": "Nalini vs The Branch Manager United India ... on 17 July, 2026",
-   "action": "ignore",
-   "reason": "Individual motor accident compensation appeal restoring the MACT award; no systemic road-safety relief or precedent binding on all tribunals/insurers."
-  },
-  {
-   "tid": 3307141,
-   "date": "2026-07-20",
-   "title": "Karam Singh vs Pal Singh on 20 July, 2026",
-   "action": "ignore",
-   "reason": "Individual motor accident compensation appeal; the Court merely restored the appellant's enhancement appeal to the High Court file. No systemic relief or precedent for all MACTs/insurers."
-  },
-  {
-   "tid": 67856717,
-   "date": "2026-07-20",
-   "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited on 20 July, 2026",
+   "tid": 151189997,
+   "date": "2026-07-30",
+   "title": "Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026",
    "action": "notable",
-   "reason": "Though framed as an individual insurance appeal on liability for a cross-border accident, the judgment lays down interpretive principles binding on MACTs/insurers regarding cross-border insurance coverage, applies contra proferentem, holds Section 147(5) MVA overrides IMT regulations, and issues suggestions plus directs IRDAI to consider a master circular standardising cross-border coverage clauses. This has precedential and systemic significance."
+   "reason": "Primarily an insurer's liability appeal, but sets evidentiary precedent on proving driving licence validity (secondary evidence, owner's duty to verify renewal) binding on MACTs/insurers, and issues suggestions to MoRTH and States on licensing awareness, compliance and driving school regulation."
   },
   {
-   "tid": 69879794,
-   "date": "2026-07-22",
-   "title": "Dilip Agarwal vs Rajshri Agarwal on 22 July, 2026",
-   "action": "ignore",
-   "reason": "Individual MACT compensation appeal turning on whether death 'arose out of' use of a motor vehicle on its own facts. No systemic/nationwide directions; it applies established precedent to a specific fact situation rather than laying down a new binding rule for all tribunals."
+   "tid": 84110900,
+   "date": "2026-07-31",
+   "title": "Nisha vs Municipal Council Sangrur on 31 July, 2026",
+   "action": "track",
+   "reason": "Though arising from an individual compensation claim, the judgment issues nationwide systemic suggestions/directions to Centre and all States on stray cattle on roads, compensation mechanisms, tagging and shelters, with copies to all Chief Secretaries."
   }
  ],
  "gists": [],
  "errors": [],
- "doc_fetches": 7,
- "approx_doc_cost_inr": 1.4
+ "doc_fetches": 3,
+ "approx_doc_cost_inr": 0.6
 }
