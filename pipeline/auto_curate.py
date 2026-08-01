@@ -26,7 +26,7 @@ import ik_client
 
 ROOT = Path(__file__).resolve().parent.parent
 CURATION_PATH = ROOT / "pipeline" / "curation.json"
-MODEL = "claude-opus-4-8"
+MODEL = "claude-opus-5"
 
 CLASSIFY_SCHEMA = {
     "type": "object",
@@ -186,12 +186,25 @@ def doc_text(tid: int, limit: int = 24000) -> str:
 def ask(client, system: str, user: str, schema: dict) -> dict:
     resp = client.messages.create(
         model=MODEL,
-        max_tokens=2000,
+        # Opus 5 thinks by DEFAULT (Opus 4.8 did not), and max_tokens caps thinking
+        # and the JSON payload together - the old 2000 would have truncated mid-answer
+        # and blown up in json.loads below. Effort 'low' keeps the spend near the 4.8
+        # baseline: this is classification against a fixed inclusion rule, not
+        # open-ended reasoning, and Opus 5 is strong at the low end.
+        max_tokens=8000,
         system=system,
-        output_config={"format": {"type": "json_schema", "schema": schema}},
+        output_config={"effort": "low",
+                       "format": {"type": "json_schema", "schema": schema}},
         messages=[{"role": "user", "content": user}],
     )
-    text = next(b.text for b in resp.content if b.type == "text")
+    # Two ways content can arrive with no text block: Opus 5's safety classifiers
+    # declining (HTTP 200, stop_reason 'refusal'), or a max_tokens cut-off landing
+    # before the JSON. A bare next() raises StopIteration deep inside the weekly
+    # run with no clue why - surface the stop_reason instead.
+    text = next((b.text for b in resp.content if b.type == "text"), None)
+    if text is None:
+        raise RuntimeError(
+            f"auto_curate: no text block in response (stop_reason={resp.stop_reason})")
     return json.loads(text)
 
 
