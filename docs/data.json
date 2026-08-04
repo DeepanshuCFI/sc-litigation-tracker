@@ -3,7 +3,7 @@
   "built": "2026-08-01",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
   "raw_docs": 589,
-  "assigned_docs": 202
+  "assigned_docs": 199
  },
  "cases": [
   {
@@ -1663,7 +1663,7 @@
   {
    "id": "right-to-walk-2026",
    "title": "Re: Fundamental Right to Walk and Footpath (Maniyar Iliyaz v. P. Ayyappan)",
-   "case_number": "C.A. 4665-4666/2025, re-numbered as Art. 32 petition · 2026 INSC 647",
+   "case_number": "C.A. 4665-4666/2025 · 2026 INSC 647, re-registered as Writ Petition (Civil) No. 844/2026",
    "court": "Supreme Court of India",
    "case_type": "Suo motu writ (converted appeal)",
    "status": "pending",
@@ -1674,8 +1674,8 @@
     "institutions"
    ],
    "why_it_matters": "Born from a five-year-old killed walking to school on a road with no footpath or crossing: the Court declared the right to walk a fundamental right under Article 19(1)(d), placed a correlative duty on urban development authorities, municipalities and panchayats to demarcate, build and maintain footpaths, and made breach actionable for restitution and compensation independent of the MV Act. The Court then converted the disposed appeal into a continuing Article 32 matter, impleading MoHUA, MoRD and MoRTH.",
-   "latest_development": "19 Jun 2026 (Narasimha & Chandurkar JJ): judgment delivered; Registry directed to re-register the case as 'Re: Fundamental Right to Walk and Footpath' with the Union impleaded in person — the pedestrian-infrastructure counterpart to Phalodi.",
-   "next_listing": "Awaiting first listing as the re-registered Article 32 matter",
+   "latest_development": "27 Jul 2026 (Narasimha & Alok Aradhe JJ): first listing of the re-registered matter as W.P.(C) 844/2026 — Registry directed to publish the Amicus Curiae's name in the cause list and to send the writ petition with the 19.06.2026 judgment to ASG K.M. Nataraj forthwith; re-listed 03.08.2026.",
+   "next_listing": "3 August 2026 (per order of 27 Jul 2026)",
    "orders": [
     {
      "date": "2026-06-19",
@@ -1683,39 +1683,17 @@
      "link": "https://indiankanoon.org/doc/111576681/",
      "gist": "Reportable judgment: the right to walk on demarcated footpaths recognised as a facet of Art. 19(1)(d); duty bearers named (urban development authorities, municipal bodies, panchayats); violations remediable through constitutional and legal claims independent of the MV Act; case converted into a continuing Article 32 petition with amicus and ASG assistance.",
      "significance": "major"
-    }
-   ],
-   "order_count": 1,
-   "first_order": "2026-06-19",
-   "latest_order": "2026-06-19"
-  },
-  {
-   "id": "fundamental-right-to-walk-2026",
-   "title": "In Re: Fundamental Right To Walk And Footpath vs Ministry Of Housing And Urban Affairs",
-   "case_number": "Writ Petition (Civil) No. 844/2026",
-   "court": "Supreme Court of India",
-   "case_type": "Suo motu writ petition (PIL)",
-   "status": "pending",
-   "filed_year": 2026,
-   "themes": [
-    "pedestrian safety",
-    "footpaths",
-    "urban road infrastructure",
-    "suo motu PIL"
-   ],
-   "why_it_matters": "A suo motu Supreme Court PIL recognising a right to walk could compel nationwide standards for footpaths and pedestrian infrastructure, directly affecting pedestrian road deaths.",
-   "latest_development": "2026-07-27: Court directed the Registry to publish the Amicus Curiae's name and to send the petition and its 19.06.2026 judgment (in Civil Appeal Nos. 4665-4666 of 2025) to ASG K.M. Nataraj, who was requested to assist; matter re-listed for 03.08.2026.",
-   "orders": [
+    },
     {
      "date": "2026-07-27",
      "tid": 111300879,
      "link": "https://indiankanoon.org/doc/111300879/",
-     "gist": "Court directed the Registry to publish the Amicus Curiae's name and to send the petition and its 19.06.2026 judgment (in Civil Appeal Nos. 4665-4666 of 2025) to ASG K.M. Nataraj, who was requested to assist; matter re-listed for 03.08.2026.",
-     "significance": "major"
+     "gist": "First listing of the re-registered petition (W.P.(C) 844/2026, by Court's motion, before Narasimha and Alok Aradhe JJ): Registry to publish the Amicus Curiae's name in the cause list and to send a copy of the writ petition with the 19.06.2026 judgment in C.A. 4665-4666/2025 to ASG K.M. Nataraj forthwith; matter re-listed on 03.08.2026. Procedural — no substantive directions to any government yet.",
+     "significance": "routine"
     }
    ],
-   "order_count": 1,
-   "first_order": "2026-07-27",
+   "order_count": 2,
+   "first_order": "2026-06-19",
    "latest_order": "2026-07-27"
   },
   {
@@ -1733,23 +1711,9 @@
     "state liability",
     "municipal duty"
    ],
-   "why_it_matters": "The Court directed States/Centre to implement cattle laws, create compensation mechanisms for bovine-caused road accidents (pedestrian and vehicular), mandate animal tagging, shelter transfer receipts and nodal officers, circulating the judgment to all Chief Secretaries.",
+   "why_it_matters": "Para 26 of the judgment makes five suggestions to the Centre and States 'for consideration and implementation' — full implementation of existing cattle laws, a compensation mechanism for bovine-caused road accidents (pedestrian and vehicular), mandatory animal tagging, receipts for owner transfers to shelters, and a nodal officer in every Corporation/Department. They are recommendations, not binding directions with deadlines, but the judgment was ordered circulated to all Chief Secretaries, UT Administrators and State Legal Services Authorities 'for taking appropriate action'.",
    "latest_development": "2026-07-31: Widow of a man fatally injured by a stray bull on a road in Sangrur challenged the High Court Division Bench's refusal of writ relief; the Supreme Court awarded Rs.15 lakh lump sum (expressly not a precedent) and issued systemic suggestions to the Centre and States on stray cattle management and compensation.",
    "orders": [
-    {
-     "date": "2008-04-29",
-     "tid": 822220,
-     "link": "https://indiankanoon.org/doc/822220/",
-     "gist": "",
-     "significance": "routine"
-    },
-    {
-     "date": "2018-04-27",
-     "tid": 63325187,
-     "link": "https://indiankanoon.org/doc/63325187/",
-     "gist": "",
-     "significance": "routine"
-    },
     {
      "date": "2026-07-31",
      "tid": 84110900,
@@ -1758,8 +1722,8 @@
      "significance": "major"
     }
    ],
-   "order_count": 3,
-   "first_order": "2008-04-29",
+   "order_count": 1,
+   "first_order": "2026-07-31",
    "latest_order": "2026-07-31"
   }
  ],
@@ -2410,7 +2374,7 @@
   }
  ],
  "new_this_refresh": [
-  "fundamental-right-to-walk-2026",
+  "right-to-walk-2026",
   "nisha-2026"
  ]
 }

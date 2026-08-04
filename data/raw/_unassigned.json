@@ -357,6 +357,15 @@
   ]
  },
  {
+  "tid": 822220,
+  "date": "2008-04-29",
+  "title": "Oriental Insurance Co. Ltd vs Zaharulnisha & Ors on 29 April, 2008",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt",
+   "\"road accident\" directions doctypes:supremecourt"
+  ]
+ },
+ {
   "tid": 153658097,
   "date": "2021-12-08",
   "title": "Rasmita Biswal vs Divisional Manager, National ... on 8 December, 2021",
@@ -1427,6 +1436,14 @@
   "tid": 603309,
   "date": "2011-07-25",
   "title": "Uttar Pradesh State Road Transport Corp vs Kulsum & Ors on 25 July, 2011",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 79552396,
+  "date": "2018-04-27",
+  "title": "Nishan Singh vs Oriental Insurance Company Ltd. ... on 27 April, 2018",
   "queries": [
    "\"driving licence\" directions doctypes:supremecourt"
   ]
@@ -2550,6 +2567,14 @@
   "tid": 174196096,
   "date": "2014-02-27",
   "title": "Basappa vs State Of Karnataka on 27 February, 2014",
+  "queries": [
+   "\"driving licence\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 63325187,
+  "date": "2018-04-27",
+  "title": "Nishan Singh vs Oriental Insurance Company Ltd. ... on 27 April, 2018",
   "queries": [
    "\"driving licence\" directions doctypes:scorders"
   ]
