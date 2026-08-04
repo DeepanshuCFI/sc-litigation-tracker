@@ -1,38 +1,16 @@
 {
- "refresh_date": "2026-08-01",
- "fromdate_window": "22-06-2026",
+ "refresh_date": "2026-08-04",
+ "fromdate_window": "25-06-2026",
  "search_pages": 66,
  "approx_cost_inr": 33.0,
- "new_docs_total": 3,
- "cases_with_new_orders": [],
- "new_order_counts": {},
- "newly_overdue": [
-  {
-   "id": "phalodi-20260713-affidavits",
-   "authority": "States / UTs",
-   "due": "2026-07-27",
-   "directive": "Defaulting States and Union Territories shall file the compliance affidavits required by the 13 Apri"
-  }
+ "new_docs_total": 1,
+ "cases_with_new_orders": [
+  "right-to-walk-2026"
  ],
+ "new_order_counts": {
+  "right-to-walk-2026": 1
+ },
+ "newly_overdue": [],
  "stale_listings": [],
- "new_unassigned_candidates": [
-  {
-   "tid": 111300879,
-   "date": "2026-07-27",
-   "title": "In Re: Fundamental Right To Walk And ... vs Ministry Of Housing And Urban Affairs on 27 July, 2026",
-   "headline": "Fundamental Right To Walk And ... vs Ministry Of Housing And Urban Affairs on 27 July, 2026 \n\n Author:  Pamidighantam Sri Narasimha  \n\n Bench:  Pamidighantam Sri Narasimha  \n\n      ITEM ... Writ Petit"
-  },
-  {
-   "tid": 151189997,
-   "date": "2026-07-30",
-   "title": "Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026",
-   "headline": " Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026 \n\n Author:  Sanjay Karol"
-  },
-  {
-   "tid": 84110900,
-   "date": "2026-07-31",
-   "title": "Nisha vs Municipal Council Sangrur on 31 July, 2026",
-   "headline": " Nisha vs Municipal Council Sangrur on 31 July, 2026 \n\n Author:  Sanjay Karol  \n\n Bench:  Sanjay Karol"
-  }
- ]
+ "new_unassigned_candidates": []
 }
