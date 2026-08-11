@@ -2275,6 +2275,149 @@
    "link": "https://indiankanoon.org/doc/74316463/"
   },
   {
+   "id": "nic-20260804-anpr",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "ANPR cameras deployed on highways and roads to be integrated with Insurance Information Bureau (IRDA) and VAHAN portal data for automatic issuance of e-challans to uninsured vehicles, in furtherance of the SOP for Electronic Monitoring and Enforcement of Road Safety.",
+   "authority": "MoRTH",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "enforcement",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-handheld",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "State Police to be supplied with handheld devices or downloadable apps linked to Insurance Information Bureau and VAHAN data, to verify real-time insurance status on the ground and impose challans for violations.",
+   "authority": "MoRTH",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "enforcement",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-fourlayer",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "A four-layer motor insurance structure for private vehicles to be implemented — mandatory third-party base cover, optional occupant/pillion liability cover, optional personal accident cover, and optional own-damage cover — with a 'customer option form' issued at every sale, offline or online.",
+   "authority": "IRDA",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "insurance",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-wordings",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "IRDA, in consultation with GIC and the insurance companies, to formulate uniform policy wordings for the optional covers under the four-layer structure.",
+   "authority": "IRDA",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "insurance",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-infosheet",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "A consumer-friendly customer information sheet outlining the four-layer structure — who is covered under mandatory and optional covers — made mandatory for every sale of motor-vehicle insurance, offline or online.",
+   "authority": "IRDA",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "insurance",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-tpterm",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "Third-party insurance at the time of purchase/registration of new vehicles enhanced from three to four years for new cars and from five to six years for new two-wheelers; IRDA to immediately issue the necessary directions.",
+   "authority": "IRDA",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "insurance",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-verifypilot",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "A pilot project to be implemented allowing citizens to verify a vehicle's insurance status, specifying whether the cover is mandatory third-party only or comprehensive, to enable prompt reporting of uninsured vehicles.",
+   "authority": "IRDA / MoRTH",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "insurance",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-fuelpilot",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "IRDA, in consultation with MoRTH, to evolve a pilot project linking fuel supply to valid insurance status — uninsured vehicles refused fuel at petrol pumps until insurance is obtained — which may be done through ANPR cameras.",
+   "authority": "IRDA / MoRTH",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "enforcement",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-tollpilot",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "MoRTH to implement the pilot projects on certain corridors, substituting the process of stopping at toll plazas with automatic detection of vehicles passing through toll points.",
+   "authority": "MoRTH",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "highways",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-dar",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "State Police to promptly file the Detailed Accident Report, along with FIR, MLC, post-mortem report, insurance policy and permit, before the concerned MACT in pending cases relating to accidents prior to 31.03.2022.",
+   "authority": "State Police",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "victim compensation",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
+   "id": "nic-20260804-witness",
+   "case_id": "national-insurance-company-limited-2026",
+   "order_date": "2026-08-04",
+   "order_tid": 134817703,
+   "directive": "State Police to assist with prompt service and production of relevant witnesses before the concerned MACT to ensure speedy disposal of cases relating to accidents prior to 31.03.2022.",
+   "authority": "State Police",
+   "granted": "responses by 14 Aug 2026",
+   "due": "2026-08-14",
+   "theme": "victim compensation",
+   "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "link": "https://indiankanoon.org/doc/134817703/"
+  },
+  {
    "id": "savelife-20260526-a",
    "case_id": "savelife-emergency-care-726-2024",
    "order_date": "2026-05-26",
@@ -2384,6 +2527,28 @@
    "historical": true,
    "case_title": "S. Rajaseekaran v. Union of India",
    "link": "https://indiankanoon.org/doc/134366340/"
+  },
+  {
+   "id": "rajaseekaran-2018-tpterm",
+   "case_id": "rajaseekaran-295-2012",
+   "order_date": "2018-07-12",
+   "directive": "Third-party insurance mandatorily to be purchased for three years for new cars and five years for new two-wheelers at the time of purchase/registration of new vehicles.",
+   "authority": "IRDA",
+   "granted": "standing (2018 direction)",
+   "due": null,
+   "status": "ongoing",
+   "status_note": "Superseded on 4 August 2026: the Court enhanced the period to four years (new cars) and six years (new two-wheelers). See the 2026 direction in this ledger.",
+   "compliance_events": [
+    {
+     "date": "2026-08-04",
+     "tid": 134817703,
+     "note": "The Court recorded that despite eight years having passed since this direction, a large number of vehicles remain uninsured, and enhanced the period by one year."
+    }
+   ],
+   "theme": "insurance",
+   "historical": true,
+   "case_title": "S. Rajaseekaran v. Union of India",
+   "link": null
   }
  ],
  "borderline_excluded": [

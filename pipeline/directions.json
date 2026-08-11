@@ -1,5 +1,5 @@
 {
-  "_comment": "The Accountability Ledger. Each entry is a concrete direction the Supreme Court issued to a government duty-bearer, with the granted period converted to an absolute 'due' date. Status is computed LIVE in the dashboard from 'due' vs today, EXCEPT where an explicit 'status' is set (missed/complied/ongoing) because a later tracked order confirms it. Every 'directive' is condensed from fetched order text — never invented. 'overdue'/'due-soon'/'upcoming' are never asserted as government failure; they mean the deadline has passed with compliance unconfirmed on the tracked record. Optional 'compliance_events': [{date, tid, note}] — dated facts from later orders about partial/progressive compliance (e.g. which States filed affidavits), rendered on the direction card without changing its status.",
+  "_comment": "The Accountability Ledger. Each entry is a concrete direction the Supreme Court issued to a government duty-bearer, with the granted period converted to an absolute 'due' date. Status is computed LIVE in the dashboard from 'due' vs today, EXCEPT where an explicit 'status' is set (missed/complied/ongoing) because a later tracked order confirms it. Every 'directive' is condensed from fetched order text \u2014 never invented. 'overdue'/'due-soon'/'upcoming' are never asserted as government failure; they mean the deadline has passed with compliance unconfirmed on the tracked record. Optional 'compliance_events': [{date, tid, note}] \u2014 dated facts from later orders about partial/progressive compliance (e.g. which States filed affidavits), rendered on the direction card without changing its status.",
   "directions": [
     {
       "id": "phalodi-20260413-a",
@@ -116,7 +116,7 @@
       "case_id": "phalodi-smwpc-9-2025",
       "order_date": "2026-04-13",
       "order_tid": 78882038,
-      "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-State Highway Safety Coordination Committee to standardise enforcement protocols — uniform driving-hour limits, surveillance standards, parking enforcement and penalty regimes — across State boundaries.",
+      "directive": "MoRTH shall place before the Court a report on the constitution of an Inter-State Highway Safety Coordination Committee to standardise enforcement protocols \u2014 uniform driving-hour limits, surveillance standards, parking enforcement and penalty regimes \u2014 across State boundaries.",
       "authority": "MoRTH",
       "granted": "60 days",
       "due": "2026-06-12",
@@ -183,7 +183,7 @@
       "case_id": "savelife-emergency-care-726-2024",
       "order_date": "2026-05-26",
       "order_tid": 79241526,
-      "directive": "Fully operationalise the PM RAHAT cashless-treatment scheme — designate hospitals, on-board the State Health Agency to the TMS, deploy police on eDAR — non-implementation declared a violation of the MV Act.",
+      "directive": "Fully operationalise the PM RAHAT cashless-treatment scheme \u2014 designate hospitals, on-board the State Health Agency to the TMS, deploy police on eDAR \u2014 non-implementation declared a violation of the MV Act.",
       "authority": "States / UTs",
       "granted": "3 months",
       "due": "2026-08-26",
@@ -207,7 +207,7 @@
       "case_id": "rajaseekaran-295-2012",
       "order_date": "2026-05-13",
       "order_tid": 74316463,
-      "directive": "Constitute the National Road Safety Board — 'one last opportunity' after the 2025 deadline lapsed; NRSB Rules 2025 already framed.",
+      "directive": "Constitute the National Road Safety Board \u2014 'one last opportunity' after the 2025 deadline lapsed; NRSB Rules 2025 already framed.",
       "authority": "MoRTH",
       "granted": "3 months",
       "due": "2026-08-13",
@@ -292,7 +292,7 @@
       "case_id": "rajaseekaran-295-2012",
       "order_date": "2017-11-30",
       "order_tid": 145033342,
-      "directive": "Set up a permanent Road Safety Cell in the Ministry and in every State — the Court recorded these had been established and passed no further orders.",
+      "directive": "Set up a permanent Road Safety Cell in the Ministry and in every State \u2014 the Court recorded these had been established and passed no further orders.",
       "authority": "MoRTH",
       "granted": "by 2017 order",
       "due": null,
@@ -305,7 +305,7 @@
       "case_id": "rajaseekaran-295-2012",
       "order_date": "2024-01-12",
       "order_tid": 134366340,
-      "directive": "Operationalise the hit-and-run compensation scheme under S.161 MV Act — Claims Enquiry Officer to forward a report within one month, compensation within 15 days of sanction, GIC to report annually; a standing scheme obligation the Court monitors.",
+      "directive": "Operationalise the hit-and-run compensation scheme under S.161 MV Act \u2014 Claims Enquiry Officer to forward a report within one month, compensation within 15 days of sanction, GIC to report annually; a standing scheme obligation the Court monitors.",
       "authority": "States / UTs",
       "granted": "standing scheme",
       "due": null,
@@ -328,9 +328,150 @@
         {
           "date": "2026-07-13",
           "tid": 121987210,
-          "note": "Court records compliance affidavits received from only 3 of 36 States/UTs — Bihar, Karnataka and Puducherry."
+          "note": "Court records compliance affidavits received from only 3 of 36 States/UTs \u2014 Bihar, Karnataka and Puducherry."
         }
       ]
+    },
+    {
+      "id": "nic-20260804-anpr",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "ANPR cameras deployed on highways and roads to be integrated with Insurance Information Bureau (IRDA) and VAHAN portal data for automatic issuance of e-challans to uninsured vehicles, in furtherance of the SOP for Electronic Monitoring and Enforcement of Road Safety.",
+      "authority": "MoRTH",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "enforcement"
+    },
+    {
+      "id": "nic-20260804-handheld",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "State Police to be supplied with handheld devices or downloadable apps linked to Insurance Information Bureau and VAHAN data, to verify real-time insurance status on the ground and impose challans for violations.",
+      "authority": "MoRTH",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "enforcement"
+    },
+    {
+      "id": "nic-20260804-fourlayer",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "A four-layer motor insurance structure for private vehicles to be implemented \u2014 mandatory third-party base cover, optional occupant/pillion liability cover, optional personal accident cover, and optional own-damage cover \u2014 with a 'customer option form' issued at every sale, offline or online.",
+      "authority": "IRDA",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "insurance"
+    },
+    {
+      "id": "nic-20260804-wordings",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "IRDA, in consultation with GIC and the insurance companies, to formulate uniform policy wordings for the optional covers under the four-layer structure.",
+      "authority": "IRDA",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "insurance"
+    },
+    {
+      "id": "nic-20260804-infosheet",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "A consumer-friendly customer information sheet outlining the four-layer structure \u2014 who is covered under mandatory and optional covers \u2014 made mandatory for every sale of motor-vehicle insurance, offline or online.",
+      "authority": "IRDA",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "insurance"
+    },
+    {
+      "id": "nic-20260804-tpterm",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "Third-party insurance at the time of purchase/registration of new vehicles enhanced from three to four years for new cars and from five to six years for new two-wheelers; IRDA to immediately issue the necessary directions.",
+      "authority": "IRDA",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "insurance"
+    },
+    {
+      "id": "nic-20260804-verifypilot",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "A pilot project to be implemented allowing citizens to verify a vehicle's insurance status, specifying whether the cover is mandatory third-party only or comprehensive, to enable prompt reporting of uninsured vehicles.",
+      "authority": "IRDA / MoRTH",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "insurance"
+    },
+    {
+      "id": "nic-20260804-fuelpilot",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "IRDA, in consultation with MoRTH, to evolve a pilot project linking fuel supply to valid insurance status \u2014 uninsured vehicles refused fuel at petrol pumps until insurance is obtained \u2014 which may be done through ANPR cameras.",
+      "authority": "IRDA / MoRTH",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "enforcement"
+    },
+    {
+      "id": "nic-20260804-tollpilot",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "MoRTH to implement the pilot projects on certain corridors, substituting the process of stopping at toll plazas with automatic detection of vehicles passing through toll points.",
+      "authority": "MoRTH",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "highways"
+    },
+    {
+      "id": "nic-20260804-dar",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "State Police to promptly file the Detailed Accident Report, along with FIR, MLC, post-mortem report, insurance policy and permit, before the concerned MACT in pending cases relating to accidents prior to 31.03.2022.",
+      "authority": "State Police",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "victim compensation"
+    },
+    {
+      "id": "nic-20260804-witness",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-08-04",
+      "order_tid": 134817703,
+      "directive": "State Police to assist with prompt service and production of relevant witnesses before the concerned MACT to ensure speedy disposal of cases relating to accidents prior to 31.03.2022.",
+      "authority": "State Police",
+      "granted": "responses by 14 Aug 2026",
+      "due": "2026-08-14",
+      "theme": "victim compensation"
+    },
+    {
+      "id": "rajaseekaran-2018-tpterm",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2018-07-12",
+      "directive": "Third-party insurance mandatorily to be purchased for three years for new cars and five years for new two-wheelers at the time of purchase/registration of new vehicles.",
+      "authority": "IRDA",
+      "granted": "standing (2018 direction)",
+      "due": null,
+      "status": "ongoing",
+      "status_note": "Superseded on 4 August 2026: the Court enhanced the period to four years (new cars) and six years (new two-wheelers). See the 2026 direction in this ledger.",
+      "compliance_events": [
+        {
+          "date": "2026-08-04",
+          "tid": 134817703,
+          "note": "The Court recorded that despite eight years having passed since this direction, a large number of vehicles remain uninsured, and enhanced the period by one year."
+        }
+      ],
+      "theme": "insurance",
+      "historical": true
     }
   ]
 }
