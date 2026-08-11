@@ -6637,5 +6637,52 @@
   "queries": [
    "\"right to walk\" doctypes:scorders"
   ]
+ },
+ "134817703": {
+  "tid": 134817703,
+  "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi on 4 August, 2026",
+  "publishdate": "2026-08-04",
+  "docsource": "Supreme Court of India",
+  "headline": "been submitted that pursuant to the directions\n       of this Court in  S. <b>Rajaseekaran</b> v. Union of India6 , at the time of registration\n       of new vehicles ... Another aspect to be considered is that this Court in  S.\n                         <b>Rajaseekaran</b> v. Union of India15  on 12.07.2018, while noting the\n                         large number of vehicles",
+  "citation": null,
+  "queries": [
+   "\"Rajaseekaran\" doctypes:supremecourt",
+   "\"Phalodi\" doctypes:supremecourt",
+   "\"road safety\" doctypes:supremecourt",
+   "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
+ },
+ "79576489": {
+  "tid": 79576489,
+  "title": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 4 August, 2026",
+  "publishdate": "2026-08-04",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 4 August, 2026 \n\n             ITEM NO.43                    COURT NO.17                  SECTION ... 9322/2022 passed by the Supreme Court of India]\n\n     <b>GOHAR</b> <b>MOHAMMAD</b>                                                  Petitioner(s)\n\n                                                VERSUS\n\n     UTTAR PRADESH STA",
+  "citation": null,
+  "queries": [
+   "\"Gohar Mohammed\" doctypes:scorders"
+  ]
+ },
+ "14430645": {
+  "tid": 14430645,
+  "title": "Rama vs Kedar on 4 August, 2026",
+  "publishdate": "2026-08-04",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": " Rama vs Kedar on 4 August, 2026 \n\n Author:  Prashant Kumar Mishra  \n\n Bench:  Prashant Kumar Mishra",
+  "citation": null,
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ "190702711": {
+  "tid": 190702711,
+  "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
+  "publishdate": "2026-07-30",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "valid insurance policy, and\n\n\n                                                             1 \n\fthe possession of a valid <b>driving</b> <b>licence</b> by the driver\n\nare   also       undisputed.    Hence,      liability        stands       fastened\n\nupon the insurer ... been adequately accounted for.\n\n                                        2 \n  \f7.     In the interest of justice, we <b>direct</b>",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:scorders"
+  ]
  }
 }

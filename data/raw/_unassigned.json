@@ -2412,14 +2412,6 @@
   ]
  },
  {
-  "tid": 46527491,
-  "date": "2023-10-13",
-  "title": "Ravi vs The National Insurance Company Limited on 13 October, 2023",
-  "queries": [
-   "helmet \"Motor Vehicles Act\" doctypes:scorders"
-  ]
- },
- {
   "tid": 104050054,
   "date": "2014-07-04",
   "title": "State Thr.C.B.I. vs Sanjiv Bhalla on 4 July, 2014",
@@ -3141,19 +3133,27 @@
   ]
  },
  {
-  "tid": 184970920,
-  "date": "2026-07-16",
-  "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
-  "queries": [
-   "\"National Highway\" fatality directions doctypes:scorders"
-  ]
- },
- {
   "tid": 151189997,
   "date": "2026-07-30",
   "title": "Reliance General Insurance Company Ltd vs Om Parkash on 30 July, 2026",
   "queries": [
    "\"driving licence\" directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 14430645,
+  "date": "2026-08-04",
+  "title": "Rama vs Kedar on 4 August, 2026",
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 190702711,
+  "date": "2026-07-30",
+  "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
+  "queries": [
+   "\"driving licence\" directions doctypes:scorders"
   ]
  }
 ]

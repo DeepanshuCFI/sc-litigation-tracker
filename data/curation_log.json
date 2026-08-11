@@ -1,17 +1,39 @@
 {
- "date": "2026-08-04",
- "classified": [],
+ "date": "2026-08-11",
+ "classified": [
+  {
+   "tid": 190702711,
+   "date": "2026-07-30",
+   "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal; fact-specific enhancement of consortium amount with no systemic direction or new precedent."
+  },
+  {
+   "tid": 134817703,
+   "date": "2026-08-04",
+   "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi on 4 August, 2026",
+   "action": "track",
+   "reason": "Though originating as an insurance appeal, the Court issued sweeping nationwide systemic directions on uninsured vehicles, enforcement, uniform policy structure, IRDA/MoRTH pilot projects and MACT case expedition, with continued compliance monitoring."
+  },
+  {
+   "tid": 14430645,
+   "date": "2026-08-04",
+   "title": "Rama vs Kedar on 4 August, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal confined to notional income of the deceased; applies existing Pranay Sethi principles without systemic road-safety relief."
+  }
+ ],
  "gists": [
   {
-   "case": "right-to-walk-2026",
-   "date": "2026-08-03",
-   "gist": "",
+   "case": "gohar-mohammed-2022",
+   "date": "2026-08-04",
+   "gist": "The Court directed renewal of a fixed deposit maturing on 11.08.2026 for a further three months.",
    "significance": "routine",
-   "latest_development": "On 3 August 2026, the Court simply adjourned the suo motu footpath matter without any substantive direction.",
-   "next_listing": "24 August 2026"
+   "latest_development": "On 4 August 2026, the Court ordered renewal of the fixed deposit maturing on 11.08.2026 for three months and listed the matters for 12.08.2026.",
+   "next_listing": "12 August 2026"
   }
  ],
  "errors": [],
- "doc_fetches": 1,
- "approx_doc_cost_inr": 0.2
+ "doc_fetches": 4,
+ "approx_doc_cost_inr": 0.8
 }

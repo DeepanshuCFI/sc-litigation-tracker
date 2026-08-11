@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-08-04",
+  "built": "2026-08-11",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 590,
-  "assigned_docs": 200
+  "raw_docs": 594,
+  "assigned_docs": 204
  },
  "cases": [
   {
@@ -1002,8 +1002,8 @@
     "MACT reform"
    ],
    "why_it_matters": "15 Dec 2022 judgment (Nazeer & Maheshwari JJ) issued nationwide directions on the Detailed Accident Report workflow — police/insurer timelines, MACT registration, coordination portal — reshaping how compensation claims begin. Compliance is monitored through MA 825/2023.",
-   "latest_development": "5 May 2026: brief order in MA 825/2023 — matter listed for August 2026; court-held fixed deposit renewed.",
-   "next_listing": "August 2026, per the order of 5 May 2026",
+   "latest_development": "On 4 August 2026, the Court ordered renewal of the fixed deposit maturing on 11.08.2026 for three months and listed the matters for 12.08.2026.",
+   "next_listing": "12 August 2026 (per order of 2026-08-04)",
    "orders": [
     {
      "date": "2019-01-04",
@@ -1256,11 +1256,18 @@
      "link": "https://indiankanoon.org/doc/180339553/",
      "gist": "",
      "significance": "routine"
+    },
+    {
+     "date": "2026-08-04",
+     "tid": 79576489,
+     "link": "https://indiankanoon.org/doc/79576489/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 36,
+   "order_count": 37,
    "first_order": "2019-01-04",
-   "latest_order": "2026-05-05"
+   "latest_order": "2026-08-04"
   },
   {
    "id": "k-balu-liquor-2016",
@@ -1732,6 +1739,50 @@
    "order_count": 1,
    "first_order": "2026-07-31",
    "latest_order": "2026-07-31"
+  },
+  {
+   "id": "national-insurance-company-limited-2026",
+   "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
+   "case_number": "Civil Appeal No. 14369 of 2025",
+   "court": "Supreme Court of India",
+   "case_type": "Civil Appeal (with systemic directions)",
+   "status": "monitoring",
+   "filed_year": 2025,
+   "themes": [
+    "uninsured vehicles",
+    "third-party insurance mandate",
+    "ANPR/e-challan enforcement",
+    "IRDA policy structure",
+    "MACT delays"
+   ],
+   "why_it_matters": "The Court mandated a four-layer motor insurance structure, uniform policy wording, extended third-party cover to 4 years (cars) and 6 years (two-wheelers), handheld insurance-verification devices for State Police, and fuel-linked/ANPR pilot projects to curb uninsured vehicles nationwide.",
+   "latest_development": "2026-08-04: Arising from an insurance appeal over a comprehensive policy's coverage of the owner-occupant, the Bench (Sanjay Karol, Prashant Kumar Mishra) impleaded IRDA, MoRTH, GIC and 22+ insurers and issued nationwide directions on enforcement of Section 146 MVA, uniform policy structure, consumer option forms, and prompt filing of DARs by State Police; compliance affidavits due 14.08.2026.",
+   "orders": [
+    {
+     "date": "2023-10-13",
+     "tid": 46527491,
+     "link": "https://indiankanoon.org/doc/46527491/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-07-16",
+     "tid": 184970920,
+     "link": "https://indiankanoon.org/doc/184970920/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-08-04",
+     "tid": 134817703,
+     "link": "https://indiankanoon.org/doc/134817703/",
+     "gist": "Arising from an insurance appeal over a comprehensive policy's coverage of the owner-occupant, the Bench (Sanjay Karol, Prashant Kumar Mishra) impleaded IRDA, MoRTH, GIC and 22+ insurers and issued nationwide directions on enforcement of Section 146 MVA, uniform policy structure, consumer option forms, and prompt filing of DARs by State Police; compliance affidavits due 14.08.2026.",
+     "significance": "major"
+    }
+   ],
+   "order_count": 3,
+   "first_order": "2023-10-13",
+   "latest_order": "2026-08-04"
   }
  ],
  "notable_judgments": [
@@ -2381,6 +2432,7 @@
   }
  ],
  "new_this_refresh": [
-  "right-to-walk-2026"
+  "gohar-mohammed-2022",
+  "national-insurance-company-limited-2026"
  ]
 }

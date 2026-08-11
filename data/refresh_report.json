@@ -1,16 +1,35 @@
 {
- "refresh_date": "2026-08-04",
- "fromdate_window": "25-06-2026",
+ "refresh_date": "2026-08-11",
+ "fromdate_window": "02-07-2026",
  "search_pages": 66,
  "approx_cost_inr": 33.0,
- "new_docs_total": 1,
+ "new_docs_total": 4,
  "cases_with_new_orders": [
-  "right-to-walk-2026"
+  "gohar-mohammed-2022"
  ],
  "new_order_counts": {
-  "right-to-walk-2026": 1
+  "gohar-mohammed-2022": 1
  },
  "newly_overdue": [],
  "stale_listings": [],
- "new_unassigned_candidates": []
+ "new_unassigned_candidates": [
+  {
+   "tid": 190702711,
+   "date": "2026-07-30",
+   "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
+   "headline": "valid insurance policy, and\n\n\n                                                             1 \n\fthe possession of a valid driving licence by the driver\n\nare   also       undisputed.    Hence,      liab"
+  },
+  {
+   "tid": 134817703,
+   "date": "2026-08-04",
+   "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi on 4 August, 2026",
+   "headline": "been submitted that pursuant to the directions\n       of this Court in  S. Rajaseekaran v. Union of India6 , at the time of registration\n       of new vehicles ... Another aspect to be considered is t"
+  },
+  {
+   "tid": 14430645,
+   "date": "2026-08-04",
+   "title": "Rama vs Kedar on 4 August, 2026",
+   "headline": " Rama vs Kedar on 4 August, 2026 \n\n Author:  Prashant Kumar Mishra  \n\n Bench:  Prashant Kumar Mishra"
+  }
+ ]
 }
