@@ -694,7 +694,7 @@
      "date": "2026-08-17",
      "tid": 169925262,
      "link": "https://indiankanoon.org/doc/169925262/",
-     "gist": "",
+     "gist": "A two-line record of proceedings: the Court listed the matter again for 1 September 2026 and directed that respondents who have not filed their affidavits shall file them in the meantime. No summons to Chief Secretaries or DGPs was issued, the step the Court had warned of on 13 July 2026.",
      "significance": "routine"
     }
    ],
@@ -2257,14 +2257,20 @@
    "granted": "two weeks",
    "due": "2026-07-27",
    "theme": "institutions",
-   "status_note": "Matter listed for 17 August 2026; the Court warned that Chief Secretaries and DGPs of still-defaulting States/UTs will be summoned to appear personally.",
+   "status_note": "Not complied with by the 27 July 2026 deadline: on 17 August 2026 the Court recorded that respondents who had not filed their affidavits shall still file them, and listed the matter for 1 September 2026. No Chief Secretary or DGP was summoned.",
    "compliance_events": [
     {
      "date": "2026-07-13",
      "tid": 121987210,
      "note": "Court records compliance affidavits received from only 3 of 36 States/UTs — Bihar, Karnataka and Puducherry."
+    },
+    {
+     "date": "2026-08-17",
+     "tid": 169925262,
+     "note": "Court again directed respondents who have not filed affidavits to do so; matter listed for 1 September 2026."
     }
    ],
+   "status": "missed",
    "case_title": "In Re: Phalodi Accident (Suo Motu)",
    "link": "https://indiankanoon.org/doc/121987210/"
   },
@@ -2603,7 +2609,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "phalodi-smwpc-9-2025"
- ]
+ "new_this_refresh": []
 }
