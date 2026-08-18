@@ -1,35 +1,103 @@
 {
- "refresh_date": "2026-08-11",
- "fromdate_window": "02-07-2026",
+ "refresh_date": "2026-08-18",
+ "fromdate_window": "09-07-2026",
  "search_pages": 66,
  "approx_cost_inr": 33.0,
- "new_docs_total": 4,
+ "new_docs_total": 2,
  "cases_with_new_orders": [
-  "gohar-mohammed-2022"
+  "phalodi-smwpc-9-2025"
  ],
  "new_order_counts": {
-  "gohar-mohammed-2022": 1
+  "phalodi-smwpc-9-2025": 1
  },
- "newly_overdue": [],
- "stale_listings": [],
+ "newly_overdue": [
+  {
+   "id": "rajaseekaran-nrsb-2026",
+   "authority": "MoRTH",
+   "due": "2026-08-13",
+   "directive": "Constitute the National Road Safety Board — 'one last opportunity' after the 2025 deadline lapsed; N"
+  },
+  {
+   "id": "nic-20260804-anpr",
+   "authority": "MoRTH",
+   "due": "2026-08-14",
+   "directive": "ANPR cameras deployed on highways and roads to be integrated with Insurance Information Bureau (IRDA"
+  },
+  {
+   "id": "nic-20260804-handheld",
+   "authority": "MoRTH",
+   "due": "2026-08-14",
+   "directive": "State Police to be supplied with handheld devices or downloadable apps linked to Insurance Informati"
+  },
+  {
+   "id": "nic-20260804-fourlayer",
+   "authority": "IRDA",
+   "due": "2026-08-14",
+   "directive": "A four-layer motor insurance structure for private vehicles to be implemented — mandatory third-part"
+  },
+  {
+   "id": "nic-20260804-wordings",
+   "authority": "IRDA",
+   "due": "2026-08-14",
+   "directive": "IRDA, in consultation with GIC and the insurance companies, to formulate uniform policy wordings for"
+  },
+  {
+   "id": "nic-20260804-infosheet",
+   "authority": "IRDA",
+   "due": "2026-08-14",
+   "directive": "A consumer-friendly customer information sheet outlining the four-layer structure — who is covered u"
+  },
+  {
+   "id": "nic-20260804-tpterm",
+   "authority": "IRDA",
+   "due": "2026-08-14",
+   "directive": "Third-party insurance at the time of purchase/registration of new vehicles enhanced from three to fo"
+  },
+  {
+   "id": "nic-20260804-verifypilot",
+   "authority": "IRDA / MoRTH",
+   "due": "2026-08-14",
+   "directive": "A pilot project to be implemented allowing citizens to verify a vehicle's insurance status, specifyi"
+  },
+  {
+   "id": "nic-20260804-fuelpilot",
+   "authority": "IRDA / MoRTH",
+   "due": "2026-08-14",
+   "directive": "IRDA, in consultation with MoRTH, to evolve a pilot project linking fuel supply to valid insurance s"
+  },
+  {
+   "id": "nic-20260804-tollpilot",
+   "authority": "MoRTH",
+   "due": "2026-08-14",
+   "directive": "MoRTH to implement the pilot projects on certain corridors, substituting the process of stopping at "
+  },
+  {
+   "id": "nic-20260804-dar",
+   "authority": "State Police",
+   "due": "2026-08-14",
+   "directive": "State Police to promptly file the Detailed Accident Report, along with FIR, MLC, post-mortem report,"
+  },
+  {
+   "id": "nic-20260804-witness",
+   "authority": "State Police",
+   "due": "2026-08-14",
+   "directive": "State Police to assist with prompt service and production of relevant witnesses before the concerned"
+  }
+ ],
+ "stale_listings": [
+  {
+   "case": "gohar-mohammed-2022",
+   "listed_for": "2026-08-12",
+   "latest_order_on_record": "2026-08-04",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  }
+ ],
  "new_unassigned_candidates": [
   {
-   "tid": 190702711,
-   "date": "2026-07-30",
-   "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
-   "headline": "valid insurance policy, and\n\n\n                                                             1 \n\fthe possession of a valid driving licence by the driver\n\nare   also       undisputed.    Hence,      liab"
-  },
-  {
-   "tid": 134817703,
-   "date": "2026-08-04",
-   "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi on 4 August, 2026",
-   "headline": "been submitted that pursuant to the directions\n       of this Court in  S. Rajaseekaran v. Union of India6 , at the time of registration\n       of new vehicles ... Another aspect to be considered is t"
-  },
-  {
-   "tid": 14430645,
-   "date": "2026-08-04",
-   "title": "Rama vs Kedar on 4 August, 2026",
-   "headline": " Rama vs Kedar on 4 August, 2026 \n\n Author:  Prashant Kumar Mishra  \n\n Bench:  Prashant Kumar Mishra"
+   "tid": 44996988,
+   "date": "2026-08-12",
+   "title": "Dinesh Kumar vs The State Of Haryana on 12 August, 2026",
+   "headline": "that taxi\n     from the accused, and the subsequent discovery of his driving\n     licence. The dead body retrieved cannot be treated as wholly\n     unconnected merely because ... hand to\n     PW-18 do"
   }
  ]
 }

@@ -1,39 +1,25 @@
 {
- "date": "2026-08-11",
+ "date": "2026-08-18",
  "classified": [
   {
-   "tid": 190702711,
-   "date": "2026-07-30",
-   "title": "Nitheesh Abraham vs Liberty Videocon General Insurance ... on 30 July, 2026",
+   "tid": 44996988,
+   "date": "2026-08-12",
+   "title": "Dinesh Kumar vs The State Of Haryana on 12 August, 2026",
    "action": "ignore",
-   "reason": "Individual motor accident compensation appeal; fact-specific enhancement of consortium amount with no systemic direction or new precedent."
-  },
-  {
-   "tid": 134817703,
-   "date": "2026-08-04",
-   "title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi on 4 August, 2026",
-   "action": "track",
-   "reason": "Though originating as an insurance appeal, the Court issued sweeping nationwide systemic directions on uninsured vehicles, enforcement, uniform policy structure, IRDA/MoRTH pilot projects and MACT case expedition, with continued compliance monitoring."
-  },
-  {
-   "tid": 14430645,
-   "date": "2026-08-04",
-   "title": "Rama vs Kedar on 4 August, 2026",
-   "action": "ignore",
-   "reason": "Individual motor accident compensation appeal confined to notional income of the deceased; applies existing Pranay Sethi principles without systemic road-safety relief."
+   "reason": "Criminal appeal on murder/robbery conviction and juvenility; no road safety systemic relief."
   }
  ],
  "gists": [
   {
-   "case": "gohar-mohammed-2022",
-   "date": "2026-08-04",
-   "gist": "The Court directed renewal of a fixed deposit maturing on 11.08.2026 for a further three months.",
+   "case": "phalodi-smwpc-9-2025",
+   "date": "2026-08-17",
+   "gist": "",
    "significance": "routine",
-   "latest_development": "On 4 August 2026, the Court ordered renewal of the fixed deposit maturing on 11.08.2026 for three months and listed the matters for 12.08.2026.",
-   "next_listing": "12 August 2026"
+   "latest_development": "On 17 August 2026, the Court adjourned the matter and directed respondents who have not yet filed affidavits to do so before the next hearing.",
+   "next_listing": "1 September 2026"
   }
  ],
  "errors": [],
- "doc_fetches": 4,
- "approx_doc_cost_inr": 0.8
+ "doc_fetches": 2,
+ "approx_doc_cost_inr": 0.4
 }
