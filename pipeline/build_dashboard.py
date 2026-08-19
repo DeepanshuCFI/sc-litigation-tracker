@@ -58,6 +58,8 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 
 /* sticky section nav */
 .jumpnav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border)}
+@media(min-width:1025px){.jumpnav{display:none}}
+.jumpnav .wrap{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .jumpnav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px;align-items:center;scrollbar-width:none}
 .jumpnav .wrap::-webkit-scrollbar{display:none}
 .jn{font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);padding:0 16px;min-height:44px;border-radius:9999px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
@@ -247,7 +249,11 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .wcard .wc-cases{font-family:Montserrat;font-size:14px;font-weight:600;line-height:1.5}
 .wcard .wc-why{margin-top:8px;font-size:13px;color:var(--muted)}
 .sitehead{padding:18px 0;border-bottom:1px solid var(--border)}
+@media(min-width:1025px){.sitehead{position:sticky;top:0;z-index:60;background:var(--white)}}
 .hd{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hd-nav{display:none;margin-left:auto;align-items:center;gap:2px}
+@media(min-width:1025px){.hd-nav{display:flex}}
+.jn.on{color:var(--brand)}
 .hd-home{display:inline-flex}
 .hd-logo{width:188px;height:auto;display:block}
 .hd-label{font-family:Montserrat;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--border);padding-left:14px}
@@ -278,6 +284,14 @@ footer{border-top:1px solid var(--border);background:var(--white)}
   <div class="wrap hd">
     <a class="hd-home" href="https://crashfreeindia.org" target="_blank" rel="noopener" aria-label="Crashfree India home"><img class="hd-logo" src="data:image/svg+xml;base64,__LOGOBLUE__" alt="Crashfree India" width="188" height="26"></a>
     <div class="hd-label">Court Watch</div>
+    <nav class="hd-nav" aria-label="Page sections">
+      <a class="jn" data-nav="ledger" href="#ledger">Ledger <span class="n" data-n="ledger"></span></a>
+      <a class="jn" data-nav="docket" href="#docket">PIL &amp; Writs <span class="n" data-n="pil"></span></a>
+      <a class="jn" data-nav="suo-motu" href="#suo-motu">Suo Motu <span class="n" data-n="suo"></span></a>
+      <a class="jn" data-nav="appeals" href="#appeals">Appeals <span class="n" data-n="app"></span></a>
+      <a class="jn" data-nav="precedents" href="#precedents">Precedents <span class="n" data-n="nj"></span></a>
+      <a class="jn" data-nav="watchlist" href="#watchlist">Watchlist</a>
+    </nav>
   </div>
 </header>
 
@@ -300,12 +314,12 @@ footer{border-top:1px solid var(--border);background:var(--white)}
 
 <nav class="jumpnav" aria-label="Sections">
   <div class="wrap">
-    <a class="jn" href="#ledger">Ledger <span class="n" id="jn-ledger"></span></a>
-    <a class="jn" href="#docket">PIL &amp; Writs <span class="n" id="jn-pil"></span></a>
-    <a class="jn" href="#suo-motu">Suo Motu <span class="n" id="jn-suo"></span></a>
-    <a class="jn" href="#appeals">Appeals <span class="n" id="jn-app"></span></a>
-    <a class="jn" href="#precedents">Precedents <span class="n" id="jn-nj"></span></a>
-    <a class="jn" href="#watchlist">Watchlist</a>
+    <a class="jn" data-nav="ledger" href="#ledger">Ledger <span class="n" data-n="ledger"></span></a>
+    <a class="jn" data-nav="docket" href="#docket">PIL &amp; Writs <span class="n" data-n="pil"></span></a>
+    <a class="jn" data-nav="suo-motu" href="#suo-motu">Suo Motu <span class="n" data-n="suo"></span></a>
+    <a class="jn" data-nav="appeals" href="#appeals">Appeals <span class="n" data-n="app"></span></a>
+    <a class="jn" data-nav="precedents" href="#precedents">Precedents <span class="n" data-n="nj"></span></a>
+    <a class="jn" data-nav="watchlist" href="#watchlist">Watchlist</a>
   </div>
 </nav>
 
@@ -642,15 +656,26 @@ if(location.hash.startsWith('#dir-') || location.hash.startsWith('#case-')){
   const el = document.querySelector(CSS.escape ? '#'+CSS.escape(location.hash.slice(1)) : location.hash);
   if(el){ el.scrollIntoView(); el.classList.add('flash'); }
 }
-// back-to-top button (Parliament Watch pattern): throttled scroll toggle at 1400px
+// scroll spy (Parliament Watch pattern): highlight the section in view on both navs
+const NAV_IDS = ['ledger','docket','suo-motu','appeals','precedents','watchlist'];
+function spy(){
+  let cur = null;
+  for(const id of NAV_IDS){
+    const el = document.getElementById(id);
+    if(el && el.getBoundingClientRect().top <= 120) cur = id;
+  }
+  document.querySelectorAll('[data-nav]').forEach(a => a.classList.toggle('on', a.dataset.nav === cur));
+}
+// back-to-top button: shares the throttled scroll handler
 const toTop = document.getElementById('toTop');
 toTop.addEventListener('click', () => { window.scrollTo({top:0}); });
+function onScroll(){ spy(); toTop.hidden = window.scrollY < 1400; }
 let ttPending = null;
 window.addEventListener('scroll', () => {
   if(ttPending) return;
-  ttPending = setTimeout(() => { ttPending = null; toTop.hidden = window.scrollY < 1400; }, 120);
+  ttPending = setTimeout(() => { ttPending = null; onScroll(); }, 120);
 }, {passive:true});
-toTop.hidden = window.scrollY < 1400;
+onScroll();
 
 // in-page clicks on Coming-up hearing cards: flash the target case card
 document.getElementById('utrack').addEventListener('click', e => {
@@ -660,12 +685,13 @@ document.getElementById('utrack').addEventListener('click', e => {
   if(el){ document.querySelectorAll('.case.flash').forEach(x=>x.classList.remove('flash')); el.classList.add('flash'); }
 });
 
-// sticky nav counts (static totals, independent of filters)
-$('#jn-ledger').textContent = DIRS.length;
-$('#jn-nj').textContent = DB.notable_judgments.length;
-$('#jn-pil').textContent = DB.cases.filter(isPil).length;
-$('#jn-suo').textContent = DB.cases.filter(isSuo).length;
-$('#jn-app').textContent = DB.cases.filter(c=>!isPil(c)&&!isSuo(c)).length;
+// sticky nav counts (static totals, independent of filters) — both navs share data-n keys
+const setN = (k,v) => document.querySelectorAll(`[data-n="${k}"]`).forEach(e => e.textContent = v);
+setN('ledger', DIRS.length);
+setN('nj', DB.notable_judgments.length);
+setN('pil', DB.cases.filter(isPil).length);
+setN('suo', DB.cases.filter(isSuo).length);
+setN('app', DB.cases.filter(c=>!isPil(c)&&!isSuo(c)).length);
 
 // theme chips
 const themes = [...new Set(DB.cases.flatMap(c=>c.themes||[]))].sort();
