@@ -26,14 +26,26 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Road Safety in the Supreme Court — Crashfree India</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Court Watch: Road Safety in the Supreme Court — Crashfree India</title>
+<meta name="description" content="Every systemic road-safety case before the Supreme Court of India, tracked order by order — plus a live ledger of the deadlines the court set and what came of them.">
+<link rel="canonical" href="https://courtwatch.crashfreeindia.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crashfree India">
+<meta property="og:title" content="Court Watch — road safety in the Supreme Court of India">
+<meta property="og:description" content="Every systemic road-safety case before the Supreme Court, tracked order by order — and a live ledger of the deadlines the court set.">
+<meta property="og:url" content="https://courtwatch.crashfreeindia.org/">
+<meta property="og:image" content="https://courtwatch.crashfreeindia.org/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4736FE">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,__FAV32__">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,__FAV16__">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Geist:wght@400;500;700&display=swap');
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:100 900;font-display:swap;src:url(data:font/woff2;base64,__MONT__) format('woff2')}
+@font-face{font-family:'Geist';font-style:normal;font-weight:100 900;font-display:swap;src:url(data:font/woff2;base64,__GEIST__) format('woff2')}
 :root{
-  --brand:#4A35FF; --brand-lite:#F8F7FF; --lavender:#F3F1FF; --lav-text:#C8C0FF;
+  --brand:#4736FE; --brand-lite:#F8F7FF; --lavender:#F3F1FF; --lav-text:#C8C0FF;
   --danger:#F10015; --warning:#F57C00; --success:#00AA44;
-  --dark:#1a1c1c; --muted:#777589; --border:#EDEEF2; --white:#FFFFFF;
+  --dark:#1a1c1c; --muted:#727084; --border:#EDEEF2; --white:#FFFFFF;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--dark);background:var(--white);line-height:1.6;font-size:16px}
@@ -219,12 +231,38 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .wcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
 .wcard .wc-cases{font-family:Montserrat;font-size:14px;font-weight:600;line-height:1.5}
 .wcard .wc-why{margin-top:8px;font-size:13px;color:var(--muted)}
-footer{border-top:1px solid var(--border);padding:48px 0 64px;font-size:14px;color:var(--muted)}
-footer .brand{font-family:Montserrat;font-weight:700;color:var(--dark)}
-footer p{max-width:820px;margin-top:8px}
+.sitehead{padding:18px 0;border-bottom:1px solid var(--border)}
+.hd{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hd-home{display:inline-flex}
+.hd-logo{width:188px;height:auto;display:block}
+.hd-label{font-family:Montserrat;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--border);padding-left:14px}
+@media(max-width:520px){.hd-logo{width:180px}.hd-label{border-left:0;padding-left:0}}
+footer{border-top:1px solid var(--border);background:var(--white)}
+.ft{padding-top:56px;padding-bottom:28px;font-size:14px;color:var(--muted)}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.ft-brand{max-width:470px}
+.ft-brand .ft-logo{width:220px;height:auto;display:block}
+.ft-mission{margin-top:18px;font-size:15px;line-height:1.65;color:var(--muted)}
+.ft-mission b{color:var(--dark);font-weight:700}
+.ft-eyebrow{font-family:Montserrat;font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+.ft-social{display:flex;gap:12px;margin-top:16px}
+.ft-social a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--border);border-radius:999px;color:var(--dark);transition:border-color .15s,color .15s}
+.ft-social a:hover,.ft-social a:focus-visible{border-color:var(--brand);color:var(--brand)}
+.ft-social svg{width:20px;height:20px}
+.ft-note{margin-top:36px;max-width:820px;font-size:13px;line-height:1.6}
+.ft-bottom{margin-top:28px;padding-top:22px;border-top:1px solid var(--border)}
+.ft-bottom .copyright{font-size:14px;color:var(--muted)}
+.ft-bottom .tag-line{margin-top:10px;font-size:12px;line-height:1.6;color:var(--muted)}
 </style>
 </head>
 <body>
+
+<header class="sitehead">
+  <div class="wrap hd">
+    <a class="hd-home" href="https://crashfreeindia.org" target="_blank" rel="noopener" aria-label="Crashfree India home"><img class="hd-logo" src="data:image/svg+xml;base64,__LOGOBLUE__" alt="Crashfree India" width="188" height="26"></a>
+    <div class="hd-label">Court Watch</div>
+  </div>
+</header>
 
 <section class="hero">
   <div class="glow" aria-hidden="true"></div>
@@ -369,9 +407,27 @@ footer p{max-width:820px;margin-top:8px}
 </section>
 
 <footer>
-  <div class="wrap">
-    <span class="brand">Crashfree India</span> · Supreme Court Road Safety Litigation Tracker
-    <p>Order gists are working summaries prepared for advocacy tracking, not legal advice. Full text of every order is linked to Indian Kanoon. Case discovery runs weekly across judgments and daily orders; newly filed systemic matters are flagged automatically. Inclusion rule: systemic relief in — individual compensation appeals out, unless they set precedent (those join the precedent feed).</p>
+  <div class="wrap ft">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <img class="ft-logo" src="data:image/svg+xml;base64,__LOGOBLUE__" alt="Crashfree India" width="220" height="30">
+        <p class="ft-mission">A bold initiative by <b>Cars24</b> and the <b>Indian Road Safety Council</b> to create a safer mobility ecosystem across India.</p>
+      </div>
+      <div class="ft-follow">
+        <div class="ft-eyebrow">Follow the movement</div>
+        <div class="ft-social">
+          <a href="https://www.instagram.com/crashfreeindia/" target="_blank" rel="noopener" aria-label="Crashfree India on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://x.com/CrashfreeIndia" target="_blank" rel="noopener" aria-label="Crashfree India on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          <a href="https://www.linkedin.com/company/crashfree-india" target="_blank" rel="noopener" aria-label="Crashfree India on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.youtube.com/@CrashfreeIndia" target="_blank" rel="noopener" aria-label="Crashfree India on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <p class="ft-note">Order gists are working summaries prepared for advocacy tracking, not legal advice and not court records. Full text of every order is linked to Indian Kanoon. Case discovery runs weekly across judgments and daily orders; newly filed systemic matters are flagged automatically. Inclusion rule: systemic relief in — individual compensation appeals out, unless they set precedent (those join the precedent feed). A deadline shown as passed means no compliance order has been recorded yet — it is not, by itself, a finding that any authority failed.</p>
+    <div class="ft-bottom">
+      <div class="copyright">© 2026 Crashfree India. All rights reserved.</div>
+      <div class="tag-line">Source: Supreme Court judgments &amp; daily orders via Indian Kanoon · Refreshed automatically every Tuesday · Independently compiled in good faith — errors possible, corrections welcome at <a href="mailto:info@crashfreeindia.org">info@crashfreeindia.org</a> · Not affiliated with the Supreme Court of India or any government body</div>
+    </div>
   </div>
 </footer>
 
@@ -657,7 +713,17 @@ render();
 
 def main() -> None:
     payload = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
-    html = TEMPLATE.replace("__DATA__", payload)
+    assets = ROOT / "assets"
+    html = TEMPLATE
+    for ph, fname in [("__MONT__", "mont.b64"), ("__GEIST__", "geist.b64"),
+                      ("__LOGOBLUE__", "logo_blue.b64"),
+                      ("__FAV32__", "favicon32.b64"), ("__FAV16__", "favicon16.b64")]:
+        html = html.replace(ph, (assets / fname).read_text().strip())
+        if ph in html:
+            raise SystemExit(f"placeholder {ph} still present after injection")
+    html = html.replace("__DATA__", payload)
+    if "__DATA__" in html:
+        raise SystemExit("placeholder __DATA__ still present after injection")
     out = ROOT / "docs" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(html)
