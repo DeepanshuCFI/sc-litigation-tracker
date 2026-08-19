@@ -201,6 +201,11 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .authchip{font-family:Montserrat;font-size:11px;font-weight:600;letter-spacing:.06em;border-radius:9999px;padding:4px 12px;background:color-mix(in srgb,var(--brand) 8%,transparent);border:1px solid color-mix(in srgb,var(--brand) 20%,transparent);color:var(--brand);white-space:nowrap}
 .dmeta .dcase{font-style:italic}
 .ledger-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:820px;border-left:3px solid var(--border);padding-left:16px;font-style:italic}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.totop{position:fixed;right:20px;bottom:20px;z-index:70;width:48px;height:48px;border-radius:999px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--dark);cursor:pointer;box-shadow:0 6px 20px rgba(26,28,28,.14);transition:border-color .15s,color .15s}
+.totop:hover{border-color:var(--brand);color:var(--brand)}
+.totop[hidden]{display:none}
+.totop svg{width:20px;height:20px}
 .dcard{scroll-margin-top:76px}
 .case{scroll-margin-top:76px}
 .case.flash{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 15%,transparent)}
@@ -266,6 +271,8 @@ footer{border-top:1px solid var(--border);background:var(--white)}
 </style>
 </head>
 <body>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></button>
 
 <header class="sitehead">
   <div class="wrap hd">
@@ -635,6 +642,16 @@ if(location.hash.startsWith('#dir-') || location.hash.startsWith('#case-')){
   const el = document.querySelector(CSS.escape ? '#'+CSS.escape(location.hash.slice(1)) : location.hash);
   if(el){ el.scrollIntoView(); el.classList.add('flash'); }
 }
+// back-to-top button (Parliament Watch pattern): throttled scroll toggle at 1400px
+const toTop = document.getElementById('toTop');
+toTop.addEventListener('click', () => { window.scrollTo({top:0}); });
+let ttPending = null;
+window.addEventListener('scroll', () => {
+  if(ttPending) return;
+  ttPending = setTimeout(() => { ttPending = null; toTop.hidden = window.scrollY < 1400; }, 120);
+}, {passive:true});
+toTop.hidden = window.scrollY < 1400;
+
 // in-page clicks on Coming-up hearing cards: flash the target case card
 document.getElementById('utrack').addEventListener('click', e => {
   const a = e.target.closest('a.ucard');
