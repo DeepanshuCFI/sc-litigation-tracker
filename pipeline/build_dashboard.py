@@ -88,7 +88,14 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .btn-secondary:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent)}
 .btn svg{flex:0 0 auto}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:48px}
-.stat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
+.stat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px;transition:.15s}
+.stat:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 5%,transparent)}
+.ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.ic svg{width:18px;height:18px}
+.ic-blue{background:var(--lavender);color:var(--brand)}
+.ic-orange{background:#FFF1E2;color:var(--warning)}
+.ic-red{background:#FFE8EA;color:var(--danger)}
+.ic-green{background:#E4F7EC;color:var(--success)}
 .stat .num{font-family:Montserrat;font-size:36px;font-weight:700;color:var(--brand);line-height:1}
 .stat .num.watch{color:var(--warning)}
 .stat .lbl{margin-top:8px;font-size:14px;color:var(--muted)}
@@ -163,7 +170,8 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 
 /* accountability ledger */
 .ledger-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:48px}
-.lstat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
+.lstat{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px;transition:.15s}
+.lstat:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 5%,transparent)}
 .lstat .num{font-family:Montserrat;font-size:44px;font-weight:700;line-height:1;color:var(--brand)}
 .lstat.red .num{color:var(--danger)}
 .lstat.orange .num{color:var(--warning)}
@@ -456,14 +464,28 @@ const mon  = DB.cases.filter(c=>c.status==='monitoring').length;
 const disp = DB.cases.filter(c=>c.status==='disposed').length;
 const orders = DB.cases.reduce((n,c)=>n+c.order_count,0);
 $('#last-refresh').textContent = fmt(DB.meta.built);
+// stroke icon set (lucide-style) for stat-tile chips — the CFI People pattern
+const ICONS = {
+  scale:'<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>',
+  hourglass:'<path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>',
+  eye:'<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  check:'<path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/>',
+  file:'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',
+  bookmark:'<path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16Z"/>',
+  clipboard:'<rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>',
+  alert:'<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+  clock:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  done:'<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+};
+const chip = (icon,tone)=>`<div class="ic ic-${tone}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[icon]}</svg></div>`;
 $('#stats').innerHTML = [
-  [DB.cases.length,'systemic cases tracked',''],
-  [live,'pending before the Court',''],
-  [mon,'under compliance monitoring','watch'],
-  [disp,'disposed with directions',''],
-  [orders,'orders indexed',''],
-  [DB.notable_judgments.length,'precedent judgments','']
-].map(([n,l,c])=>`<div class="stat"><div class="num ${c}">${n}</div><div class="lbl">${l}</div></div>`).join('');
+  [DB.cases.length,'systemic cases tracked','','scale','blue'],
+  [live,'pending before the Court','','hourglass','blue'],
+  [mon,'under compliance monitoring','watch','eye','orange'],
+  [disp,'disposed with directions','','check','blue'],
+  [orders,'orders indexed','','file','blue'],
+  [DB.notable_judgments.length,'precedent judgments','','bookmark','blue']
+].map(([n,l,c,i,t])=>`<div class="stat">${chip(i,t)}<div class="num ${c}">${n}</div><div class="lbl">${l}</div></div>`).join('');
 
 // ===== Accountability Ledger =====
 const DIRS = DB.directions || [];
@@ -493,11 +515,11 @@ const nOver = DIRS.filter(d=>d._st==='overdue'||d._st==='missed').length;
 const nSoon = DIRS.filter(d=>d._st==='due-soon').length;
 const nDone = DIRS.filter(d=>d._st==='complied').length;
 $('#ledger-stats').innerHTML = [
-  [DIRS.length,'directions tracked',''],
-  [nOver,'overdue — deadline passed','red'],
-  [nSoon,'due within 90 days','orange'],
-  [nDone,'confirmed complied','green'],
-].map(([n,l,c])=>`<div class="lstat ${c}"><div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
+  [DIRS.length,'directions tracked','','clipboard','blue'],
+  [nOver,'overdue — deadline passed','red','alert','red'],
+  [nSoon,'due within 90 days','orange','clock','orange'],
+  [nDone,'confirmed complied','green','done','green'],
+].map(([n,l,c,i,t])=>`<div class="lstat ${c}">${chip(i,t)}<div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
 
 // by-authority bar chart (single-hue magnitude)
 const authCounts = {};
