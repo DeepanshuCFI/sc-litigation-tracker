@@ -202,6 +202,8 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .dmeta .dcase{font-style:italic}
 .ledger-note{margin-top:20px;font-size:13px;color:var(--muted);max-width:820px;border-left:3px solid var(--border);padding-left:16px;font-style:italic}
 .dcard{scroll-margin-top:76px}
+.case{scroll-margin-top:76px}
+.case.flash{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 15%,transparent)}
 .dlink{font-size:12px;color:var(--muted);white-space:nowrap}
 .dlink:hover{color:var(--brand)}
 .dcard.flash{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 15%,transparent)}
@@ -605,7 +607,7 @@ function parseListing(s){
   DB.cases.forEach(c => {
     const d = parseListing(c.next_listing);
     if(d && d >= today && d <= horizon)
-      events.push({date:d, kind:'hearing', klabel:'Hearing', label:c.title, sub:c.case_number, href:'#docket'});
+      events.push({date:d, kind:'hearing', klabel:'Hearing', label:c.title, sub:c.case_number, href:'#case-'+c.id});
   });
   DIRS.forEach(x => {
     if(x.due && x.due >= today && x.due <= horizon && !x.status)
@@ -627,12 +629,19 @@ function parseListing(s){
   document.getElementById('upcoming').hidden = false;
 })();
 
-// deep link to a direction card (#dir-<id>) — content renders dynamically, so
-// resolve the hash ourselves after first render
-if(location.hash.startsWith('#dir-')){
+// deep link to a direction or case card (#dir-<id> / #case-<id>) — content
+// renders dynamically, so resolve the hash ourselves after first render
+if(location.hash.startsWith('#dir-') || location.hash.startsWith('#case-')){
   const el = document.querySelector(CSS.escape ? '#'+CSS.escape(location.hash.slice(1)) : location.hash);
   if(el){ el.scrollIntoView(); el.classList.add('flash'); }
 }
+// in-page clicks on Coming-up hearing cards: flash the target case card
+document.getElementById('utrack').addEventListener('click', e => {
+  const a = e.target.closest('a.ucard');
+  if(!a || !a.getAttribute('href').startsWith('#case-')) return;
+  const el = document.querySelector('#'+CSS.escape(a.getAttribute('href').slice(1)));
+  if(el){ document.querySelectorAll('.case.flash').forEach(x=>x.classList.remove('flash')); el.classList.add('flash'); }
+});
 
 // sticky nav counts (static totals, independent of filters)
 $('#jn-ledger').textContent = DIRS.length;
@@ -668,7 +677,7 @@ function renderCase(c, newSet){
       <div class="tdate">${fmt(o.date)}</div>
       <div class="tbody">${o.gist?`<span class="gist">${o.gist}</span> `:''}<a href="${o.link}" target="_blank" rel="noopener">Read order ↗</a></div>
     </div>`).join('');
-  return `<div class="case" data-id="${c.id}">
+  return `<div class="case" id="case-${c.id}" data-id="${c.id}">
     <div class="case-head">
       <h3>${c.title}</h3>
       <span class="chip-type">${typeChip(c)}</span>
