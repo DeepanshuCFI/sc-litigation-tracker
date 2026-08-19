@@ -57,12 +57,18 @@ a:hover{text-decoration:underline}
 section{border-top:1px solid var(--border);scroll-margin-top:76px}
 
 /* sticky section nav */
-.jumpnav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border)}
-@media(min-width:1025px){.jumpnav{display:none}}
-.jumpnav .wrap{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.jumpnav{display:none}
+@media(max-width:760px){
+.jumpnav{display:block;position:relative;position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border)}
+.jumpnav .wrap{display:flex;gap:2px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:6px 16px;scrollbar-width:none}
+.jumpnav .wrap::-webkit-scrollbar{display:none}
+.jumpnav::after{content:"";position:absolute;top:0;right:0;bottom:0;width:44px;background:linear-gradient(to left,#fff 20%,rgba(255,255,255,0));pointer-events:none;opacity:1;transition:opacity .15s}
+.jumpnav.pn-end::after{opacity:0}
+}
 .jumpnav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px;align-items:center;scrollbar-width:none}
 .jumpnav .wrap::-webkit-scrollbar{display:none}
-.jn{font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);padding:0 16px;min-height:44px;border-radius:9999px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.jn{font-family:Montserrat;font-size:13px;font-weight:600;color:var(--muted);padding:8px 12px;border-radius:9999px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:color .12s,background .12s}
+.jn:hover{color:var(--brand);text-decoration:none}
 .jn:hover{color:var(--brand);background:var(--brand-lite);text-decoration:none}
 .jn .n{font-size:11px;color:var(--brand);font-weight:700}
 .sect{padding:64px 0}
@@ -248,16 +254,19 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .wcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px}
 .wcard .wc-cases{font-family:Montserrat;font-size:14px;font-weight:600;line-height:1.5}
 .wcard .wc-why{margin-top:8px;font-size:13px;color:var(--muted)}
-.sitehead{padding:18px 0;border-bottom:1px solid var(--border)}
-@media(min-width:1025px){.sitehead{position:sticky;top:0;z-index:60;background:var(--white)}}
-.hd{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.hd-nav{display:none;margin-left:auto;align-items:center;gap:2px}
-@media(min-width:1025px){.hd-nav{display:flex}}
-.jn.on{color:var(--brand)}
+.sitehead{position:sticky;top:0;z-index:60;border-bottom:1px solid var(--border);background:var(--white)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+.hd-left{display:flex;align-items:center;gap:16px;min-width:0}
 .hd-home{display:inline-flex}
 .hd-logo{width:188px;height:auto;display:block}
-.hd-label{font-family:Montserrat;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--border);padding-left:14px}
-@media(max-width:520px){.hd-logo{width:180px}.hd-label{border-left:0;padding-left:0}}
+.hd-label{font-family:Montserrat;font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--border);padding-left:16px}
+.hd-nav{display:flex;align-items:center;gap:2px}
+.hd-nav a{font-family:Montserrat;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:9999px;white-space:nowrap;transition:color .12s,background .12s}
+.hd-nav a:hover{color:var(--brand);text-decoration:none}
+.hd-nav a.on,.jumpnav .jn.on{color:var(--brand);background:rgba(71,54,254,.08)}
+.hd-nav a .n{font-size:11px}
+@media(max-width:1150px){.hd-label{display:none}}
+@media(max-width:760px){.sitehead{position:static}.hd-nav{display:none}.hd-logo{width:180px}}
 footer{border-top:1px solid var(--border);background:var(--white)}
 .ft{padding-top:56px;padding-bottom:28px;font-size:14px;color:var(--muted)}
 .ft-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
@@ -282,8 +291,10 @@ footer{border-top:1px solid var(--border);background:var(--white)}
 
 <header class="sitehead">
   <div class="wrap hd">
-    <a class="hd-home" href="https://crashfreeindia.org" target="_blank" rel="noopener" aria-label="Crashfree India home"><img class="hd-logo" src="data:image/svg+xml;base64,__LOGOBLUE__" alt="Crashfree India" width="188" height="26"></a>
-    <div class="hd-label">Court Watch</div>
+    <div class="hd-left">
+      <a class="hd-home" href="https://crashfreeindia.org" target="_blank" rel="noopener" aria-label="Crashfree India home"><img class="hd-logo" src="data:image/svg+xml;base64,__LOGOBLUE__" alt="Crashfree India" width="188" height="26"></a>
+      <div class="hd-label">Court Watch</div>
+    </div>
     <nav class="hd-nav" aria-label="Page sections">
       <a class="jn" data-nav="ledger" href="#ledger">Ledger <span class="n" data-n="ledger"></span></a>
       <a class="jn" data-nav="docket" href="#docket">PIL &amp; Writs <span class="n" data-n="pil"></span></a>
@@ -676,6 +687,13 @@ window.addEventListener('scroll', () => {
   ttPending = setTimeout(() => { ttPending = null; onScroll(); }, 120);
 }, {passive:true});
 onScroll();
+
+// mobile chip-row right-edge fade: hide once scrolled to the end (Parliament pattern)
+const jnav = document.querySelector('.jumpnav'), jwrap = jnav.querySelector('.wrap');
+function jfade(){ jnav.classList.toggle('pn-end', jwrap.scrollLeft + jwrap.clientWidth >= jwrap.scrollWidth - 4); }
+jwrap.addEventListener('scroll', jfade, {passive:true});
+window.addEventListener('resize', jfade, {passive:true});
+jfade();
 
 // in-page clicks on Coming-up hearing cards: flash the target case card
 document.getElementById('utrack').addEventListener('click', e => {
