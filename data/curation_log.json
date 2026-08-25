@@ -1,24 +1,22 @@
 {
- "date": "2026-08-18",
+ "date": "2026-08-25",
  "classified": [
   {
-   "tid": 44996988,
-   "date": "2026-08-12",
-   "title": "Dinesh Kumar vs The State Of Haryana on 12 August, 2026",
+   "tid": 13295108,
+   "date": "2026-08-06",
+   "title": "Amarjot Singh Suri vs Aravind Mallappa Bangari on 6 August, 2026",
    "action": "ignore",
-   "reason": "Criminal appeal on murder/robbery conviction and juvenility; no road safety systemic relief."
-  }
- ],
- "gists": [
+   "reason": "Private tenancy/encroachment dispute over a road in Agra; contempt petition dismissed. No systemic road-safety relief."
+  },
   {
-   "case": "phalodi-smwpc-9-2025",
-   "date": "2026-08-17",
-   "gist": "",
-   "significance": "routine",
-   "latest_development": "On 17 August 2026, the Court adjourned the matter and directed respondents who have not yet filed affidavits to do so before the next hearing.",
-   "next_listing": "1 September 2026"
+   "tid": 47450545,
+   "date": "2026-08-19",
+   "title": "Reena vs The Managing Director, Karnataka State ... on 19 August, 2026",
+   "action": "ignore",
+   "reason": "Individual motor accident compensation appeal (non-reportable) restating settled principles on contributory negligence and quantum; no systemic road-safety relief."
   }
  ],
+ "gists": [],
  "errors": [],
  "doc_fetches": 2,
  "approx_doc_cost_inr": 0.4

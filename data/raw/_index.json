@@ -6706,5 +6706,28 @@
   "queries": [
    "\"driving licence\" directions doctypes:supremecourt"
   ]
+ },
+ "47450545": {
+  "tid": 47450545,
+  "title": "Reena vs The Managing Director, Karnataka State ... on 19 August, 2026",
+  "publishdate": "2026-08-19",
+  "docsource": "Supreme Court of India",
+  "headline": "person\n\n<b>driving</b> holds an effective <b>driving</b> <b>licence</b> at the time of the accident and is not\n\ndisqualified from holding or obtaining such <b>licence</b>. It further ... provides that\n\nthe person must hold an effective learner’s <b>licence</b> and must comply with\n\nRule 3 of the Central Motor Vehicles Rules",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt",
+   "\"homemaker\" compensation doctypes:supremecourt"
+  ]
+ },
+ "13295108": {
+  "tid": 13295108,
+  "title": "Amarjot Singh Suri vs Aravind Mallappa Bangari on 6 August, 2026",
+  "publishdate": "2026-08-06",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "transpires     that   there      is   a\n\nstraight      <b>road</b>    and     there      are     covered      pavements       also\n\nabutting the <b>road</b> on both sides.\n \n 4.    From     the    photographs            brought ... Authority,         i.e.,     on     14.05.1947\n\nthere was a 30 feet <b>road</b> and 8 feet <b>footpath</b> on each side,\n\nwhich was covered, and the same being",
+  "citation": null,
+  "queries": [
+   "\"footpath\" road doctypes:scorders"
+  ]
  }
 }

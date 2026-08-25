@@ -3163,5 +3163,22 @@
   "queries": [
    "\"driving licence\" directions doctypes:supremecourt"
   ]
+ },
+ {
+  "tid": 47450545,
+  "date": "2026-08-19",
+  "title": "Reena vs The Managing Director, Karnataka State ... on 19 August, 2026",
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt",
+   "\"homemaker\" compensation doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 13295108,
+  "date": "2026-08-06",
+  "title": "Amarjot Singh Suri vs Aravind Mallappa Bangari on 6 August, 2026",
+  "queries": [
+   "\"footpath\" road doctypes:scorders"
+  ]
  }
 ]
