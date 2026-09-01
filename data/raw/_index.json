@@ -6729,5 +6729,17 @@
   "queries": [
    "\"footpath\" road doctypes:scorders"
   ]
+ },
+ "156932792": {
+  "tid": 156932792,
+  "title": "In Re: Fundamental Right To Walk And ... vs Ministry Of Housing And Urban Affairs on 24 August, 2026",
+  "publishdate": "2026-08-24",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "Civil)         No(s).    844/2026\n\n     IN RE: FUNDAMENTAL RIGHT TO WALK AND <b>FOOTPATH</b>                                Petitioner(s)\n\n                                                       VERSUS\n\n     MINISTRY OF HOUSING AND URBAN AFFAIRS                                        Respondent ... Signature Not Verified \n\n\n     Ministry                of   Housing    and    Urban       Affairs    ",
+  "citation": null,
+  "queries": [
+   "\"footpath\" road doctypes:scorders",
+   "\"right to walk\" doctypes:scorders"
+  ]
  }
 }

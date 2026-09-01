@@ -1,23 +1,46 @@
 {
- "refresh_date": "2026-08-25",
- "fromdate_window": "16-07-2026",
+ "refresh_date": "2026-09-01",
+ "fromdate_window": "23-07-2026",
  "search_pages": 66,
  "approx_cost_inr": 33.0,
- "new_docs_total": 2,
- "cases_with_new_orders": [],
- "new_order_counts": {},
- "newly_overdue": [],
+ "new_docs_total": 1,
+ "cases_with_new_orders": [
+  "right-to-walk-2026"
+ ],
+ "new_order_counts": {
+  "right-to-walk-2026": 1
+ },
+ "newly_overdue": [
+  {
+   "id": "savelife-20260526-a",
+   "authority": "States / UTs",
+   "due": "2026-08-26",
+   "directive": "Integrate all emergency/ambulance helplines (100, 101, 108, 102, 1033, 1091) into helpline 112, with"
+  },
+  {
+   "id": "savelife-20260526-b",
+   "authority": "States / UTs",
+   "due": "2026-08-26",
+   "directive": "Establish functional physical and digital Good Samaritan Grievance Redressal Systems with State- and"
+  },
+  {
+   "id": "savelife-20260526-h",
+   "authority": "States / UTs",
+   "due": "2026-08-26",
+   "directive": "Fully operationalise the PM RAHAT cashless-treatment scheme — designate hospitals, on-board the Stat"
+  }
+ ],
  "stale_listings": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "listed_for": "2026-09-01",
+   "latest_order_on_record": "2026-08-17",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  },
   {
    "case": "gohar-mohammed-2022",
    "listed_for": "2026-08-12",
    "latest_order_on_record": "2026-08-04",
-   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
-  },
-  {
-   "case": "right-to-walk-2026",
-   "listed_for": "2026-08-24",
-   "latest_order_on_record": "2026-08-03",
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   },
   {
@@ -27,18 +50,5 @@
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
  ],
- "new_unassigned_candidates": [
-  {
-   "tid": 13295108,
-   "date": "2026-08-06",
-   "title": "Amarjot Singh Suri vs Aravind Mallappa Bangari on 6 August, 2026",
-   "headline": "transpires     that   there      is   a\n\nstraight      road    and     there      are     covered      pavements       also\n\nabutting the road on both sides.\n \n 4.    From     the    photographs      "
-  },
-  {
-   "tid": 47450545,
-   "date": "2026-08-19",
-   "title": "Reena vs The Managing Director, Karnataka State ... on 19 August, 2026",
-   "headline": "person\n\ndriving holds an effective driving licence at the time of the accident and is not\n\ndisqualified from holding or obtaining such licence. It further ... provides that\n\nthe person must hold an ef"
-  }
- ]
+ "new_unassigned_candidates": []
 }

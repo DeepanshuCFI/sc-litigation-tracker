@@ -1,23 +1,17 @@
 {
- "date": "2026-08-25",
- "classified": [
+ "date": "2026-09-01",
+ "classified": [],
+ "gists": [
   {
-   "tid": 13295108,
-   "date": "2026-08-06",
-   "title": "Amarjot Singh Suri vs Aravind Mallappa Bangari on 6 August, 2026",
-   "action": "ignore",
-   "reason": "Private tenancy/encroachment dispute over a road in Agra; contempt petition dismissed. No systemic road-safety relief."
-  },
-  {
-   "tid": 47450545,
-   "date": "2026-08-19",
-   "title": "Reena vs The Managing Director, Karnataka State ... on 19 August, 2026",
-   "action": "ignore",
-   "reason": "Individual motor accident compensation appeal (non-reportable) restating settled principles on contributory negligence and quantum; no systemic road-safety relief."
+   "case": "right-to-walk-2026",
+   "date": "2026-08-24",
+   "gist": "The Court impleaded all State Governments and Union Territories (through their Municipal Administration and Urban Development Departments) and the Ministry of Road Transport and Highways as party-respondents, holding their presence necessary to implement the ministries' directions of 21 and 23 August 2026, and ordered notices to issue.",
+   "significance": "major",
+   "latest_development": "On 24 August 2026, the Supreme Court impleaded all States, UTs and the Ministry of Road Transport and Highways as respondents and directed notices for implementation of the recent ministry directions on footpaths.",
+   "next_listing": "5 October 2026"
   }
  ],
- "gists": [],
  "errors": [],
- "doc_fetches": 2,
- "approx_doc_cost_inr": 0.4
+ "doc_fetches": 1,
+ "approx_doc_cost_inr": 0.2
 }
