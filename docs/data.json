@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-09-01",
+  "built": "2026-09-08",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 599,
-  "assigned_docs": 206
+  "raw_docs": 601,
+  "assigned_docs": 208
  },
  "cases": [
   {
@@ -666,8 +666,8 @@
     "institutions"
    ],
    "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
-   "latest_development": "On 17 August 2026, the Court adjourned the matter and directed respondents who have not yet filed affidavits to do so before the next hearing.",
-   "next_listing": "1 September 2026 (per order of 2026-08-17)",
+   "latest_development": "On 3 September 2026, the Supreme Court recorded non-compliance by MoRTH, MHA and Tamil Nadu, gave them two weeks to file compliance affidavits on pain of personal appearance of the Secretaries/Chief Secretary, and directed NHAI to supply information to the amicus.",
+   "next_listing": "6 October 2026 (per order of 2026-09-03)",
    "orders": [
     {
      "date": "2025-11-10",
@@ -696,11 +696,25 @@
      "link": "https://indiankanoon.org/doc/169925262/",
      "gist": "A two-line record of proceedings: the Court listed the matter again for 1 September 2026 and directed that respondents who have not filed their affidavits shall file them in the meantime. No summons to Chief Secretaries or DGPs was issued, the step the Court had warned of on 13 July 2026.",
      "significance": "routine"
+    },
+    {
+     "date": "2026-09-01",
+     "tid": 82462975,
+     "link": "https://indiankanoon.org/doc/82462975/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-09-03",
+     "tid": 83422822,
+     "link": "https://indiankanoon.org/doc/83422822/",
+     "gist": "The Court noted that MoRTH, MHA and the State of Tamil Nadu had not filed compliance affidavits, granted them two weeks to do so, failing which the two Ministries' Secretaries must appear personally and Tamil Nadu's Chief Secretary via video conferencing; NHAI was directed to furnish necessary information to the amicus curiae.",
+     "significance": "major"
     }
    ],
-   "order_count": 4,
+   "order_count": 6,
    "first_order": "2025-11-10",
-   "latest_order": "2026-08-17"
+   "latest_order": "2026-09-03"
   },
   {
    "id": "savelife-good-samaritan-235-2012",
@@ -2478,6 +2492,19 @@
    "link": "https://indiankanoon.org/doc/79241526/"
   },
   {
+   "id": "phalodi-smwpc-9-2025-20260903-0",
+   "case_id": "phalodi-smwpc-9-2025",
+   "order_date": "2026-09-03",
+   "order_tid": 83422822,
+   "directive": "The Ministry of Road Transport and Highways, the Ministry of Home Affairs and the State of Tamil Nadu shall file their respective compliance affidavits within two weeks, failing which the Secretaries of both Ministries shall remain present on the next date and the Chief Secretary of Tamil Nadu shall appear through video conferencing.",
+   "authority": "MoRTH",
+   "granted": "two weeks",
+   "due": "2026-09-17",
+   "theme": "institutions",
+   "case_title": "In Re: Phalodi Accident (Suo Motu)",
+   "link": "https://indiankanoon.org/doc/83422822/"
+  },
+  {
    "id": "savelife-20260526-f",
    "case_id": "savelife-emergency-care-726-2024",
    "order_date": "2026-05-26",
@@ -2618,6 +2645,6 @@
   }
  ],
  "new_this_refresh": [
-  "right-to-walk-2026"
+  "phalodi-smwpc-9-2025"
  ]
 }

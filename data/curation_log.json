@@ -1,17 +1,32 @@
 {
- "date": "2026-09-01",
+ "date": "2026-09-08",
  "classified": [],
  "gists": [
   {
-   "case": "right-to-walk-2026",
-   "date": "2026-08-24",
-   "gist": "The Court impleaded all State Governments and Union Territories (through their Municipal Administration and Urban Development Departments) and the Ministry of Road Transport and Highways as party-respondents, holding their presence necessary to implement the ministries' directions of 21 and 23 August 2026, and ordered notices to issue.",
+   "case": "phalodi-smwpc-9-2025",
+   "date": "2026-09-01",
+   "gist": "",
+   "significance": "routine",
+   "latest_development": "On 1 September 2026, the Court simply adjourned the suo motu Phalodi Accident matter and connected writ petition, listing them for 3 September 2026.",
+   "next_listing": "3 September 2026"
+  },
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "date": "2026-09-03",
+   "gist": "The Court noted that MoRTH, MHA and the State of Tamil Nadu had not filed compliance affidavits, granted them two weeks to do so, failing which the two Ministries' Secretaries must appear personally and Tamil Nadu's Chief Secretary via video conferencing; NHAI was directed to furnish necessary information to the amicus curiae.",
    "significance": "major",
-   "latest_development": "On 24 August 2026, the Supreme Court impleaded all States, UTs and the Ministry of Road Transport and Highways as respondents and directed notices for implementation of the recent ministry directions on footpaths.",
-   "next_listing": "5 October 2026"
+   "latest_development": "On 3 September 2026, the Supreme Court recorded non-compliance by MoRTH, MHA and Tamil Nadu, gave them two weeks to file compliance affidavits on pain of personal appearance of the Secretaries/Chief Secretary, and directed NHAI to supply information to the amicus.",
+   "next_listing": "6 October 2026"
   }
  ],
  "errors": [],
- "doc_fetches": 1,
- "approx_doc_cost_inr": 0.2
+ "new_directions": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "directive": "The Ministry of Road Transport and Highways, the Ministry of Home Affairs and th",
+   "due": "2026-09-17"
+  }
+ ],
+ "doc_fetches": 2,
+ "approx_doc_cost_inr": 0.4
 }

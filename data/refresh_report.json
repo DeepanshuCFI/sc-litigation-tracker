@@ -1,42 +1,17 @@
 {
- "refresh_date": "2026-09-01",
- "fromdate_window": "23-07-2026",
+ "refresh_date": "2026-09-08",
+ "fromdate_window": "30-07-2026",
  "search_pages": 66,
  "approx_cost_inr": 33.0,
- "new_docs_total": 1,
+ "new_docs_total": 2,
  "cases_with_new_orders": [
-  "right-to-walk-2026"
+  "phalodi-smwpc-9-2025"
  ],
  "new_order_counts": {
-  "right-to-walk-2026": 1
+  "phalodi-smwpc-9-2025": 2
  },
- "newly_overdue": [
-  {
-   "id": "savelife-20260526-a",
-   "authority": "States / UTs",
-   "due": "2026-08-26",
-   "directive": "Integrate all emergency/ambulance helplines (100, 101, 108, 102, 1033, 1091) into helpline 112, with"
-  },
-  {
-   "id": "savelife-20260526-b",
-   "authority": "States / UTs",
-   "due": "2026-08-26",
-   "directive": "Establish functional physical and digital Good Samaritan Grievance Redressal Systems with State- and"
-  },
-  {
-   "id": "savelife-20260526-h",
-   "authority": "States / UTs",
-   "due": "2026-08-26",
-   "directive": "Fully operationalise the PM RAHAT cashless-treatment scheme — designate hospitals, on-board the Stat"
-  }
- ],
+ "newly_overdue": [],
  "stale_listings": [
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "listed_for": "2026-09-01",
-   "latest_order_on_record": "2026-08-17",
-   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
-  },
   {
    "case": "gohar-mohammed-2022",
    "listed_for": "2026-08-12",

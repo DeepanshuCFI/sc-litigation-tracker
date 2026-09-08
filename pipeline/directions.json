@@ -478,6 +478,17 @@
       ],
       "theme": "insurance",
       "historical": true
+    },
+    {
+      "id": "phalodi-smwpc-9-2025-20260903-0",
+      "case_id": "phalodi-smwpc-9-2025",
+      "order_date": "2026-09-03",
+      "order_tid": 83422822,
+      "directive": "The Ministry of Road Transport and Highways, the Ministry of Home Affairs and the State of Tamil Nadu shall file their respective compliance affidavits within two weeks, failing which the Secretaries of both Ministries shall remain present on the next date and the Chief Secretary of Tamil Nadu shall appear through video conferencing.",
+      "authority": "MoRTH",
+      "granted": "two weeks",
+      "due": "2026-09-17",
+      "theme": "institutions"
     }
   ]
 }
