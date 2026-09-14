@@ -2412,6 +2412,14 @@
   ]
  },
  {
+  "tid": 46527491,
+  "date": "2023-10-13",
+  "title": "Ravi vs The National Insurance Company Limited on 13 October, 2023",
+  "queries": [
+   "helmet \"Motor Vehicles Act\" doctypes:scorders"
+  ]
+ },
+ {
   "tid": 104050054,
   "date": "2014-07-04",
   "title": "State Thr.C.B.I. vs Sanjiv Bhalla on 4 July, 2014",
@@ -3130,6 +3138,14 @@
   "title": "Alok Kotahwala vs Jaipur Metro Rail Corporation Ltd on 13 July, 2026",
   "queries": [
    "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 184970920,
+  "date": "2026-07-16",
+  "title": "Gurmail Kaur vs National Insurance Company Limited on 16 July, 2026",
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:scorders"
   ]
  },
  {

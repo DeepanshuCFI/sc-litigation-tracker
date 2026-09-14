@@ -1,134 +1,143 @@
 {
-  "inclusion_rule": "Track a case if it seeks or produces systemic relief (directions, guidelines, monitoring, policy change) on road safety. Exclude individual compensation appeals unless precedent-setting — those go to notable_judgments.",
-  "seed_cases": [
-    {
-      "id": "rajaseekaran-295-2012",
-      "title": "S. Rajaseekaran v. Union of India",
-      "case_number": "W.P.(C) 295/2012",
-      "why_seeded": "Master road-safety PIL: SC Committee on Road Safety (Sapre Committee), Jan 2024 hit-and-run compensation directions, MACT reforms, ongoing monitoring.",
-      "search_queries": [
-        "\"Rajaseekaran\" doctypes:supremecourt"
-      ]
-    },
-    {
-      "id": "savelife-235-2012",
-      "title": "SaveLIFE Foundation v. Union of India",
-      "case_number": "W.P.(C) 235/2012",
-      "why_seeded": "Good Samaritan PIL — 2016 guidelines given force of law.",
-      "search_queries": [
-        "\"SaveLIFE Foundation\" doctypes:supremecourt"
-      ]
-    },
-    {
-      "id": "gohar-mohammed-2022",
-      "title": "Gohar Mohammed v. Uttar Pradesh SRTC",
-      "case_number": "C.A. 9322/2022",
-      "why_seeded": "Systemic MACT directions: DAR workflow, police/insurer timelines.",
-      "search_queries": [
-        "\"Gohar Mohammed\" doctypes:supremecourt"
-      ]
-    },
-    {
-      "id": "phalodi-smwpc-9-2025",
-      "title": "In Re: Phalodi Accident (Suo Motu)",
-      "case_number": "SMW(C) 9/2025",
-      "why_seeded": "Live suo motu with the largest active direction set (highway safety, ATMS, blackspots); title-based query so its orders are caught even when no discovery phrase appears in the text.",
-      "search_queries": [
-        "\"Phalodi\" doctypes:supremecourt"
-      ]
-    },
-    {
-      "id": "gyan-prakash-1272-2019",
-      "title": "Gyan Prakash v. Union of India",
-      "case_number": "W.P.(C) 1272/2019",
-      "why_seeded": "Pending NH encroachment-removal matter with open ledger directions; needs a title query for the same reason.",
-      "search_queries": [
-        "\"Gyan Prakash\" highways doctypes:supremecourt"
-      ]
-    }
-  ],
-  "discovery_queries": [
-    "\"road safety\" doctypes:supremecourt",
-    "\"black spot\" road doctypes:supremecourt",
-    "\"pedestrian safety\" doctypes:supremecourt",
-    "\"road accident\" directions doctypes:supremecourt",
-    "helmet \"Motor Vehicles Act\" doctypes:supremecourt",
-    "\"speed breaker\" OR \"road hump\" doctypes:supremecourt",
-    "\"Good Samaritan\" doctypes:supremecourt",
-    "\"Motor Vehicles Amendment Act\" doctypes:supremecourt",
-    "\"National Road Safety\" doctypes:supremecourt",
-    "\"hit and run\" compensation doctypes:supremecourt",
-    "\"driving licence\" directions doctypes:supremecourt",
-    "\"road engineering\" OR \"crash barrier\" doctypes:supremecourt",
-    "\"suo motu\" \"road accident\" doctypes:supremecourt",
-    "\"road safety audit\" doctypes:supremecourt",
-    "\"cashless treatment\" doctypes:supremecourt",
-    "\"golden hour\" doctypes:supremecourt",
-    "\"overloading\" \"motor vehicles\" doctypes:supremecourt",
-    "\"homemaker\" compensation doctypes:supremecourt",
-    "\"loss of domestic care\" doctypes:supremecourt",
-    "\"pedestrian\" guidelines doctypes:supremecourt",
-    "\"footpath\" road doctypes:supremecourt",
-    "\"zebra crossing\" doctypes:supremecourt",
-    "\"right to walk\" doctypes:supremecourt",
-    "\"school bus\" OR \"school children\" transport doctypes:supremecourt",
-    "\"drunk driving\" OR \"drunken driving\" doctypes:supremecourt",
-    "\"e-rickshaw\" OR \"electric vehicle\" safety doctypes:supremecourt",
-    "\"trauma centre\" OR \"trauma care\" doctypes:supremecourt",
-    "\"National Highway\" fatality directions doctypes:supremecourt"
-  ],
-  "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses.",
-  "citation_follow": {
-    "_comment": "Principal systemic orders whose citing cases are swept quarterly by citation_sweep.py — catches oddly-worded matters the phrase battery misses. Compensation precedents (Sarla Verma, Pranay Sethi) deliberately excluded: citedby is thousands of individual MACT appeals.",
-    "docids": [
-      {
-        "case_id": "rajaseekaran-295-2012",
-        "date": "2017-11-30",
-        "tid": 180830072,
-        "why": "2017 governance-backbone order"
-      },
-      {
-        "case_id": "rajaseekaran-295-2012",
-        "date": "2024-01-12",
-        "tid": 4654780,
-        "why": "2024 hit-and-run compensation directions"
-      },
-      {
-        "case_id": "rajaseekaran-295-2012",
-        "date": "2025-05-14",
-        "tid": 166094161,
-        "why": "NRSB constitution order"
-      },
-      {
-        "case_id": "savelife-good-samaritan-235-2012",
-        "date": "2016-03-30",
-        "tid": 132863475,
-        "why": "Good Samaritan guidelines judgment"
-      },
-      {
-        "case_id": "savelife-emergency-care-726-2024",
-        "date": "2026-05-26",
-        "tid": 79241526,
-        "why": "Emergency care / PM RAHAT directions"
-      },
-      {
-        "case_id": "gohar-mohammed-2022",
-        "date": "2022-12-15",
-        "tid": 85494539,
-        "why": "DAR workflow judgment"
-      },
-      {
-        "case_id": "phalodi-smwpc-9-2025",
-        "date": "2026-04-13",
-        "tid": 78882038,
-        "why": "Highway safety direction set"
-      },
-      {
-        "case_id": "gyan-prakash-1272-2019",
-        "date": "2025-05-21",
-        "tid": 85517552,
-        "why": "NH encroachment order"
-      }
-    ]
+ "inclusion_rule": "Track a case if it seeks or produces systemic relief (directions, guidelines, monitoring, policy change) on road safety. Exclude individual compensation appeals unless precedent-setting — those go to notable_judgments.",
+ "seed_cases": [
+  {
+   "id": "rajaseekaran-295-2012",
+   "title": "S. Rajaseekaran v. Union of India",
+   "case_number": "W.P.(C) 295/2012",
+   "why_seeded": "Master road-safety PIL: SC Committee on Road Safety (Sapre Committee), Jan 2024 hit-and-run compensation directions, MACT reforms, ongoing monitoring.",
+   "search_queries": [
+    "\"Rajaseekaran\" doctypes:supremecourt"
+   ]
+  },
+  {
+   "id": "savelife-235-2012",
+   "title": "SaveLIFE Foundation v. Union of India",
+   "case_number": "W.P.(C) 235/2012",
+   "why_seeded": "Good Samaritan PIL — 2016 guidelines given force of law.",
+   "search_queries": [
+    "\"SaveLIFE Foundation\" doctypes:supremecourt"
+   ]
+  },
+  {
+   "id": "gohar-mohammed-2022",
+   "title": "Gohar Mohammed v. Uttar Pradesh SRTC",
+   "case_number": "C.A. 9322/2022",
+   "why_seeded": "Systemic MACT directions: DAR workflow, police/insurer timelines.",
+   "search_queries": [
+    "\"Gohar Mohammed\" doctypes:supremecourt"
+   ]
+  },
+  {
+   "id": "phalodi-smwpc-9-2025",
+   "title": "In Re: Phalodi Accident (Suo Motu)",
+   "case_number": "SMW(C) 9/2025",
+   "why_seeded": "Live suo motu with the largest active direction set (highway safety, ATMS, blackspots); title-based query so its orders are caught even when no discovery phrase appears in the text.",
+   "search_queries": [
+    "\"Phalodi\" doctypes:supremecourt"
+   ]
+  },
+  {
+   "id": "gyan-prakash-1272-2019",
+   "title": "Gyan Prakash v. Union of India",
+   "case_number": "W.P.(C) 1272/2019",
+   "why_seeded": "Pending NH encroachment-removal matter with open ledger directions; needs a title query for the same reason.",
+   "search_queries": [
+    "\"Gyan Prakash\" highways doctypes:supremecourt"
+   ]
+  },
+  {
+   "id": "national-insurance-company-limited-2026",
+   "title": "National Insurance Company Limited v. Thungala Dhana Laxmi",
+   "case_number": "Civil Appeal No. 14369 of 2025",
+   "why_seeded": "Nationwide insurance-enforcement directions (four-layer policy structure, ANPR/VAHAN integration, DAR filing) under continuing compliance monitoring.",
+   "search_queries": [
+    "\"Thungala Dhana Laxmi\" doctypes:supremecourt"
+   ]
   }
+ ],
+ "discovery_queries": [
+  "\"road safety\" doctypes:supremecourt",
+  "\"black spot\" road doctypes:supremecourt",
+  "\"pedestrian safety\" doctypes:supremecourt",
+  "\"road accident\" directions doctypes:supremecourt",
+  "helmet \"Motor Vehicles Act\" doctypes:supremecourt",
+  "\"speed breaker\" OR \"road hump\" doctypes:supremecourt",
+  "\"Good Samaritan\" doctypes:supremecourt",
+  "\"Motor Vehicles Amendment Act\" doctypes:supremecourt",
+  "\"National Road Safety\" doctypes:supremecourt",
+  "\"hit and run\" compensation doctypes:supremecourt",
+  "\"driving licence\" directions doctypes:supremecourt",
+  "\"road engineering\" OR \"crash barrier\" doctypes:supremecourt",
+  "\"suo motu\" \"road accident\" doctypes:supremecourt",
+  "\"road safety audit\" doctypes:supremecourt",
+  "\"cashless treatment\" doctypes:supremecourt",
+  "\"golden hour\" doctypes:supremecourt",
+  "\"overloading\" \"motor vehicles\" doctypes:supremecourt",
+  "\"homemaker\" compensation doctypes:supremecourt",
+  "\"loss of domestic care\" doctypes:supremecourt",
+  "\"pedestrian\" guidelines doctypes:supremecourt",
+  "\"footpath\" road doctypes:supremecourt",
+  "\"zebra crossing\" doctypes:supremecourt",
+  "\"right to walk\" doctypes:supremecourt",
+  "\"school bus\" OR \"school children\" transport doctypes:supremecourt",
+  "\"drunk driving\" OR \"drunken driving\" doctypes:supremecourt",
+  "\"e-rickshaw\" OR \"electric vehicle\" safety doctypes:supremecourt",
+  "\"trauma centre\" OR \"trauma care\" doctypes:supremecourt",
+  "\"National Highway\" fatality directions doctypes:supremecourt"
+ ],
+ "citation_follow_docids_note": "During backfill, resolve seed cases' principal IK docids, then use doc(maxcitedby=50) to find newer cases citing them — catches oddly-worded matters the query battery misses.",
+ "citation_follow": {
+  "_comment": "Principal systemic orders whose citing cases are swept quarterly by citation_sweep.py — catches oddly-worded matters the phrase battery misses. Compensation precedents (Sarla Verma, Pranay Sethi) deliberately excluded: citedby is thousands of individual MACT appeals.",
+  "docids": [
+   {
+    "case_id": "rajaseekaran-295-2012",
+    "date": "2017-11-30",
+    "tid": 180830072,
+    "why": "2017 governance-backbone order"
+   },
+   {
+    "case_id": "rajaseekaran-295-2012",
+    "date": "2024-01-12",
+    "tid": 4654780,
+    "why": "2024 hit-and-run compensation directions"
+   },
+   {
+    "case_id": "rajaseekaran-295-2012",
+    "date": "2025-05-14",
+    "tid": 166094161,
+    "why": "NRSB constitution order"
+   },
+   {
+    "case_id": "savelife-good-samaritan-235-2012",
+    "date": "2016-03-30",
+    "tid": 132863475,
+    "why": "Good Samaritan guidelines judgment"
+   },
+   {
+    "case_id": "savelife-emergency-care-726-2024",
+    "date": "2026-05-26",
+    "tid": 79241526,
+    "why": "Emergency care / PM RAHAT directions"
+   },
+   {
+    "case_id": "gohar-mohammed-2022",
+    "date": "2022-12-15",
+    "tid": 85494539,
+    "why": "DAR workflow judgment"
+   },
+   {
+    "case_id": "phalodi-smwpc-9-2025",
+    "date": "2026-04-13",
+    "tid": 78882038,
+    "why": "Highway safety direction set"
+   },
+   {
+    "case_id": "gyan-prakash-1272-2019",
+    "date": "2025-05-21",
+    "tid": 85517552,
+    "why": "NH encroachment order"
+   }
+  ]
+ }
 }

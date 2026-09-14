@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-09-08",
+  "built": "2026-09-14",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 601,
-  "assigned_docs": 208
+  "raw_docs": 604,
+  "assigned_docs": 209
  },
  "cases": [
   {
@@ -1784,34 +1784,41 @@
     "MACT delays"
    ],
    "why_it_matters": "The Court mandated a four-layer motor insurance structure, uniform policy wording, extended third-party cover to 4 years (cars) and 6 years (two-wheelers), handheld insurance-verification devices for State Police, and fuel-linked/ANPR pilot projects to curb uninsured vehicles nationwide.",
-   "latest_development": "2026-08-04: Arising from an insurance appeal over a comprehensive policy's coverage of the owner-occupant, the Bench (Sanjay Karol, Prashant Kumar Mishra) impleaded IRDA, MoRTH, GIC and 22+ insurers and issued nationwide directions on enforcement of Section 146 MVA, uniform policy structure, consumer option forms, and prompt filing of DARs by State Police; compliance affidavits due 14.08.2026.",
-   "next_listing": "18 August 2026, 2 PM — for perusal of compliance affidavits (per judgment of 4 Aug 2026)",
+   "latest_development": "On 21 August 2026, the Court ordered the awarded amount released directly to the claimants, recorded that it had perused the compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies on the 4 August directions, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026.",
+   "next_listing": "22 September 2026 (per order of 2026-08-21)",
    "orders": [
-    {
-     "date": "2023-10-13",
-     "tid": 46527491,
-     "link": "https://indiankanoon.org/doc/46527491/",
-     "gist": "",
-     "significance": "routine"
-    },
-    {
-     "date": "2026-07-16",
-     "tid": 184970920,
-     "link": "https://indiankanoon.org/doc/184970920/",
-     "gist": "",
-     "significance": "routine"
-    },
     {
      "date": "2026-08-04",
      "tid": 134817703,
      "link": "https://indiankanoon.org/doc/134817703/",
      "gist": "Arising from an insurance appeal over a comprehensive policy's coverage of the owner-occupant, the Bench (Sanjay Karol, Prashant Kumar Mishra) impleaded IRDA, MoRTH, GIC and 22+ insurers and issued nationwide directions on enforcement of Section 146 MVA, uniform policy structure, consumer option forms, and prompt filing of DARs by State Police; compliance affidavits due 14.08.2026.",
      "significance": "major"
+    },
+    {
+     "date": "2026-08-18",
+     "tid": 179433498,
+     "link": "https://indiankanoon.org/doc/179433498/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-08-19",
+     "tid": 144234843,
+     "link": "https://indiankanoon.org/doc/144234843/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "link": "https://indiankanoon.org/doc/17753097/",
+     "gist": "The insurer reported compliance with the Court's directions and remittance of the awarded amount, which the Court ordered released directly into the claimants' bank accounts. The Court recorded that it had perused the compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, directed the Registry to circulate the compliance folder digitally to all counsel, and requested the Additional Solicitor General to place a consolidated statement of compliance by all stakeholders before the next hearing.",
+     "significance": "major"
     }
    ],
-   "order_count": 3,
-   "first_order": "2023-10-13",
-   "latest_order": "2026-08-04"
+   "order_count": 4,
+   "first_order": "2026-08-04",
+   "latest_order": "2026-08-21"
   }
  ],
  "notable_judgments": [
@@ -2279,7 +2286,7 @@
    "granted": "two weeks",
    "due": "2026-07-27",
    "theme": "institutions",
-   "status_note": "Not complied with by the 27 July 2026 deadline: on 17 August 2026 the Court recorded that respondents who had not filed their affidavits shall still file them, and listed the matter for 1 September 2026. No Chief Secretary or DGP was summoned.",
+   "status_note": "Not complied with by the 27 July 2026 deadline: on 17 August 2026 the Court recorded that respondents who had not filed their affidavits shall still file them. Compliance then came in late — on 3 September 2026 the amicus curiae's chart showed every State/UT except Tamil Nadu had filed, with MoRTH and MHA also still in default. No Chief Secretary or DGP was ever summoned.",
    "compliance_events": [
     {
      "date": "2026-07-13",
@@ -2290,6 +2297,11 @@
      "date": "2026-08-17",
      "tid": 169925262,
      "note": "Court again directed respondents who have not filed affidavits to do so; matter listed for 1 September 2026."
+    },
+    {
+     "date": "2026-09-03",
+     "tid": 83422822,
+     "note": "Amicus curiae placed a compliance chart before the Court: all States, Union Territories and departments had by then filed affidavits except MoRTH, MHA and the State of Tamil Nadu — i.e. late compliance by every State/UT other than Tamil Nadu."
     }
    ],
    "status": "missed",
@@ -2319,6 +2331,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "enforcement",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2332,6 +2351,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "enforcement",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2345,6 +2371,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "insurance",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2358,6 +2391,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "insurance",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2371,6 +2411,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "insurance",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2384,6 +2431,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "insurance",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2397,6 +2451,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "insurance",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2410,6 +2471,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "enforcement",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2423,6 +2491,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "highways",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2436,6 +2511,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "victim compensation",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2449,6 +2531,13 @@
    "granted": "responses by 14 Aug 2026",
    "due": "2026-08-14",
    "theme": "victim compensation",
+   "compliance_events": [
+    {
+     "date": "2026-08-21",
+     "tid": 17753097,
+     "note": "Court recorded that it had perused compliance reports filed by the Legal Services Committee, MoRTH, IRDA and other agencies, and asked the Additional Solicitor General to place a consolidated statement of stakeholder compliance before the next hearing on 22 September 2026. Reports are on record; the Court has not yet certified compliance."
+    }
+   ],
    "case_title": "National Insurance Company Limited vs Smt. Thungala Dhana Laxmi",
    "link": "https://indiankanoon.org/doc/134817703/"
   },
@@ -2497,7 +2586,7 @@
    "order_date": "2026-09-03",
    "order_tid": 83422822,
    "directive": "The Ministry of Road Transport and Highways, the Ministry of Home Affairs and the State of Tamil Nadu shall file their respective compliance affidavits within two weeks, failing which the Secretaries of both Ministries shall remain present on the next date and the Chief Secretary of Tamil Nadu shall appear through video conferencing.",
-   "authority": "MoRTH",
+   "authority": "MoRTH / MHA / Tamil Nadu",
    "granted": "two weeks",
    "due": "2026-09-17",
    "theme": "institutions",
@@ -2644,7 +2733,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "phalodi-smwpc-9-2025"
- ]
+ "new_this_refresh": []
 }
