@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-09-14",
+  "built": "2026-09-15",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 604,
-  "assigned_docs": 209
+  "raw_docs": 605,
+  "assigned_docs": 210
  },
  "cases": [
   {
@@ -666,8 +666,8 @@
     "institutions"
    ],
    "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
-   "latest_development": "On 3 September 2026, the Supreme Court recorded non-compliance by MoRTH, MHA and Tamil Nadu, gave them two weeks to file compliance affidavits on pain of personal appearance of the Secretaries/Chief Secretary, and directed NHAI to supply information to the amicus.",
-   "next_listing": "6 October 2026 (per order of 2026-09-03)",
+   "latest_development": "On 8 September 2026, the Supreme Court directed responses to the pending applications within ten days and ordered parties to maintain status quo till 22 September 2026.",
+   "next_listing": "22 September 2026 (per order of 2026-09-08)",
    "orders": [
     {
      "date": "2025-11-10",
@@ -710,11 +710,18 @@
      "link": "https://indiankanoon.org/doc/83422822/",
      "gist": "The Court noted that MoRTH, MHA and the State of Tamil Nadu had not filed compliance affidavits, granted them two weeks to do so, failing which the two Ministries' Secretaries must appear personally and Tamil Nadu's Chief Secretary via video conferencing; NHAI was directed to furnish necessary information to the amicus curiae.",
      "significance": "major"
+    },
+    {
+     "date": "2026-09-08",
+     "tid": 121194438,
+     "link": "https://indiankanoon.org/doc/121194438/",
+     "gist": "After hearing counsel for various applicants, the NHAI and the amicus curiae on a batch of intervention, clarification and stay applications, the Court took three fresh IAs on board, directed responses within ten days and ordered that status quo be maintained by the parties until the next hearing.",
+     "significance": "major"
     }
    ],
-   "order_count": 6,
+   "order_count": 7,
    "first_order": "2025-11-10",
-   "latest_order": "2026-09-03"
+   "latest_order": "2026-09-08"
   },
   {
    "id": "savelife-good-samaritan-235-2012",
@@ -2733,5 +2740,7 @@
    ]
   }
  ],
- "new_this_refresh": []
+ "new_this_refresh": [
+  "phalodi-smwpc-9-2025"
+ ]
 }

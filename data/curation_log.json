@@ -1,32 +1,17 @@
 {
- "date": "2026-09-08",
+ "date": "2026-09-15",
  "classified": [],
  "gists": [
   {
    "case": "phalodi-smwpc-9-2025",
-   "date": "2026-09-01",
-   "gist": "",
-   "significance": "routine",
-   "latest_development": "On 1 September 2026, the Court simply adjourned the suo motu Phalodi Accident matter and connected writ petition, listing them for 3 September 2026.",
-   "next_listing": "3 September 2026"
-  },
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "date": "2026-09-03",
-   "gist": "The Court noted that MoRTH, MHA and the State of Tamil Nadu had not filed compliance affidavits, granted them two weeks to do so, failing which the two Ministries' Secretaries must appear personally and Tamil Nadu's Chief Secretary via video conferencing; NHAI was directed to furnish necessary information to the amicus curiae.",
+   "date": "2026-09-08",
+   "gist": "After hearing counsel for various applicants, the NHAI and the amicus curiae on a batch of intervention, clarification and stay applications, the Court took three fresh IAs on board, directed responses within ten days and ordered that status quo be maintained by the parties until the next hearing.",
    "significance": "major",
-   "latest_development": "On 3 September 2026, the Supreme Court recorded non-compliance by MoRTH, MHA and Tamil Nadu, gave them two weeks to file compliance affidavits on pain of personal appearance of the Secretaries/Chief Secretary, and directed NHAI to supply information to the amicus.",
-   "next_listing": "6 October 2026"
+   "latest_development": "On 8 September 2026, the Supreme Court directed responses to the pending applications within ten days and ordered parties to maintain status quo till 22 September 2026.",
+   "next_listing": "22 September 2026"
   }
  ],
  "errors": [],
- "new_directions": [
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "directive": "The Ministry of Road Transport and Highways, the Ministry of Home Affairs and th",
-   "due": "2026-09-17"
-  }
- ],
- "doc_fetches": 2,
- "approx_doc_cost_inr": 0.4
+ "doc_fetches": 1,
+ "approx_doc_cost_inr": 0.2
 }

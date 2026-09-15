@@ -1,26 +1,20 @@
 {
- "refresh_date": "2026-09-08",
- "fromdate_window": "30-07-2026",
- "search_pages": 66,
- "approx_cost_inr": 33.0,
- "new_docs_total": 2,
+ "refresh_date": "2026-09-15",
+ "fromdate_window": "06-08-2026",
+ "search_pages": 68,
+ "approx_cost_inr": 34.0,
+ "new_docs_total": 1,
  "cases_with_new_orders": [
   "phalodi-smwpc-9-2025"
  ],
  "new_order_counts": {
-  "phalodi-smwpc-9-2025": 2
+  "phalodi-smwpc-9-2025": 1
  },
  "newly_overdue": [],
  "stale_listings": [
   {
    "case": "gohar-mohammed-2022",
    "listed_for": "2026-08-12",
-   "latest_order_on_record": "2026-08-04",
-   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
-  },
-  {
-   "case": "national-insurance-company-limited-2026",
-   "listed_for": "2026-08-18",
    "latest_order_on_record": "2026-08-04",
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
