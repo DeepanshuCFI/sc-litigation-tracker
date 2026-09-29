@@ -1,21 +1,36 @@
 {
- "refresh_date": "2026-09-15",
- "fromdate_window": "06-08-2026",
- "search_pages": 68,
- "approx_cost_inr": 34.0,
- "new_docs_total": 1,
- "cases_with_new_orders": [
-  "phalodi-smwpc-9-2025"
+ "refresh_date": "2026-09-29",
+ "fromdate_window": "20-08-2026",
+ "search_pages": 0,
+ "approx_cost_inr": 0.0,
+ "new_docs_total": 0,
+ "cases_with_new_orders": [],
+ "new_order_counts": {},
+ "newly_overdue": [
+  {
+   "id": "savelife-20260526-f",
+   "authority": "States / UTs",
+   "due": "2026-09-26",
+   "directive": "Establish State Trauma Registries covering all medical facilities and link them to a Coordinated Tra"
+  }
  ],
- "new_order_counts": {
-  "phalodi-smwpc-9-2025": 1
- },
- "newly_overdue": [],
  "stale_listings": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "listed_for": "2026-09-22",
+   "latest_order_on_record": "2026-09-08",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  },
   {
    "case": "gohar-mohammed-2022",
    "listed_for": "2026-08-12",
    "latest_order_on_record": "2026-08-04",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  },
+  {
+   "case": "national-insurance-company-limited-2026",
+   "listed_for": "2026-09-22",
+   "latest_order_on_record": "2026-08-21",
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
  ],

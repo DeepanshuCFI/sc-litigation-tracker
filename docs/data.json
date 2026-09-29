@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built": "2026-09-15",
+  "built": "2026-09-29",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
   "raw_docs": 605,
   "assigned_docs": 210
@@ -2740,7 +2740,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "phalodi-smwpc-9-2025"
- ]
+ "new_this_refresh": []
 }
