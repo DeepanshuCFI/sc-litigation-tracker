@@ -1,19 +1,12 @@
 {
- "refresh_date": "2026-09-29",
- "fromdate_window": "20-08-2026",
+ "refresh_date": "2026-10-06",
+ "fromdate_window": "27-08-2026",
  "search_pages": 0,
  "approx_cost_inr": 0.0,
  "new_docs_total": 0,
  "cases_with_new_orders": [],
  "new_order_counts": {},
- "newly_overdue": [
-  {
-   "id": "savelife-20260526-f",
-   "authority": "States / UTs",
-   "due": "2026-09-26",
-   "directive": "Establish State Trauma Registries covering all medical facilities and link them to a Coordinated Tra"
-  }
- ],
+ "newly_overdue": [],
  "stale_listings": [
   {
    "case": "phalodi-smwpc-9-2025",
@@ -25,6 +18,12 @@
    "case": "gohar-mohammed-2022",
    "listed_for": "2026-08-12",
    "latest_order_on_record": "2026-08-04",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  },
+  {
+   "case": "right-to-walk-2026",
+   "listed_for": "2026-10-05",
+   "latest_order_on_record": "2026-08-24",
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   },
   {
