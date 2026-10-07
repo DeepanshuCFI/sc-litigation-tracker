@@ -6807,5 +6807,29 @@
   "queries": [
    "\"Phalodi\" doctypes:scorders"
   ]
+ },
+ "171097989": {
+  "tid": 171097989,
+  "title": "In Re: <b>Phalodi</b> Accident vs National Highways Authority Of India on 22 September, 2026",
+  "publishdate": "2026-09-22",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Phalodi</b> Accident vs National Highways Authority Of India on 22 September, 2026 \n\n Author:  Vikram Nath  \n\n Bench:  Vikram Nath  \n\n      ITEM NO.43                         COURT NO.2                    SECTION PIL-W\n\n                           SUO MOTO WRIT PETITION(CIVIL)     No(s).   9/2025\n\n         IN RE: <b>PHALODI</b> ACCIDENT                                        Petitioner(",
+  "citation": null,
+  "queries": [
+   "\"Phalodi\" doctypes:scorders"
+  ],
+  "manual_add": "2026-10-07: added by hand from indiankanoon.org/doc/171097989/ while the IK API was returning 403"
+ },
+ "122769202": {
+  "tid": 122769202,
+  "title": "In Re: <b>Phalodi</b> Accident vs National Highways Authority Of India on 6 October, 2026",
+  "publishdate": "2026-10-06",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Phalodi</b> Accident vs National Highways Authority Of India on 6 October, 2026 \n\n Author:  Vikram Nath  \n\n Bench:  Vikram Nath  \n\n      ITEM NO.28                       COURT NO.2                  SECTION PIL-W\n\n                         SUO MOTO WRIT PETITION(CIVIL)   No(s).   9/2025\n\n         IN RE: <b>PHALODI</b> ACCIDENT                                    Petitioner(",
+  "citation": null,
+  "queries": [
+   "\"Phalodi\" doctypes:scorders"
+  ],
+  "manual_add": "2026-10-07: added by hand from indiankanoon.org/doc/122769202/ while the IK API was returning 403"
  }
 }
