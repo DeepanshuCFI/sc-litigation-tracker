@@ -21,6 +21,8 @@ import ik_client
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
+# abort once this many queries have been attempted and every one failed
+ALL_FAIL_ABORT_AFTER = 5
 SEEDS = json.loads((ROOT / "pipeline" / "seeds.json").read_text())
 
 
@@ -61,12 +63,30 @@ def main() -> None:
 
     pages = 0
     new_docs = []
-    for q in all_queries():
+    queries = all_queries()
+    failed = []        # queries whose IK call raised (HTTP 4xx/5xx after retries)
+    attempted = 0
+    for q in queries:
         full_q = f"{q} fromdate:{fromdate}"
+        attempted += 1
         try:
             docs = ik_client.search_all(full_q, max_pages=5, delay=1.0)
         except SystemExit as e:
             print(f"  QUERY FAILED (continuing): {full_q}: {e}", file=sys.stderr)
+            failed.append({"query": q, "error": str(e)[:200]})
+            # Fail LOUD, not quiet: when nothing has succeeded yet, the API is
+            # down for us (token/credit/permission), not one flaky query.
+            # Bail before touching the index, registry or refresh_report so
+            # (a) the workflow's failure step fires and (b) refresh_date keeps
+            # pointing at the last GOOD run, which widens the window later.
+            # Lesson from 22 Sep–6 Oct 2026: 68/68 queries 403'd for two weeks
+            # while the runs went green and the dashboard looked merely quiet.
+            if len(failed) == attempted and attempted >= ALL_FAIL_ABORT_AFTER:
+                sys.exit(
+                    f"REFRESH ABORTED: first {attempted} IK queries all failed "
+                    f"({failed[-1]['error']}). Nothing written. Check the IK API "
+                    f"token / account balance, then re-run."
+                )
             continue
         pages += max(1, (len(docs) + 9) // 10)
         for d in docs:
@@ -82,6 +102,13 @@ def main() -> None:
             if q not in index[tid]["queries"]:
                 index[tid]["queries"].append(q)
         time.sleep(0.5)
+
+    if failed and len(failed) == len(queries):
+        sys.exit(f"REFRESH ABORTED: all {len(queries)} IK queries failed "
+                 f"({failed[-1]['error']}). Nothing written.")
+    if failed:
+        print(f"  WARNING: {len(failed)}/{len(queries)} queries failed — results "
+              f"are partial; see failed_queries in refresh_report.json", file=sys.stderr)
 
     (RAW / "_index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False))
 
@@ -148,6 +175,9 @@ def main() -> None:
         "search_pages": pages,
         "approx_cost_inr": round(pages * 0.5, 1),
         "new_docs_total": len(new_docs),
+        "queries_total": len(queries),
+        "queries_failed": len(failed),
+        "failed_queries": failed,
         "cases_with_new_orders": grew,
         "new_order_counts": new_order_counts,
         "newly_overdue": newly_overdue,
