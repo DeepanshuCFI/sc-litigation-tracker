@@ -211,7 +211,16 @@
       "authority": "MoRTH",
       "granted": "3 months",
       "due": "2026-08-13",
-      "theme": "institutions"
+      "theme": "institutions",
+      "status": "complied",
+      "status_note": "Constituted within the three months granted: the order of 15 September 2026 records that the Government of India constituted the NRSB on 29 June 2026 and that it held its first meeting on 21 July 2026. Whether it is fully functional is now a separate direction in this ledger.",
+      "compliance_events": [
+        {
+          "date": "2026-09-15",
+          "tid": 77348616,
+          "note": "The Court recorded that the NRSB was constituted on 29 June 2026 and met first on 21 July 2026, and asked to be told by the next date whether it is fully functional."
+        }
+      ]
     },
     {
       "id": "gyanprakash-20250521-enc",
@@ -582,6 +591,167 @@
       "granted": "three days",
       "due": "2026-10-09",
       "theme": "highways"
+    },
+    {
+      "id": "rajaseekaran-20260915-vltd-report",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "Place on record MoRTH's report of its interaction with vehicle manufacturers on pre-fitment of Vehicle Location Tracking Devices, as already directed on 13 May 2026.",
+      "authority": "MoRTH",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260915-125h-states",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "File compliance and status reports on enforcement of Rule 125H CMVR (vehicle location tracking and panic buttons in public service vehicles) and the measures in MoRTH's letter of 19 December 2025; Chief Secretaries to take time-bound steps and place the decisions on affidavit.",
+      "authority": "States / UTs",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260915-sld-union",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "Ensure that transport vehicles covered by Rule 118 CMVR are sold only after a speed-limiting device or function is fitted, act against manufacturers or dealers who sell without one, and file a compliance report covering all new transport-vehicle registrations and the penalties imposed.",
+      "authority": "MoRTH",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260915-sld-states",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "Chief Secretaries to order RTOs to verify that Rule 118 transport vehicles carry a speed-limiting device or function before registration; file compliance reports on new registrations and penalties, and an affidavit on how existing transport vehicles will be brought into compliance.",
+      "authority": "States / UTs",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260915-nrsb-functional",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "Inform the Court whether the National Road Safety Board, constituted on 29 June 2026, is fully functional; the Board to consider a public website with RTI disclosure, and a mechanism for public feedback with a status dashboard and online hearings.",
+      "authority": "MoRTH",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "institutions"
+    },
+    {
+      "id": "rajaseekaran-20260915-up-abatement",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "File a further report on the revival and prosecution of non-compoundable, mandatory-imprisonment and repeat Motor Vehicles Act offences abated by the UP Criminal Law (Composition of Offences and Abatement of Trials) (Amendment) Act 2023; the Court expects an ordinance clarifying that such offences never abated.",
+      "authority": "Uttar Pradesh",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260915-mathura-road",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-15",
+      "order_tid": 77348616,
+      "directive": "Nominate experts to examine pedestrian safety at the Mathura Road crossing by the Delhi High Court and the National Zoological Park (ordered on 7 October 2025 to be fixed within seven months; one signal installed, often not working) and suggest immediate measures; do the needful within six weeks and file compliance reports from MoRTH and the Delhi Chief Secretary before the next hearing.",
+      "authority": "Delhi Government / MoRTH",
+      "granted": "6 weeks",
+      "due": "2026-10-27",
+      "theme": "pedestrian safety",
+      "compliance_events": [
+        {
+          "date": "2026-09-28",
+          "tid": 167843106,
+          "note": "The amicus wrote to the Delhi Chief Secretary on 19 September 2026 and received no reply. The Court reminded the Chief Secretary of the directions, ordered a compliance report, and said he must remain personally present on 25 November 2026 if the work is not done."
+        }
+      ]
+    },
+    {
+      "id": "rajaseekaran-20260928-136a-states",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "Forthwith implement MoRTH's Standard Operating Procedure of 28 October 2025 on electronic monitoring and enforcement of road safety; comply with Section 136A of the Motor Vehicles Act read with Rule 167A CMVR; notify e-enforcement sites and finalise device procurement, deployment and calibration.",
+      "authority": "States / UTs",
+      "granted": "forthwith",
+      "due": null,
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260928-136a-morth",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "File an affidavit on compliance with Section 136A (electronic enforcement), how MoRTH proposes to comply, and a specific timeline.",
+      "authority": "MoRTH",
+      "granted": "no period fixed; matter listed 25 Nov 2026",
+      "due": "2026-11-25",
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260928-nrsb-eenforcement",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "Monitor electronic enforcement of road safety under Section 136A across States and UTs.",
+      "authority": "NRSB",
+      "granted": "standing",
+      "due": null,
+      "theme": "institutions"
+    },
+    {
+      "id": "rajaseekaran-20260928-echallan-recovery",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "Freeze online services for vehicles with unpaid e-challans: no registration renewal, duplicate RC, address update, fitness certificate, ownership transfer or PUC certificate until all fines are cleared; blacklist the vehicle on Parivahan; suspend driving licences for multiple violations; impound vehicles found on random checks with unhonoured e-challans.",
+      "authority": "States / UTs",
+      "granted": "standing",
+      "due": null,
+      "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20260928-overloading",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "'Ordered accordingly' on the overloading application: no overloaded transport vehicle to proceed past a toll plaza or check-post until the excess load is removed; the NHAI SOP adopted by the Kerala High Court to apply nationally; payment of fee or penalty is no substitute for compliance; weigh-in-motion systems to be integrated with toll and e-enforcement systems; police assistance for enforcement; quarterly data on detections, off-loading and accidents to the NRSB and the Court.",
+      "authority": "MoRTH / NHAI / States / UTs",
+      "granted": "recurring (quarterly reports)",
+      "due": null,
+      "theme": "highways"
+    },
+    {
+      "id": "rajaseekaran-20260928-bmc-footpaths",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "File a more comprehensive report on implementation of the Universal Footpath Policy of 26 May 2023, including the geospatial inventory of existing and missing footpaths and the City-Wide Master Pedestrian Network Plan, adhering to the policy's timelines.",
+      "authority": "BMC (Mumbai)",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "pedestrian safety"
+    },
+    {
+      "id": "rajaseekaran-20260928-jewar-busfire",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-09-28",
+      "order_tid": 167843106,
+      "directive": "Respond to the application on the Jewar (Yamuna Expressway) sleeper-bus fire of 23/24 September 2026 and its reliefs, and state on affidavit what action has been taken against the driver and the registered owner, whether they have been arrested, and whether the owner complied with all rules before plying the bus.",
+      "authority": "Uttar Pradesh / MoRTH",
+      "granted": "before the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "enforcement"
     }
   ]
 }

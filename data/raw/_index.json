@@ -6831,5 +6831,29 @@
    "\"Phalodi\" doctypes:scorders"
   ],
   "manual_add": "2026-10-07: added by hand from indiankanoon.org/doc/122769202/ while the IK API was returning 403"
+ },
+ "77348616": {
+  "tid": 77348616,
+  "title": "S.<b>Rajaseekaran</b> vs Union Of India And Ors on 15 September, 2026",
+  "publishdate": "2026-09-15",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Rajaseekaran</b> vs Union Of India And Ors on 15 September, 2026 \n\n      W.P.(C)No.295/2012\n\n      ITEM NO.301                 COURT NO.5                SECTION PIL-W\n\n                                 Writ Petition (Civil)   No.295/2012\n\n      S.<b>RAJASEEKARAN</b>                                        Petitioner(s)\n\n                 ",
+  "citation": null,
+  "queries": [
+   "\"Rajaseekaran\" doctypes:scorders"
+  ],
+  "manual_add": "2026-10-21: added by hand from indiankanoon.org/doc/77348616/ while the IK API was returning 403"
+ },
+ "167843106": {
+  "tid": 167843106,
+  "title": "S.<b>Rajaseekaran</b> vs Union Of India And Ors on 28 September, 2026",
+  "publishdate": "2026-09-28",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Rajaseekaran</b> vs Union Of India And Ors on 28 September, 2026 \n\n      ITEM NO.301(PH)                         COURT NO.6                   SECTION PIL-W\n\n                                 Writ Petition(Civil)     No.295/2012\n\n      S.<b>RAJASEEKARAN</b>                                                     Petitioner(s)\n\n                 ",
+  "citation": null,
+  "queries": [
+   "\"Rajaseekaran\" doctypes:scorders"
+  ],
+  "manual_add": "2026-10-21: added by hand from indiankanoon.org/doc/167843106/ while the IK API was returning 403"
  }
 }
