@@ -19,7 +19,10 @@ jobs:
     timeout-minutes: 30
     env:
       IK_API_TOKEN: ${{ secrets.IK_API_TOKEN }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Curation runs on Deepanshu's Claude subscription (`claude setup-token`,
+      # valid one year), not the metered API. No ANTHROPIC_API_KEY here on purpose:
+      # with no key in the env there is nothing for a failure to fall back to and bill.
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,9 +31,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        # pinned below the next major so an SDK breaking change can't take out
-        # a Tuesday run unreviewed; bump the floor deliberately when needed
-        run: pip install "anthropic>=0.60,<2" certifi
+        run: pip install certifi
+
+      - name: Install Claude Code CLI (subscription inference backend)
+        run: npm install -g @anthropic-ai/claude-code
 
       - name: Fetch new orders from Indian Kanoon
         run: python3 pipeline/refresh.py
@@ -49,6 +53,22 @@ jobs:
             git commit -m "Weekly refresh $(date -u +%F)"
             git push
           fi
+
+      # Runs after the commit so a dead token or an exhausted subscription limit
+      # never costs the week's Indian Kanoon data, but still turns the run red
+      # and files the failure issue below.
+      - name: Fail if LLM curation could not run
+        run: |
+          python3 - <<'EOF'
+          import datetime, json, pathlib, sys
+          p = pathlib.Path("data/curation_log.json")
+          log = json.loads(p.read_text()) if p.exists() else {}
+          # the log is committed; only this run's log counts, not last week's
+          if log.get("date") == datetime.date.today().isoformat() and log.get("llm_unavailable"):
+              sys.exit("LLM curation did not run: " + log["llm_unavailable"]
+                       + "\nNew orders are published with links but no gists; re-run once fixed.")
+          print("curation ok (or nothing to curate)")
+          EOF
 
       - name: Notify on failure
         if: failure()

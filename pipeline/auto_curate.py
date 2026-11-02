@@ -8,14 +8,25 @@ orders, fetches the newest order and asks Claude for a gist + significance +
 updated latest_development. Applies changes to curation.json, rebuilds the
 registry and dashboard, and writes data/curation_log.json.
 
-Degrades gracefully: any API failure logs the error and exits 0 — the
-mechanical refresh (new orders with links) has already been published.
+Inference runs on Deepanshu's Claude subscription through the `claude` CLI
+(`claude -p`), never the metered API: his standing rule since 16 Oct 2026. In
+CI the CLI authenticates with CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`);
+on a Mac it uses the interactive login. ANTHROPIC_API_KEY is stripped from the
+CLI's environment so nothing can silently fall back to billing.
 
-Env: ANTHROPIC_API_KEY, IK_API_TOKEN.
+Degrades gracefully: a failed call logs the error and the run exits 0, so the
+mechanical refresh (new orders with links) still gets committed. A dead token or
+an exhausted subscription limit stops all further calls and sets
+`llm_unavailable` in data/curation_log.json; the workflow fails the job on that
+flag AFTER the commit, so the failure notification fires without losing data.
+
+Env: CLAUDE_CODE_OAUTH_TOKEN (CI), IK_API_TOKEN.
 """
 
 import json
+import os
 import re
+import shutil
 import subprocess
 import sys
 from datetime import date
@@ -27,6 +38,7 @@ import ik_client
 ROOT = Path(__file__).resolve().parent.parent
 CURATION_PATH = ROOT / "pipeline" / "curation.json"
 MODEL = "claude-opus-5"
+CLI_TIMEOUT_S = 300
 
 CLASSIFY_SCHEMA = {
     "type": "object",
@@ -183,29 +195,76 @@ def doc_text(tid: int, limit: int = 24000) -> str:
     return text
 
 
-def ask(client, system: str, user: str, schema: dict) -> dict:
-    resp = client.messages.create(
-        model=MODEL,
-        # Opus 5 thinks by DEFAULT (Opus 4.8 did not), and max_tokens caps thinking
-        # and the JSON payload together - the old 2000 would have truncated mid-answer
-        # and blown up in json.loads below. Effort 'low' keeps the spend near the 4.8
-        # baseline: this is classification against a fixed inclusion rule, not
-        # open-ended reasoning, and Opus 5 is strong at the low end.
-        max_tokens=8000,
-        system=system,
-        output_config={"effort": "low",
-                       "format": {"type": "json_schema", "schema": schema}},
-        messages=[{"role": "user", "content": user}],
-    )
-    # Two ways content can arrive with no text block: Opus 5's safety classifiers
-    # declining (HTTP 200, stop_reason 'refusal'), or a max_tokens cut-off landing
-    # before the JSON. A bare next() raises StopIteration deep inside the weekly
-    # run with no clue why - surface the stop_reason instead.
-    text = next((b.text for b in resp.content if b.type == "text"), None)
-    if text is None:
-        raise RuntimeError(
-            f"auto_curate: no text block in response (stop_reason={resp.stop_reason})")
-    return json.loads(text)
+# A refused credential or an exhausted subscription limit is not a per-document
+# problem: every later call would fail the same way. Matched only against the
+# CLI's own error text, never against order text.
+_AUTH_FAIL = re.compile(
+    r"failed to authenticate|\b401\b|\b403\b|invalid (api key|x-api-key)|"
+    r"oauth.{0,40}(invalid|expired|revoked)|authentication_error|not logged in", re.I)
+_LIMIT = re.compile(r"usage limit|weekly limit|hit your .{0,20}limit|rate.?limit", re.I)
+LLM_DOWN = {"reason": None}
+
+
+class LLMUnavailable(RuntimeError):
+    pass
+
+
+def _cli_env() -> dict:
+    env = dict(os.environ)
+    env.pop("ANTHROPIC_API_KEY", None)   # never let the CLI bill the API instead
+    env.pop("ANTHROPIC_AUTH_TOKEN", None)
+    return env
+
+
+def _down(reason: str):
+    LLM_DOWN["reason"] = reason
+    raise LLMUnavailable(reason)
+
+
+def ask(system: str, user: str, schema: dict) -> dict:
+    """One structured call on the subscription via `claude -p`. The CLI has no
+    schema-enforced output mode, so the schema goes in the prompt and the reply is
+    parsed and checked for the required keys (the infra-defect pipeline's pattern)."""
+    if LLM_DOWN["reason"]:
+        raise LLMUnavailable(LLM_DOWN["reason"])
+    binary = os.environ.get("CLAUDE_BIN") or shutil.which("claude")
+    if not binary:
+        _down("claude CLI not found - install @anthropic-ai/claude-code")
+    prompt = (f"{system}\n\nReturn a SINGLE JSON object matching this JSON schema exactly. "
+              f"No prose, no markdown fence, no commentary - the object only.\n"
+              f"SCHEMA:\n{json.dumps(schema, ensure_ascii=False)}\n\n{user}")
+    try:
+        # prompt on stdin: order text runs to ~24k chars
+        p = subprocess.run(
+            [binary, "-p", "--model", MODEL, "--output-format", "json", "--max-turns", "1"],
+            input=prompt, capture_output=True, text=True, timeout=CLI_TIMEOUT_S,
+            env=_cli_env())
+    except subprocess.TimeoutExpired:
+        raise RuntimeError(f"claude CLI timed out after {CLI_TIMEOUT_S}s")
+    err = (p.stderr or "")[:400]
+    try:
+        envelope = json.loads(p.stdout)
+    except json.JSONDecodeError:
+        if _AUTH_FAIL.search(err) or _LIMIT.search(err):
+            _down(f"claude CLI refused: {err}")
+        raise RuntimeError(f"claude CLI exited {p.returncode} with no JSON envelope: {err or p.stdout[:200]}")
+    result = str(envelope.get("result") or "")
+    if envelope.get("is_error"):
+        if _LIMIT.search(result) or _LIMIT.search(err):
+            _down(f"subscription usage limit reached (token is fine, do NOT refresh it): {result[:300]}")
+        if _AUTH_FAIL.search(result) or _AUTH_FAIL.search(err):
+            _down(f"credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: {result[:300]}")
+        raise RuntimeError(f"claude CLI error: {result[:300]}")
+    m = re.search(r"```(?:json)?\s*(.*?)```", result, re.S)
+    body = m.group(1) if m else result
+    start, end = body.find("{"), body.rfind("}")
+    if start == -1 or end <= start:
+        raise RuntimeError(f"no JSON object in reply: {result[:200]}")
+    out = json.loads(body[start:end + 1])
+    missing = [k for k in schema.get("required", []) if k not in out]
+    if missing:
+        raise RuntimeError(f"reply missing required keys {missing}")
+    return out
 
 
 def norm_title(t: str) -> str:
@@ -242,15 +301,6 @@ def main() -> None:
     changed = False
     new_case_ids = []
 
-    try:
-        import anthropic
-        client = anthropic.Anthropic()
-    except Exception as e:
-        log["errors"].append(f"anthropic client init failed: {e}")
-        (ROOT / "data" / "curation_log.json").write_text(json.dumps(log, indent=1))
-        print(f"SKIPPED LLM curation: {e}", file=sys.stderr)
-        return
-
     rule = curation["_comment"] if "inclusion" in curation.get("_comment", "") else ""
     inclusion_rule = (
         "Track a case only if it seeks or produces SYSTEMIC relief on road safety in India "
@@ -272,9 +322,11 @@ def main() -> None:
 
     # 1. classify new unassigned candidates
     for c in candidates:
+        if LLM_DOWN["reason"]:
+            break  # don't pay IK for documents nobody can classify
         try:
             text = doc_text(c["tid"])
-            result = ask(client, classify_system,
+            result = ask(classify_system,
                          f"Document title: {c['title']}\nDate: {c['date']}\n\nFull text (may be truncated):\n{text}",
                          CLASSIFY_SCHEMA)
             entry = {"tid": c["tid"], "date": c["date"], "title": c["title"],
@@ -375,9 +427,11 @@ def main() -> None:
         # Chronological order, so the newest order wins latest_development.
         n_new = max(1, report.get("new_order_counts", {}).get(cid, 1))
         for newest in case["orders"][-n_new:]:
+          if LLM_DOWN["reason"]:
+              break
           try:
             text = doc_text(newest["tid"])
-            result = ask(client, gist_system,
+            result = ask(gist_system,
                          f"Case: {case['title']} ({case['case_number']})\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
                          GIST_SCHEMA)
             log["gists"].append({"case": cid, "date": newest["date"], **result})
@@ -398,7 +452,7 @@ def main() -> None:
             # Deliberately NOT gated on significance: a procedurally 'routine' listing
             # order can still set a real deadline, and dropping it would leave a hole
             # in the ledger. The extractor returns [] when there is nothing to capture.
-            dres = ask(client, dir_system,
+            dres = ask(dir_system,
                        f"Case: {case['title']}\nOrder date: {newest['date']}\n\nOrder text:\n{text}",
                        DIRECTIONS_SCHEMA)
             for i, d in enumerate(dres.get("directions", [])):
@@ -443,6 +497,9 @@ def main() -> None:
         (ROOT / "data" / "cases.json").write_text(json.dumps(registry, indent=1, ensure_ascii=False))
         subprocess.run([sys.executable, str(ROOT / "pipeline" / "build_dashboard.py")], check=True)
 
+    if LLM_DOWN["reason"]:
+        log["llm_unavailable"] = LLM_DOWN["reason"]
+        print(f"LLM curation stopped early: {LLM_DOWN['reason']}", file=sys.stderr)
     log["doc_fetches"] = DOC_FETCHES["n"]
     log["approx_doc_cost_inr"] = round(DOC_FETCHES["n"] * 0.2, 1)
     (ROOT / "data" / "curation_log.json").write_text(json.dumps(log, indent=1, ensure_ascii=False))
