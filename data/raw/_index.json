@@ -6855,5 +6855,65 @@
    "\"Rajaseekaran\" doctypes:scorders"
   ],
   "manual_add": "2026-10-21: added by hand from indiankanoon.org/doc/167843106/ while the IK API was returning 403"
+ },
+ "111523760": {
+  "tid": 111523760,
+  "title": "S.<b>Rajaseekaran</b> vs Union Of India And Ors on 16 October, 2026",
+  "publishdate": "2026-10-16",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "\"Rajaseekaran\" doctypes:scorders"
+  ],
+  "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/111523760/ while the IK API was returning 403"
+ },
+ "160899034": {
+  "tid": 160899034,
+  "title": "In Re: <b>Phalodi</b> Accident vs National Highways Authority Of India on 13 October, 2026",
+  "publishdate": "2026-10-13",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "\"Phalodi\" doctypes:scorders"
+  ],
+  "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/160899034/ while the IK API was returning 403"
+ },
+ "137990753": {
+  "tid": 137990753,
+  "title": "In Re: Fundamental Right To Walk And ... vs Ministry Of Housing And Urban Affairs on 5 October, 2026",
+  "publishdate": "2026-10-05",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "\"right to walk\" doctypes:scorders"
+  ],
+  "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/137990753/ while the IK API was returning 403"
+ },
+ "6030964": {
+  "tid": 6030964,
+  "title": "National Insurance Company Limited vs Thungala Dhana Laxmi on 22 September, 2026",
+  "publishdate": "2026-09-22",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "\"Thungala Dhana Laxmi\" doctypes:scorders"
+  ],
+  "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/6030964/ while the IK API was returning 403"
+ },
+ "144555232": {
+  "tid": 144555232,
+  "title": "<b>Gyan</b> <b>Prakash</b> vs Union Of India on 22 September, 2026",
+  "publishdate": "2026-09-22",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "",
+  "citation": null,
+  "queries": [
+   "\"Gyan Prakash\" highways doctypes:scorders"
+  ],
+  "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/144555232/ while the IK API was returning 403"
  }
 }

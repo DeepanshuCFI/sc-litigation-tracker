@@ -752,6 +752,111 @@
       "granted": "before the next hearing (25 Nov 2026)",
       "due": "2026-11-25",
       "theme": "enforcement"
+    },
+    {
+      "id": "rajaseekaran-20250417-annual-report",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2025-04-17",
+      "order_tid": 197125754,
+      "directive": "Publish the annual report on road accidents for 2023 by the end of August 2025, and publish every later annual report within six months of the end of each calendar year.",
+      "authority": "MoRTH",
+      "granted": "by end of August 2025, then six months after each year",
+      "due": "2025-08-31",
+      "theme": "institutions",
+      "compliance_events": [
+        {
+          "date": "2026-10-16",
+          "tid": 111523760,
+          "note": "A contempt petition (Diary No. 39789/2026) says this direction has still not been complied with; the Court issued notice returnable 25 November 2026 and asked the Union to explain. Non-compliance is alleged, not yet found."
+        }
+      ]
+    },
+    {
+      "id": "rajaseekaran-20250428-164a-scheme",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2025-04-28",
+      "order_tid": 18278958,
+      "directive": "Frame a scheme for interim relief to accident claimants under Section 164A of the MV Act, unimplemented since it came into force on 1 April 2022.",
+      "authority": "MoRTH",
+      "granted": "four months",
+      "due": "2025-08-28",
+      "theme": "victim compensation",
+      "status": "complied",
+      "status_note": "Complied late: the order of 16 October 2026 records that MoRTH framed the Compensation to Victims (Interim Relief) Scheme, 2026 and circulated it to States on 23 February 2026, about six months after the deadline. Gazette publication, publicity and coverage of uninsured vehicles are now separate directions in this ledger.",
+      "compliance_events": [
+        {
+          "date": "2026-10-16",
+          "tid": 111523760,
+          "note": "The ASG told the Court the Scheme was framed and circulated on 23 February 2026; the amicus and the applicant had not known of it."
+        }
+      ]
+    },
+    {
+      "id": "rajaseekaran-20261016-annual-report-reply",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-10-16",
+      "order_tid": 111523760,
+      "directive": "Reply to the contempt notice explaining why the 17 April 2025 direction to publish annual road-accident reports within six months of each year has not been complied with, and what the Union proposes to do.",
+      "authority": "MoRTH",
+      "granted": "notice returnable 25 Nov 2026",
+      "due": "2026-11-25",
+      "theme": "institutions"
+    },
+    {
+      "id": "rajaseekaran-20261016-164a-gazette",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-10-16",
+      "order_tid": 111523760,
+      "directive": "Publish the Compensation to Victims (Interim Relief) Scheme, 2026 in the Official Gazette at the earliest, as a statutory scheme under Section 212, and give it wide publicity so that claimants know they can apply.",
+      "authority": "MoRTH",
+      "granted": "at the earliest",
+      "due": null,
+      "theme": "victim compensation",
+      "status": "ongoing"
+    },
+    {
+      "id": "rajaseekaran-20261016-164a-operational",
+      "case_id": "rajaseekaran-295-2012",
+      "order_date": "2026-10-16",
+      "order_tid": 111523760,
+      "directive": "Tell the Court how the interim relief scheme will be made operational and whether it will cover uninsured vehicles, and respond to the applicant's suggestions: quarterly district-wise data on pending MACT claims, appeals, recovery proceedings and unpaid awards published by MoRTH, and adequate infrastructure for Claims Tribunals.",
+      "authority": "MoRTH",
+      "granted": "by the next hearing (25 Nov 2026)",
+      "due": "2026-11-25",
+      "theme": "victim compensation"
+    },
+    {
+      "id": "right-to-walk-20261005-authority",
+      "case_id": "right-to-walk-2026",
+      "order_date": "2026-10-05",
+      "order_tid": 137990753,
+      "directive": "Identify the authority responsible for establishing footpaths, or create one if none exists under any statute, with the space, infrastructure, staff and funds needed; the ASG to report on it.",
+      "authority": "Union of India",
+      "granted": "by the next hearing (6 Nov 2026)",
+      "due": "2026-11-06",
+      "theme": "pedestrian safety"
+    },
+    {
+      "id": "right-to-walk-20261005-pilot-towns",
+      "case_id": "right-to-walk-2026",
+      "order_date": "2026-10-05",
+      "order_tid": 137990753,
+      "directive": "Identify at least five towns for a pilot project providing a footpath wherever a road exists, and tell the Court where it can be implemented.",
+      "authority": "Union of India",
+      "granted": "by the next hearing (6 Nov 2026)",
+      "due": "2026-11-06",
+      "theme": "pedestrian safety"
+    },
+    {
+      "id": "nic-20260922-consolidated",
+      "case_id": "national-insurance-company-limited-2026",
+      "order_date": "2026-09-22",
+      "order_tid": 6030964,
+      "directive": "File a consolidated statement of compliance by all stakeholders with the Court's 4 August 2026 directions on uninsured vehicles.",
+      "authority": "Union of India",
+      "granted": "four weeks",
+      "due": "2026-10-20",
+      "theme": "insurance"
     }
   ]
 }
