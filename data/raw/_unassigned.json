@@ -3196,5 +3196,45 @@
   "queries": [
    "\"footpath\" road doctypes:scorders"
   ]
+ },
+ {
+  "tid": 90054754,
+  "date": "2026-10-12",
+  "title": "Vinod Mangaldas Shah vs Iffco Tokio General Insurance Co. Ltd on 12 October, 2026",
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 101353469,
+  "date": "2026-10-26",
+  "title": "Gurdev Singh vs The State Of Punjab on 26 October, 2026",
+  "queries": [
+   "\"Good Samaritan\" doctypes:scorders"
+  ]
+ },
+ {
+  "tid": 158065806,
+  "date": "2026-09-21",
+  "title": "Kusumavati Gowda vs The Government Of Karnataka on 21 September, 2026",
+  "queries": [
+   "\"golden hour\" doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 193561276,
+  "date": "2026-10-01",
+  "title": "Santosh Gurung vs The State Of Sikkim on 1 October, 2026",
+  "queries": [
+   "\"footpath\" road doctypes:supremecourt"
+  ]
+ },
+ {
+  "tid": 191250321,
+  "date": "2026-10-29",
+  "title": "Shreeram Builders vs Upendra Kantilal Thanawala on 29 October, 2026",
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
  }
 ]

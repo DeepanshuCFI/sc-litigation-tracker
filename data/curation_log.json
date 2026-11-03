@@ -1,17 +1,11 @@
 {
- "date": "2026-09-15",
+ "date": "2026-11-03",
  "classified": [],
- "gists": [
-  {
-   "case": "phalodi-smwpc-9-2025",
-   "date": "2026-09-08",
-   "gist": "After hearing counsel for various applicants, the NHAI and the amicus curiae on a batch of intervention, clarification and stay applications, the Court took three fresh IAs on board, directed responses within ten days and ordered that status quo be maintained by the parties until the next hearing.",
-   "significance": "major",
-   "latest_development": "On 8 September 2026, the Supreme Court directed responses to the pending applications within ten days and ordered parties to maintain status quo till 22 September 2026.",
-   "next_listing": "22 September 2026"
-  }
+ "gists": [],
+ "errors": [
+  "classify tid=158065806: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
  ],
- "errors": [],
+ "llm_unavailable": "credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token",
  "doc_fetches": 1,
  "approx_doc_cost_inr": 0.2
 }

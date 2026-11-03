@@ -1,8 +1,8 @@
 {
  "meta": {
-  "built": "2026-11-02",
+  "built": "2026-11-03",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 614,
+  "raw_docs": 619,
   "assigned_docs": 219
  },
  "cases": [

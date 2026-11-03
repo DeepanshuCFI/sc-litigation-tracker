@@ -6840,7 +6840,10 @@
   "headline": "<b>Rajaseekaran</b> vs Union Of India And Ors on 15 September, 2026 \n\n      W.P.(C)No.295/2012\n\n      ITEM NO.301                 COURT NO.5                SECTION PIL-W\n\n                                 Writ Petition (Civil)   No.295/2012\n\n      S.<b>RAJASEEKARAN</b>                                        Petitioner(s)\n\n                 ",
   "citation": null,
   "queries": [
-   "\"Rajaseekaran\" doctypes:scorders"
+   "\"Rajaseekaran\" doctypes:scorders",
+   "\"road safety\" doctypes:scorders",
+   "\"pedestrian safety\" doctypes:scorders",
+   "\"National Road Safety\" doctypes:scorders"
   ],
   "manual_add": "2026-10-21: added by hand from indiankanoon.org/doc/77348616/ while the IK API was returning 403"
  },
@@ -6852,7 +6855,14 @@
   "headline": "<b>Rajaseekaran</b> vs Union Of India And Ors on 28 September, 2026 \n\n      ITEM NO.301(PH)                         COURT NO.6                   SECTION PIL-W\n\n                                 Writ Petition(Civil)     No.295/2012\n\n      S.<b>RAJASEEKARAN</b>                                                     Petitioner(s)\n\n                 ",
   "citation": null,
   "queries": [
-   "\"Rajaseekaran\" doctypes:scorders"
+   "\"Rajaseekaran\" doctypes:scorders",
+   "\"road safety\" doctypes:scorders",
+   "\"pedestrian safety\" doctypes:scorders",
+   "\"National Road Safety\" doctypes:scorders",
+   "\"driving licence\" directions doctypes:scorders",
+   "\"overloading\" \"motor vehicles\" doctypes:scorders",
+   "\"pedestrian\" guidelines doctypes:scorders",
+   "\"footpath\" road doctypes:scorders"
   ],
   "manual_add": "2026-10-21: added by hand from indiankanoon.org/doc/167843106/ while the IK API was returning 403"
  },
@@ -6888,7 +6898,8 @@
   "headline": "",
   "citation": null,
   "queries": [
-   "\"right to walk\" doctypes:scorders"
+   "\"right to walk\" doctypes:scorders",
+   "\"footpath\" road doctypes:scorders"
   ],
   "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/137990753/ while the IK API was returning 403"
  },
@@ -6912,8 +6923,64 @@
   "headline": "",
   "citation": null,
   "queries": [
-   "\"Gyan Prakash\" highways doctypes:scorders"
+   "\"Gyan Prakash\" highways doctypes:scorders",
+   "\"Phalodi\" doctypes:scorders"
   ],
   "manual_add": "2026-11-02: added by hand from indiankanoon.org/doc/144555232/ while the IK API was returning 403"
+ },
+ "90054754": {
+  "tid": 90054754,
+  "title": "Vinod Mangaldas Shah vs Iffco Tokio General Insurance Co. Ltd on 12 October, 2026",
+  "publishdate": "2026-10-12",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "award of the relevant\n\n                         Motor Accidents Claims Tribunal, by making certain <b>directions</b> without\n\n                         even issuing notice to the claimants/appellants, who are the respondents ... years old)\n\n      who has lost his son in the fatal <b>road</b> <b>accident</b>, we request the roster\n\n      Bench of the High Court to decide the interim",
+  "citation": null,
+  "queries": [
+   "\"road accident\" directions doctypes:scorders"
+  ]
+ },
+ "101353469": {
+  "tid": 101353469,
+  "title": "Gurdev Singh vs The State Of Punjab on 26 October, 2026",
+  "publishdate": "2026-10-26",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "that, to demonstrate their\nbona fides and intent to act as <b>good</b> <b>Samaritans</b>, the petitioners are\nready to deposit a sum of Rs.5 lakhs",
+  "citation": null,
+  "queries": [
+   "\"Good Samaritan\" doctypes:scorders"
+  ]
+ },
+ "158065806": {
+  "tid": 158065806,
+  "title": "Kusumavati Gowda vs The Government Of Karnataka on 21 September, 2026",
+  "publishdate": "2026-09-21",
+  "docsource": "Supreme Court of India",
+  "headline": "further held that the\n\ninvestigation was not properly conducted in the <b>Golden</b> <b>Hour</b>. The doctor\n\nwho collected the vaginal swab virtually demolished the entire case ... doubtful that evidence that could not be collected at the\n\n<b>golden</b> <b>hour</b> is still available. No useful purpose would be served even if\n\nreinvestigation",
+  "citation": null,
+  "queries": [
+   "\"golden hour\" doctypes:supremecourt"
+  ]
+ },
+ "193561276": {
+  "tid": 193561276,
+  "title": "Santosh Gurung vs The State Of Sikkim on 1 October, 2026",
+  "publishdate": "2026-10-01",
+  "docsource": "Supreme Court of India",
+  "headline": "under:\n \n        “It is true that there is an old <b>road</b> and a <b>footpath</b> used by cattle\n       herders who collect fodder in the said area",
+  "citation": null,
+  "queries": [
+   "\"footpath\" road doctypes:supremecourt"
+  ]
+ },
+ "191250321": {
+  "tid": 191250321,
+  "title": "Shreeram Builders vs Upendra Kantilal Thanawala on 29 October, 2026",
+  "publishdate": "2026-10-29",
+  "docsource": "Supreme Court of India",
+  "headline": " Shreeram Builders vs Upendra Kantilal Thanawala on 29 October, 2026 \n\n                                                                                       Reportable\n\n\n2026 INSC 1176                              IN",
+  "citation": null,
+  "queries": [
+   "\"National Highway\" fatality directions doctypes:supremecourt"
+  ]
  }
 }
