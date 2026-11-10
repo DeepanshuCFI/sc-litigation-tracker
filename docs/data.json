@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-11-03",
+  "built": "2026-11-10",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 619,
-  "assigned_docs": 219
+  "raw_docs": 621,
+  "assigned_docs": 221
  },
  "cases": [
   {
@@ -1334,11 +1334,18 @@
      "link": "https://indiankanoon.org/doc/79576489/",
      "gist": "",
      "significance": "routine"
+    },
+    {
+     "date": "2026-11-02",
+     "tid": 72159869,
+     "link": "https://indiankanoon.org/doc/72159869/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 37,
+   "order_count": 38,
    "first_order": "2019-01-04",
-   "latest_order": "2026-08-04"
+   "latest_order": "2026-11-02"
   },
   {
    "id": "k-balu-liquor-2016",
@@ -1797,11 +1804,18 @@
      "link": "https://indiankanoon.org/doc/137990753/",
      "gist": "Justices Narasimha and Alok Aradhe, after hearing ASG K.M. Nataraj and amicus M.V. Mukunda, set out two steps to implement the principle that wherever there is a road there must be a footpath. The Union must identify the authority responsible for building footpaths, or create one if none exists under any statute, with the space, infrastructure, staff and funds to do it; the ASG is to report on this. At least five towns are to be identified for a pilot project providing footpaths wherever a road exists, and the ASG is to tell the Court where. Re-listed 6 November 2026.",
      "significance": "major"
+    },
+    {
+     "date": "2026-11-06",
+     "tid": 12866363,
+     "link": "https://indiankanoon.org/doc/12866363/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 5,
+   "order_count": 6,
    "first_order": "2026-06-19",
-   "latest_order": "2026-10-05"
+   "latest_order": "2026-11-06"
   },
   {
    "id": "nisha-2026",
@@ -3144,5 +3158,8 @@
    ]
   }
  ],
- "new_this_refresh": []
+ "new_this_refresh": [
+  "gohar-mohammed-2022",
+  "right-to-walk-2026"
+ ]
 }

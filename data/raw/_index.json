@@ -6982,5 +6982,27 @@
   "queries": [
    "\"National Highway\" fatality directions doctypes:supremecourt"
   ]
+ },
+ "72159869": {
+  "tid": 72159869,
+  "title": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 2 November, 2026",
+  "publishdate": "2026-11-02",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "<b>Gohar</b> <b>Mohammad</b> vs Uttar Pradesh State Road Transport ... on 2 November, 2026 \n\n                                                      1\n\n     ITEM NO.50                              COURT NO.15                SECTION ... 9322/2022 passed by the Supreme Court of India]\n\n     <b>GOHAR</b> <b>MOHAMMAD</b>                                                     PETITIONER(S)\n\n                ",
+  "citation": null,
+  "queries": [
+   "\"Gohar Mohammed\" doctypes:scorders"
+  ]
+ },
+ "12866363": {
+  "tid": 12866363,
+  "title": "In Re: Fundamental <b>Right</b> To <b>Walk</b> And ... vs Ministry Of Housing And Urban Affairs on 6 November, 2026",
+  "publishdate": "2026-11-06",
+  "docsource": "Supreme Court - Daily Orders",
+  "headline": "Fundamental <b>Right</b> To <b>Walk</b> And ... vs Ministry Of Housing And Urban Affairs on 6 November, 2026 \n\n Author:  Pamidighantam Sri Narasimha  \n\n Bench:  Pamidighantam Sri Narasimha  \n\n                                                                Writ ... Writ Petition(s)(Civil)            No(s).    844/2026\n\n     IN RE: FUNDAMENTAL <b>RIGHT</b> TO <b>WALK</b> AND FOOTPATH                ",
+  "citation": null,
+  "queries": [
+   "\"right to walk\" doctypes:scorders"
+  ]
  }
 }

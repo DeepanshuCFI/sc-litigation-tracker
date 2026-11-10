@@ -1,22 +1,35 @@
 {
- "refresh_date": "2026-11-03",
- "fromdate_window": "15-09-2026",
+ "refresh_date": "2026-11-10",
+ "fromdate_window": "01-10-2026",
  "search_pages": 68,
  "approx_cost_inr": 34.0,
- "new_docs_total": 5,
+ "new_docs_total": 2,
  "queries_total": 68,
  "queries_failed": 0,
  "failed_queries": [],
- "cases_with_new_orders": [],
- "new_order_counts": {},
- "newly_overdue": [],
- "stale_listings": [
+ "cases_with_new_orders": [
+  "gohar-mohammed-2022",
+  "right-to-walk-2026"
+ ],
+ "new_order_counts": {
+  "gohar-mohammed-2022": 1,
+  "right-to-walk-2026": 1
+ },
+ "newly_overdue": [
   {
-   "case": "gohar-mohammed-2022",
-   "listed_for": "2026-08-12",
-   "latest_order_on_record": "2026-08-04",
-   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+   "id": "right-to-walk-20261005-authority",
+   "authority": "Union of India",
+   "due": "2026-11-06",
+   "directive": "Identify the authority responsible for establishing footpaths, or create one if none exists under an"
   },
+  {
+   "id": "right-to-walk-20261005-pilot-towns",
+   "authority": "Union of India",
+   "due": "2026-11-06",
+   "directive": "Identify at least five towns for a pilot project providing a footpath wherever a road exists, and te"
+  }
+ ],
+ "stale_listings": [
   {
    "case": "national-insurance-company-limited-2026",
    "listed_for": "2026-10-20",
@@ -24,36 +37,5 @@
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
  ],
- "new_unassigned_candidates": [
-  {
-   "tid": 158065806,
-   "date": "2026-09-21",
-   "title": "Kusumavati Gowda vs The Government Of Karnataka on 21 September, 2026",
-   "headline": "further held that the\n\ninvestigation was not properly conducted in the Golden Hour. The doctor\n\nwho collected the vaginal swab virtually demolished the entire case ... doubtful that evidence that coul"
-  },
-  {
-   "tid": 193561276,
-   "date": "2026-10-01",
-   "title": "Santosh Gurung vs The State Of Sikkim on 1 October, 2026",
-   "headline": "under:\n \n        “It is true that there is an old road and a footpath used by cattle\n       herders who collect fodder in the said area"
-  },
-  {
-   "tid": 90054754,
-   "date": "2026-10-12",
-   "title": "Vinod Mangaldas Shah vs Iffco Tokio General Insurance Co. Ltd on 12 October, 2026",
-   "headline": "award of the relevant\n\n                         Motor Accidents Claims Tribunal, by making certain directions without\n\n                         even issuing notice to the claimants/appellants, who are"
-  },
-  {
-   "tid": 101353469,
-   "date": "2026-10-26",
-   "title": "Gurdev Singh vs The State Of Punjab on 26 October, 2026",
-   "headline": "that, to demonstrate their\nbona fides and intent to act as good Samaritans, the petitioners are\nready to deposit a sum of Rs.5 lakhs"
-  },
-  {
-   "tid": 191250321,
-   "date": "2026-10-29",
-   "title": "Shreeram Builders vs Upendra Kantilal Thanawala on 29 October, 2026",
-   "headline": " Shreeram Builders vs Upendra Kantilal Thanawala on 29 October, 2026 \n\n                                                                                       Reportable\n\n\n2026 INSC 1176               "
-  }
- ]
+ "new_unassigned_candidates": []
 }

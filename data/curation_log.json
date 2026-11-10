@@ -1,9 +1,9 @@
 {
- "date": "2026-11-03",
+ "date": "2026-11-10",
  "classified": [],
  "gists": [],
  "errors": [
-  "classify tid=158065806: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
+  "gist/directions case=gohar-mohammed-2022 order=2026-11-02: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
  ],
  "llm_unavailable": "credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token",
  "doc_fetches": 1,
