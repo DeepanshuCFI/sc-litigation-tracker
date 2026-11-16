@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built": "2026-11-10",
+  "built": "2026-11-16",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
   "raw_docs": 621,
   "assigned_docs": 221
@@ -1073,8 +1073,8 @@
     "MACT reform"
    ],
    "why_it_matters": "15 Dec 2022 judgment (Nazeer & Maheshwari JJ) issued nationwide directions on the Detailed Accident Report workflow — police/insurer timelines, MACT registration, coordination portal — reshaping how compensation claims begin. Compliance is monitored through MA 825/2023.",
-   "latest_development": "On 4 August 2026, the Court ordered renewal of the fixed deposit maturing on 11.08.2026 for three months and listed the matters for 12.08.2026.",
-   "next_listing": "12 August 2026 (per order of 2026-08-04)",
+   "latest_development": "On 2 November 2026 the Court ordered the fixed deposit maturing on 11.11.2026 to be re-invested for three months and directed the matters to be listed on a non-miscellaneous day after four weeks.",
+   "next_listing": "~1 December 2026 — 'list on a non-miscellaneous day after four weeks' per the 2 November 2026 order",
    "orders": [
     {
      "date": "2019-01-04",
@@ -1339,7 +1339,7 @@
      "date": "2026-11-02",
      "tid": 72159869,
      "link": "https://indiankanoon.org/doc/72159869/",
-     "gist": "",
+     "gist": "Justices Satish Chandra Sharma and Devendra Kumar Upadhyaya directed the Registry to re-invest the fixed deposit of Rs 5,27,829 (maturing 11.11.2026) for a further three months, and to list the matters on a non-miscellaneous day after four weeks. No compliance directions were issued.",
      "significance": "routine"
     }
    ],
@@ -1767,8 +1767,8 @@
     "institutions"
    ],
    "why_it_matters": "Born from a five-year-old killed walking to school on a road with no footpath or crossing: the Court declared the right to walk a fundamental right under Article 19(1)(d), placed a correlative duty on urban development authorities, municipalities and panchayats to demarcate, build and maintain footpaths, and made breach actionable for restitution and compensation independent of the MV Act. The Court then converted the disposed appeal into a continuing Article 32 matter, impleading MoHUA, MoRD and MoRTH.",
-   "latest_development": "On 5 October 2026 the Court directed the Union to identify, or if necessary create, an authority responsible for building footpaths, with the funds and staff to do it, and to name at least five towns for a pilot providing a footpath wherever there is a road. The ASG reports on both on 6 November 2026.",
-   "next_listing": "6 November 2026 (per order of 2026-10-05)",
+   "latest_development": "On 6 November 2026 the Court concluded the hearing and reserved its order. The written order does not record what the Union reported on the two steps set on 5 October (the authority responsible for footpaths, and five pilot towns).",
+   "next_listing": "Order reserved on 6 November 2026; no date fixed",
    "orders": [
     {
      "date": "2026-06-19",
@@ -1809,8 +1809,8 @@
      "date": "2026-11-06",
      "tid": 12866363,
      "link": "https://indiankanoon.org/doc/12866363/",
-     "gist": "",
-     "significance": "routine"
+     "gist": "Justices Narasimha and Alok Aradhe heard ASG K.M. Nataraj and amicus M.V. Mukunda, with counsel for a large number of States on record, and recorded: 'Hearing concluded. Order/Judgment reserved.' The written order does not set out what the Union reported on the footpath authority or the five pilot towns it was to identify by this date.",
+     "significance": "major"
     }
    ],
    "order_count": 6,
@@ -2806,6 +2806,13 @@
    "granted": "by the next hearing (6 Nov 2026)",
    "due": "2026-11-06",
    "theme": "pedestrian safety",
+   "compliance_events": [
+    {
+     "date": "2026-11-06",
+     "tid": 12866363,
+     "note": "The Court heard the ASG and the amicus, concluded the hearing and reserved its order. The written order does not record what the Union reported on this direction."
+    }
+   ],
    "case_title": "Re: Fundamental Right to Walk and Footpath (Maniyar Iliyaz v. P. Ayyappan)",
    "link": "https://indiankanoon.org/doc/137990753/"
   },
@@ -2819,6 +2826,13 @@
    "granted": "by the next hearing (6 Nov 2026)",
    "due": "2026-11-06",
    "theme": "pedestrian safety",
+   "compliance_events": [
+    {
+     "date": "2026-11-06",
+     "tid": 12866363,
+     "note": "The Court heard the ASG and the amicus, concluded the hearing and reserved its order. The written order does not record what the Union reported on this direction."
+    }
+   ],
    "case_title": "Re: Fundamental Right to Walk and Footpath (Maniyar Iliyaz v. P. Ayyappan)",
    "link": "https://indiankanoon.org/doc/137990753/"
   },

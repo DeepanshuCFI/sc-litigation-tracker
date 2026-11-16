@@ -834,7 +834,14 @@
       "authority": "Union of India",
       "granted": "by the next hearing (6 Nov 2026)",
       "due": "2026-11-06",
-      "theme": "pedestrian safety"
+      "theme": "pedestrian safety",
+      "compliance_events": [
+        {
+          "date": "2026-11-06",
+          "tid": 12866363,
+          "note": "The Court heard the ASG and the amicus, concluded the hearing and reserved its order. The written order does not record what the Union reported on this direction."
+        }
+      ]
     },
     {
       "id": "right-to-walk-20261005-pilot-towns",
@@ -845,7 +852,14 @@
       "authority": "Union of India",
       "granted": "by the next hearing (6 Nov 2026)",
       "due": "2026-11-06",
-      "theme": "pedestrian safety"
+      "theme": "pedestrian safety",
+      "compliance_events": [
+        {
+          "date": "2026-11-06",
+          "tid": 12866363,
+          "note": "The Court heard the ASG and the amicus, concluded the hearing and reserved its order. The written order does not record what the Union reported on this direction."
+        }
+      ]
     },
     {
       "id": "nic-20260922-consolidated",

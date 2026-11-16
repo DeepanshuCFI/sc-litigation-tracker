@@ -1,11 +1,62 @@
 {
- "date": "2026-11-10",
- "classified": [],
- "gists": [],
- "errors": [
-  "gist/directions case=gohar-mohammed-2022 order=2026-11-02: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
+ "date": "2026-11-16",
+ "manual": "Curated by hand in a Claude Code session on the subscription: the 3 Nov and 10 Nov CI curation runs were refused (401 on CLAUDE_CODE_OAUTH_TOKEN), which left two tracked-case orders without gists and five candidates unclassified. Full texts fetched from the IK API and read.",
+ "classified": [
+  {
+   "tid": 158065806,
+   "date": "2026-09-21",
+   "title": "Kusumavati Gowda v. Government of Karnataka (2026 INSC 1030)",
+   "action": "ignore",
+   "reason": "Fresh SIT investigation ordered into a 2012 rape and murder; matched only on 'golden hour' of a criminal investigation. Not a road-safety matter."
+  },
+  {
+   "tid": 193561276,
+   "date": "2026-10-01",
+   "title": "Santosh Gurung v. State of Sikkim (2026 INSC 1073)",
+   "action": "ignore",
+   "reason": "Acquittal in a POCSO/murder appeal; 'footpath' appears once in a witness's cross-examination. Not a road-safety matter."
+  },
+  {
+   "tid": 90054754,
+   "date": "2026-10-12",
+   "title": "Vinod Mangaldas Shah v. IFFCO Tokio General Insurance (C.A. 13683/2026)",
+   "action": "ignore",
+   "reason": "Individual MACT appeal: Bombay High Court order disposing of an insurer's interim application without notice to the claimants set aside for breach of natural justice and remitted. Fact-specific, no precedent for tribunals or insurers at large."
+  },
+  {
+   "tid": 101353469,
+   "date": "2026-10-26",
+   "title": "Gurdev Singh v. State of Punjab (SLP(Crl.) 19816/2026)",
+   "action": "ignore",
+   "reason": "Virtual appearance allowed for compromise verification in an IPC cross-case; matched only on counsel's phrase 'good Samaritans'. Not a road-safety matter."
+  },
+  {
+   "tid": 191250321,
+   "date": "2026-10-29",
+   "title": "Shreeram Builders v. Upendra Kantilal Thanawala",
+   "action": "ignore",
+   "reason": "Arbitration appeal over a development agreement; matched only on a citation to an NHAI arbitration precedent. Not a road-safety matter."
+  }
  ],
- "llm_unavailable": "credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token",
- "doc_fetches": 1,
- "approx_doc_cost_inr": 0.2
+ "gists": [
+  {
+   "case": "gohar-mohammed-2022",
+   "order": "2026-11-02",
+   "tid": 72159869,
+   "significance": "routine",
+   "next_listing": "~1 December 2026",
+   "new_directions": 0
+  },
+  {
+   "case": "right-to-walk-2026",
+   "order": "2026-11-06",
+   "tid": 12866363,
+   "significance": "major",
+   "next_listing": "order reserved, no date fixed",
+   "new_directions": 0
+  }
+ ],
+ "errors": [],
+ "doc_fetches": 7,
+ "approx_doc_cost_inr": 1.4
 }
