@@ -194,6 +194,11 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .abar .fill{height:100%;background:var(--brand);border-radius:9999px;min-width:14px}
 .abar .av{font-family:Montserrat;font-size:13px;font-weight:600;color:var(--brand);text-align:right}
 .ledger-list{margin-top:24px}
+.ledger-count{margin-top:24px;font-size:13px;color:var(--muted)}
+.ledger-count b{color:var(--dark);font-weight:600}
+.ledger-count + .ledger-list{margin-top:12px}
+.ledger-more{margin-top:20px;display:flex;justify-content:center}
+.ledger-more .btn{cursor:pointer;font-family:Montserrat}
 .dcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:22px 24px;margin-bottom:16px;transition:.15s}
 .dcard:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 5%,transparent)}
 .dcard-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap-reverse}
@@ -350,6 +355,7 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     <h2 class="h2">What the Court ordered.<br><span class="accent">What's come due.</span></h2>
     <p class="lead">The Supreme Court doesn't just decide road-safety cases — it hands the government dated deadlines. This ledger extracts each direction, names the duty-bearer, and converts the granted time into a calendar date, so the question becomes simple: has the deadline passed?</p>
     <div class="ledger-stats" id="ledger-stats"></div>
+    <p class="ledger-note">"Deadline passed" means the date the Court set has gone by with compliance not confirmed on the orders we track — not a finding of government failure. "Non-compliance recorded" is used only where a later order of the Court itself notes the direction was not met (as with the National Road Safety Board). Every direction links to its source order.</p>
     <div class="authchart">
       <h4>Court-ordered obligations, by duty-bearer</h4>
       <div class="csub">Who the Supreme Court is currently holding to a deadline on road safety.</div>
@@ -357,15 +363,18 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     </div>
     <div class="filters" id="ledger-filters">
       <button class="fbtn active" data-lstatus="all">All directions</button>
-      <button class="fbtn" data-lstatus="overdue">Overdue</button>
-      <button class="fbtn" data-lstatus="due-soon">Due soon</button>
+      <button class="fbtn" data-lstatus="overdue">Deadline passed</button>
+      <button class="fbtn" data-lstatus="due-soon">Due within 90 days</button>
       <button class="fbtn" data-lstatus="upcoming">Upcoming</button>
       <button class="fbtn" data-lstatus="complied">Complied</button>
       <button class="fbtn" data-lstatus="ongoing">Ongoing</button>
     </div>
     <div class="tchips" id="ledger-auth"></div>
+    <p class="ledger-count" id="ledger-count" aria-live="polite"></p>
     <div class="ledger-list" id="ledger-list"></div>
-    <p class="ledger-note">"Deadline passed" means the date the Court set has gone by with compliance not confirmed on the orders we track — not a finding of government failure. "Non-compliance recorded" is used only where a later order of the Court itself notes the direction was not met (as with the National Road Safety Board). Every direction links to its source order.</p>
+    <div class="ledger-more" id="ledger-more" hidden>
+      <button class="btn btn-secondary" id="ledger-toggle" type="button" aria-expanded="false" aria-controls="ledger-list"></button>
+    </div>
   </div>
 </section>
 
@@ -552,7 +561,7 @@ const nSoon = DIRS.filter(d=>d._st==='due-soon').length;
 const nDone = DIRS.filter(d=>d._st==='complied').length;
 $('#ledger-stats').innerHTML = [
   [DIRS.length,'directions tracked','','clipboard','blue'],
-  [nOver,'overdue — deadline passed','red','alert','red'],
+  [nOver,'deadline passed','red','alert','red'],
   [nSoon,'due within 90 days','orange','clock','orange'],
   [nDone,'confirmed complied','green','done','green'],
 ].map(([n,l,c,i,t])=>`<div class="lstat ${c}">${chip(i,t)}<div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
@@ -573,7 +582,11 @@ $('#auth-bars').innerHTML = authRows.map(([a,n])=>`
 const authList = authRows.map(r=>r[0]);
 $('#ledger-auth').innerHTML = authList.map(a=>`<button class="tchip" data-lauth="${a}">${a}</button>`).join('');
 
-let lStatus='all', lAuth=null;
+// The ledger opens on a short list: 64 full cards put the docket about 17
+// screens down the page. The rest is one click away, and any link to a
+// direction further down opens the full list first (see revealHash).
+const LEDGER_PREVIEW = 8;
+let lStatus='all', lAuth=null, lShowAll=false;
 function renderLedger(){
   const inStatusBucket = (st) => lStatus==='all' ? true
     : lStatus==='overdue' ? (st==='overdue'||st==='missed')
@@ -584,7 +597,15 @@ function renderLedger(){
     return true;
   }).sort((a,b)=> (SMETA[a._st].rank - SMETA[b._st].rank) || ((a.due||'9999').localeCompare(b.due||'9999')));
 
-  $('#ledger-list').innerHTML = rows.length ? rows.map(d=>{
+  const shown = lShowAll ? rows : rows.slice(0, LEDGER_PREVIEW);
+  const filtered = lStatus!=='all' || lAuth;
+  $('#ledger-count').innerHTML = !rows.length ? ''
+    : `Showing <b>${shown.length}</b> of <b>${rows.length}</b> ${filtered?'matching directions':'directions'} · longest outstanding first`;
+  const more = $('#ledger-more'), tog = $('#ledger-toggle');
+  more.hidden = rows.length <= LEDGER_PREVIEW;
+  tog.textContent = lShowAll ? 'Show fewer' : `Show all ${rows.length} ${filtered?'matching directions':'directions'}`;
+  tog.setAttribute('aria-expanded', String(lShowAll));
+  $('#ledger-list').innerHTML = rows.length ? shown.map(d=>{
     const m = SMETA[d._st];
     const due = d.due ? `due <b>${fmt(d.due)}</b>` : '<b>no fixed date</b>';
     const link = d.link ? `<a href="${d.link}" target="_blank" rel="noopener">Read order ↗</a>` : '';
@@ -618,6 +639,10 @@ document.querySelectorAll('#ledger-auth .tchip').forEach(b=>b.addEventListener('
   document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
   lAuth = on ? null : b.dataset.lauth; if(!on) b.classList.add('active'); renderLedger();
 }));
+$('#ledger-toggle').addEventListener('click',()=>{
+  lShowAll = !lShowAll; renderLedger();
+  if(!lShowAll) $('#ledger-filters').scrollIntoView({block:'start'});
+});
 renderLedger();
 
 // ===== Coming up (next 90 days) =====
@@ -663,10 +688,24 @@ function parseListing(s){
 
 // deep link to a direction or case card (#dir-<id> / #case-<id>) — content
 // renders dynamically, so resolve the hash ourselves after first render
-if(location.hash.startsWith('#dir-') || location.hash.startsWith('#case-')){
-  const el = document.querySelector(CSS.escape ? '#'+CSS.escape(location.hash.slice(1)) : location.hash);
+function revealHash(){
+  const h = location.hash;
+  if(!(h.startsWith('#dir-') || h.startsWith('#case-'))) return;
+  const sel = CSS.escape ? '#'+CSS.escape(h.slice(1)) : h;
+  let el = document.querySelector(sel);
+  if(!el && h.startsWith('#dir-') && DIRS.some(d => 'dir-'+d.id === h.slice(1))){
+    // the direction exists but is filtered out or below the short list
+    lStatus='all'; lAuth=null; lShowAll=true;
+    document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.toggle('active', x.dataset.lstatus==='all'));
+    document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
+    renderLedger();
+    el = document.querySelector(sel);
+  }
   if(el){ el.scrollIntoView(); el.classList.add('flash'); }
 }
+revealHash();
+// "Coming up" deadline cards and permalinks point at #dir-<id> on this same page
+window.addEventListener('hashchange', revealHash);
 // scroll spy (Parliament Watch pattern): highlight the section in view on both navs
 const NAV_IDS = ['ledger','docket','suo-motu','appeals','precedents','watchlist'];
 function spy(){
@@ -744,7 +783,7 @@ function renderCase(c, newSet){
       <span class="chip-type">${typeChip(c)}</span>
       ${newSet.has(c.id)?'<span class="badge new">New</span>':''}
       <span class="badge ${c.status}">${statusLabel(c.status)}</span>
-      <div class="meta"><b>${c.case_number}</b> · ${c.case_type} · filed ${c.filed_year} · ${c.order_count} orders on record (${fmt(c.first_order)} → ${fmt(c.latest_order)})${c.next_listing?` · Next listing: <b>${c.next_listing}</b>`:''}</div>
+      <div class="meta">${/verify/i.test(c.case_number||'')?'':`<b>${c.case_number}</b> · `}${c.case_type} · filed ${c.filed_year} · ${c.order_count} orders on record (${fmt(c.first_order)} → ${fmt(c.latest_order)})${listingMeta(c)}</div>
     </div>
     <p class="why">${c.why_it_matters||''}</p>
     ${c.latest_development?`<div class="latest"><b>Latest development</b>${c.latest_development}</div>`:''}
@@ -752,6 +791,28 @@ function renderCase(c, newSet){
     <button class="toggle" data-toggle="${c.id}">Show order timeline (${c.order_count}) ▾</button>
     <div class="timeline" id="tl-${c.id}">${rows}${routine>0?`<div class="tmore">${majors.length} orders summarised above are marked significant; the remaining ${routine} are procedural (listings, extensions, exemptions).</div>`:''}</div>
   </div>`;
+}
+
+// "Next listing" is free text taken from the latest order. Once that date has
+// gone by with no later order on record, calling it "next" is wrong: say so.
+// Only the leading date expression counts ("~September 2026 — ... per the
+// 26 May 2026 order" is about September, not May).
+function listingPassed(c){
+  const head = (c.next_listing||'').split(/ — | \(per /)[0];
+  let d = parseListing(head);
+  if(!d){
+    const m = head.match(/([A-Za-z]+)\s+(\d{4})/), mo = m && MONTHS_[m[1].toLowerCase()];
+    if(mo) d = `${m[2]}-${String(mo).padStart(2,'0')}-${new Date(Date.UTC(+m[2], mo, 0)).getUTCDate()}`;
+  }
+  if(!d) return false;
+  const today = new Date(Date.now() + 330*60000).toISOString().slice(0,10);
+  return d < today && (c.latest_order||'') < d;
+}
+function listingMeta(c){
+  if(!c.next_listing) return '';
+  return listingPassed(c)
+    ? ` · Listing date passed: <b>${c.next_listing}</b> · no later order on record yet`
+    : ` · Next listing: <b>${c.next_listing}</b>`;
 }
 
 function render(){
