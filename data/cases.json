@@ -24,6 +24,13 @@
    "why_it_matters": "The master road-safety PIL, filed by orthopaedic surgeon Dr. S. Rajaseekaran. Created the SC Committee on Road Safety (22 Apr 2014), forced state road-safety policies and lead agencies (30 Nov 2017), produced the Jan 2024 hit-and-run compensation directions, and is now driving vehicle-tracking and speed-governor enforcement.",
    "latest_development": "On 20 November 2026, on mentioning by the ASG for the Union of India, the Court deferred the hearing scheduled for 25 November 2026 and relisted the writ petition for 16 December 2026.",
    "next_listing": "16 December 2026 (per order of 2026-11-20)",
+   "topics": [
+    "post-crash care",
+    "enforcement",
+    "institutions",
+    "victim compensation",
+    "pedestrian safety"
+   ],
    "orders": [
     {
      "date": "2014-02-18",
@@ -697,6 +704,11 @@
    "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
    "latest_development": "18 November 2026 (reportable, 2026 INSC 1243): the Court sent occupants facing NHAI removal notices to their jurisdictional High Courts, protected their existing structures from demolition until those cases are decided, and held that removal must follow the Section 26 notice-and-hearing procedure of the Control of National Highways (Land and Traffic) Act, 2002. Its 13 April 2026 directions did not decide whether any particular structure is an encroachment. The main matter stays pending, to be listed in due course.",
    "next_listing": "No date fixed; to be listed in due course (per the judgment of 18 November 2026)",
+   "topics": [
+    "road engineering",
+    "highways",
+    "institutions"
+   ],
    "orders": [
     {
      "date": "2025-11-10",
@@ -794,6 +806,10 @@
    ],
    "why_it_matters": "The Good Samaritan case: 30 Mar 2016 judgment gave MoRTH's 2015 Good Samaritan guidelines the force of law, protecting bystanders who help crash victims — later codified as S.134A MV Act.",
    "latest_development": "Disposed 30 Mar 2016; guidelines later codified as S.134A MV Act (2019 amendment).",
+   "topics": [
+    "post-crash care",
+    "good samaritan"
+   ],
    "orders": [
     {
      "date": "2014-01-31",
@@ -970,6 +986,10 @@
    "why_it_matters": "SaveLIFE's second-generation petition: integrate all emergency helplines into 112, Good Samaritan grievance redressal in every state, and full operationalization of cashless treatment. The May 2026 order turned PM RAHAT rollout into a court-monitored obligation.",
    "latest_development": "On 20 November 2026 the matter was not taken up and was adjourned to 4 December 2026.",
    "next_listing": "4 December 2026 (per order of 2026-11-20)",
+   "topics": [
+    "post-crash care",
+    "good samaritan"
+   ],
    "orders": [
     {
      "date": "2024-11-06",
@@ -1103,6 +1123,10 @@
    "why_it_matters": "15 Dec 2022 judgment (Nazeer & Maheshwari JJ) issued nationwide directions on the Detailed Accident Report workflow — police/insurer timelines, MACT registration, coordination portal — reshaping how compensation claims begin. Compliance is monitored through MA 825/2023.",
    "latest_development": "On 2 November 2026 the Court ordered the fixed deposit maturing on 11.11.2026 to be re-invested for three months and directed the matters to be listed on a non-miscellaneous day after four weeks.",
    "next_listing": "~1 December 2026 — 'list on a non-miscellaneous day after four weeks' per the 2 November 2026 order",
+   "topics": [
+    "victim compensation",
+    "MACT process"
+   ],
    "orders": [
     {
      "date": "2019-01-04",
@@ -1389,6 +1413,10 @@
    ],
    "why_it_matters": "Banned liquor vends within 500m of national and state highways (Dec 2016), relying on National Road Safety Council advice; scope clarified for municipal areas in 2017. The landmark drunk-driving-prevention order.",
    "latest_development": "Disposed; 31 Mar 2017 clarification modified the ban's application.",
+   "topics": [
+    "enforcement",
+    "highways"
+   ],
    "orders": [
     {
      "date": "2016-12-15",
@@ -1423,6 +1451,10 @@
    ],
    "why_it_matters": "Five-judge bench (6 Nov 2024) settled whether an LMV licence covers transport vehicles under 7,500 kg — upholding Mukund Dewangan — while recording road-safety concerns about licensing for MoRTH to address through amendments.",
    "latest_development": "Disposed 6 Nov 2024 by Constitution Bench.",
+   "topics": [
+    "licensing and vehicles",
+    "insurance"
+   ],
    "orders": [
     {
      "date": "2018-05-03",
@@ -1473,6 +1505,11 @@
    "why_it_matters": "National Highway safety PIL built on the Control of National Highways (Land and Traffic) Act 2002 and Highway Administration Rules 2004 — pressing for functioning highway administrations. The Justice Sapre Road Safety Committee reports to the Court through this matter.",
    "latest_development": "22 September 2026: tagged with the Phalodi suo motu (SMW(C) 9/2025), which is examining compliance with this petition's directions on national-highway encroachments; it was listed with that matter on 6 and 13 October 2026.",
    "next_listing": "Tagged with In Re: Phalodi Accident (SMW(C) 9/2025); follows that matter",
+   "topics": [
+    "highways",
+    "road engineering",
+    "institutions"
+   ],
    "orders": [
     {
      "date": "2024-08-27",
@@ -1514,6 +1551,10 @@
    ],
    "why_it_matters": "Petition to enforce the Rajaseekaran order of 22 Apr 2014 across states — an example of how the master PIL's directions were operationalised through satellite litigation.",
    "latest_development": "Disposed (last order Aug 2016).",
+   "topics": [
+    "victim compensation",
+    "insurance"
+   ],
    "orders": [
     {
      "date": "2014-07-14",
@@ -1555,6 +1596,10 @@
    ],
    "why_it_matters": "Early PIL on deficient road infrastructure and traffic-control devices. Dismissed (11 Apr 2008, Katju J) holding courts cannot direct legislation — the doctrinal gap that Rajaseekaran later filled through continuing mandamus.",
    "latest_development": "Dismissed 11 Apr 2008.",
+   "topics": [
+    "road engineering",
+    "institutions"
+   ],
    "orders": [
     {
      "date": "2008-04-11",
@@ -1582,6 +1627,10 @@
    ],
    "why_it_matters": "Banned black films / dark tinted glass on vehicles beyond prescribed visual light transmission (Apr 2012) on road-safety and crime-prevention grounds.",
    "latest_development": "Disposed 27 Apr 2012.",
+   "topics": [
+    "enforcement",
+    "licensing and vehicles"
+   ],
    "orders": [
     {
      "date": "2012-04-27",
@@ -1609,6 +1658,9 @@
    ],
    "why_it_matters": "Upheld compulsory helmet rules (1988) against constitutional challenge — the foundation for helmet mandates nationwide.",
    "latest_development": "Disposed 29 Aug 1988.",
+   "topics": [
+    "enforcement"
+   ],
    "orders": [
     {
      "date": "1988-08-29",
@@ -1636,6 +1688,10 @@
    ],
    "why_it_matters": "Precursor to K. Balu: SC refused to disturb the P&H High Court's interim orders against Haryana's policy of licensing liquor shops along National Highways, noting the MoRTH Road Safety Cell circular.",
    "latest_development": "SLP dismissed 10 Mar 2014.",
+   "topics": [
+    "enforcement",
+    "highways"
+   ],
    "orders": [
     {
      "date": "2014-03-10",
@@ -1663,6 +1719,10 @@
    ],
    "why_it_matters": "The foundation of post-crash care law in India: every doctor, government or private, must provide immediate emergency treatment to accident victims without waiting for police formalities. Every later Good Samaritan and cashless-treatment direction builds on this.",
    "latest_development": "Disposed 28 Aug 1989; the duty-to-treat principle now underpins S.134A MV Act and PM RAHAT.",
+   "topics": [
+    "post-crash care",
+    "good samaritan"
+   ],
    "orders": [
     {
      "date": "1989-08-28",
@@ -1691,6 +1751,10 @@
    ],
    "why_it_matters": "The overloading case: struck at state notifications that let overloaded commercial vehicles ply on payment, holding axle-load limits under the MV Act must be enforced, not monetised — overloading being a major crash and road-damage cause.",
    "latest_development": "Disposed 9 Nov 2005 (Pasayat & Thakker JJ).",
+   "topics": [
+    "enforcement",
+    "highways"
+   ],
    "orders": [
     {
      "date": "2005-11-09",
@@ -1719,6 +1783,10 @@
    ],
    "why_it_matters": "The pre-Gohar Mohammed reform vehicle: a reportable three-judge order (17 Dec 2009) confronting four systemic MACT failures — uncompensated victims of hit-and-run and uninsured vehicles, delayed claim registration, and police-tribunal coordination — with follow-up orders into 2018.",
    "latest_development": "Disposed; monitoring orders ran through Feb 2018. Its reporting mechanism was later expanded by Gohar Mohammed (2022).",
+   "topics": [
+    "victim compensation",
+    "MACT process"
+   ],
    "orders": [
     {
      "date": "2009-12-17",
@@ -1768,6 +1836,10 @@
    ],
    "why_it_matters": "The homemaker-valuation judgment: fixed ₹30,000/month as the floor value of a homemaker's work — a new 'loss of domestic care' head rising 10% cumulatively every three years — recast homemakers as 'Nation Builders', and issued nationwide directions to High Courts and tribunals on clearing decades-old MACT appeals. The family here had waited 25 years.",
    "latest_development": "Decided 11 Jun 2026 (Karol & Kotiswar Singh JJ); judgment circulated to the Registrars General of all High Courts for compliance.",
+   "topics": [
+    "victim compensation",
+    "MACT process"
+   ],
    "orders": [
     {
      "date": "2026-06-11",
@@ -1797,6 +1869,10 @@
    "why_it_matters": "Born from a five-year-old killed walking to school on a road with no footpath or crossing: the Court declared the right to walk a fundamental right under Article 19(1)(d), placed a correlative duty on urban development authorities, municipalities and panchayats to demarcate, build and maintain footpaths, and made breach actionable for restitution and compensation independent of the MV Act. The Court then converted the disposed appeal into a continuing Article 32 matter, impleading MoHUA, MoRD and MoRTH.",
    "latest_development": "On 6 November 2026 the Court concluded the hearing and reserved its order. The written order does not record what the Union reported on the two steps set on 5 October (the authority responsible for footpaths, and five pilot towns).",
    "next_listing": "Order reserved on 6 November 2026; no date fixed",
+   "topics": [
+    "pedestrian safety",
+    "institutions"
+   ],
    "orders": [
     {
      "date": "2026-06-19",
@@ -1862,6 +1938,10 @@
    ],
    "why_it_matters": "Para 26 of the judgment makes five suggestions to the Centre and States 'for consideration and implementation' — full implementation of existing cattle laws, a compensation mechanism for bovine-caused road accidents (pedestrian and vehicular), mandatory animal tagging, receipts for owner transfers to shelters, and a nodal officer in every Corporation/Department. They are recommendations, not binding directions with deadlines, but the judgment was ordered circulated to all Chief Secretaries, UT Administrators and State Legal Services Authorities 'for taking appropriate action'.",
    "latest_development": "2026-07-31: Widow of a man fatally injured by a stray bull on a road in Sangrur challenged the High Court Division Bench's refusal of writ relief; the Supreme Court awarded Rs.15 lakh lump sum (expressly not a precedent) and issued systemic suggestions to the Centre and States on stray cattle management and compensation.",
+   "topics": [
+    "victim compensation",
+    "institutions"
+   ],
    "orders": [
     {
      "date": "2026-07-31",
@@ -1893,6 +1973,11 @@
    "why_it_matters": "The Court mandated a four-layer motor insurance structure, uniform policy wording, extended third-party cover to 4 years (cars) and 6 years (two-wheelers), handheld insurance-verification devices for State Police, and fuel-linked/ANPR pilot projects to curb uninsured vehicles nationwide.",
    "latest_development": "On 22 September 2026 the Court gave the Union four more weeks to file a consolidated statement of every stakeholder's compliance with the 4 August directions on uninsured vehicles, and directed listing after four weeks. No later order is on Indian Kanoon yet.",
    "next_listing": "~20 October 2026 — 'list after four weeks' per the 22 September 2026 order",
+   "topics": [
+    "insurance",
+    "enforcement",
+    "MACT process"
+   ],
    "orders": [
     {
      "date": "2026-08-04",
@@ -1941,6 +2026,7 @@
    "date": "2026-11-25",
    "title": "Sukumarbai & Ors. vs United India Insurance Company Ltd. & Anr.",
    "gist": "A three-Judge Bench (Vikram Nath, Sandeep Mehta, Aparesh Kumar Singh) affirmed that the insurer had no statutory or contractual liability for a passenger killed in a privately owned Tata Sumo covered by an Act Only Policy, but invoked Article 142 to direct the insurer to first satisfy the Rs 7,79,800 award with 7.5% interest and recover it from the vehicle owner through execution before the Tribunal. The Court laid down four requirements — established liability, exceptional necessity, necessity and proportionality, and procedural fairness with recovery safeguards — for such directions.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/199086973/"
   },
   {
@@ -1948,6 +2034,7 @@
    "date": "2026-09-16",
    "title": "K Rashik vs National Insurance Company Ltd",
    "gist": "Reportable ruling (2026 INSC 996, Justices Bhuyan and Chandurkar) on where a MACT claim can be filed: under Section 166(2), only where the accident happened, where the claimant lives or works, or where the defendant (owner or driver) lives. An insurer's office does not count, because 'defendant' there does not include the insurer; an insurer that objects at the outset can have the claim moved. This narrows claimants' choice of tribunal.",
+   "topic": "Claims procedure and jurisdiction",
    "link": "https://indiankanoon.org/doc/191273560/"
   },
   {
@@ -1955,6 +2042,7 @@
    "date": "2026-07-30",
    "title": "Reliance General Insurance Company Ltd vs Om Parkash",
    "gist": "The Supreme Court set aside the High Court's finding that the driver held a valid licence on the accident date, holding the insurer not ultimately liable but applying pay-and-recover; it also suggested MoRTH and States run awareness campaigns, ensure strict compliance and streamline licence issuance/renewal and driving school regulation.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/151189997/"
   },
   {
@@ -1962,6 +2050,7 @@
    "date": "2026-07-20",
    "title": "The Oriental Insurance Co. Ltd vs Durg Roadways Private Limited",
    "gist": "Insurer's appeal against being held liable for a Durg-to-Nepal bus accident was dismissed; the Court ruled the 'Limitations as to Use' permit clause provided coverage regardless of location, applied contra proferentem, held non-payment of IMT additional premium immaterial given Section 147(5) MVA's overriding effect, and advised IRDAI to standardise cross-border coverage clauses.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/67856717/"
   },
   {
@@ -1969,6 +2058,7 @@
    "date": "2026-06-11",
    "title": "Shishupal @ Shish Ram v. Surjeet",
    "gist": "Created the 'loss of domestic care' head: ₹30,000/month — rising 10% every three years — as the minimum value of a homemaker's work in MACT cases; a stand-in income for non-earning homemakers, additional to proved income for working women.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/158690569/"
   },
   {
@@ -1976,6 +2066,7 @@
    "date": "2026-06-11",
    "title": "The Commissioner, Bruhat Bangalore Mahanagara Palike vs K.K. Umesh Kumar",
    "gist": "A stationary autorickshaw passenger was injured when a tree branch fell during rain. The Supreme Court held the vehicle played no active role in the accident so a Section 166 MV Act claim may not be appropriate, but under Article 142 enhanced compensation to Rs.25 lakh to avoid further litigation, keeping apportionment undisturbed.",
+   "topic": "Claims procedure and jurisdiction",
    "link": "https://indiankanoon.org/doc/145672176/"
   },
   {
@@ -1983,6 +2074,7 @@
    "date": "2024-12-11",
    "title": "Baby Sakshi Greola v. Manzoor Ahmad Simon",
    "gist": "A seven-year-old struck by a speeding car on a zebra crossing: the Court set aside the High Court's order and enhanced the MACT compensation, insurer to pay within eight weeks — pedestrian priority at crossings, vindicated in compensation law.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/49053501/"
   },
   {
@@ -1990,6 +2082,7 @@
    "date": "2024-11-06",
    "title": "Bajaj Allianz v. Rambha Devi (Constitution Bench)",
    "gist": "LMV licence holders may drive transport vehicles under 7,500 kg; licensing-reform concerns flagged to MoRTH.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/138121606/"
   },
   {
@@ -1997,6 +2090,7 @@
    "date": "2022-12-15",
    "title": "Gohar Mohammed v. UP SRTC",
    "gist": "Nationwide Detailed Accident Report directions — police and insurer timelines that begin every compensation claim (also a tracked case).",
+   "topic": "Claims procedure and jurisdiction",
    "link": "https://indiankanoon.org/doc/85494539/"
   },
   {
@@ -2004,6 +2098,7 @@
    "date": "2022-02-17",
    "title": "Regional Transport Authority v. Shaju",
    "gist": "Upheld Kerala rule letting RTAs refuse replacement of a permit vehicle with an older one (S.83 MV Act) — vehicle age and road-worthiness as valid safety criteria.",
+   "topic": "Regulation and prevention",
    "link": "https://indiankanoon.org/doc/191389481/"
   },
   {
@@ -2011,6 +2106,7 @@
    "date": "2021-11-16",
    "title": "Kurvan Ansari v. Shyam Kishore Murmu",
    "gist": "Raised the notional-income basis for deceased children, criticising states' failure to update compensation schedules.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/117494438/"
   },
   {
@@ -2018,6 +2114,7 @@
    "date": "2021-01-05",
    "title": "Kirti v. Oriental Insurance",
    "gist": "Fixed notional income for homemakers and extended future prospects to notional-income cases — recognising unpaid domestic work.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/106405133/"
   },
   {
@@ -2025,6 +2122,7 @@
    "date": "2020-06-30",
    "title": "United India Insurance v. Satinder Kaur",
    "gist": "Consolidated the post-Pranay Sethi law on just compensation — income assessment, future prospects and conventional heads.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/142302016/"
   },
   {
@@ -2032,6 +2130,7 @@
    "date": "2020-02-05",
    "title": "Kajal v. Jagdish Chand",
    "gist": "A comprehensive framework for compensating a child left with 100% disability — attendant care, future treatment, interest.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/180443810/"
   },
   {
@@ -2039,6 +2138,7 @@
    "date": "2018-09-18",
    "title": "Magma General Insurance v. Nanu Ram",
    "gist": "Recognised loss of consortium in its spousal, parental and filial forms as distinct heads of compensation.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/175246407/"
   },
   {
@@ -2046,6 +2146,7 @@
    "date": "2018-04-06",
    "title": "Mangla Ram v. Oriental Insurance",
    "gist": "MACT claims are decided on preponderance of probability — strict criminal-trial proof standards do not apply.",
+   "topic": "Claims procedure and jurisdiction",
    "link": "https://indiankanoon.org/doc/153452910/"
   },
   {
@@ -2053,6 +2154,7 @@
    "date": "2017-10-31",
    "title": "National Insurance Co. v. Pranay Sethi (Constitution Bench)",
    "gist": "Settled 'future prospects' additions and conventional heads for just compensation, resolving conflicting benches.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/139996215/"
   },
   {
@@ -2060,6 +2162,7 @@
    "date": "2017-07-03",
    "title": "Mukund Dewangan v. Oriental Insurance (3-judge)",
    "gist": "LMV licence holders may drive transport vehicles under 7,500 kg — later affirmed by the Rambha Devi Constitution Bench.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/120470411/"
   },
   {
@@ -2067,6 +2170,7 @@
    "date": "2016-12-15",
    "title": "State of Tamil Nadu v. K. Balu",
    "gist": "Liquor vends banned within 500m of highways — drunk-driving prevention as a constitutional road-safety obligation.",
+   "topic": "Regulation and prevention",
    "link": "https://indiankanoon.org/doc/41625467/"
   },
   {
@@ -2074,6 +2178,7 @@
    "date": "2015-03-30",
    "title": "State of Punjab v. Saurabh Bakshi",
    "gist": "Deterrent sentencing in rash-driving deaths reiterated, with a call to the legislature to revisit inadequate penalties.",
+   "topic": "Criminal sentencing",
    "link": "https://indiankanoon.org/doc/155597603/"
   },
   {
@@ -2081,6 +2186,7 @@
    "date": "2013-04-02",
    "title": "Reshma Kumari v. Madan Mohan",
    "gist": "Three-judge bench affirming Sarla Verma's multiplier approach — bound the compensation method ahead of Pranay Sethi.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/86908489/"
   },
   {
@@ -2088,6 +2194,7 @@
    "date": "2012-08-03",
    "title": "State v. Sanjeev Nanda (BMW hit-and-run)",
    "gist": "Drunk-driving death treated as culpable homicide (S.304 Part II) — a marker for the accountability of intoxicated drivers.",
+   "topic": "Criminal sentencing",
    "link": "https://indiankanoon.org/doc/190237958/"
   },
   {
@@ -2095,6 +2202,7 @@
    "date": "2012-01-12",
    "title": "Alister Anthony Pareira v. State of Maharashtra",
    "gist": "Upheld conviction and custodial sentence in the Mumbai drunk-driving pavement deaths case — deterrence in drunk-driving sentencing.",
+   "topic": "Criminal sentencing",
    "link": "https://indiankanoon.org/doc/79026890/"
   },
   {
@@ -2102,6 +2210,7 @@
    "date": "2009-04-15",
    "title": "Sarla Verma v. Delhi Transport Corporation",
    "gist": "Standardised the multiplier method for motor accident compensation — the arithmetic every MACT in India now uses.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/837924/"
   },
   {
@@ -2109,6 +2218,7 @@
    "date": "2004-01-05",
    "title": "National Insurance Co. v. Swaran Singh (3-judge)",
    "gist": "Licence-defect defences narrowed: the insurer must prove a wilful, fundamental breach to escape third-party liability; pay-and-recover preserved.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/1827019/"
   },
   {
@@ -2116,6 +2226,7 @@
    "date": "2002-12-03",
    "title": "Nagappa v. Gurudayal Singh",
    "gist": "Tribunals may award compensation beyond the amount claimed — just compensation is not capped by the pleading.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/47966/"
   },
   {
@@ -2123,6 +2234,7 @@
    "date": "2000-05-04",
    "title": "Dalbir Singh v. State of Haryana",
    "gist": "Sentencing in S.304A road-death cases: leniency towards rash drivers undermines deterrence — the custodial norm affirmed.",
+   "topic": "Criminal sentencing",
    "link": "https://indiankanoon.org/doc/611175/"
   },
   {
@@ -2130,6 +2242,7 @@
    "date": "1996-07-17",
    "title": "Sohan Lal Passi v. P. Sesh Reddy",
    "gist": "An insurer escapes liability only for the insured's wilful breach of licence conditions — protecting third-party claimants.",
+   "topic": "Insurer liability and licence defences",
    "link": "https://indiankanoon.org/doc/772259/"
   },
   {
@@ -2137,6 +2250,7 @@
    "date": "1996-05-07",
    "title": "U.P. SRTC v. Trilok Chandra",
    "gist": "Recalibrated the multiplier method and capped multipliers — the bridge between Susamma Thomas and Sarla Verma.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/1554972/"
   },
   {
@@ -2144,6 +2258,7 @@
    "date": "1993-01-06",
    "title": "G.M., Kerala SRTC v. Susamma Thomas",
    "gist": "Established the multiplier method as the governing approach to computing fatal-accident compensation.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/1683465/"
   },
   {
@@ -2151,6 +2266,7 @@
    "date": "1991-07-17",
    "title": "Shivaji Dayanu Patil v. Vatschala Uttam More",
    "gist": "'Arising out of the use of a motor vehicle' read expansively — a tanker explosion hours after the collision remained compensable.",
+   "topic": "Claims procedure and jurisdiction",
    "link": "https://indiankanoon.org/doc/712469/"
   },
   {
@@ -2158,6 +2274,7 @@
    "date": "1977-02-09",
    "title": "Manjusri Raha v. B.L. Gupta",
    "gist": "Early three-judge call for realistic, non-conservative compensation in fatal road accidents.",
+   "topic": "Compensation method",
    "link": "https://indiankanoon.org/doc/987419/"
   }
  ],

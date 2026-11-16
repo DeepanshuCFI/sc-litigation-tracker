@@ -47,6 +47,13 @@ CURATION_PATH = ROOT / "pipeline" / "curation.json"
 MODEL = "claude-opus-5"
 CLI_TIMEOUT_S = 300
 
+# Fixed lists behind the dashboard's filter chips. `themes` stays free-form (the
+# fine tags printed on each case card and matched by search); `topics` and
+# `precedent_topic` must come from these lists so the chip rows stop growing by
+# one tag per new case (30 themes for 20 cases by Nov 2026).
+CASE_TOPICS = ["victim compensation", "MACT process", "insurance", "post-crash care", "good samaritan", "highways", "road engineering", "pedestrian safety", "enforcement", "licensing and vehicles", "institutions"]
+PRECEDENT_TOPICS = ["Compensation method", "Insurer liability and licence defences", "Claims procedure and jurisdiction", "Criminal sentencing", "Regulation and prevention"]
+
 CLASSIFY_SCHEMA = {
     "type": "object",
     "properties": {
@@ -58,12 +65,15 @@ CLASSIFY_SCHEMA = {
         "status": {"type": "string", "enum": ["pending", "monitoring", "disposed", "unknown"]},
         "filed_year": {"type": "integer"},
         "themes": {"type": "array", "items": {"type": "string"}},
+        "topics": {"type": "array", "items": {"type": "string", "enum": CASE_TOPICS}},
+        "precedent_topic": {"type": "string", "enum": PRECEDENT_TOPICS + [""]},
         "why_it_matters": {"type": "string"},
         "gist": {"type": "string"},
         "match_pattern": {"type": "string"},
     },
     "required": ["action", "reason", "title", "case_number", "case_type", "status",
-                 "filed_year", "themes", "why_it_matters", "gist", "match_pattern"],
+                 "filed_year", "themes", "topics", "precedent_topic", "why_it_matters", "gist",
+                 "match_pattern"],
     "additionalProperties": False,
 }
 
@@ -405,7 +415,10 @@ def main() -> None:
         "\nGround every field in the document text provided — never invent case numbers, benches, or "
         "holdings. If a field is not determinable from the text, use 'unknown' or an empty string. "
         "Keep why_it_matters and gist to 1-2 sentences each, factual and specific. match_pattern must "
-        "be a lowercase substring of the case title (petitioner name) usable to match related orders."
+        "be a lowercase substring of the case title (petitioner name) usable to match related orders. "
+        "topics: one to three entries from the fixed list in the schema, for a case you would 'track' "
+        "(empty list otherwise). precedent_topic: exactly one entry from the fixed list for a 'notable' "
+        "judgment, describing the rule it sets (empty string otherwise). themes may be free text."
     )
 
     # 1. classify new unassigned candidates
@@ -449,6 +462,9 @@ def main() -> None:
                     "status": result["status"] if result["status"] != "unknown" else "pending",
                     "filed_year": result["filed_year"] or int(c["date"][:4]),
                     "themes": result["themes"][:5],
+                    # only values from the fixed list reach the chips; a reply that
+                    # ignores the list simply leaves the case without a topic
+                    "topics": [t for t in result.get("topics", []) if t in CASE_TOPICS][:3],
                     "why_it_matters": result["why_it_matters"],
                     "latest_development": f"{c['date']}: {result['gist']}" if result["gist"] else "",
                     "order_notes": {c["date"]: {"gist": result["gist"], "significance": "major"}} if result["gist"] else {},
@@ -456,10 +472,11 @@ def main() -> None:
                 new_case_ids.append(cid)
                 changed = True
             elif result["action"] == "notable":
-                curation["notable_judgments"].append({
-                    "tid": c["tid"], "date": c["date"], "title": result["title"],
-                    "gist": result["gist"],
-                })
+                nj = {"tid": c["tid"], "date": c["date"], "title": result["title"],
+                      "gist": result["gist"]}
+                if result.get("precedent_topic") in PRECEDENT_TOPICS:
+                    nj["topic"] = result["precedent_topic"]
+                curation["notable_judgments"].append(nj)
                 changed = True
             elif result["action"] == "borderline":
                 curation["borderline_excluded"].append({"why": result["reason"], "cases": [result["title"]]})

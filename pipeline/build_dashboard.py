@@ -106,6 +106,10 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .ic-green{background:#E4F7EC;color:var(--success)}
 .stat .num{font-family:Montserrat;font-size:36px;font-weight:700;color:var(--brand);line-height:1}
 .stat .num.watch{color:var(--warning)}
+.stat .num.red{color:var(--danger)}
+.stat .num.green{color:var(--success)}
+a.stat{display:block;text-decoration:none;color:inherit}
+a.stat:hover{text-decoration:none}
 .stat .lbl{margin-top:8px;font-size:14px;color:var(--muted)}
 
 /* filters */
@@ -199,7 +203,19 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .authchart{margin-top:24px;border:1px solid var(--border);border-radius:16px;background:var(--white);padding:24px 28px}
 .authchart h4{font-family:Montserrat;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--dark)}
 .authchart .csub{font-size:12.5px;color:var(--muted);margin-top:4px;margin-bottom:20px}
-.abar{display:grid;grid-template-columns:minmax(88px,168px) 1fr 28px;align-items:center;gap:14px;margin:11px 0}
+.abar{display:grid;grid-template-columns:minmax(88px,168px) 1fr 28px;align-items:center;gap:14px;width:calc(100% + 20px);margin:3px -10px;padding:8px 10px;border:0;border-radius:10px;background:none;font:inherit;cursor:pointer;transition:background .12s}
+.abar:hover{background:var(--brand-lite)}
+.abar.active{background:color-mix(in srgb,var(--brand) 10%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--brand) 40%,transparent)}
+.abar.active .an{color:var(--brand);font-weight:600}
+.abar .track,.abar .fill,.abar .an,.abar .av{display:block}
+.authchart .cnote{margin-top:14px;font-size:12.5px;color:var(--muted)}
+.tchip .tn{margin-left:6px;font-size:11px;font-weight:600;opacity:.7}
+.nj-topics{margin-top:28px}
+.nj-topics .tchip{background:transparent;border-color:color-mix(in srgb,var(--white) 30%,transparent);color:var(--white)}
+.nj-topics .tchip:hover{border-color:color-mix(in srgb,var(--white) 70%,transparent)}
+.nj-topics .tchip.active{background:var(--white);border-color:var(--white);color:var(--brand);font-weight:600}
+.nj .njtopic{margin-top:6px;font-size:12px;color:color-mix(in srgb,var(--white) 72%,transparent)}
+.nj-topics + .njgrid{margin-top:20px}
 .abar .an{font-size:13px;color:var(--dark);text-align:right;line-height:1.3}
 .abar .track{height:14px;background:var(--brand-lite);border-radius:9999px;overflow:hidden}
 .abar .fill{height:100%;background:var(--brand);border-radius:9999px;min-width:14px}
@@ -410,8 +426,9 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     <p class="ledger-note">"Deadline passed" means the date the Court set has gone by with compliance not confirmed on the orders we track — not a finding of government failure. "Non-compliance recorded" is used only where a later order of the Court itself notes the direction was not met (as with the National Road Safety Board). Every direction links to its source order.</p>
     <div class="authchart">
       <h4>Court-ordered obligations, by duty-bearer</h4>
-      <div class="csub">Who the Supreme Court is currently holding to a deadline on road safety.</div>
-      <div id="auth-bars"></div>
+      <div class="csub">Who the Supreme Court is currently holding to a deadline on road safety. A direction addressed to more than one body counts once under each, so the bars add up to more than the <span id="auth-total"></span> directions tracked. Select a bar to filter the list below.</div>
+      <div id="auth-bars" role="group" aria-label="Filter directions by duty-bearer"></div>
+      <p class="cnote" id="auth-other" hidden></p>
     </div>
     <div class="filters" id="ledger-filters">
       <button class="fbtn active" data-lstatus="all">All directions</button>
@@ -421,7 +438,6 @@ footer{border-top:1px solid var(--border);background:var(--white)}
       <button class="fbtn" data-lstatus="complied">Complied</button>
       <button class="fbtn" data-lstatus="ongoing">Ongoing</button>
     </div>
-    <div class="tchips" id="ledger-auth"></div>
     <p class="ledger-count" id="ledger-count" aria-live="polite"></p>
     <div class="ledger-list" id="ledger-list"></div>
     <div class="ledger-more" id="ledger-more" hidden>
@@ -444,7 +460,7 @@ footer{border-top:1px solid var(--border);background:var(--white)}
       <input class="search" id="search" type="search" placeholder="Search cases, directions and judgments…" autocomplete="off" data-q>
     </div>
     <div class="tchips" id="theme-chips"></div>
-    <p class="fnote">Status and theme filters apply across all three docket sections below. Search covers the whole page: directions, cases and judgments.</p>
+    <p class="fnote">Status and topic filters apply across all three docket sections below. Search covers the whole page: directions, cases and judgments.</p>
     <div class="group-top" style="margin-top:36px"><div></div><div class="gcount"><div class="num" id="count-pil"></div><div class="lbl">petitions</div></div></div>
     <div class="case-list" id="list-pil"></div>
   </div>
@@ -483,6 +499,7 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     <span class="eyebrow">Precedent Feed</span>
     <h2 class="h2">Judgments that set the rules<br><span class="accent">for every crash victim.</span></h2>
     <p class="lead">Not systemic monitoring cases — the rulings every Motor Accident Claims Tribunal, insurer and claimant lawyer works from: compensation method, insurer liability, licence law and sentencing.</p>
+    <div class="tchips nj-topics" id="nj-topics" role="group" aria-label="Filter judgments by topic"></div>
     <div class="njgrid" id="nj-grid"></div>
   </div>
 </section>
@@ -578,14 +595,7 @@ const ICONS = {
   done:'<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
 };
 const chip = (icon,tone)=>`<div class="ic ic-${tone}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[icon]}</svg></div>`;
-$('#stats').innerHTML = [
-  [DB.cases.length,'systemic cases tracked','','scale','blue'],
-  [live,'pending before the Court','','hourglass','blue'],
-  [mon,'under compliance monitoring','watch','eye','orange'],
-  [disp,'disposed with directions','','check','blue'],
-  [orders,'orders indexed','','file','blue'],
-  [DB.notable_judgments.length,'precedent judgments','','bookmark','blue']
-].map(([n,l,c,i,t])=>`<div class="stat">${chip(i,t)}<div class="num ${c}">${n}</div><div class="lbl">${l}</div></div>`).join('');
+// (the hero tiles are filled in further down, once the ledger's numbers exist)
 
 // ===== Accountability Ledger =====
 const DIRS = DB.directions || [];
@@ -643,21 +653,49 @@ $('#ledger-stats').innerHTML = [
   [nDone,'confirmed complied','green','done','green'],
 ].map(([n,l,c,i,t])=>`<div class="lstat ${c}">${chip(i,t)}<div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
 
-// by-authority bar chart (single-hue magnitude)
-const authCounts = {};
-DIRS.forEach(d=>{authCounts[d.authority]=(authCounts[d.authority]||0)+1;});
-const authRows = Object.entries(authCounts).sort((a,b)=>b[1]-a[1]);
-const authMax = Math.max(...authRows.map(r=>r[1]),1);
-$('#auth-bars').innerHTML = authRows.map(([a,n])=>`
-  <div class="abar">
-    <div class="an">${a}</div>
-    <div class="track"><div class="fill" style="width:${Math.round(n/authMax*100)}%"></div></div>
-    <div class="av">${n}</div>
-  </div>`).join('');
+// Hero tiles: what has come due first, then the size of the record. The first
+// tile counts every date that has gone by without compliance on the record;
+// the second says how many of those the Court itself has recorded as not met,
+// so the larger number is never read as a count of proven failures.
+const nMissed = DIRS.filter(d=>d._st==='missed').length;
+$('#stats').innerHTML = [
+  [nOver,'court deadlines passed, compliance not confirmed','red','alert','red','overdue'],
+  [nMissed,'of those recorded by the Court as not met','red','alert','red','overdue'],
+  [nDone,'directions confirmed complied','green','done','green','complied'],
+  [DB.cases.length,`systemic cases tracked · ${live} pending, ${mon} monitored`,'','scale','blue',null],
+  [orders,'orders indexed','','file','blue',null],
+  [DB.notable_judgments.length,'precedent judgments','','bookmark','blue',null],
+].filter(r => !(r[1].startsWith('of those') && !r[0])).map(([n,l,c,i,t,ls])=> ls
+  ? `<a class="stat" href="#ledger" data-ledger-status="${ls}">${chip(i,t)}<div class="num ${c}">${n}</div><div class="lbl">${l}</div></a>`
+  : `<div class="stat">${chip(i,t)}<div class="num ${c}">${n}</div><div class="lbl">${l}</div></div>`).join('');
 
-// authority filter chips
-const authList = authRows.map(r=>r[0]);
-$('#ledger-auth').innerHTML = authList.map(a=>`<button class="tchip" data-lauth="${a}">${a}</button>`).join('');
+// Duty-bearer chart (single-hue magnitude). A direction addressed to more than
+// one body ("IRDA / MoRTH") binds each of them, so it counts once under each;
+// the caption says the bars therefore add up to more than the directions.
+// "States / UTs" is one label, not two.
+const bodiesOf = d => (d.authority||'').replace('States / UTs','States|UTs').split('/')
+  .map(x => x.trim().replace('States|UTs','States / UTs')).filter(Boolean);
+const bodyCounts = {};
+DIRS.forEach(d => bodiesOf(d).forEach(b => { bodyCounts[b] = (bodyCounts[b]||0) + 1; }));
+// bodies named in a single direction share one row, listed by name under the chart
+const OTHER = 'Other named bodies';
+const singles = Object.keys(bodyCounts).filter(b => bodyCounts[b] === 1).sort();
+const otherSet = new Set(singles.length > 2 ? singles : []);
+const namesBody = (d, a) => a === OTHER ? bodiesOf(d).some(b => otherSet.has(b)) : bodiesOf(d).includes(a);
+const authRows = Object.entries(bodyCounts).filter(([b]) => !otherSet.has(b)).sort((a,b)=>b[1]-a[1]);
+if(otherSet.size) authRows.push([OTHER, DIRS.filter(d => namesBody(d, OTHER)).length]);
+const authMax = Math.max(...authRows.map(r=>r[1]),1);
+$('#auth-total').textContent = DIRS.length;
+$('#auth-bars').innerHTML = authRows.map(([a,n])=>`
+  <button class="abar" type="button" data-lauth="${a}" aria-pressed="false">
+    <span class="an">${a}</span>
+    <span class="track"><span class="fill" style="width:${Math.round(n/authMax*100)}%"></span></span>
+    <span class="av">${n}</span>
+  </button>`).join('');
+if(otherSet.size){
+  $('#auth-other').textContent = `${OTHER}: ${[...otherSet].join(', ')}.`;
+  $('#auth-other').hidden = false;
+}
 
 // The ledger opens on a short list: 64 full cards put the docket about 17
 // screens down the page. The rest is one click away, and any link to a
@@ -671,14 +709,14 @@ function renderLedger(){
     : st===lStatus;
   const rows = DIRS.filter(d=>{
     if(!inStatusBucket(d._st)) return false;
-    if(lAuth && d.authority!==lAuth) return false;
+    if(lAuth && !namesBody(d, lAuth)) return false;
     return dirMatches(d);
   }).sort((a,b)=> (SMETA[a._st].rank - SMETA[b._st].rank) || ((a.due||'9999').localeCompare(b.due||'9999')));
 
   const shown = lShowAll ? rows : rows.slice(0, LEDGER_PREVIEW);
   const filtered = lStatus!=='all' || lAuth || fText;
   $('#ledger-count').innerHTML = !rows.length ? ''
-    : `Showing <b>${shown.length}</b> of <b>${rows.length}</b> ${filtered?'matching directions':'directions'} · longest outstanding first`;
+    : `Showing <b>${shown.length}</b> of <b>${rows.length}</b> ${filtered?'matching directions':'directions'}${lAuth?` naming <b>${lAuth===OTHER?'one of the other named bodies':lAuth}</b>`:''} · longest outstanding first`;
   const more = $('#ledger-more'), tog = $('#ledger-toggle');
   more.hidden = rows.length <= LEDGER_PREVIEW;
   tog.textContent = lShowAll ? 'Show fewer' : `Show all ${rows.length} ${filtered?'matching directions':'directions'}`;
@@ -713,9 +751,9 @@ document.querySelectorAll('#ledger-filters .fbtn').forEach(b=>b.addEventListener
   document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.remove('active'));
   b.classList.add('active'); lStatus=b.dataset.lstatus; renderLedger();
 }));
-document.querySelectorAll('#ledger-auth .tchip').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('#auth-bars .abar').forEach(b=>b.addEventListener('click',()=>{
   const on=b.classList.contains('active');
-  document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('#auth-bars .abar').forEach(x=>x.classList.remove('active'));
   lAuth = on ? null : b.dataset.lauth; if(!on) b.classList.add('active'); renderLedger();
 }));
 $('#ledger-toggle').addEventListener('click',()=>{
@@ -789,7 +827,7 @@ function parseListing(s){
 function setLedgerStatus(status, showAll){
   lStatus = status; lAuth = null; if(showAll) lShowAll = true;
   document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.toggle('active', x.dataset.lstatus===status));
-  document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('#auth-bars .abar').forEach(x=>x.classList.remove('active'));
   renderLedger(); syncPressed();
 }
 function revealHash(){
@@ -863,9 +901,9 @@ document.addEventListener('click', e => {
 // Filters are toggle buttons: tell assistive tech which ones are on. Runs after
 // each control's own handler (those fire on the button before the click bubbles here).
 function syncPressed(){
-  document.querySelectorAll('.fbtn,.tchip').forEach(b => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
+  document.querySelectorAll('.fbtn,.tchip,.abar').forEach(b => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
 }
-document.addEventListener('click', e => { if(e.target.closest('.fbtn,.tchip')) syncPressed(); });
+document.addEventListener('click', e => { if(e.target.closest('.fbtn,.tchip,.abar')) syncPressed(); });
 
 // long timelines: reveal or hide the procedural orders
 document.addEventListener('click', e => {
@@ -885,18 +923,22 @@ setN('pil', DB.cases.filter(isPil).length);
 setN('suo', DB.cases.filter(isSuo).length);
 setN('app', DB.cases.filter(c=>!isPil(c)&&!isSuo(c)).length);
 
-// theme chips
-const themes = [...new Set(DB.cases.flatMap(c=>c.themes||[]))].sort();
-$('#theme-chips').innerHTML = themes.map(t=>`<button class="tchip" data-theme="${t}">${t}</button>`).join('');
+// Topic chips: a fixed list (pipeline/auto_curate.py CASE_TOPICS), shown in this
+// order. The finer free-form tags stay on each case card and in search.
+const TOPIC_ORDER = ["victim compensation", "MACT process", "insurance", "post-crash care", "good samaritan", "highways", "road engineering", "pedestrian safety", "enforcement", "licensing and vehicles", "institutions"];
+const topicsOf = c => c.topics || [];
+const usedTopics = [...new Set(DB.cases.flatMap(topicsOf))];
+const themes = TOPIC_ORDER.filter(t => usedTopics.includes(t)).concat(usedTopics.filter(t => !TOPIC_ORDER.includes(t)).sort());
+$('#theme-chips').innerHTML = themes.map(t=>`<button class="tchip" data-theme="${t}">${t}<span class="tn">${DB.cases.filter(c=>topicsOf(c).includes(t)).length}</span></button>`).join('');
 
 const statusLabel = s => s==='pending'?'Pending':s==='monitoring'?'Monitoring':'Disposed';
 
 function matches(c){
   if(fStatus!=='all' && c.status!==fStatus) return false;
-  if(fTheme && !(c.themes||[]).includes(fTheme)) return false;
+  if(fTheme && !topicsOf(c).includes(fTheme)) return false;
   if(fText){
     const hay=(c.title+' '+c.case_number+' '+(c.why_it_matters||'')+' '+(c.latest_development||'')+' '
-      +(c.themes||[]).join(' ')+' '+c.orders.map(o=>o.gist).join(' ')).toLowerCase();
+      +(c.themes||[]).join(' ')+' '+topicsOf(c).join(' ')+' '+c.orders.map(o=>o.gist).join(' ')).toLowerCase();
     if(!hay.includes(fText)) return false;
   }
   return true;
@@ -998,13 +1040,28 @@ document.querySelectorAll('#theme-chips .tchip').forEach(b=>b.addEventListener('
   fTheme=on?null:b.dataset.theme; if(!on)b.classList.add('active'); render();
 }));
 // precedent feed (newest first)
-const njMatches = j => !fText || (j.title+' '+(j.gist||'')+' '+fmt(j.date)).toLowerCase().includes(fText);
+const NJ_TOPICS = ["Compensation method", "Insurer liability and licence defences", "Claims procedure and jurisdiction", "Criminal sentencing", "Regulation and prevention"];
+let njTopic = null;
+const njText = j => !fText || (j.title+' '+(j.gist||'')+' '+(j.topic||'')+' '+fmt(j.date)).toLowerCase().includes(fText);
+const njMatches = j => (!njTopic || j.topic === njTopic) && njText(j);
+(function(){
+  const used = [...new Set(DB.notable_judgments.map(j=>j.topic).filter(Boolean))];
+  const order = NJ_TOPICS.filter(t=>used.includes(t)).concat(used.filter(t=>!NJ_TOPICS.includes(t)).sort());
+  if(!order.length) return;   // untagged data: no chip row at all
+  $('#nj-topics').innerHTML = `<button class="tchip active" data-njtopic="">All<span class="tn">${DB.notable_judgments.length}</span></button>`
+    + order.map(t=>`<button class="tchip" data-njtopic="${t}">${t}<span class="tn">${DB.notable_judgments.filter(j=>j.topic===t).length}</span></button>`).join('');
+  document.querySelectorAll('#nj-topics .tchip').forEach(b=>b.addEventListener('click',()=>{
+    njTopic = b.dataset.njtopic || null;
+    document.querySelectorAll('#nj-topics .tchip').forEach(x=>x.classList.toggle('active', x===b));
+    renderNJ();
+  }));
+})();
 function renderNJ(){
   const rows = DB.notable_judgments.filter(njMatches);
   $('#nj-grid').innerHTML = rows.length ? rows.map(j=>`
-  <div class="nj"><div class="njdate">${fmt(j.date)}</div><h4>${j.title}</h4><p>${j.gist}</p>
+  <div class="nj"><div class="njdate">${fmt(j.date)}</div>${j.topic?`<div class="njtopic">${j.topic}</div>`:''}<h4>${j.title}</h4><p>${j.gist}</p>
   <a href="${j.link}" target="_blank" rel="noopener">Read judgment ↗</a></div>`).join('')
-    : '<p class="njempty">No judgments match this search.</p>';
+    : '<p class="njempty">No judgments match the current topic and search.</p>';
   return rows.length;
 }
 
