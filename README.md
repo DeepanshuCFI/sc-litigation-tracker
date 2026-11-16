@@ -11,11 +11,17 @@ motor accident compensation rulings. High Courts are phase 2 (`court` field exis
 Every Tuesday 08:10 IST, GitHub Actions ([weekly-refresh.yml](.github/workflows/weekly-refresh.yml)):
 1. `pipeline/refresh.py` — searches Indian Kanoon (SC judgments + daily orders, ~40-day window),
    merges new hits, rebuilds registry + dashboard, writes `data/refresh_report.json`
-2. `pipeline/auto_curate.py` — Claude (claude-opus-4-8) classifies new candidates per the
-   inclusion rule and writes gists for new orders in tracked cases; updates `pipeline/curation.json`
+2. `pipeline/auto_curate.py` — Claude (claude-opus-5, on the Claude subscription via the
+   `claude` CLI) classifies new candidates per the inclusion rule and writes gists for new
+   orders in tracked cases; updates `pipeline/curation.json`. Work is queued in
+   `data/curation_pending.json` and leaves the queue only once curated, so a week where the
+   LLM cannot be reached is retried by the next run instead of being lost
 3. Commits and pushes — GitHub Pages redeploys the dashboard automatically
 
-Secrets required: `IK_API_TOKEN` (Indian Kanoon), `ANTHROPIC_API_KEY` (curation).
+Secrets required: `IK_API_TOKEN` (Indian Kanoon), `CLAUDE_CODE_OAUTH_TOKEN` (curation, from
+`claude setup-token`).
+
+Tests: `python3 -m unittest discover -s tests -v`
 
 ## Architecture
 - `pipeline/ik_client.py` — Indian Kanoon API client (search / doc / docmeta), stdlib + certifi

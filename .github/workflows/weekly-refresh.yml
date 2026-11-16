@@ -64,9 +64,15 @@ jobs:
           p = pathlib.Path("data/curation_log.json")
           log = json.loads(p.read_text()) if p.exists() else {}
           # the log is committed; only this run's log counts, not last week's
-          if log.get("date") == datetime.date.today().isoformat() and log.get("llm_unavailable"):
+          today = log.get("date") == datetime.date.today().isoformat()
+          if today and log.get("llm_unavailable"):
               sys.exit("LLM curation did not run: " + log["llm_unavailable"]
-                       + "\nNew orders are published with links but no gists; re-run once fixed.")
+                       + "\nNew orders are published with links but no gists. The unfinished work is"
+                       + " queued in data/curation_pending.json and the next run picks it up.")
+          # an item that failed three runs for a reason of its own has left the queue:
+          # a human has to look at it, so the run must not go green
+          if today and log.get("gave_up"):
+              sys.exit("Curation gave up on: " + json.dumps(log["gave_up"], ensure_ascii=False))
           print("curation ok (or nothing to curate)")
           EOF
 

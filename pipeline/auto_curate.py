@@ -8,6 +8,13 @@ orders, fetches the newest order and asks Claude for a gist + significance +
 updated latest_development. Applies changes to curation.json, rebuilds the
 registry and dashboard, and writes data/curation_log.json.
 
+Work is driven from a persistent queue, data/curation_pending.json, not from
+the report directly. Each run first copies the report's candidates and new
+orders into the queue, then works the queue, removing an item only once it has
+been curated. refresh.py overwrites the report every week, so without the queue
+a run that could not reach the LLM lost that week's work for good (3 and 10 Nov
+2026: five candidates never classified, two orders never gisted).
+
 Inference runs on Deepanshu's Claude subscription through the `claude` CLI
 (`claude -p`), never the metered API: his standing rule since 16 Oct 2026. In
 CI the CLI authenticates with CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`);
@@ -284,19 +291,89 @@ def norm_pattern(title: str) -> str:
     return t.split(" vs ")[0].strip() or t[:40]
 
 
+# An item that fails this many runs for a reason of its own (unreadable document,
+# malformed reply) leaves the queue and is reported, so one bad document cannot be
+# re-fetched from Indian Kanoon every week forever. LLM outages never count.
+MAX_ATTEMPTS = 3
+
+
+def load_pending(path: Path) -> dict:
+    pending = json.loads(path.read_text()) if path.exists() else {}
+    pending.setdefault("candidates", [])
+    pending.setdefault("orders", [])
+    return pending
+
+
+def enqueue_report(pending: dict, report: dict, by_id: dict) -> None:
+    """Copy this refresh's candidates and new orders into the queue, once.
+
+    The signature stops a second auto_curate run on the same report (a manual
+    re-run, a local test) from re-queueing work that has already been done."""
+    candidates = report.get("new_unassigned_candidates", [])
+    counts = report.get("new_order_counts", {})
+    grew = report.get("cases_with_new_orders", [])
+    if not candidates and not grew:
+        return
+    sig = json.dumps([report.get("refresh_date"), sorted(str(c["tid"]) for c in candidates),
+                      sorted((cid, counts.get(cid, 1)) for cid in grew)])
+    if pending.get("ingested_report") == sig:
+        return
+    today = date.today().isoformat()
+    have = {str(c["tid"]) for c in pending["candidates"]}
+    for c in candidates:
+        if str(c["tid"]) not in have:
+            pending["candidates"].append({"tid": c["tid"], "date": c["date"], "title": c["title"],
+                                          "queued": today})
+            have.add(str(c["tid"]))
+    have = {str(o["tid"]) for o in pending["orders"]}
+    for cid in grew:
+        case = by_id.get(cid)
+        if not case or not case.get("orders"):
+            continue
+        # every order added this refresh, not just the newest: after court
+        # vacations a case routinely gains 2+ orders in one window
+        for o in case["orders"][-max(1, counts.get(cid, 1)):]:
+            if str(o["tid"]) not in have:
+                pending["orders"].append({"case": cid, "tid": o["tid"], "date": o["date"],
+                                          "queued": today})
+                have.add(str(o["tid"]))
+    pending["ingested_report"] = sig
+
+
+def note_failure(item: dict, queue: list, log: dict, kind: str, err: Exception) -> None:
+    """Count a failure that was the item's own, and give up after MAX_ATTEMPTS."""
+    item["attempts"] = item.get("attempts", 0) + 1
+    item["last_error"] = str(err)[:200]
+    if item["attempts"] >= MAX_ATTEMPTS:
+        queue.remove(item)
+        log.setdefault("gave_up", []).append(
+            {"kind": kind, **{k: item[k] for k in ("case", "tid", "date", "title") if k in item},
+             "attempts": item["attempts"], "last_error": item["last_error"]})
+
+
 def main() -> None:
     report_path = ROOT / "data" / "refresh_report.json"
     if not report_path.exists():
         print("no refresh report — nothing to curate")
         return
     report = json.loads(report_path.read_text())
-    candidates = report.get("new_unassigned_candidates", [])
     grew = report.get("cases_with_new_orders", [])
-    if not candidates and not grew:
-        print("nothing new — no curation needed")
+
+    registry = json.loads((ROOT / "data" / "cases.json").read_text())
+    by_id = {cs["id"]: cs for cs in registry["cases"]}
+
+    pending_path = ROOT / "data" / "curation_pending.json"
+    pending = load_pending(pending_path)
+    pending_before = json.dumps(pending, sort_keys=True)
+    carried = {"candidates": len(pending["candidates"]), "orders": len(pending["orders"])}
+    enqueue_report(pending, report, by_id)
+    if not pending["candidates"] and not pending["orders"]:
+        print("nothing new and nothing pending — no curation needed")
         return
 
     log = {"date": date.today().isoformat(), "classified": [], "gists": [], "errors": []}
+    if carried["candidates"] or carried["orders"]:
+        log["carried_over"] = carried   # work left by an earlier run that could not finish
     curation = json.loads(CURATION_PATH.read_text())
     changed = False
     new_case_ids = []
@@ -321,7 +398,7 @@ def main() -> None:
     )
 
     # 1. classify new unassigned candidates
-    for c in candidates:
+    for c in list(pending["candidates"]):
         if LLM_DOWN["reason"]:
             break  # don't pay IK for documents nobody can classify
         try:
@@ -368,8 +445,12 @@ def main() -> None:
             elif result["action"] == "borderline":
                 curation["borderline_excluded"].append({"why": result["reason"], "cases": [result["title"]]})
                 changed = True
+            pending["candidates"].remove(c)   # classified, whatever the verdict
+        except LLMUnavailable as e:
+            log["errors"].append(f"classify tid={c.get('tid')}: {e}")   # stays queued
         except Exception as e:
             log["errors"].append(f"classify tid={c.get('tid')}: {e}")
+            note_failure(c, pending["candidates"], log, "candidate", e)
 
     # 2. gists for tracked cases that grew
     gist_system = (
@@ -414,21 +495,30 @@ def main() -> None:
     existing_dir_ids = {d["id"] for d in dirdata["directions"]}
     dir_changed = False
 
-    registry = json.loads((ROOT / "data" / "cases.json").read_text())
-    by_id = {cs["id"]: cs for cs in registry["cases"]}
-    for cid in grew:
-        case = by_id.get(cid)
-        spec = next((s for s in curation["tracked_cases"] if s["id"] == cid), None)
-        if not case or not spec or not case["orders"]:
-            continue
-        # gist/extract EVERY order added this refresh, not just the newest —
-        # after court vacations a case routinely gains 2+ orders in one window,
-        # and skipping the earlier ones left their directions out of the ledger.
-        # Chronological order, so the newest order wins latest_development.
-        n_new = max(1, report.get("new_order_counts", {}).get(cid, 1))
-        for newest in case["orders"][-n_new:]:
+    # Chronological order, so the newest order wins latest_development.
+    pending["orders"].sort(key=lambda o: (o["date"], str(o["tid"])))
+    gisted_cases = set()
+    for item in list(pending["orders"]):
           if LLM_DOWN["reason"]:
               break
+          cid = item["case"]
+          case = by_id.get(cid)
+          spec = next((s for s in curation["tracked_cases"] if s["id"] == cid), None)
+          newest = next((o for o in (case or {}).get("orders", [])
+                         if str(o["tid"]) == str(item["tid"])), None)
+          if not spec or not newest:
+              # the case was removed or re-matched since this order was queued
+              pending["orders"].remove(item)
+              log.setdefault("dropped", []).append(
+                  {"case": cid, "tid": item["tid"], "date": item["date"],
+                   "why": "case or order no longer in the registry"})
+              continue
+          # A retried order can be older than one already curated. Its gist and
+          # directions still belong on the record, but it must not drag the case's
+          # headline state (latest development, next listing) back in time.
+          queued_tids = {str(o["tid"]) for o in pending["orders"]}
+          superseded = any(o["date"] > newest["date"] and str(o["tid"]) not in queued_tids
+                           for o in case["orders"])
           try:
             text = doc_text(newest["tid"])
             result = ask(gist_system,
@@ -438,14 +528,15 @@ def main() -> None:
             if result["significance"] == "major" and result["gist"]:
                 spec.setdefault("order_notes", {})[newest["date"]] = {
                     "gist": result["gist"], "significance": "major"}
-            if result["latest_development"]:
-                spec["latest_development"] = result["latest_development"]
-            # keep next_listing current — a stale hearing date is worse than none
-            if result.get("next_listing"):
-                spec["next_listing"] = f"{result['next_listing']} (per order of {newest['date']})"
-            elif "next_listing" in spec:
-                # order fixed no date; drop the old one rather than display it stale
-                del spec["next_listing"]
+            if not superseded:
+                if result["latest_development"]:
+                    spec["latest_development"] = result["latest_development"]
+                # keep next_listing current — a stale hearing date is worse than none
+                if result.get("next_listing"):
+                    spec["next_listing"] = f"{result['next_listing']} (per order of {newest['date']})"
+                elif "next_listing" in spec:
+                    # order fixed no date; drop the old one rather than display it stale
+                    del spec["next_listing"]
             changed = True
 
             # Extract deadline-bearing directions from this order into the ledger.
@@ -480,8 +571,13 @@ def main() -> None:
                 existing_dir_ids.add(did)
                 dir_changed = True
                 log.setdefault("new_directions", []).append({"case": cid, "directive": d["directive"][:80], "due": due})
+            pending["orders"].remove(item)
+            gisted_cases.add(cid)
+          except LLMUnavailable as e:
+            log["errors"].append(f"gist/directions case={cid} order={newest['date']}: {e}")   # stays queued
           except Exception as e:
             log["errors"].append(f"gist/directions case={cid} order={newest['date']}: {e}")
+            note_failure(item, pending["orders"], log, "order", e)
 
     if dir_changed:
         DIR_PATH.write_text(json.dumps(dirdata, indent=2, ensure_ascii=False))
@@ -492,7 +588,7 @@ def main() -> None:
         subprocess.run([sys.executable, str(ROOT / "pipeline" / "build_registry.py")], check=True)
         # build_registry resets new_this_refresh — restore it (grown cases + newly added)
         registry = json.loads((ROOT / "data" / "cases.json").read_text())
-        registry["new_this_refresh"] = sorted(set(grew) | set(new_case_ids))
+        registry["new_this_refresh"] = sorted(set(grew) | set(new_case_ids) | gisted_cases)
         registry["meta"]["built"] = date.today().isoformat()
         (ROOT / "data" / "cases.json").write_text(json.dumps(registry, indent=1, ensure_ascii=False))
         subprocess.run([sys.executable, str(ROOT / "pipeline" / "build_dashboard.py")], check=True)
@@ -500,6 +596,10 @@ def main() -> None:
     if LLM_DOWN["reason"]:
         log["llm_unavailable"] = LLM_DOWN["reason"]
         print(f"LLM curation stopped early: {LLM_DOWN['reason']}", file=sys.stderr)
+    if pending["candidates"] or pending["orders"]:
+        log["pending"] = {"candidates": len(pending["candidates"]), "orders": len(pending["orders"])}
+    if json.dumps(pending, sort_keys=True) != pending_before:
+        pending_path.write_text(json.dumps(pending, indent=1, ensure_ascii=False))
     log["doc_fetches"] = DOC_FETCHES["n"]
     log["approx_doc_cost_inr"] = round(DOC_FETCHES["n"] * 0.2, 1)
     (ROOT / "data" / "curation_log.json").write_text(json.dumps(log, indent=1, ensure_ascii=False))
