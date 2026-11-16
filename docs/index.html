@@ -141,17 +141,28 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .upcoming{padding:48px 0}
 .upcoming .uhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
 .upcoming .usub{font-size:14px;color:var(--muted)}
-.utrack{margin-top:24px;display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
-.ucard{flex:0 0 260px;border:1px solid var(--border);border-radius:16px;background:var(--white);padding:18px 20px;transition:.15s;text-decoration:none;color:inherit;display:block}
+.utrack{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start}
+.ucard{max-width:600px;border:1px solid var(--border);border-radius:16px;background:var(--white);padding:20px 22px;transition:.15s;color:inherit}
+.ucard .ukinds{display:flex;gap:8px;flex-wrap:wrap}
+.ucard .ucase{display:block;margin-top:12px;font-family:Montserrat;font-size:15px;font-weight:600;color:var(--dark);line-height:1.35}
+.ucard .ucase:hover{color:var(--brand)}
+.ucard .udue{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);list-style:none}
+.ucard .udue li{font-size:13.5px;line-height:1.45;margin-top:8px}
+.ucard .udue li:first-child{margin-top:0}
+.ucard .udue a{color:var(--dark);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ucard .udue a:hover{color:var(--brand)}
+.ucard .udue .uauth{color:var(--muted);font-weight:500}
+.ucard .umore{display:inline-flex;align-items:center;min-height:32px;margin-top:10px;font-size:13px;font-weight:500}
+.umore-dates{margin-top:16px;font-size:13px;color:var(--muted)}
 .ucard:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);text-decoration:none}
 .ucard .udate{font-family:Montserrat;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--brand)}
 .ucard .udate .udays{font-weight:500;color:var(--muted);letter-spacing:0;text-transform:none;margin-left:6px}
 .ucard.past .udate{color:var(--warning)}
-.ucard .ukind{display:inline-block;margin-top:10px;font-family:Montserrat;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:9999px;padding:4px 11px}
+.ucard .ukind{display:inline-block;margin-top:10px;font-family:Montserrat;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:9999px;padding:4px 11px}
 .ucard .ukind.hearing{background:color-mix(in srgb,var(--brand) 10%,transparent);color:var(--brand);border:1px solid color-mix(in srgb,var(--brand) 25%,transparent)}
 .ucard .ukind.deadline{background:color-mix(in srgb,var(--warning) 10%,transparent);color:var(--warning);border:1px solid color-mix(in srgb,var(--warning) 30%,transparent)}
 .ucard .ulabel{margin-top:10px;font-size:13.5px;line-height:1.45;color:var(--dark);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.ucard .usub2{margin-top:8px;font-size:12px;color:var(--muted)}
+.ucard .usub2{margin-top:4px;font-size:13px;color:var(--muted)}
 
 /* accountability ledger */
 .ledger-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:36px}
@@ -171,16 +182,43 @@ section{border-top:1px solid var(--border);scroll-margin-top:76px}
 .abar .fill{height:100%;background:var(--brand);border-radius:9999px;min-width:14px}
 .abar .av{font-family:Montserrat;font-size:13px;font-weight:600;color:var(--brand);text-align:right}
 .ledger-list{margin-top:24px}
+/* keyboard focus: one visible ring everywhere (white on the brand-blue section) */
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.notable :focus-visible,.cta :focus-visible{outline-color:var(--white)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--white);color:var(--brand);border:1px solid var(--brand);border-radius:9999px;padding:10px 18px;font-family:Montserrat;font-size:13px;font-weight:600}
+.skip:focus{left:16px}
+/* page-wide search */
+.gsearch{padding:32px 0 40px}
+.gs-label{display:block;font-family:Montserrat;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:10px}
+.gs-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.gs-row .search{flex:1 1 320px;max-width:560px;min-height:48px}
+.gs-clear{font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.05em;min-height:44px;padding:0 16px;border:1px solid var(--border);background:var(--white);color:var(--muted);border-radius:9999px;cursor:pointer}
+.gs-clear:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);color:var(--brand)}
+.gs-summary{margin-top:12px;font-size:14px;color:var(--muted);min-height:21px}
+.gs-summary b{color:var(--dark);font-weight:600}
+.njempty{margin-top:36px;color:color-mix(in srgb,var(--white) 85%,transparent);font-size:15px}
+/* case card footer row + copy-link controls */
+.case-actions{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.case-actions .toggle{margin-top:0}
+.dlink{display:inline-flex;align-items:center;min-height:32px}
+.dpast{color:var(--danger);font-weight:500}
+/* long timelines open on the orders that carry a summary */
+.timeline.folded .trow.proc{display:none}
+.tl-more{margin:8px 0 0 120px;font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--brand);background:none;border:1px solid var(--border);border-radius:9999px;cursor:pointer;min-height:40px;padding:0 16px}
+.tl-more:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent)}
+@media(max-width:640px){.tl-more{margin-left:0}}
 .ledger-count{margin-top:24px;font-size:13px;color:var(--muted)}
 .ledger-count b{color:var(--dark);font-weight:600}
 .ledger-count + .ledger-list{margin-top:12px}
 .ledger-more{margin-top:20px;display:flex;justify-content:center}
+.ledger-more[hidden]{display:none}
 .ledger-more .btn{cursor:pointer;font-family:Montserrat}
 .dcard{border:1px solid var(--border);border-radius:16px;background:var(--white);padding:22px 24px;margin-bottom:16px;transition:.15s}
 .dcard:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 5%,transparent)}
 .dcard-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap-reverse}
 .dtext{font-size:15px;color:var(--dark);line-height:1.5;max-width:760px;flex:1 1 320px}
-.dpill{font-family:Montserrat;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:9999px;padding:6px 13px;white-space:nowrap}
+.dpill{font-family:Montserrat;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:9999px;padding:6px 13px;white-space:nowrap}
 .dpill.overdue,.dpill.missed{background:color-mix(in srgb,var(--danger) 9%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 28%,transparent)}
 .dpill.due-soon{background:color-mix(in srgb,var(--warning) 10%,transparent);color:var(--warning);border:1px solid color-mix(in srgb,var(--warning) 30%,transparent)}
 .dpill.upcoming{background:color-mix(in srgb,var(--brand) 10%,transparent);color:var(--brand);border:1px solid color-mix(in srgb,var(--brand) 25%,transparent)}
@@ -268,6 +306,7 @@ footer{border-top:1px solid var(--border);background:var(--white)}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <button class="totop" id="toTop" type="button" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></button>
 
@@ -287,6 +326,8 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     </nav>
   </div>
 </header>
+
+<main id="main">
 
 <section class="hero">
   <div class="glow" aria-hidden="true"></div>
@@ -323,6 +364,17 @@ footer{border-top:1px solid var(--border);background:var(--white)}
       <span class="usub">Hearings and court-set deadlines in the next 90 days</span>
     </div>
     <div class="utrack" id="utrack"></div>
+  </div>
+</section>
+
+<section class="gsearch" id="find" role="search">
+  <div class="wrap">
+    <label class="gs-label" for="gsearch">Search the tracker</label>
+    <div class="gs-row">
+      <input class="search" id="gsearch" type="search" placeholder="Search cases, directions and judgments…" autocomplete="off" data-q>
+      <button class="gs-clear" id="gs-clear" type="button" hidden>Clear search</button>
+    </div>
+    <p class="gs-summary" id="gs-summary" aria-live="polite"></p>
   </div>
 </section>
 
@@ -365,10 +417,11 @@ footer{border-top:1px solid var(--border);background:var(--white)}
       <button class="fbtn" data-status="pending">Pending</button>
       <button class="fbtn" data-status="monitoring">Compliance monitoring</button>
       <button class="fbtn" data-status="disposed">Disposed</button>
-      <input class="search" id="search" type="search" placeholder="Search cases, numbers, orders…">
+      <label class="sr-only" for="search">Search cases, directions and judgments</label>
+      <input class="search" id="search" type="search" placeholder="Search cases, directions and judgments…" autocomplete="off" data-q>
     </div>
     <div class="tchips" id="theme-chips"></div>
-    <p class="fnote">Filters and search apply across all three docket sections below.</p>
+    <p class="fnote">Status and theme filters apply across all three docket sections below. Search covers the whole page: directions, cases and judgments.</p>
     <div class="group-top" style="margin-top:36px"><div></div><div class="gcount"><div class="num" id="count-pil"></div><div class="lbl">petitions</div></div></div>
     <div class="case-list" id="list-pil"></div>
   </div>
@@ -433,6 +486,8 @@ footer{border-top:1px solid var(--border);background:var(--white)}
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap ft">
@@ -519,6 +574,28 @@ const SMETA = {
   complied:  {label:'Complied',                 cls:'complied', rank:3},
   ongoing:   {label:'Ongoing / recurring',      cls:'ongoing',  rank:4},
 };
+const escHtml = t => String(t).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+// how far a direction is from the date the Court set, in plain words
+function dueDistance(d){
+  if(!d.due || d._st==='complied' || d._st==='ongoing') return '';
+  const todayIST = new Date(Date.now() + 330*60000).toISOString().slice(0,10);
+  const days = Math.round((Date.parse(todayIST) - Date.parse(d.due))/86400000);
+  if(days <= 0){
+    const n = -days;
+    return ` · ${n===0 ? 'today' : n===1 ? 'tomorrow' : 'in '+n+' days'}`;
+  }
+  const months = Math.floor(days/30.4375);
+  const txt = days < 60 ? `${days} day${days===1?'':'s'} past`
+            : months < 24 ? `${months} months past`
+            : `over ${Math.floor(months/12)} years past`;
+  return ` · <span class="dpast">${txt}</span>`;
+}
+function dirMatches(d){
+  if(!fText) return true;
+  const hay = [d.directive, d.authority, d.case_title, d.theme, d.granted, d.status_note,
+    ...(d.compliance_events||[]).map(e=>e.note)].join(' ').toLowerCase();
+  return hay.includes(fText);
+}
 function dstatus(d){
   if(d.status) return d.status;              // missed / complied / ongoing set explicitly
   if(!d.due) return 'ongoing';
@@ -564,6 +641,7 @@ $('#ledger-auth').innerHTML = authList.map(a=>`<button class="tchip" data-lauth=
 // direction further down opens the full list first (see revealHash).
 const LEDGER_PREVIEW = 8;
 let lStatus='all', lAuth=null, lShowAll=false;
+let fStatus='all', fTheme=null, fText='';   // fText is the page-wide search, shared with the docket and precedents
 function renderLedger(){
   const inStatusBucket = (st) => lStatus==='all' ? true
     : lStatus==='overdue' ? (st==='overdue'||st==='missed')
@@ -571,11 +649,11 @@ function renderLedger(){
   const rows = DIRS.filter(d=>{
     if(!inStatusBucket(d._st)) return false;
     if(lAuth && d.authority!==lAuth) return false;
-    return true;
+    return dirMatches(d);
   }).sort((a,b)=> (SMETA[a._st].rank - SMETA[b._st].rank) || ((a.due||'9999').localeCompare(b.due||'9999')));
 
   const shown = lShowAll ? rows : rows.slice(0, LEDGER_PREVIEW);
-  const filtered = lStatus!=='all' || lAuth;
+  const filtered = lStatus!=='all' || lAuth || fText;
   $('#ledger-count').innerHTML = !rows.length ? ''
     : `Showing <b>${shown.length}</b> of <b>${rows.length}</b> ${filtered?'matching directions':'directions'} · longest outstanding first`;
   const more = $('#ledger-more'), tog = $('#ledger-toggle');
@@ -599,13 +677,14 @@ function renderLedger(){
       <div class="dmeta">
         <span class="authchip">${d.authority}</span>
         ${standing}
-        <span>Granted <b>${d.granted}</b> · ${due}</span>
+        <span>Granted <b>${d.granted}</b> · ${due}${dueDistance(d)}</span>
         <span class="dcase">${d.case_title}</span>
         ${link}
-        <a class="dlink" href="#dir-${d.id}" title="Permalink to this direction">§ link</a>
+        <a class="dlink" href="#dir-${d.id}" data-copy>Copy link</a>
       </div>
     </div>`;
   }).join('') : '<div class="gempty">No directions match the current filters.</div>';
+  return rows.length;
 }
 document.querySelectorAll('#ledger-filters .fbtn').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.remove('active'));
@@ -641,30 +720,55 @@ function parseListing(s){
   DB.cases.forEach(c => {
     const d = parseListing(c.next_listing);
     if(d && d >= today && d <= horizon)
-      events.push({date:d, kind:'hearing', klabel:'Hearing', label:c.title, sub:c.case_number, href:'#case-'+c.id});
+      events.push({date:d, cid:c.id});
   });
+  // one card per date and case: 25 Nov is one hearing plus eleven deadlines in
+  // the same matter, and twelve look-alike cards said less than one card does
+  const caseById = Object.fromEntries(DB.cases.map(c => [c.id, c]));
+  const groups = {};
+  const group = (date, cid) => groups[date+'|'+cid] || (groups[date+'|'+cid] = {date, cid, hearing:false, dirs:[]});
+  events.forEach(e => { group(e.date, e.cid).hearing = true; });
   DIRS.forEach(x => {
-    if(x.due && x.due >= today && x.due <= horizon && !x.status)
-      events.push({date:x.due, kind:'deadline', klabel:'Deadline', label:x.directive, sub:x.authority, href:'#dir-'+x.id});
+    if(x.due && x.due >= today && x.due <= horizon && !x.status) group(x.due, x.case_id).dirs.push(x);
   });
-  if(!events.length) return;
-  events.sort((a,b) => a.date.localeCompare(b.date));
+  const list = Object.values(groups).sort((a,b) => a.date.localeCompare(b.date) || a.cid.localeCompare(b.cid));
+  if(!list.length) return;
   const days = d => Math.round((Date.parse(d) - Date.parse(today))/86400000);
-  document.getElementById('utrack').innerHTML = events.map(e => {
-    const n = days(e.date);
+  const MAX_CARDS = 6, MAX_LINES = 3;
+  document.getElementById('utrack').innerHTML = list.slice(0, MAX_CARDS).map(g => {
+    const n = days(g.date);
     const rel = n === 0 ? 'today' : n === 1 ? 'tomorrow' : `in ${n} days`;
-    return `<a class="ucard" href="${e.href}">
-      <div class="udate">${fmt(e.date)}<span class="udays">· ${rel}</span></div>
-      <span class="ukind ${e.kind}">${e.klabel}</span>
-      <div class="ulabel">${e.label}</div>
-      <div class="usub2">${e.sub}</div>
-    </a>`;
+    const c = caseById[g.cid] || {};
+    const title = c.title || (g.dirs[0] && g.dirs[0].case_title) || '';
+    const kinds = (g.hearing ? '<span class="ukind hearing">Hearing</span>' : '')
+      + (g.dirs.length ? `<span class="ukind deadline">${g.dirs.length} deadline${g.dirs.length===1?'':'s'}</span>` : '');
+    const lines = g.dirs.slice(0, MAX_LINES).map(x =>
+      `<li><a href="#dir-${x.id}"><span class="uauth">${x.authority}:</span> ${x.directive}</a></li>`).join('');
+    const more = g.dirs.length > MAX_LINES
+      ? `<a class="umore" href="#ledger" data-ledger-status="due-soon">See all ${g.dirs.length} in the ledger →</a>` : '';
+    return `<div class="ucard">
+      <div class="udate">${fmt(g.date)}<span class="udays">· ${rel}</span></div>
+      <div class="ukinds">${kinds}</div>
+      ${c.id ? `<a class="ucase" href="#case-${c.id}">${title}</a>` : `<span class="ucase">${title}</span>`}
+      ${c.case_number && !/verify/i.test(c.case_number) ? `<div class="usub2">${c.case_number}</div>` : ''}
+      ${lines ? `<ul class="udue" aria-label="Deadlines falling due">${lines}</ul>${more}` : ''}
+    </div>`;
   }).join('');
+  if(list.length > MAX_CARDS)
+    document.getElementById('utrack').insertAdjacentHTML('afterend',
+      `<p class="umore-dates">${list.length - MAX_CARDS} more date${list.length-MAX_CARDS===1?'':'s'} in the next 90 days: <a href="#ledger" data-ledger-status="due-soon">see the ledger</a>.</p>`);
   document.getElementById('upcoming').hidden = false;
 })();
 
 // deep link to a direction or case card (#dir-<id> / #case-<id>) — content
 // renders dynamically, so resolve the hash ourselves after first render
+// set the ledger's status filter from outside its own buttons
+function setLedgerStatus(status, showAll){
+  lStatus = status; lAuth = null; if(showAll) lShowAll = true;
+  document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.toggle('active', x.dataset.lstatus===status));
+  document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
+  renderLedger(); syncPressed();
+}
 function revealHash(){
   const h = location.hash;
   if(!(h.startsWith('#dir-') || h.startsWith('#case-'))) return;
@@ -672,15 +776,15 @@ function revealHash(){
   let el = document.querySelector(sel);
   if(!el && h.startsWith('#dir-') && DIRS.some(d => 'dir-'+d.id === h.slice(1))){
     // the direction exists but is filtered out or below the short list
-    lStatus='all'; lAuth=null; lShowAll=true;
-    document.querySelectorAll('#ledger-filters .fbtn').forEach(x=>x.classList.toggle('active', x.dataset.lstatus==='all'));
-    document.querySelectorAll('#ledger-auth .tchip').forEach(x=>x.classList.remove('active'));
-    renderLedger();
+    if(fText) setQuery('');
+    setLedgerStatus('all', true);
     el = document.querySelector(sel);
   }
-  if(el){ el.scrollIntoView(); el.classList.add('flash'); }
+  if(el){
+    document.querySelectorAll('.case.flash,.dcard.flash').forEach(x=>x.classList.remove('flash'));
+    el.scrollIntoView(); el.classList.add('flash');
+  }
 }
-revealHash();
 // "Coming up" deadline cards and permalinks point at #dir-<id> on this same page
 window.addEventListener('hashchange', revealHash);
 // scroll spy (Parliament Watch pattern): highlight the section in view on both navs
@@ -711,12 +815,43 @@ jwrap.addEventListener('scroll', jfade, {passive:true});
 window.addEventListener('resize', jfade, {passive:true});
 jfade();
 
-// in-page clicks on Coming-up hearing cards: flash the target case card
-document.getElementById('utrack').addEventListener('click', e => {
-  const a = e.target.closest('a.ucard');
-  if(!a || !a.getAttribute('href').startsWith('#case-')) return;
-  const el = document.querySelector('#'+CSS.escape(a.getAttribute('href').slice(1)));
-  if(el){ document.querySelectorAll('.case.flash').forEach(x=>x.classList.remove('flash')); el.classList.add('flash'); }
+// "See all N in the ledger" on a Coming-up card: show the directions due soon
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-ledger-status]');
+  if(!a) return;
+  if(fText) setQuery('');
+  setLedgerStatus(a.dataset.ledgerStatus, true);
+});
+
+// Copy link: put the permalink on the clipboard and in the address bar
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[data-copy]');
+  if(!a) return;
+  e.preventDefault();
+  const hash = a.getAttribute('href');
+  history.replaceState(null, '', hash);
+  const say = t => { a.textContent = t; setTimeout(() => { a.textContent = 'Copy link'; }, 1800); };
+  const url = location.origin + location.pathname + hash;
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(url).then(() => say('Link copied'), () => say('Link is in the address bar'));
+  else say('Link is in the address bar');
+});
+
+// Filters are toggle buttons: tell assistive tech which ones are on. Runs after
+// each control's own handler (those fire on the button before the click bubbles here).
+function syncPressed(){
+  document.querySelectorAll('.fbtn,.tchip').forEach(b => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
+}
+document.addEventListener('click', e => { if(e.target.closest('.fbtn,.tchip')) syncPressed(); });
+
+// long timelines: reveal or hide the procedural orders
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-tlmore]');
+  if(!b) return;
+  const tl = document.getElementById('tl-'+b.dataset.tlmore);
+  const folded = tl.classList.toggle('folded');
+  b.setAttribute('aria-expanded', String(!folded));
+  b.textContent = folded ? b.dataset.show : 'Hide procedural orders';
 });
 
 // sticky nav counts (static totals, independent of filters) — both navs share data-n keys
@@ -731,7 +866,6 @@ setN('app', DB.cases.filter(c=>!isPil(c)&&!isSuo(c)).length);
 const themes = [...new Set(DB.cases.flatMap(c=>c.themes||[]))].sort();
 $('#theme-chips').innerHTML = themes.map(t=>`<button class="tchip" data-theme="${t}">${t}</button>`).join('');
 
-let fStatus='all', fTheme=null, fText='';
 const statusLabel = s => s==='pending'?'Pending':s==='monitoring'?'Monitoring':'Disposed';
 
 function matches(c){
@@ -739,7 +873,7 @@ function matches(c){
   if(fTheme && !(c.themes||[]).includes(fTheme)) return false;
   if(fText){
     const hay=(c.title+' '+c.case_number+' '+(c.why_it_matters||'')+' '+(c.latest_development||'')+' '
-      +c.orders.map(o=>o.gist).join(' ')).toLowerCase();
+      +(c.themes||[]).join(' ')+' '+c.orders.map(o=>o.gist).join(' ')).toLowerCase();
     if(!hay.includes(fText)) return false;
   }
   return true;
@@ -748,12 +882,23 @@ function matches(c){
 function renderCase(c, newSet){
   const majors=c.orders.filter(o=>o.significance==='major');
   const routine=c.orders.length-majors.length;
+  // A long timeline opens on the orders that say something: those marked
+  // significant or carrying a summary, plus the three most recent. The rest
+  // (listings, extensions, exemptions) is one click away.
+  const recent = new Set(c.orders.slice(-3).map(o=>o.tid));
+  const shownFirst = o => o.significance==='major' || o.gist || recent.has(o.tid);
+  const nProc = c.orders.filter(o=>!shownFirst(o)).length;
+  const fold = c.orders.length > 12 && nProc > 0;
   const rows=c.orders.slice().reverse().map(o=>`
-    <div class="trow ${o.significance==='major'?'major':''}">
+    <div class="trow ${o.significance==='major'?'major':''}${fold && !shownFirst(o)?' proc':''}">
       <div class="dot"></div>
       <div class="tdate">${fmt(o.date)}</div>
       <div class="tbody">${o.gist?`<span class="gist">${o.gist}</span> `:''}<a href="${o.link}" target="_blank" rel="noopener">Read order ↗</a></div>
     </div>`).join('');
+  const showLabel = `Show ${nProc} procedural order${nProc===1?'':'s'} (listings, extensions, exemptions)`;
+  const tail = fold
+    ? `<button class="tl-more" type="button" data-tlmore="${c.id}" data-show="${showLabel}" aria-expanded="false" aria-controls="tl-${c.id}">${showLabel}</button>`
+    : (routine>0?`<div class="tmore">${majors.length} orders summarised above are marked significant; the remaining ${routine} are procedural (listings, extensions, exemptions).</div>`:'');
   return `<div class="case" id="case-${c.id}" data-id="${c.id}">
     <div class="case-head">
       <h3>${c.title}</h3>
@@ -765,8 +910,11 @@ function renderCase(c, newSet){
     <p class="why">${c.why_it_matters||''}</p>
     ${c.latest_development?`<div class="latest"><b>Latest development</b>${c.latest_development}</div>`:''}
     <div class="themes">${(c.themes||[]).map(t=>`<span class="theme">${t}</span>`).join('')}</div>
-    <button class="toggle" data-toggle="${c.id}">Show order timeline (${c.order_count}) ▾</button>
-    <div class="timeline" id="tl-${c.id}">${rows}${routine>0?`<div class="tmore">${majors.length} orders summarised above are marked significant; the remaining ${routine} are procedural (listings, extensions, exemptions).</div>`:''}</div>
+    <div class="case-actions">
+      <button class="toggle" type="button" data-toggle="${c.id}" aria-expanded="false" aria-controls="tl-${c.id}">Show order timeline (${c.order_count}) ▾</button>
+      <a class="dlink" href="#case-${c.id}" data-copy>Copy link</a>
+    </div>
+    <div class="timeline${fold?' folded':''}" id="tl-${c.id}">${rows}${tail}</div>
   </div>`;
 }
 
@@ -808,9 +956,10 @@ function render(){
   }
   document.querySelectorAll('[data-toggle]').forEach(b=>b.addEventListener('click',()=>{
     const tl=document.getElementById('tl-'+b.dataset.toggle);
-    tl.classList.toggle('open');
+    b.setAttribute('aria-expanded', String(tl.classList.toggle('open')));
     b.textContent=b.textContent.includes('▾')?b.textContent.replace('Show','Hide').replace('▾','▴'):b.textContent.replace('Hide','Show').replace('▴','▾');
   }));
+  return groups;
 }
 
 // Scoped to the docket's own controls — the ledger has separate .fbtn/.tchip
@@ -825,18 +974,45 @@ document.querySelectorAll('#theme-chips .tchip').forEach(b=>b.addEventListener('
   document.querySelectorAll('#theme-chips .tchip').forEach(x=>x.classList.remove('active'));
   fTheme=on?null:b.dataset.theme; if(!on)b.classList.add('active'); render();
 }));
-document.getElementById('search').addEventListener('input',e=>{fText=e.target.value.trim().toLowerCase();render();});
-
 // precedent feed (newest first)
-$('#nj-grid').innerHTML = DB.notable_judgments.map(j=>`
+const njMatches = j => !fText || (j.title+' '+(j.gist||'')+' '+fmt(j.date)).toLowerCase().includes(fText);
+function renderNJ(){
+  const rows = DB.notable_judgments.filter(njMatches);
+  $('#nj-grid').innerHTML = rows.length ? rows.map(j=>`
   <div class="nj"><div class="njdate">${fmt(j.date)}</div><h4>${j.title}</h4><p>${j.gist}</p>
-  <a href="${j.link}" target="_blank" rel="noopener">Read judgment ↗</a></div>`).join('');
+  <a href="${j.link}" target="_blank" rel="noopener">Read judgment ↗</a></div>`).join('')
+    : '<p class="njempty">No judgments match this search.</p>';
+  return rows.length;
+}
+
+// One search for the whole page. It narrows the ledger, the three docket
+// sections and the precedent feed together, and says how many of each matched.
+function setQuery(raw){
+  fText = (raw||'').trim().toLowerCase();
+  document.querySelectorAll('input[data-q]').forEach(i => { if(i.value.trim().toLowerCase() !== fText) i.value = raw||''; });
+  const nd = renderLedger(), groups = render(), nj = renderNJ(); syncPressed();
+  $('#gs-clear').hidden = !fText;
+  if(!fText){ $('#gs-summary').textContent = ''; return; }
+  const nc = groups.reduce((n,g) => n + g.cases.length, 0);
+  const firstSection = (groups.find(g => g.cases.length) || {section:'#docket'}).section;
+  const part = (n, one, many, href) => n ? `<a href="${href}">${n} ${n===1?one:many}</a>` : `0 ${many}`;
+  const total = nd + nc + nj;
+  $('#gs-summary').innerHTML = total
+    ? `<b>${total}</b> match${total===1?'':'es'} for “${escHtml(raw.trim())}”: `
+      + [part(nd,'direction','directions','#ledger'), part(nc,'case','cases',firstSection), part(nj,'judgment','judgments','#precedents')].join(' · ')
+    : `No matches for “${escHtml(raw.trim())}”.`;
+}
+document.querySelectorAll('input[data-q]').forEach(i => i.addEventListener('input', e => setQuery(e.target.value)));
+$('#gs-clear').addEventListener('click', () => { setQuery(''); $('#gsearch').focus(); });
+renderNJ();
 
 // watchlist
 $('#watch-grid').innerHTML = DB.borderline_excluded.map(w=>`
   <div class="wcard"><div class="wc-cases">${w.cases.join('<br>')}</div><div class="wc-why">${w.why}</div></div>`).join('');
 
 render();
+syncPressed();
+revealHash();
 </script>
 </body>
 </html>
