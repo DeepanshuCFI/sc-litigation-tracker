@@ -1,34 +1,15 @@
 {
- "refresh_date": "2026-11-10",
- "fromdate_window": "01-10-2026",
+ "refresh_date": "2026-11-17",
+ "fromdate_window": "08-10-2026",
  "search_pages": 68,
  "approx_cost_inr": 34.0,
- "new_docs_total": 2,
+ "new_docs_total": 0,
  "queries_total": 68,
  "queries_failed": 0,
  "failed_queries": [],
- "cases_with_new_orders": [
-  "gohar-mohammed-2022",
-  "right-to-walk-2026"
- ],
- "new_order_counts": {
-  "gohar-mohammed-2022": 1,
-  "right-to-walk-2026": 1
- },
- "newly_overdue": [
-  {
-   "id": "right-to-walk-20261005-authority",
-   "authority": "Union of India",
-   "due": "2026-11-06",
-   "directive": "Identify the authority responsible for establishing footpaths, or create one if none exists under an"
-  },
-  {
-   "id": "right-to-walk-20261005-pilot-towns",
-   "authority": "Union of India",
-   "due": "2026-11-06",
-   "directive": "Identify at least five towns for a pilot project providing a footpath wherever a road exists, and te"
-  }
- ],
+ "cases_with_new_orders": [],
+ "new_order_counts": {},
+ "newly_overdue": [],
  "stale_listings": [
   {
    "case": "national-insurance-company-limited-2026",

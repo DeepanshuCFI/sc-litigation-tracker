@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built": "2026-11-16",
+  "built": "2026-11-17",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
   "raw_docs": 621,
   "assigned_docs": 221
@@ -3172,8 +3172,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "gohar-mohammed-2022",
-  "right-to-walk-2026"
- ]
+ "new_this_refresh": []
 }
