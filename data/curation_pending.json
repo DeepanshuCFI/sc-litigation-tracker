@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  {
+   "tid": 198193271,
+   "date": "2026-11-16",
+   "title": "Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026",
+   "queued": "2026-11-24"
+  },
+  {
+   "tid": 141342595,
+   "date": "2026-11-18",
+   "title": "In Re: Phalodi Accident vs National Highways Authority Of India on 18 November, 2026",
+   "queued": "2026-11-24"
+  }
+ ],
+ "orders": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "tid": 165603562,
+   "date": "2026-11-18",
+   "queued": "2026-11-24"
+  },
+  {
+   "case": "savelife-emergency-care-726-2024",
+   "tid": 35898737,
+   "date": "2026-11-18",
+   "queued": "2026-11-24"
+  },
+  {
+   "case": "savelife-emergency-care-726-2024",
+   "tid": 101886225,
+   "date": "2026-11-20",
+   "queued": "2026-11-24"
+  },
+  {
+   "case": "rajaseekaran-295-2012",
+   "tid": 58956456,
+   "date": "2026-11-20",
+   "queued": "2026-11-24"
+  }
+ ],
+ "ingested_report": "[\"2026-11-24\", [\"141342595\", \"198193271\"], [[\"phalodi-smwpc-9-2025\", 1], [\"rajaseekaran-295-2012\", 1], [\"savelife-emergency-care-726-2024\", 2]]]"
+}

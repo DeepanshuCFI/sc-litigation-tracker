@@ -1,9 +1,9 @@
 {
  "meta": {
-  "built": "2026-11-17",
+  "built": "2026-11-24",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 621,
-  "assigned_docs": 221
+  "raw_docs": 627,
+  "assigned_docs": 226
  },
  "cases": [
   {
@@ -668,11 +668,18 @@
      "link": "https://indiankanoon.org/doc/111523760/",
      "gist": "Two contempt petitions heard by Justices Pardiwala and Viswanathan. (1) Annual road-accident reports: the applicant says MoRTH has not complied with the 17 April 2025 direction to publish each annual report within six months of the year's end; notice issued, returnable 25 November 2026, and the Union must explain why and say what it proposes. (2) Interim relief under Section 164A: the ASG told the Court that MoRTH has framed the 'Compensation to Victims (Interim Relief) Scheme, 2026', circulated to States on 23 February 2026. The amicus and the applicant said they had not known of it, and that it covers only insured vehicles. The Union must take instructions on uninsured vehicles, publish the Scheme in the Official Gazette at the earliest (it is a statutory scheme under Section 212), give it wide publicity, say by the next date how it will be made operational, and respond to the applicant's suggestions: quarterly district-wise MACT pendency and unpaid-award data published by MoRTH, and better infrastructure for Claims Tribunals, especially in Uttar Pradesh where claims average more than five years. Notice also issued on I.A. 18487/2026. Listed with the main matter on 25 November 2026 at 2 PM.",
      "significance": "major"
+    },
+    {
+     "date": "2026-11-20",
+     "tid": 58956456,
+     "link": "https://indiankanoon.org/doc/58956456/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 92,
+   "order_count": 93,
    "first_order": "2014-02-18",
-   "latest_order": "2026-10-16"
+   "latest_order": "2026-11-20"
   },
   {
    "id": "phalodi-smwpc-9-2025",
@@ -760,11 +767,18 @@
      "link": "https://indiankanoon.org/doc/160899034/",
      "gist": "Justices Vikram Nath and Aparesh Kumar Singh heard the amicus (Atmaram Nadkarni), the applicants described as unauthorised occupants along national highways, and NHAI. Orders on the applications concerning unauthorised occupants are reserved; the interim status quo continues until they are pronounced, and parties may file written notes within two weeks. W.P.(C) 1100/2025 and Gyan Prakash W.P.(C) 1272/2019 were listed with the matter.",
      "significance": "major"
+    },
+    {
+     "date": "2026-11-18",
+     "tid": 165603562,
+     "link": "https://indiankanoon.org/doc/165603562/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 10,
+   "order_count": 11,
    "first_order": "2025-11-10",
-   "latest_order": "2026-10-13"
+   "latest_order": "2026-11-18"
   },
   {
    "id": "savelife-good-samaritan-235-2012",
@@ -1054,11 +1068,25 @@
      "link": "https://indiankanoon.org/doc/79241526/",
      "gist": "Reportable order: PM RAHAT operationalization within 8 weeks–3 months made a court-monitored obligation on all states/UTs; 112 helpline integration; Good Samaritan grievance systems; mass-media campaigns; ATRs to the Registry; listed after 4 months.",
      "significance": "major"
+    },
+    {
+     "date": "2026-11-18",
+     "tid": 35898737,
+     "link": "https://indiankanoon.org/doc/35898737/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-11-20",
+     "tid": 101886225,
+     "link": "https://indiankanoon.org/doc/101886225/",
+     "gist": "",
+     "significance": "routine"
     }
    ],
-   "order_count": 14,
+   "order_count": 16,
    "first_order": "2024-11-06",
-   "latest_order": "2026-05-26"
+   "latest_order": "2026-11-20"
   },
   {
    "id": "gohar-mohammed-2022",
@@ -3172,5 +3200,9 @@
    ]
   }
  ],
- "new_this_refresh": []
+ "new_this_refresh": [
+  "rajaseekaran-295-2012",
+  "phalodi-smwpc-9-2025",
+  "savelife-emergency-care-726-2024"
+ ]
 }

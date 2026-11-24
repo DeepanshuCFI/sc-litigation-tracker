@@ -1,14 +1,22 @@
 {
- "refresh_date": "2026-11-17",
- "fromdate_window": "08-10-2026",
+ "refresh_date": "2026-11-24",
+ "fromdate_window": "15-10-2026",
  "search_pages": 68,
  "approx_cost_inr": 34.0,
- "new_docs_total": 0,
+ "new_docs_total": 6,
  "queries_total": 68,
  "queries_failed": 0,
  "failed_queries": [],
- "cases_with_new_orders": [],
- "new_order_counts": {},
+ "cases_with_new_orders": [
+  "rajaseekaran-295-2012",
+  "phalodi-smwpc-9-2025",
+  "savelife-emergency-care-726-2024"
+ ],
+ "new_order_counts": {
+  "rajaseekaran-295-2012": 1,
+  "phalodi-smwpc-9-2025": 1,
+  "savelife-emergency-care-726-2024": 2
+ },
  "newly_overdue": [],
  "stale_listings": [
   {
@@ -18,5 +26,18 @@
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
  ],
- "new_unassigned_candidates": []
+ "new_unassigned_candidates": [
+  {
+   "tid": 198193271,
+   "date": "2026-11-16",
+   "title": "Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026",
+   "headline": " Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026 \n\n 2026"
+  },
+  {
+   "tid": 141342595,
+   "date": "2026-11-18",
+   "title": "In Re: Phalodi Accident vs National Highways Authority Of India on 18 November, 2026",
+   "headline": "Phalodi Accident vs National Highways Authority Of India on 18 November, 2026 \n\n Author:  Vikram Nath  \n\n Bench:  Vikram Nath  \n\n 2026 INSC 1243                                                REPORTAB"
+  }
+ ]
 }
