@@ -20,7 +20,7 @@
         "pedestrian safety"
       ],
       "why_it_matters": "The master road-safety PIL, filed by orthopaedic surgeon Dr. S. Rajaseekaran. Created the SC Committee on Road Safety (22 Apr 2014), forced state road-safety policies and lead agencies (30 Nov 2017), produced the Jan 2024 hit-and-run compensation directions, and is now driving vehicle-tracking and speed-governor enforcement.",
-      "latest_development": "16 October 2026: on two contempt petitions, the Court issued notice to the Union for not publishing annual road-accident reports within six months of each year as directed in April 2025, and directed it to gazette and publicise the new Compensation to Victims (Interim Relief) Scheme, 2026 under Section 164A, say whether it will cover uninsured vehicles, and explain by 25 November how it will be made operational. This follows the 28 September order asking for a chart of every direction issued and whether it was implemented.",
+      "latest_development": "On 20 November 2026, on mentioning by the ASG for the Union of India, the Court deferred the hearing scheduled for 25 November 2026 and relisted the writ petition for 16 December 2026.",
       "order_notes": {
         "2014-04-22": {
           "gist": "Constituted the Supreme Court Committee on Road Safety (Justice K.S. Radhakrishnan) with directions to states on implementation reporting.",
@@ -63,7 +63,7 @@
           "significance": "major"
         }
       },
-      "next_listing": "25 November 2026 (per order of 2026-10-16)"
+      "next_listing": "16 December 2026 (per order of 2026-11-20)"
     },
     {
       "id": "phalodi-smwpc-9-2025",
@@ -82,7 +82,7 @@
         "institutions"
       ],
       "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
-      "latest_development": "On 13 October 2026 the Court reserved orders on the applications by occupants facing NHAI's removal of highway encroachments, kept the status quo in place until the orders are pronounced, and allowed written notes within two weeks.",
+      "latest_development": "On 18 November 2026 the Court pronounced a reportable judgment in the matter, disposing of 49 interlocutory applications in its terms while leaving the remaining applications pending and directing the main and connected matters to be listed in due course.",
       "order_notes": {
         "2025-11-10": {
           "gist": "Suo motu cognizance of the Phalodi (Rajasthan) and Chevella (Telangana) crashes of 2–3 Nov 2025; notice to Rajasthan and central highway authorities.",
@@ -119,9 +119,12 @@
         "2026-10-13": {
           "gist": "Justices Vikram Nath and Aparesh Kumar Singh heard the amicus (Atmaram Nadkarni), the applicants described as unauthorised occupants along national highways, and NHAI. Orders on the applications concerning unauthorised occupants are reserved; the interim status quo continues until they are pronounced, and parties may file written notes within two weeks. W.P.(C) 1100/2025 and Gyan Prakash W.P.(C) 1272/2019 were listed with the matter.",
           "significance": "major"
+        },
+        "2026-11-18": {
+          "gist": "The Bench of Vikram Nath and Aparesh Kumar Singh, JJ. pronounced a signed reportable judgment in the suo motu Phalodi accident matter and the connected petitions, disposing of some 49 interlocutory applications of 2026 (covering intervention/impleadment, modification, stay and clarification prayers) in terms of that judgment. The remaining interlocutory applications were kept pending and the main matter, with connected matters, is to be listed in due course.",
+          "significance": "major"
         }
-      },
-      "next_listing": "Orders reserved on 13 October 2026 (encroachment applications); no date fixed"
+      }
     },
     {
       "id": "savelife-good-samaritan-235-2012",
@@ -166,14 +169,14 @@
         "PM RAHAT"
       ],
       "why_it_matters": "SaveLIFE's second-generation petition: integrate all emergency helplines into 112, Good Samaritan grievance redressal in every state, and full operationalization of cashless treatment. The May 2026 order turned PM RAHAT rollout into a court-monitored obligation.",
-      "latest_development": "26 May 2026 (reportable, Maheshwari J): all states/UTs directed to fully operationalize PM RAHAT within 8 weeks–3 months (hospital designation, SHA on TMS, police on eDAR, DC sub-agency accounts), integrate helplines with 112, run multilingual mass-media campaigns on 112/S.134A/cashless treatment, and file action-taken reports. Non-implementation declared a violation of the MV Act. Listed after four months.",
+      "latest_development": "On 20 November 2026 the matter was not taken up and was adjourned to 4 December 2026.",
       "order_notes": {
         "2026-05-26": {
           "gist": "Reportable order: PM RAHAT operationalization within 8 weeks–3 months made a court-monitored obligation on all states/UTs; 112 helpline integration; Good Samaritan grievance systems; mass-media campaigns; ATRs to the Registry; listed after 4 months.",
           "significance": "major"
         }
       },
-      "next_listing": "~September 2026 — 'list after four months' per the 26 May 2026 order"
+      "next_listing": "4 December 2026 (per order of 2026-11-20)"
     },
     {
       "id": "gohar-mohammed-2022",
@@ -622,6 +625,33 @@
         }
       },
       "next_listing": "~20 October 2026 — 'list after four weeks' per the 22 September 2026 order"
+    },
+    {
+      "id": "in-re-phalodi-accident-2026",
+      "match": [
+        "in re: phalodi accident"
+      ],
+      "title": "In Re: Phalodi Accident vs National Highways Authority of India",
+      "case_number": "Suo Moto Writ Petition (Civil) No. 9/2025 (with W.P. (C) No. 1100/2025 and W.P. (C) No. 1272/2019)",
+      "court": "Supreme Court of India",
+      "case_type": "Suo motu writ petition (civil)",
+      "status": "monitoring",
+      "filed_year": 2025,
+      "themes": [
+        "highway safety",
+        "encroachment removal",
+        "right of way",
+        "national highways",
+        "NHAI compliance monitoring"
+      ],
+      "why_it_matters": "The Court's 13.04.2026 directions in this suo motu matter impose nationwide obligations on NHAI, NHIDCL, State PWDs and District Magistrates — district highway safety task forces, ROW encroachment prohibition and removal, Rajmargyatra/1033 grievance channels, twice-yearly drone surveys and six-monthly reports to the Court. This order confirms those directions continue in full force while requiring their implementation to follow the statutory procedure under the Control of National Highways (Land and Traffic) Act, 2002.",
+      "latest_development": "2026-11-18: Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
+      "order_notes": {
+        "2026-11-18": {
+          "gist": "Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
+          "significance": "major"
+        }
+      }
     }
   ],
   "notable_judgments": [
@@ -810,6 +840,12 @@
       "date": "2026-09-16",
       "title": "K Rashik vs National Insurance Company Ltd",
       "gist": "Reportable ruling (2026 INSC 996, Justices Bhuyan and Chandurkar) on where a MACT claim can be filed: under Section 166(2), only where the accident happened, where the claimant lives or works, or where the defendant (owner or driver) lives. An insurer's office does not count, because 'defendant' there does not include the insurer; an insurer that objects at the outset can have the claim moved. This narrows claimants' choice of tribunal."
+    },
+    {
+      "tid": 199086973,
+      "date": "2026-11-25",
+      "title": "Sukumarbai & Ors. vs United India Insurance Company Ltd. & Anr.",
+      "gist": "A three-Judge Bench (Vikram Nath, Sandeep Mehta, Aparesh Kumar Singh) affirmed that the insurer had no statutory or contractual liability for a passenger killed in a privately owned Tata Sumo covered by an Act Only Policy, but invoked Article 142 to direct the insurer to first satisfy the Rs 7,79,800 award with 7.5% interest and recover it from the vehicle owner through execution before the Tribunal. The Court laid down four requirements — established liability, exceptional necessity, necessity and proportionality, and procedural fairness with recovery safeguards — for such directions."
     }
   ],
   "borderline_excluded": [

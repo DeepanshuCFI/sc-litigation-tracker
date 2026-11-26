@@ -22,8 +22,8 @@
     "pedestrian safety"
    ],
    "why_it_matters": "The master road-safety PIL, filed by orthopaedic surgeon Dr. S. Rajaseekaran. Created the SC Committee on Road Safety (22 Apr 2014), forced state road-safety policies and lead agencies (30 Nov 2017), produced the Jan 2024 hit-and-run compensation directions, and is now driving vehicle-tracking and speed-governor enforcement.",
-   "latest_development": "16 October 2026: on two contempt petitions, the Court issued notice to the Union for not publishing annual road-accident reports within six months of each year as directed in April 2025, and directed it to gazette and publicise the new Compensation to Victims (Interim Relief) Scheme, 2026 under Section 164A, say whether it will cover uninsured vehicles, and explain by 25 November how it will be made operational. This follows the 28 September order asking for a chart of every direction issued and whether it was implemented.",
-   "next_listing": "25 November 2026 (per order of 2026-10-16)",
+   "latest_development": "On 20 November 2026, on mentioning by the ASG for the Union of India, the Court deferred the hearing scheduled for 25 November 2026 and relisted the writ petition for 16 December 2026.",
+   "next_listing": "16 December 2026 (per order of 2026-11-20)",
    "orders": [
     {
      "date": "2014-02-18",
@@ -695,8 +695,7 @@
     "institutions"
    ],
    "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
-   "latest_development": "On 13 October 2026 the Court reserved orders on the applications by occupants facing NHAI's removal of highway encroachments, kept the status quo in place until the orders are pronounced, and allowed written notes within two weeks.",
-   "next_listing": "Orders reserved on 13 October 2026 (encroachment applications); no date fixed",
+   "latest_development": "On 18 November 2026 the Court pronounced a reportable judgment in the matter, disposing of 49 interlocutory applications in its terms while leaving the remaining applications pending and directing the main and connected matters to be listed in due course.",
    "orders": [
     {
      "date": "2025-11-10",
@@ -772,8 +771,8 @@
      "date": "2026-11-18",
      "tid": 165603562,
      "link": "https://indiankanoon.org/doc/165603562/",
-     "gist": "",
-     "significance": "routine"
+     "gist": "The Bench of Vikram Nath and Aparesh Kumar Singh, JJ. pronounced a signed reportable judgment in the suo motu Phalodi accident matter and the connected petitions, disposing of some 49 interlocutory applications of 2026 (covering intervention/impleadment, modification, stay and clarification prayers) in terms of that judgment. The remaining interlocutory applications were kept pending and the main matter, with connected matters, is to be listed in due course.",
+     "significance": "major"
     }
    ],
    "order_count": 11,
@@ -968,8 +967,8 @@
     "PM RAHAT"
    ],
    "why_it_matters": "SaveLIFE's second-generation petition: integrate all emergency helplines into 112, Good Samaritan grievance redressal in every state, and full operationalization of cashless treatment. The May 2026 order turned PM RAHAT rollout into a court-monitored obligation.",
-   "latest_development": "26 May 2026 (reportable, Maheshwari J): all states/UTs directed to fully operationalize PM RAHAT within 8 weeks–3 months (hospital designation, SHA on TMS, police on eDAR, DC sub-agency accounts), integrate helplines with 112, run multilingual mass-media campaigns on 112/S.134A/cashless treatment, and file action-taken reports. Non-implementation declared a violation of the MV Act. Listed after four months.",
-   "next_listing": "~September 2026 — 'list after four months' per the 26 May 2026 order",
+   "latest_development": "On 20 November 2026 the matter was not taken up and was adjourned to 4 December 2026.",
+   "next_listing": "4 December 2026 (per order of 2026-11-20)",
    "orders": [
     {
      "date": "2024-11-06",
@@ -1933,9 +1932,116 @@
    "order_count": 5,
    "first_order": "2026-08-04",
    "latest_order": "2026-09-22"
+  },
+  {
+   "id": "in-re-phalodi-accident-2026",
+   "title": "In Re: Phalodi Accident vs National Highways Authority of India",
+   "case_number": "Suo Moto Writ Petition (Civil) No. 9/2025 (with W.P. (C) No. 1100/2025 and W.P. (C) No. 1272/2019)",
+   "court": "Supreme Court of India",
+   "case_type": "Suo motu writ petition (civil)",
+   "status": "monitoring",
+   "filed_year": 2025,
+   "themes": [
+    "highway safety",
+    "encroachment removal",
+    "right of way",
+    "national highways",
+    "NHAI compliance monitoring"
+   ],
+   "why_it_matters": "The Court's 13.04.2026 directions in this suo motu matter impose nationwide obligations on NHAI, NHIDCL, State PWDs and District Magistrates — district highway safety task forces, ROW encroachment prohibition and removal, Rajmargyatra/1033 grievance channels, twice-yearly drone surveys and six-monthly reports to the Court. This order confirms those directions continue in full force while requiring their implementation to follow the statutory procedure under the Control of National Highways (Land and Traffic) Act, 2002.",
+   "latest_development": "2026-11-18: Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
+   "orders": [
+    {
+     "date": "2025-11-10",
+     "tid": 161778033,
+     "link": "https://indiankanoon.org/doc/161778033/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-04-13",
+     "tid": 78882038,
+     "link": "https://indiankanoon.org/doc/78882038/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-07-13",
+     "tid": 121987210,
+     "link": "https://indiankanoon.org/doc/121987210/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-08-17",
+     "tid": 169925262,
+     "link": "https://indiankanoon.org/doc/169925262/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-09-01",
+     "tid": 82462975,
+     "link": "https://indiankanoon.org/doc/82462975/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-09-03",
+     "tid": 83422822,
+     "link": "https://indiankanoon.org/doc/83422822/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-09-08",
+     "tid": 121194438,
+     "link": "https://indiankanoon.org/doc/121194438/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-09-22",
+     "tid": 171097989,
+     "link": "https://indiankanoon.org/doc/171097989/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-10-06",
+     "tid": 122769202,
+     "link": "https://indiankanoon.org/doc/122769202/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-10-13",
+     "tid": 160899034,
+     "link": "https://indiankanoon.org/doc/160899034/",
+     "gist": "",
+     "significance": "routine"
+    },
+    {
+     "date": "2026-11-18",
+     "tid": 165603562,
+     "link": "https://indiankanoon.org/doc/165603562/",
+     "gist": "Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
+     "significance": "major"
+    }
+   ],
+   "order_count": 11,
+   "first_order": "2025-11-10",
+   "latest_order": "2026-11-18"
   }
  ],
  "notable_judgments": [
+  {
+   "tid": 199086973,
+   "date": "2026-11-25",
+   "title": "Sukumarbai & Ors. vs United India Insurance Company Ltd. & Anr.",
+   "gist": "A three-Judge Bench (Vikram Nath, Sandeep Mehta, Aparesh Kumar Singh) affirmed that the insurer had no statutory or contractual liability for a passenger killed in a privately owned Tata Sumo covered by an Act Only Policy, but invoked Article 142 to direct the insurer to first satisfy the Rs 7,79,800 award with 7.5% interest and recover it from the vehicle owner through execution before the Tribunal. The Court laid down four requirements — established liability, exceptional necessity, necessity and proportionality, and procedural fairness with recovery safeguards — for such directions.",
+   "link": "https://indiankanoon.org/doc/199086973/"
+  },
   {
    "tid": 191273560,
    "date": "2026-09-16",
@@ -3200,5 +3306,10 @@
    ]
   }
  ],
- "new_this_refresh": []
+ "new_this_refresh": [
+  "in-re-phalodi-accident-2026",
+  "phalodi-smwpc-9-2025",
+  "rajaseekaran-295-2012",
+  "savelife-emergency-care-726-2024"
+ ]
 }

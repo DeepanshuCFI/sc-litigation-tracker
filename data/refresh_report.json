@@ -3,7 +3,7 @@
  "fromdate_window": "17-10-2026",
  "search_pages": 68,
  "approx_cost_inr": 34.0,
- "new_docs_total": 1,
+ "new_docs_total": 0,
  "queries_total": 68,
  "queries_failed": 0,
  "failed_queries": [],
@@ -91,12 +91,5 @@
    "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
   }
  ],
- "new_unassigned_candidates": [
-  {
-   "tid": 199086973,
-   "date": "2026-11-25",
-   "title": "Sukumarbai vs United India Insurance Company Ltd on 25 November, 2026",
-   "headline": "consequences of a breach of policy conditions relating\n           to the driving licence of the person operating the insured\n           vehicle. The Court recognised that, in cases ... controversy  in"
-  }
- ]
+ "new_unassigned_candidates": []
 }

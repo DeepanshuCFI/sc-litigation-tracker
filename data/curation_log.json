@@ -1,19 +1,67 @@
 {
  "date": "2026-11-26",
- "classified": [],
- "gists": [],
- "errors": [
-  "classify tid=198193271: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
+ "classified": [
+  {
+   "tid": 198193271,
+   "date": "2026-11-16",
+   "title": "Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026",
+   "action": "ignore",
+   "reason": "Arbitration dispute between a state power utility and a coal mining company over arbitral awards under the Arbitration and Conciliation Act, 1996; no connection to road safety in India and no systemic road-safety relief sought or granted."
+  },
+  {
+   "tid": 141342595,
+   "date": "2026-11-18",
+   "title": "In Re: Phalodi Accident vs National Highways Authority Of India on 18 November, 2026",
+   "action": "track",
+   "reason": "Suo motu writ proceedings on National Highway road safety producing nationwide systemic directions (district highway safety task forces, encroachment removal from Right of Way, drone surveys, six-monthly compliance reports to the Court); this order clarifies the scope of those directions and keeps the main matter under continued monitoring."
+  },
+  {
+   "tid": 199086973,
+   "date": "2026-11-25",
+   "title": "Sukumarbai vs United India Insurance Company Ltd on 25 November, 2026",
+   "action": "notable",
+   "reason": "Not a PIL or systemic road-safety matter, but a reportable three-Judge judgment laying down binding law that every MACT and insurer must follow: compulsory third-party insurance under Section 147 MV Act does not automatically cover gratuitous occupants of private vehicles or pillion riders under an Act Only Policy, and a four-part test now governs Article 142 'pay and recover' directions."
+  }
  ],
+ "gists": [
+  {
+   "case": "phalodi-smwpc-9-2025",
+   "date": "2026-11-18",
+   "gist": "The Bench of Vikram Nath and Aparesh Kumar Singh, JJ. pronounced a signed reportable judgment in the suo motu Phalodi accident matter and the connected petitions, disposing of some 49 interlocutory applications of 2026 (covering intervention/impleadment, modification, stay and clarification prayers) in terms of that judgment. The remaining interlocutory applications were kept pending and the main matter, with connected matters, is to be listed in due course.",
+   "significance": "major",
+   "latest_development": "On 18 November 2026 the Court pronounced a reportable judgment in the matter, disposing of 49 interlocutory applications in its terms while leaving the remaining applications pending and directing the main and connected matters to be listed in due course.",
+   "next_listing": ""
+  },
+  {
+   "case": "savelife-emergency-care-726-2024",
+   "date": "2026-11-18",
+   "gist": "",
+   "significance": "routine",
+   "latest_development": "On 18 November 2026, the petition was mentioned before a three-judge bench but the Court passed no orders.",
+   "next_listing": ""
+  },
+  {
+   "case": "savelife-emergency-care-726-2024",
+   "date": "2026-11-20",
+   "gist": "",
+   "significance": "routine",
+   "latest_development": "On 20 November 2026 the matter was not taken up and was adjourned to 4 December 2026.",
+   "next_listing": "4 December 2026"
+  },
+  {
+   "case": "rajaseekaran-295-2012",
+   "date": "2026-11-20",
+   "gist": "",
+   "significance": "routine",
+   "latest_development": "On 20 November 2026, on mentioning by the ASG for the Union of India, the Court deferred the hearing scheduled for 25 November 2026 and relisted the writ petition for 16 December 2026.",
+   "next_listing": "16 December 2026"
+  }
+ ],
+ "errors": [],
  "carried_over": {
-  "candidates": 2,
-  "orders": 4
- },
- "llm_unavailable": "credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token",
- "pending": {
   "candidates": 3,
   "orders": 4
  },
- "doc_fetches": 1,
- "approx_doc_cost_inr": 0.2
+ "doc_fetches": 7,
+ "approx_doc_cost_inr": 1.4
 }
