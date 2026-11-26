@@ -25,6 +25,19 @@ def norm_title(t: str) -> str:
     return re.sub(r"\s+", " ", t).strip()
 
 
+def collapse_by_date(hits: list) -> dict:
+    """One timeline entry per date. When a judgment and its daily-order copy share
+    a date, keep the judgment (docsource without 'Daily Order'). The old sort was
+    alphabetical on docsource, which put 'Supreme Court - Daily Orders' first and
+    so kept the bare order instead."""
+    by_date: dict = {}
+    for d in sorted(hits, key=lambda x: "Daily Order" in (x.get("docsource") or "")):
+        dt = d.get("publishdate") or "?"
+        if dt not in by_date:
+            by_date[dt] = d
+    return by_date
+
+
 def clean(t: str) -> str:
     return re.sub(r"<[^>]+>", "", t or "")
 
@@ -53,12 +66,7 @@ def main() -> None:
         ]
         for d in hits:
             assigned_tids.add(str(d["tid"]))
-        # collapse same-date duplicates, prefer judgment doctype (docsource has no 'Daily Order')
-        by_date: dict = {}
-        for d in sorted(hits, key=lambda x: (x.get("docsource") or "")):
-            dt = d.get("publishdate") or "?"
-            if dt not in by_date:
-                by_date[dt] = d
+        by_date = collapse_by_date(hits)
         notes = spec.get("order_notes", {})
         orders = []
         for dt in sorted(by_date):

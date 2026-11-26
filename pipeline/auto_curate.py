@@ -274,6 +274,17 @@ def ask(system: str, user: str, schema: dict) -> dict:
     return out
 
 
+def owning_case(curation: dict, title: str, doc_date: str) -> str:
+    """id of the tracked case whose title pattern (and date window) already
+    covers this document, or '' when it belongs to none."""
+    nt = norm_title(title)
+    for spec in curation.get("tracked_cases", []):
+        if (any(m and m in nt for m in spec.get("match", []))
+                and spec.get("date_min", "0000") <= (doc_date or "?") <= spec.get("date_max", "9999")):
+            return spec["id"]
+    return ""
+
+
 def norm_title(t: str) -> str:
     """Mirror of build_registry.norm_title — the string match patterns run against."""
     t = re.sub(r"<[^>]+>", "", t or "")
@@ -399,6 +410,14 @@ def main() -> None:
 
     # 1. classify new unassigned candidates
     for c in list(pending["candidates"]):
+        owner = owning_case(curation, c.get("title", ""), c.get("date", ""))
+        if owner:
+            # already part of a tracked case (e.g. the judgment twin of a daily
+            # order): classifying it could only create a duplicate case
+            log.setdefault("already_tracked", []).append(
+                {"tid": c["tid"], "date": c["date"], "title": c["title"], "case": owner})
+            pending["candidates"].remove(c)
+            continue
         if LLM_DOWN["reason"]:
             break  # don't pay IK for documents nobody can classify
         try:

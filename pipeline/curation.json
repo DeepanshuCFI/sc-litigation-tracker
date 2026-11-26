@@ -82,7 +82,7 @@
         "institutions"
       ],
       "why_it_matters": "Registered suo motu after twin crashes killed 34 people in Nov 2025 — 15 near Phalodi (Rajasthan, Bharatmala expressway) and 19 near Chevella (Telangana). Now the most active systemic matter: Article 142 interim directions to MoRTH, NHAI and all states on expressway safety, blackspots and illegal roadside obstructions. NH carry ~2% of road length but ~30% of fatalities.",
-      "latest_development": "On 18 November 2026 the Court pronounced a reportable judgment in the matter, disposing of 49 interlocutory applications in its terms while leaving the remaining applications pending and directing the main and connected matters to be listed in due course.",
+      "latest_development": "18 November 2026 (reportable, 2026 INSC 1243): the Court sent occupants facing NHAI removal notices to their jurisdictional High Courts, protected their existing structures from demolition until those cases are decided, and held that removal must follow the Section 26 notice-and-hearing procedure of the Control of National Highways (Land and Traffic) Act, 2002. Its 13 April 2026 directions did not decide whether any particular structure is an encroachment. The main matter stays pending, to be listed in due course.",
       "order_notes": {
         "2025-11-10": {
           "gist": "Suo motu cognizance of the Phalodi (Rajasthan) and Chevella (Telangana) crashes of 2–3 Nov 2025; notice to Rajasthan and central highway authorities.",
@@ -121,10 +121,11 @@
           "significance": "major"
         },
         "2026-11-18": {
-          "gist": "The Bench of Vikram Nath and Aparesh Kumar Singh, JJ. pronounced a signed reportable judgment in the suo motu Phalodi accident matter and the connected petitions, disposing of some 49 interlocutory applications of 2026 (covering intervention/impleadment, modification, stay and clarification prayers) in terms of that judgment. The remaining interlocutory applications were kept pending and the main matter, with connected matters, is to be listed in due course.",
+          "gist": "Reportable judgment (2026 INSC 1243) by Justices Vikram Nath and Aparesh Kumar Singh on a batch of applications from property owners and businesses facing NHAI removal notices along NH-48 and other national highways. The Court said its 13 April 2026 directions never examined whether any particular structure is an encroachment, and that removal has to follow the notice-and-hearing procedure in Section 26 of the Control of National Highways (Land and Traffic) Act, 2002. It sent the applicants to their jurisdictional High Courts, which are to decide ownership, demarcation, acquisition and statutory compliance afresh and expeditiously. Interim protection already granted continues, and where none was granted NHAI and other authorities must not demolish or take coercive action on the notices, until the High Court cases are decided. The protection covers only the existing structures and permits no fresh construction or encroachment. The listed applications were disposed of, the remaining ones stay pending, and the main matter is to be listed in due course.",
           "significance": "major"
         }
-      }
+      },
+      "next_listing": "No date fixed; to be listed in due course (per the judgment of 18 November 2026)"
     },
     {
       "id": "savelife-good-samaritan-235-2012",
@@ -625,33 +626,6 @@
         }
       },
       "next_listing": "~20 October 2026 — 'list after four weeks' per the 22 September 2026 order"
-    },
-    {
-      "id": "in-re-phalodi-accident-2026",
-      "match": [
-        "in re: phalodi accident"
-      ],
-      "title": "In Re: Phalodi Accident vs National Highways Authority of India",
-      "case_number": "Suo Moto Writ Petition (Civil) No. 9/2025 (with W.P. (C) No. 1100/2025 and W.P. (C) No. 1272/2019)",
-      "court": "Supreme Court of India",
-      "case_type": "Suo motu writ petition (civil)",
-      "status": "monitoring",
-      "filed_year": 2025,
-      "themes": [
-        "highway safety",
-        "encroachment removal",
-        "right of way",
-        "national highways",
-        "NHAI compliance monitoring"
-      ],
-      "why_it_matters": "The Court's 13.04.2026 directions in this suo motu matter impose nationwide obligations on NHAI, NHIDCL, State PWDs and District Magistrates — district highway safety task forces, ROW encroachment prohibition and removal, Rajmargyatra/1033 grievance channels, twice-yearly drone surveys and six-monthly reports to the Court. This order confirms those directions continue in full force while requiring their implementation to follow the statutory procedure under the Control of National Highways (Land and Traffic) Act, 2002.",
-      "latest_development": "2026-11-18: Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
-      "order_notes": {
-        "2026-11-18": {
-          "gist": "Disposing of a batch of interlocutory applications by property owners facing demolition notices on NH-48 and other highways, the Court (Vikram Nath and Aparesh Kumar Singh, JJ.) clarified that its 13.04.2026 encroachment-removal directions did not adjudicate individual ownership or ROW extent and cannot displace the Section 26 notice-and-hearing procedure under the 2002 Act. Applicants were relegated to the jurisdictional High Courts with interim protection continuing until those proceedings are decided, while the 13.04.2026 directions remain unaffected and the main matter stays pending.",
-          "significance": "major"
-        }
-      }
     }
   ],
   "notable_judgments": [

@@ -131,8 +131,14 @@ def main() -> None:
     # operator report
     def ctitle(t):
         return re.sub(r"<[^>]+>", "", t or "")
-    assigned = {str(o["tid"]) for c in reg["cases"] for o in c["orders"]}
-    unassigned_new = [d for d in new_docs if str(d["tid"]) not in assigned]
+    # "Unassigned" means no tracked case's title pattern matched it. Do NOT derive
+    # this from the timeline tids: a judgment and its daily-order copy share a date
+    # and collapse to one entry, so the twin's tid is missing from the timeline and
+    # was reported as a new candidate (18 Nov 2026: the Phalodi judgment was then
+    # filed as a second Phalodi case). build_registry writes the real list.
+    unassigned_tids = {str(u["tid"]) for u in
+                       json.loads((RAW / "_unassigned.json").read_text())}
+    unassigned_new = [d for d in new_docs if str(d["tid"]) in unassigned_tids]
     # ledger deadlines that crossed 'due' since the last refresh — the flip to
     # overdue happens client-side and would otherwise go unannounced
     week_ago = (date.today() - timedelta(days=7)).isoformat()
