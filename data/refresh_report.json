@@ -1,24 +1,89 @@
 {
- "refresh_date": "2026-11-24",
- "fromdate_window": "15-10-2026",
+ "refresh_date": "2026-11-26",
+ "fromdate_window": "17-10-2026",
  "search_pages": 68,
  "approx_cost_inr": 34.0,
- "new_docs_total": 6,
+ "new_docs_total": 1,
  "queries_total": 68,
  "queries_failed": 0,
  "failed_queries": [],
- "cases_with_new_orders": [
-  "rajaseekaran-295-2012",
-  "phalodi-smwpc-9-2025",
-  "savelife-emergency-care-726-2024"
+ "cases_with_new_orders": [],
+ "new_order_counts": {},
+ "newly_overdue": [
+  {
+   "id": "rajaseekaran-20260915-vltd-report",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "Place on record MoRTH's report of its interaction with vehicle manufacturers on pre-fitment of Vehic"
+  },
+  {
+   "id": "rajaseekaran-20260915-125h-states",
+   "authority": "States / UTs",
+   "due": "2026-11-25",
+   "directive": "File compliance and status reports on enforcement of Rule 125H CMVR (vehicle location tracking and p"
+  },
+  {
+   "id": "rajaseekaran-20260915-sld-union",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "Ensure that transport vehicles covered by Rule 118 CMVR are sold only after a speed-limiting device "
+  },
+  {
+   "id": "rajaseekaran-20260915-sld-states",
+   "authority": "States / UTs",
+   "due": "2026-11-25",
+   "directive": "Chief Secretaries to order RTOs to verify that Rule 118 transport vehicles carry a speed-limiting de"
+  },
+  {
+   "id": "rajaseekaran-20260915-nrsb-functional",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "Inform the Court whether the National Road Safety Board, constituted on 29 June 2026, is fully funct"
+  },
+  {
+   "id": "rajaseekaran-20260915-up-abatement",
+   "authority": "Uttar Pradesh",
+   "due": "2026-11-25",
+   "directive": "File a further report on the revival and prosecution of non-compoundable, mandatory-imprisonment and"
+  },
+  {
+   "id": "rajaseekaran-20260928-136a-morth",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "File an affidavit on compliance with Section 136A (electronic enforcement), how MoRTH proposes to co"
+  },
+  {
+   "id": "rajaseekaran-20260928-bmc-footpaths",
+   "authority": "BMC (Mumbai)",
+   "due": "2026-11-25",
+   "directive": "File a more comprehensive report on implementation of the Universal Footpath Policy of 26 May 2023, "
+  },
+  {
+   "id": "rajaseekaran-20260928-jewar-busfire",
+   "authority": "Uttar Pradesh / MoRTH",
+   "due": "2026-11-25",
+   "directive": "Respond to the application on the Jewar (Yamuna Expressway) sleeper-bus fire of 23/24 September 2026"
+  },
+  {
+   "id": "rajaseekaran-20261016-annual-report-reply",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "Reply to the contempt notice explaining why the 17 April 2025 direction to publish annual road-accid"
+  },
+  {
+   "id": "rajaseekaran-20261016-164a-operational",
+   "authority": "MoRTH",
+   "due": "2026-11-25",
+   "directive": "Tell the Court how the interim relief scheme will be made operational and whether it will cover unin"
+  }
  ],
- "new_order_counts": {
-  "rajaseekaran-295-2012": 1,
-  "phalodi-smwpc-9-2025": 1,
-  "savelife-emergency-care-726-2024": 2
- },
- "newly_overdue": [],
  "stale_listings": [
+  {
+   "case": "rajaseekaran-295-2012",
+   "listed_for": "2026-11-25",
+   "latest_order_on_record": "2026-11-20",
+   "note": "hearing date passed with no order fetched yet — check the SC website / IK directly"
+  },
   {
    "case": "national-insurance-company-limited-2026",
    "listed_for": "2026-10-20",
@@ -28,16 +93,10 @@
  ],
  "new_unassigned_candidates": [
   {
-   "tid": 198193271,
-   "date": "2026-11-16",
-   "title": "Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026",
-   "headline": " Rajasthan Rajya Vidyut Utpadan Nigam ... vs Parsa Kente Collieries Limited on 16 November, 2026 \n\n 2026"
-  },
-  {
-   "tid": 141342595,
-   "date": "2026-11-18",
-   "title": "In Re: Phalodi Accident vs National Highways Authority Of India on 18 November, 2026",
-   "headline": "Phalodi Accident vs National Highways Authority Of India on 18 November, 2026 \n\n Author:  Vikram Nath  \n\n Bench:  Vikram Nath  \n\n 2026 INSC 1243                                                REPORTAB"
+   "tid": 199086973,
+   "date": "2026-11-25",
+   "title": "Sukumarbai vs United India Insurance Company Ltd on 25 November, 2026",
+   "headline": "consequences of a breach of policy conditions relating\n           to the driving licence of the person operating the insured\n           vehicle. The Court recognised that, in cases ... controversy  in"
   }
  ]
 }

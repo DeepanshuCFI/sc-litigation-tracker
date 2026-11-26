@@ -1,13 +1,17 @@
 {
- "date": "2026-11-24",
+ "date": "2026-11-26",
  "classified": [],
  "gists": [],
  "errors": [
   "classify tid=198193271: credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token"
  ],
+ "carried_over": {
+  "candidates": 2,
+  "orders": 4
+ },
  "llm_unavailable": "credential refused - refresh CLAUDE_CODE_OAUTH_TOKEN: Failed to authenticate. API Error: 401 Invalid bearer token",
  "pending": {
-  "candidates": 2,
+  "candidates": 3,
   "orders": 4
  },
  "doc_fetches": 1,

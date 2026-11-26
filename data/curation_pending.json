@@ -11,6 +11,12 @@
    "date": "2026-11-18",
    "title": "In Re: Phalodi Accident vs National Highways Authority Of India on 18 November, 2026",
    "queued": "2026-11-24"
+  },
+  {
+   "tid": 199086973,
+   "date": "2026-11-25",
+   "title": "Sukumarbai vs United India Insurance Company Ltd on 25 November, 2026",
+   "queued": "2026-11-26"
   }
  ],
  "orders": [
@@ -39,5 +45,5 @@
    "queued": "2026-11-24"
   }
  ],
- "ingested_report": "[\"2026-11-24\", [\"141342595\", \"198193271\"], [[\"phalodi-smwpc-9-2025\", 1], [\"rajaseekaran-295-2012\", 1], [\"savelife-emergency-care-726-2024\", 2]]]"
+ "ingested_report": "[\"2026-11-26\", [\"199086973\"], []]"
 }

@@ -7072,5 +7072,16 @@
   "queries": [
    "\"National Highway\" fatality directions doctypes:supremecourt"
   ]
+ },
+ "199086973": {
+  "tid": 199086973,
+  "title": "Sukumarbai vs United India Insurance Company Ltd on 25 November, 2026",
+  "publishdate": "2026-11-25",
+  "docsource": "Supreme Court of India",
+  "headline": "consequences of a breach of policy conditions relating\n           to the <b>driving</b> <b>licence</b> of the person operating the insured\n           vehicle. The Court recognised that, in cases ... controversy  in that case  concerned\n           the absence of a valid <b>driving</b> <b>licence</b>, which constituted\n           a breach of the conditions of the policy. The decision\n           must",
+  "citation": null,
+  "queries": [
+   "\"driving licence\" directions doctypes:supremecourt"
+  ]
  }
 }

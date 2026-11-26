@@ -1,8 +1,8 @@
 {
  "meta": {
-  "built": "2026-11-24",
+  "built": "2026-11-26",
   "source": "Indian Kanoon API (doctypes: supremecourt + scorders)",
-  "raw_docs": 627,
+  "raw_docs": 628,
   "assigned_docs": 226
  },
  "cases": [
@@ -3200,9 +3200,5 @@
    ]
   }
  ],
- "new_this_refresh": [
-  "rajaseekaran-295-2012",
-  "phalodi-smwpc-9-2025",
-  "savelife-emergency-care-726-2024"
- ]
+ "new_this_refresh": []
 }
